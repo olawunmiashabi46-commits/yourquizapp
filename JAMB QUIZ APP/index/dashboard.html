@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../style/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- HEADER -->
+        <div class="dashboard-header">
+            <div>
+                <h1>JAMB QUIZ</h1>
+                <p id="welcome-message">Welcome, Student!</p>
+            </div>
+        </div>
+
+        <!-- DASHBOARD CONTENT -->
+        <div class="dashboard-content">
+
+            <div class="dashboard-card">
+
+                <h2>🎓 Student Dashboard</h2>
+                <p>Welcome to your quiz dashboard. Choose an option below to continue.</p>
+
+                <!-- MAIN BUTTONS GRID (2 PER ROW) -->
+                <div class="dashboard-actions">
+
+                    <!-- ROW 1 -->
+                    <button id="start-quiz-button">
+                        📝 <span>Start Quiz</span>
+                    </button>
+
+                    <button id="results-button">
+                        📊 <span>View Results</span>
+                    </button>
+
+                    <!-- ROW 2 -->
+                    <button id="leaderboard-button">
+                        🏆 <span>Leaderboard</span>
+                    </button>
+
+                    <button id="join-quiz-button">
+                        🎮 <span>Join Quiz</span>
+                    </button>
+
+                    <!-- ROW 3 (Create Quiz sits on the left half, exact same size) -->
+                    <button id="create-quiz-button">
+                        🎯 <span>Create Quiz</span>
+                    </button>
+
+                </div>
+
+                <!-- LOGOUT (FULL WIDTH AT BOTTOM) -->
+                <div class="logout-section">
+                    <button id="logout-button">
+                        🚪 Logout
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>JAMB Quiz App © 2026</p>
+        </footer>
+
+    </div>
+
+    <script src="../script/dashboard.js"></script>
+</body>
+
+</html>

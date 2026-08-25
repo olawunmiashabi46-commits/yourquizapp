@@ -1,0 +1,393 @@
+/* ======================================
+   GLOBAL RESETS & ACADEMIC COLOR PALETTE
+====================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc; /* Clean off-white background */
+    color: #1e293b;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 15px;
+    overflow-x: hidden;
+}
+
+.quiz-container,
+.dashboard-container,
+.welcome-box {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ======================================
+   DASHBOARD & START PAGE ALIGNMENT FIX
+====================================== */
+.welcome-box, 
+.dashboard-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 2-Column Grid for Subject Checkboxes / Selection Cards */
+#subjects-container,
+.subject-selection-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 equal subjects per row */
+    gap: 12px !important;
+    width: 100% !important;
+    margin: 10px 0 !important;
+}
+
+#subjects-container label,
+.subject-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f5f9;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #334155;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+#subjects-container label:hover,
+.subject-item:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+/* Dashboard Start Quiz Button - Perfectly Aligned Width */
+#start-quiz, 
+.start-quiz-btn {
+    width: 100% !important;
+    height: 52px;
+    background: linear-gradient(135deg, #059669 0%, #047857 100%); /* Emerald Green */
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#start-quiz:hover, 
+.start-quiz-btn:hover {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+}
+
+/* =========================
+   QUIZ HEADER & TIMER
+========================= */
+.quiz-header {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 15px;
+}
+
+.quiz-header h1 {
+    font-size: 20px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+#student-name {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.timer {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 8px 14px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.timer span {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #166534;
+    font-weight: 700;
+}
+
+.timer strong {
+    font-size: 18px;
+    color: #15803d;
+}
+
+/* =========================
+   QUIZ INFORMATION
+========================= */
+.quiz-info {
+    background: #ffffff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+#subject-name {
+    font-weight: 700;
+    color: #1e3a8a; /* Deep Academic Blue */
+}
+
+#question-number {
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* =========================
+   QUESTION BOX & OPTIONS
+========================= */
+.question-box {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+}
+
+#question {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.option,
+.option-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #334155;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option:hover,
+.option-btn:hover {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+}
+
+.option.selected,
+.option-btn.selected {
+    background-color: #1e3a8a !important; /* Deep Navy Blue */
+    color: #ffffff !important;
+    border-color: #1e3a8a !important;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+}
+
+/* =========================
+   PREVIOUS & NEXT BUTTONS
+========================= */
+.quiz-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.quiz-buttons button {
+    flex: 1;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#previous-button {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+#previous-button:hover {
+    background: #cbd5e1;
+}
+
+#previous-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#next-button {
+    background: #1e3a8a;
+    color: #ffffff;
+}
+
+#next-button:hover {
+    background: #1e40af;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+#submit-button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #dc2626; /* Crimson Red */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#submit-button:hover {
+    background: #b91c1c;
+}
+
+/* =========================
+   SUBJECT TABS NAVIGATION
+========================= */
+.subject-navigation-wrapper {
+    margin: 15px 0;
+}
+
+.subject-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.subject-tab {
+    background-color: #ffffff;
+    color: #475569;
+    border: 2px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.subject-tab:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.subject-tab.active {
+    background-color: #059669; /* Active subject green tab */
+    color: #ffffff;
+    border-color: #059669;
+    box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+}
+
+/* =========================
+   QUESTION PALETTE GRID
+========================= */
+.palette-wrapper {
+    margin: 12px 0;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.palette-wrapper h3 {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.question-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.palette-btn {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #cbd5e1;
+    background-color: #f8fafc;
+    color: #334155;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.palette-btn.answered {
+    background-color: #10b981;
+    color: #ffffff;
+    border-color: #059669;
+}
+
+.palette-btn.current {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    background-color: #eff6ff;
+}

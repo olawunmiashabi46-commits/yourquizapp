@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+        <!-- ADD THIS tag to force full desktop layout on phones: -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>JAMB Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="../style/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="welcome-box">
+
+            <h1>JAMB QUIZ</h1>
+
+            <p class="subtitle">
+                Select your category and choose your 4 JAMB subjects.
+            </p>
+
+
+            <!-- ==================================
+                 STUDENT
+            =================================== -->
+
+            <div class="form-group">
+
+                <label>
+                    Student
+                </label>
+
+                <p id="student-display">
+                    Loading student...
+                </p>
+
+            </div>
+
+
+            <!-- ==================================
+                 CATEGORY
+            =================================== -->
+
+            <div class="form-group">
+
+                <label for="category">
+                    Select Your Category
+                </label>
+
+                <select id="category">
+
+                    <option value="">
+                        Select your category
+                    </option>
+
+                    <option value="science">
+                        Science
+                    </option>
+
+                    <option value="commercial">
+                        Commercial
+                    </option>
+
+                    <option value="art">
+                        Art
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ==================================
+                 SUBJECTS
+            =================================== -->
+
+            <div class="form-group">
+
+                <label>
+                    Choose Your 4 JAMB Subjects
+                </label>
+
+                <div id="subjects-container"></div>
+
+            </div>
+
+
+            <!-- ==================================
+                 START QUIZ
+            =================================== -->
+
+            <button id="start-quiz">
+                Start Quiz
+            </button>
+
+
+            <!-- ==================================
+                 ERROR
+            =================================== -->
+
+            <p id="error-message"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../script/script.js"></script>
+
+</body>
+
+</html>

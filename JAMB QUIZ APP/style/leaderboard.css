@@ -1,0 +1,145 @@
+/* ======================================
+   GLOBAL RESET & FONTS
+====================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+    overflow-x: hidden;
+    color: #1e293b;
+}
+
+.leaderboard-container {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.leaderboard-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.leaderboard-header h1 {
+    font-size: 28px;
+    color: #0f172a; /* Deep Navy Header */
+    margin-bottom: 5px;
+}
+
+.leaderboard-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.leaderboard-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #1e3a8a; /* Deep Navy Bar */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-header span {
+    flex: 1;
+}
+
+.table-header span:nth-child(1) { flex: 0.8; }
+.table-header span:nth-child(2) { flex: 1.5; }
+.table-header span:nth-child(3) { flex: 0.7; text-align: right; }
+
+.leaderboard-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 15px;
+    transition: background 0.2s ease;
+}
+
+.leaderboard-row:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-row .position {
+    flex: 0.8;
+    font-weight: bold;
+    color: #475569;
+}
+
+.leaderboard-row .student {
+    flex: 1.5;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.leaderboard-row .score {
+    flex: 0.7;
+    text-align: right;
+    font-weight: bold;
+    color: #059669; /* Emerald Green Score */
+}
+
+/* Podium Styling (Refined Academic Tones) */
+.leaderboard-row.first-place {
+    background: #fffbeb;
+}
+.leaderboard-row.first-place .position {
+    color: #d97706; /* Gold/Amber */
+}
+
+.leaderboard-row.second-place {
+    background: #f8fafc;
+}
+.leaderboard-row.second-place .position {
+    color: #64748b; /* Silver/Slate */
+}
+
+.leaderboard-row.third-place {
+    background: #fff7ed;
+}
+.leaderboard-row.third-place .position {
+    color: #b45309; /* Bronze */
+}
+
+#back-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #1e3a8a; /* Deep Navy */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+}
+
+#back-button:hover {
+    background: #1e40af;
+}

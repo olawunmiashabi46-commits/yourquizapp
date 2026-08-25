@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- ADD THIS tag to force full desktop layout on phones: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Create Account | JAMB Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="../style/register.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <div class="register-box">
+
+            <h1>🎓 JAMB QUIZ</h1>
+
+            <p class="subtitle">
+                Create your student account
+            </p>
+
+
+            <!-- FULL NAME -->
+
+            <div class="form-group">
+
+                <label for="full-name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="full-name"
+                    placeholder="Enter your full name"
+                >
+
+            </div>
+
+
+            <!-- USERNAME -->
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Create a username"
+                >
+
+            </div>
+
+
+            <!-- Password Field in register.html -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Create a password" />
+                        <button type="button" id="toggle-password" class="toggle-password-btn">👁️</button>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" />
+                        <button type="button" id="toggle-confirm-password" class="toggle-password-btn">👁️</button>
+                    </div>
+                </div>
+                
+            <!-- REGISTER -->
+
+            <button id="register-button">
+                Create Account
+            </button>
+
+
+            <!-- ERROR -->
+
+            <p id="error-message"></p>
+
+
+            <!-- LOGIN -->
+
+            <p class="account-link">
+
+                Already have an account?
+
+                <button id="login-button">
+                    Login
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script type="module" src="../script/register.js"></script>
+
+</body>
+
+</html>

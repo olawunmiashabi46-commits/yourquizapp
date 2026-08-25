@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- ADD THIS tag to force full desktop layout on phones: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Quiz Result</title>
+
+    <link rel="stylesheet" href="../style/result.css">
+
+</head>
+
+<body>
+
+    <div class="result-container">
+
+
+        <!-- ==================================
+             HEADER
+        =================================== -->
+
+        <div class="result-header">
+
+            <h1>🎉 Quiz Completed!</h1>
+
+            <p id="student-name"></p>
+
+            <p class="result-message">
+                Here is your complete quiz performance.
+            </p>
+
+        </div>
+
+
+        <!-- ==================================
+             STUDENT'S PERFORMANCE
+        =================================== -->
+
+        <div class="performance-card">
+
+            <h2>📈 Student's Performance</h2>
+
+            <div class="performance-details">
+
+                <div class="performance-item">
+
+                    <span>👤 Student</span>
+
+                    <strong id="performance-name">-</strong>
+
+                </div>
+
+
+                <div class="performance-item">
+
+                    <span>📝 Total Questions</span>
+
+                    <strong id="total-questions">0</strong>
+
+                </div>
+
+
+                <div class="performance-item correct">
+
+                    <span>✅ Correct Answers</span>
+
+                    <strong id="correct-answers">0</strong>
+
+                </div>
+
+
+                <div class="performance-item wrong">
+
+                    <span>❌ Wrong Answers</span>
+
+                    <strong id="wrong-answers">0</strong>
+
+                </div>
+
+
+                <div class="performance-item score-item">
+
+                    <span>📊 Score</span>
+
+                    <strong id="overall-score">0</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="performance-message">
+
+                <h3 id="performance-title">
+                    Performance
+                </h3>
+
+                <p id="performance-message"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================
+             ACTION BUTTONS
+        =================================== -->
+
+        <div class="result-buttons top-buttons">
+
+            <button id="review-button">
+                📝 Review Answers
+            </button>
+
+        </div>
+
+
+        <!-- ==================================
+             YOUR SCORES
+        =================================== -->
+
+        <div class="result-card">
+
+            <h2>📊 Your Scores</h2>
+
+            <div id="scores-container"></div>
+
+        </div>
+
+
+        <!-- ==================================
+             PERFORMANCE FEEDBACK
+        =================================== -->
+
+        <div class="result-card">
+
+            <h2>💬 Performance Feedback</h2>
+
+            <div id="feedback-container"></div>
+
+        </div>
+
+
+        <!-- ==================================
+             AREA TO IMPROVE
+        =================================== -->
+
+        <div class="improvement-card">
+
+            <h2>📌 Area to Improve</h2>
+
+            <p id="improvement-message"></p>
+
+        </div>
+
+
+        <!-- ==================================
+             REVIEW ANSWERS
+        =================================== -->
+
+        <div
+        class="result-card review-card"
+            id="review-section"
+            style="display: none;">
+
+            <h2>📝 Review Answers</h2>
+
+            <p class="review-intro">
+                Check the answers you selected and compare
+                them with the correct answers.
+            </p>
+
+            <div id="review-container"></div>
+
+        </div>
+
+
+        <!-- ==================================
+             BOTTOM BUTTONS
+        =================================== -->
+
+        <div class="result-buttons">
+
+            <button id="go-back-button">
+                ← Go Back
+            </button>
+
+
+            <button id="try-again-button">
+                🔄 Try Quiz Again
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ==================================
+         QUESTION BANK
+    =================================== -->
+
+    <script src="../script/question.js"></script>
+
+
+    <!-- ==================================
+         RESULT JAVASCRIPT
+    =================================== -->
+
+    <script src="../script/result.js"></script>
+
+</body>
+
+</html>

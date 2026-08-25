@@ -1,0 +1,136 @@
+/* ======================================
+   UNIFORM DASHBOARD GRID STYLING
+====================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.dashboard-header {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    font-size: 26px;
+    color: #0f172a; /* Deep Navy Header */
+    margin-bottom: 6px;
+}
+
+.dashboard-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* Card Section */
+.dashboard-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.dashboard-card h2 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.dashboard-card > p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* 2-COLUMN GRID FOR MAIN ACTION BUTTONS */
+.dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* ALL MAIN BUTTONS ARE IDENTICAL IN SIZE AND LOOK */
+.dashboard-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1.5px solid #cbd5e1;
+    background: #ffffff;
+    color: #1e3a8a; /* Deep Navy Action Text */
+}
+
+.dashboard-actions button:hover {
+    background: #eff6ff;
+    border-color: #1e3a8a;
+    transform: translateY(-1px);
+}
+
+/* Logout Section (Red-Accented Full Width at Bottom) */
+.logout-section {
+    margin-top: 15px;
+}
+
+#logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #fee2e2;
+    color: #dc2626; /* Crimson Red */
+    border: 1px solid #fca5a5;
+    transition: all 0.2s ease;
+}
+
+#logout-button:hover {
+    background: #fecaca;
+    border-color: #f87171;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 25px;
+}

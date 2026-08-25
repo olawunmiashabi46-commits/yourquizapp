@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- ADD THIS tag to force full desktop layout on phones: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Join Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="../style/join-quiz.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="join-container">
+
+        <div class="join-card">
+
+            <div class="join-icon">
+                📝
+            </div>
+
+            <h1 id="page-title">
+                Join Quiz
+            </h1>
+
+            <p
+                class="join-description"
+                id="join-description"
+            >
+                Enter the quiz code provided by the quiz organizer.
+            </p>
+
+
+            <!-- ======================================
+                 QUIZ CODE FORM
+            ======================================= -->
+
+            <div
+                class="form-group"
+                id="join-form"
+            >
+
+                <label for="quiz-code">
+                    Quiz Code
+                </label>
+
+                <input
+                    type="text"
+                    id="quiz-code"
+                    placeholder="Enter quiz code"
+                    maxlength="6"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- ======================================
+                 ERROR MESSAGE
+            ======================================= -->
+
+            <p id="error-message"></p>
+
+
+            <!-- ======================================
+                 JOIN BUTTON
+            ======================================= -->
+
+            <button
+                id="join-button"
+                type="button"
+            >
+                🚀 Join Quiz
+            </button>
+
+
+            <!-- ======================================
+                 WAITING ROOM
+            ======================================= -->
+
+            <div
+                id="waiting-room"
+                class="waiting-room"
+                style="display: none;"
+            >
+
+                <div class="waiting-icon">
+                    ⏳
+                </div>
+
+                <h2>
+                    You're In!
+                </h2>
+
+                <p id="waiting-quiz-title">
+                    Quiz
+                </p>
+
+                <p class="waiting-message">
+                    You have successfully joined the quiz.
+                </p>
+
+                <p class="waiting-message">
+                    Please wait for the creator to start the quiz.
+                </p>
+
+                <div class="waiting-status">
+                    🟡 Waiting for creator...
+                </div>
+
+            </div>
+
+
+            <!-- ======================================
+                 BACK BUTTON
+            ======================================= -->
+
+            <button
+                id="back-button"
+                type="button"
+            >
+                ← Back to Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script type="module" src="../script/join-quiz.js"></script>
+
+</body>
+
+</html>

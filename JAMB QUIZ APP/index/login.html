@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- ADD THIS tag to force full desktop layout on phones: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>JAMB Quiz Login</title>
+
+    <link
+        rel="stylesheet"
+        href="../style/login.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>🎓 JAMB QUIZ</h1>
+
+            <p class="subtitle">
+                Login to continue your quiz
+            </p>
+
+
+            <!-- Username -->
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input type="text" id="username" autocapitalize="none" autocomplete="off" spellcheck="false" placeholder="Enter Username">
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" />
+                    <button type="button" id="toggle-password" class="toggle-password-btn">👁️</button>
+                </div>
+            </div>
+
+            <!-- Login Button -->
+
+            <button id="login-button">
+                Login
+            </button>
+
+
+            <!-- Error -->
+
+            <p id="error-message"></p>
+
+
+            <!-- Create Account -->
+
+            <p class="account-link">
+
+                Don't have an account?
+
+                <button id="create-account-button">
+                    Create Account
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script type="module" src="../script/login.js"></script>
+    
+</body>
+
+</html>

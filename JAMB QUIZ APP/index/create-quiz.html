@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="../style/create-quiz.css">
+</head>
+
+<body>
+
+    <div class="create-container">
+        <div class="create-card">
+
+            <div class="create-icon">
+                🎯
+            </div>
+
+            <h1>Create Quiz</h1>
+
+            <p class="description">
+                Create a quiz room, choose a category and select the subjects students will answer.
+            </p>
+
+            <!-- QUIZ TITLE -->
+            <div class="form-group">
+                <label for="quiz-title">Quiz Title</label>
+                <input 
+                    type="text" 
+                    id="quiz-title" 
+                    placeholder="Example: JAMB Science Challenge" 
+                    maxlength="50"
+                >
+            </div>
+
+            <!-- CATEGORY -->
+            <div class="form-group">
+                <label for="quiz-category">Category / Department</label>
+                <select id="quiz-category">
+                    <option value="">Select a category</option>
+                    <option value="Science">Science</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Social Science">Social Science</option>
+                </select>
+            </div>
+
+            <!-- SUBJECTS SELECTION AREA -->
+            <div class="form-group" id="subjects-section">
+                <div id="subjects-container" class="subjects-container">
+                    <!-- Populated dynamically via JavaScript -->
+                </div>
+            </div>
+
+            <!-- ERROR MESSAGE -->
+            <p id="error-message"></p>
+
+            <!-- CREATE BUTTON -->
+            <button id="create-button" type="button">
+                🚀 Create Quiz
+            </button>
+
+            <!-- QUIZ RESULT / CREATOR LOBBY -->
+            <div id="quiz-result" class="quiz-result hidden">
+
+                <p class="success-message">
+                    🎉 Quiz created successfully!
+                </p>
+
+                <p class="code-label">
+                    Your Quiz Code
+                </p>
+
+                <strong id="quiz-code">------</strong>
+
+                <p class="share-message">
+                    Share this code with the students who should join this quiz.
+                </p>
+
+                <!-- COPY CODE -->
+                <button id="copy-button" type="button">
+                    📋 Copy Code
+                </button>
+
+                <!-- PARTICIPANT STATUS -->
+                <div class="creator-lobby">
+                    <h2>👥 Quiz Lobby</h2>
+                    <p id="participant-count">0 students have joined.</p>
+                    <p id="creator-status">🟡 Waiting for students to join...</p>
+                </div>
+
+                <!-- START QUIZ -->
+                <button id="start-quiz-button" type="button" disabled>
+                    ▶️ Start Quiz
+                </button>
+
+            </div>
+
+            <!-- BACK BUTTON -->
+            <button id="back-button" type="button">
+                ← Back to Dashboard
+            </button>
+
+        </div>
+    </div>
+
+    <script type="module" src="../script/create-quiz.js"></script>
+
+</body>
+
+</html>
