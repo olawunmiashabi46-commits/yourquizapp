@@ -1,41 +1,43 @@
 // ======================================
 // GET LOGGED-IN STUDENT
 // ======================================
-
-const loggedInStudent = JSON.parse(
-    localStorage.getItem('loggedInStudent')
-);
+const loggedInStudent =
+    JSON.parse(
+        localStorage.getItem('loggedInStudent')
+    );
 
 
 // ======================================
 // CHECK LOGIN
 // ======================================
-
 if (!loggedInStudent) {
 
-    window.location.href = 'login.html';
+    window.location.href =
+        'login.html';
 
 }
 
 
 // ======================================
-// GET STUDENT RESULT
+// GET LAST QUIZ RESULT
 // ======================================
-
-const studentResult = JSON.parse(
-    localStorage.getItem('studentResult')
-);
+const studentResult =
+    JSON.parse(
+        localStorage.getItem('lastQuizResult')
+    );
 
 
 // ======================================
 // CHECK RESULT
 // ======================================
-
 if (!studentResult) {
 
-    alert('No quiz result was found.');
+    alert(
+        'No quiz result was found.'
+    );
 
-    window.location.href = 'dashboard.html';
+    window.location.href =
+        'dashboard.html';
 
 }
 
@@ -43,176 +45,231 @@ if (!studentResult) {
 // ======================================
 // CHECK RESULT BELONGS TO STUDENT
 // ======================================
-
 if (
-    studentResult.studentId !==
-    loggedInStudent.id
+    studentResult.studentId &&
+    loggedInStudent.id &&
+    String(studentResult.studentId) !==
+    String(loggedInStudent.id)
 ) {
 
     alert(
         'This result does not belong to the current student.'
     );
 
-    window.location.href = 'dashboard.html';
+    window.location.href =
+        'dashboard.html';
 
 }
 
 
 // ======================================
-// GET RESULT INFORMATION
+// RESULT INFORMATION
 // ======================================
-
-const studentData = {
-
-    name: studentResult.studentName,
-
-    category: studentResult.category,
-
-    subjects: studentResult.subjects || []
-
-};
-
-
-const quizAnswers =
-    studentResult.answers || {};
+const studentName =
+    studentResult.studentName ||
+    loggedInStudent.name ||
+    'Student';
 
 
 const quizScores =
     studentResult.scores || {};
 
 
-// ======================================
-// GET HTML ELEMENTS
-// ======================================
-
-const studentNameElement =
-    document.getElementById('student-name');
-
-const performanceNameElement =
-    document.getElementById('performance-name');
-
-const totalQuestionsElement =
-    document.getElementById('total-questions');
-
-const correctAnswersElement =
-    document.getElementById('correct-answers');
-
-const wrongAnswersElement =
-    document.getElementById('wrong-answers');
-
-const overallScoreElement =
-    document.getElementById('overall-score');
-
-const performanceTitleElement =
-    document.getElementById('performance-title');
-
-const performanceMessageElement =
-    document.getElementById('performance-message');
-
-const scoresContainer =
-    document.getElementById('scores-container');
-
-const feedbackContainer =
-    document.getElementById('feedback-container');
-
-const improvementMessage =
-    document.getElementById('improvement-message');
-
-const reviewButton =
-    document.getElementById('review-button');
-
-const reviewSection =
-    document.getElementById('review-section');
-
-const reviewContainer =
-    document.getElementById('review-container');
-
-const goBackButton =
-    document.getElementById('go-back-button');
-
-const tryAgainButton =
-    document.getElementById('try-again-button');
+const quizAnswers =
+    studentResult.answers || {};
 
 
-// ======================================
-// DISPLAY STUDENT NAME
-// ======================================
-
-studentNameElement.textContent =
-    `Student: ${studentData.name}`;
-
-performanceNameElement.textContent =
-    studentData.name;
+const quizQuestions =
+    studentResult.questions || {};
 
 
-// ======================================
-// CALCULATE OVERALL PERFORMANCE
-// ======================================
-
-let totalQuestions = 0;
-
-let correctAnswers = 0;
+const totalQuestions =
+    Number(
+        studentResult.totalQuestionsCount
+    ) || 0;
 
 
-studentData.subjects.forEach(
-    function (subject) {
-
-        const questions =
-            questionBank[subject] || [];
-
-
-        totalQuestions +=
-            questions.length;
-
-
-        correctAnswers +=
-            Number(quizScores[subject]) || 0;
-
-    }
-);
+const correctAnswers =
+    Number(
+        studentResult.totalScore
+    ) || 0;
 
 
 const wrongAnswers =
-    totalQuestions - correctAnswers;
+    Math.max(
+        0,
+        totalQuestions -
+        correctAnswers
+    );
 
 
 const overallScore =
-    totalQuestions > 0
-        ? Math.round(
-            (correctAnswers /
-                totalQuestions) * 100
-        )
-        : 0;
+    Number(
+        studentResult.percentageScore
+    ) || 0;
 
 
 // ======================================
-// DISPLAY PERFORMANCE
+// GET HTML ELEMENTS
 // ======================================
+const studentNameElement =
+    document.getElementById(
+        'student-name'
+    );
 
-totalQuestionsElement.textContent =
-    totalQuestions;
 
-correctAnswersElement.textContent =
-    correctAnswers;
+const performanceNameElement =
+    document.getElementById(
+        'performance-name'
+    );
 
-wrongAnswersElement.textContent =
-    wrongAnswers;
 
-overallScoreElement.textContent =
-    `${overallScore}%`;
+const totalQuestionsElement =
+    document.getElementById(
+        'total-questions'
+    );
+
+
+const correctAnswersElement =
+    document.getElementById(
+        'correct-answers'
+    );
+
+
+const wrongAnswersElement =
+    document.getElementById(
+        'wrong-answers'
+    );
+
+
+const overallScoreElement =
+    document.getElementById(
+        'overall-score'
+    );
+
+
+const performanceTitleElement =
+    document.getElementById(
+        'performance-title'
+    );
+
+
+const performanceMessageElement =
+    document.getElementById(
+        'performance-message'
+    );
+
+
+const scoresContainer =
+    document.getElementById(
+        'scores-container'
+    );
+
+
+const feedbackContainer =
+    document.getElementById(
+        'feedback-container'
+    );
+
+
+const improvementMessage =
+    document.getElementById(
+        'improvement-message'
+    );
+
+
+const reviewButton =
+    document.getElementById(
+        'review-button'
+    );
+
+
+const reviewSection =
+    document.getElementById(
+        'review-section'
+    );
+
+
+const reviewContainer =
+    document.getElementById(
+        'review-container'
+    );
+
+
+const goBackButton =
+    document.getElementById(
+        'go-back-button'
+    );
+
+
+const tryAgainButton =
+    document.getElementById(
+        'try-again-button'
+    );
 
 
 // ======================================
-// OVERALL PERFORMANCE MESSAGE
+// DISPLAY BASIC RESULT
 // ======================================
+if (studentNameElement) {
 
+    studentNameElement.textContent =
+        `Student: ${studentName}`;
+
+}
+
+
+if (performanceNameElement) {
+
+    performanceNameElement.textContent =
+        studentName;
+
+}
+
+
+if (totalQuestionsElement) {
+
+    totalQuestionsElement.textContent =
+        totalQuestions;
+
+}
+
+
+if (correctAnswersElement) {
+
+    correctAnswersElement.textContent =
+        correctAnswers;
+
+}
+
+
+if (wrongAnswersElement) {
+
+    wrongAnswersElement.textContent =
+        wrongAnswers;
+
+}
+
+
+if (overallScoreElement) {
+
+    overallScoreElement.textContent =
+        overallScore;
+
+}
+
+
+// ======================================
+// PERFORMANCE MESSAGE
+// ======================================
 function getOverallPerformance(score) {
 
     if (score >= 80) {
 
         return {
 
-            title: '🌟 Excellent Performance!',
+            title:
+                'Excellent Performance!',
 
             message:
                 'Excellent work! You have performed very well. Keep up the great effort and continue practising.'
@@ -226,7 +283,8 @@ function getOverallPerformance(score) {
 
         return {
 
-            title: '👏 Great Performance!',
+            title:
+                'Great Performance!',
 
             message:
                 'Great job! You are doing well. Keep practising and work towards an even higher score.'
@@ -240,7 +298,8 @@ function getOverallPerformance(score) {
 
         return {
 
-            title: '👍 Good Performance!',
+            title:
+                'Good Performance!',
 
             message:
                 'Good effort! You have a good foundation. Keep studying and practising to improve further.'
@@ -254,7 +313,8 @@ function getOverallPerformance(score) {
 
         return {
 
-            title: '📚 Fair Performance',
+            title:
+                'Fair Performance',
 
             message:
                 'You are making progress. Spend more time reviewing your topics and keep practising.'
@@ -266,7 +326,8 @@ function getOverallPerformance(score) {
 
     return {
 
-        title: '💪 Keep Working!',
+        title:
+            'Keep Working!',
 
         message:
             'Do not give up. Review your topics, practise more questions and try the quiz again.'
@@ -282,45 +343,75 @@ const performance =
     );
 
 
-performanceTitleElement.textContent =
-    performance.title;
+if (performanceTitleElement) {
 
-performanceMessageElement.textContent =
-    performance.message;
+    performanceTitleElement.textContent =
+        performance.title;
+
+}
+
+
+if (performanceMessageElement) {
+
+    performanceMessageElement.textContent =
+        performance.message;
+
+}
 
 
 // ======================================
 // SUBJECT SCORES
 // ======================================
-
 const percentageScores = {};
 
 
-scoresContainer.innerHTML = '';
+if (scoresContainer) {
+
+    scoresContainer.innerHTML = '';
+
+}
 
 
-studentData.subjects.forEach(
+const selectedSubjects =
+    Object.keys(quizScores);
+
+
+selectedSubjects.forEach(
     function (subject) {
 
-        const questions =
-            questionBank[subject] || [];
+        const subjectResult =
+            quizScores[subject] || {};
 
 
         const correct =
-            Number(quizScores[subject]) || 0;
+            Number(
+                subjectResult.score
+            ) || 0;
+
+
+        const total =
+            Number(
+                subjectResult.total
+            ) || 0;
 
 
         const percentage =
-            questions.length > 0
+            total > 0
                 ? Math.round(
-                    (correct /
-                        questions.length) * 100
+                    (
+                        correct /
+                        total
+                    ) * 100
                 )
                 : 0;
 
 
         percentageScores[subject] =
             percentage;
+
+
+        if (!scoresContainer)
+            return;
 
 
         const scoreCard =
@@ -335,9 +426,11 @@ studentData.subjects.forEach(
         const subjectElement =
             document.createElement('span');
 
+
         subjectElement.classList.add(
             'subject'
         );
+
 
         subjectElement.textContent =
             subject;
@@ -346,17 +439,20 @@ studentData.subjects.forEach(
         const scoreElement =
             document.createElement('span');
 
+
         scoreElement.classList.add(
             'score'
         );
 
+
         scoreElement.textContent =
-            `${percentage}%`;
+            percentage;
 
 
         scoreCard.appendChild(
             subjectElement
         );
+
 
         scoreCard.appendChild(
             scoreElement
@@ -374,57 +470,64 @@ studentData.subjects.forEach(
 // ======================================
 // SUBJECT FEEDBACK
 // ======================================
-
 function getFeedback(score) {
 
     if (score >= 80) {
 
-        return '🎉 Excellent work! Keep up the great performance.';
+        return 'Excellent work! Keep up the great performance.';
 
     }
 
 
     if (score >= 70) {
 
-        return '👏 Great job! Keep practising to maintain this performance.';
+        return 'Great job! Keep practising to maintain this performance.';
 
     }
 
 
     if (score >= 60) {
 
-        return '👍 Good effort! A little more practice can make you even stronger.';
+        return 'Good effort! A little more practice can make you even stronger.';
 
     }
 
 
     if (score >= 50) {
 
-        return '📚 Fair performance. Spend more time reviewing this subject.';
+        return 'Fair performance. Spend more time reviewing this subject.';
 
     }
 
 
     if (score >= 40) {
 
-        return '💪 You need more practice in this subject. Do not give up.';
+        return 'You need more practice in this subject. Do not give up.';
 
     }
 
 
-    return '📖 Work harder on this subject. Review the topics and try another quiz.';
+    return 'Work harder on this subject. Review the topics and try another quiz.';
 
 }
 
 
-feedbackContainer.innerHTML = '';
+if (feedbackContainer) {
+
+    feedbackContainer.innerHTML = '';
+
+}
 
 
-studentData.subjects.forEach(
+selectedSubjects.forEach(
     function (subject) {
 
+        if (!feedbackContainer)
+            return;
+
+
         const score =
-            percentageScores[subject];
+            percentageScores[subject] || 0;
 
 
         const feedbackCard =
@@ -439,12 +542,14 @@ studentData.subjects.forEach(
         const heading =
             document.createElement('h3');
 
+
         heading.textContent =
             subject;
 
 
         const message =
             document.createElement('p');
+
 
         message.textContent =
             getFeedback(score);
@@ -453,6 +558,7 @@ studentData.subjects.forEach(
         feedbackCard.appendChild(
             heading
         );
+
 
         feedbackCard.appendChild(
             message
@@ -470,22 +576,22 @@ studentData.subjects.forEach(
 // ======================================
 // FIND WEAKEST SUBJECT
 // ======================================
-
 let lowestScore = 101;
 
 let weakestSubjects = [];
 
 
-studentData.subjects.forEach(
+selectedSubjects.forEach(
     function (subject) {
 
         const score =
-            percentageScores[subject];
+            percentageScores[subject] || 0;
 
 
         if (score < lowestScore) {
 
-            lowestScore = score;
+            lowestScore =
+                score;
 
             weakestSubjects = [
                 subject
@@ -510,56 +616,62 @@ studentData.subjects.forEach(
 // ======================================
 // AREA TO IMPROVE
 // ======================================
+if (improvementMessage) {
 
-if (
-    weakestSubjects.length === 1
-) {
+    if (
+        weakestSubjects.length === 1
+    ) {
 
-    improvementMessage.textContent =
-        `${weakestSubjects[0]} is currently your weakest subject. Review your ${weakestSubjects[0]} topics and try another quiz to improve your score.`;
+        improvementMessage.textContent =
+            `${weakestSubjects[0]} is currently your weakest subject. Review your ${weakestSubjects[0]} topics and try another quiz to improve your score.`;
 
-}
+    }
 
-else if (
-    weakestSubjects.length > 1
-) {
+    else if (
+        weakestSubjects.length > 1
+    ) {
 
-    improvementMessage.textContent =
-        `${weakestSubjects.join(' and ')} need more attention. Review these subjects and try another quiz to improve your scores.`;
+        improvementMessage.textContent =
+            `${weakestSubjects.join(' and ')} need more attention. Review these subjects and try another quiz to improve your scores.`;
 
-}
+    }
 
-else {
+    else {
 
-    improvementMessage.textContent =
-        'Keep practising all your subjects to improve your performance.';
+        improvementMessage.textContent =
+            'Keep practising all your subjects to improve your performance.';
+
+    }
 
 }
 
 
 // ======================================
-// DISPLAY REVIEW ANSWERS
+// REVIEW ANSWERS
 // ======================================
-
 function displayReviewAnswers() {
+
+    if (!reviewContainer)
+        return;
+
 
     reviewContainer.innerHTML = '';
 
 
-    studentData.subjects.forEach(
+    selectedSubjects.forEach(
         function (subject) {
 
             const questions =
-                questionBank[subject] || [];
+                quizQuestions[subject] || [];
 
 
             const studentSubjectAnswers =
                 quizAnswers[subject] || [];
 
 
-            // ==================================
-            // SUBJECT HEADING
-            // ==================================
+            if (!questions.length)
+                return;
+
 
             const subjectHeading =
                 document.createElement('h3');
@@ -579,10 +691,6 @@ function displayReviewAnswers() {
             );
 
 
-            // ==================================
-            // QUESTIONS
-            // ==================================
-
             questions.forEach(
                 function (
                     question,
@@ -590,7 +698,9 @@ function displayReviewAnswers() {
                 ) {
 
                     const studentAnswer =
-                        studentSubjectAnswers[index];
+                        studentSubjectAnswers[
+                            index
+                        ];
 
 
                     const isCorrect =
@@ -607,10 +717,6 @@ function displayReviewAnswers() {
                     );
 
 
-                    // ==================================
-                    // QUESTION NUMBER
-                    // ==================================
-
                     const number =
                         document.createElement('div');
 
@@ -624,10 +730,6 @@ function displayReviewAnswers() {
                         `Question ${index + 1}`;
 
 
-                    // ==================================
-                    // QUESTION TEXT
-                    // ==================================
-
                     const questionText =
                         document.createElement('div');
 
@@ -640,10 +742,6 @@ function displayReviewAnswers() {
                     questionText.textContent =
                         question.question;
 
-
-                    // ==================================
-                    // STUDENT ANSWER
-                    // ==================================
 
                     const studentAnswerElement =
                         document.createElement('div');
@@ -688,10 +786,6 @@ function displayReviewAnswers() {
                     }
 
 
-                    // ==================================
-                    // CORRECT ANSWER
-                    // ==================================
-
                     const correctAnswerElement =
                         document.createElement('div');
 
@@ -705,21 +799,20 @@ function displayReviewAnswers() {
                         `🔵 <strong>Correct answer:</strong> ${question.answer}`;
 
 
-                    // ==================================
-                    // ADD TO REVIEW
-                    // ==================================
-
                     reviewQuestion.appendChild(
                         number
                     );
+
 
                     reviewQuestion.appendChild(
                         questionText
                     );
 
+
                     reviewQuestion.appendChild(
                         studentAnswerElement
                     );
+
 
                     reviewQuestion.appendChild(
                         correctAnswerElement
@@ -740,117 +833,118 @@ function displayReviewAnswers() {
 
 
 // ======================================
-// REVIEW ANSWERS BUTTON
+// REVIEW BUTTON
 // ======================================
+if (reviewButton) {
 
-reviewButton.addEventListener(
-    'click',
-    function () {
+    reviewButton.addEventListener(
+        'click',
+        function () {
 
-        if (
-            reviewSection.style.display ===
-            'none' ||
-            reviewSection.style.display === ''
-        ) {
+            if (
+                reviewSection.style.display ===
+                    'none' ||
+                reviewSection.style.display ===
+                    ''
+            ) {
 
-            displayReviewAnswers();
-
-
-            reviewSection.style.display =
-                'block';
+                displayReviewAnswers();
 
 
-            reviewButton.textContent =
-                '🔼 Hide Review Answers';
+                reviewSection.style.display =
+                    'block';
 
 
-            reviewSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+                reviewButton.textContent =
+                    'Hide Review Answers';
+
+
+                reviewSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+            }
+
+            else {
+
+                reviewSection.style.display =
+                    'none';
+
+
+                reviewButton.textContent =
+                    'Review Answers';
+
+            }
 
         }
+    );
 
-        else {
-
-            reviewSection.style.display =
-                'none';
-
-
-            reviewButton.textContent =
-                '📝 Review Answers';
-
-        }
-
-    }
-);
+}
 
 
 // ======================================
 // INITIAL REVIEW STATE
 // ======================================
+if (reviewSection) {
 
-reviewSection.style.display =
-    'none';
+    reviewSection.style.display =
+        'none';
+
+}
 
 
 // ======================================
 // GO BACK BUTTON
 // ======================================
+if (goBackButton) {
 
-goBackButton.addEventListener(
-    'click',
-    function () {
+    goBackButton.addEventListener(
+        'click',
+        function () {
 
-        window.location.href =
-            'dashboard.html';
+            window.location.href =
+                'dashboard.html';
 
-    }
-);
+        }
+    );
+
+}
 
 
 // ======================================
 // TRY AGAIN BUTTON
 // ======================================
+if (tryAgainButton) {
 
-tryAgainButton.addEventListener(
-    'click',
-    function () {
+    tryAgainButton.addEventListener(
+        'click',
+        function () {
 
-        const confirmRestart =
-            confirm(
-                'Are you sure you want to start a new quiz? Your current result will be cleared.'
+            const confirmRestart =
+                confirm(
+                    'Are you sure you want to start a new quiz? Your current result will be cleared.'
+                );
+
+
+            if (!confirmRestart)
+                return;
+
+
+            localStorage.removeItem(
+                'lastQuizResult'
             );
 
 
-        if (!confirmRestart) {
+            localStorage.removeItem(
+                'savedQuizResult'
+            );
 
-            return;
+
+            window.location.href =
+                'dashboard.html';
 
         }
+    );
 
-
-        // Remove current quiz result
-
-        localStorage.removeItem(
-            'quizScores'
-        );
-
-
-        localStorage.removeItem(
-            'quizAnswers'
-        );
-
-
-        localStorage.removeItem(
-            'studentResult'
-        );
-
-
-        // Keep logged-in account
-
-        window.location.href =
-            'dashboard.html';
-
-    }
-);
+}
