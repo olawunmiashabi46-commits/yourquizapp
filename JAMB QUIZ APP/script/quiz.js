@@ -10,13 +10,19 @@ import { supabase } from './supabase.js';
 // ======================================
 
 const loggedInStudent =
-    JSON.parse(localStorage.getItem('loggedInStudent')) || {};
+    JSON.parse(
+        localStorage.getItem('loggedInStudent')
+    ) || {};
 
 const studentData =
-    JSON.parse(localStorage.getItem('studentData')) || {};
+    JSON.parse(
+        localStorage.getItem('studentData')
+    ) || {};
 
 const joinedQuiz =
-    JSON.parse(localStorage.getItem('joinedQuiz')) || {};
+    JSON.parse(
+        localStorage.getItem('joinedQuiz')
+    ) || {};
 
 
 // ======================================
@@ -155,6 +161,7 @@ function shuffleArray(array) {
     }
 
     return arr;
+
 }
 
 
@@ -165,37 +172,70 @@ function shuffleArray(array) {
 function formatSubjectForAPI(subject) {
 
     const cleanSub =
-        subject.toLowerCase().trim();
+        subject
+            .toLowerCase()
+            .trim();
 
-    if (cleanSub.includes('english'))
+
+    if (
+        cleanSub.includes('english')
+    )
         return 'english';
 
-    if (cleanSub.includes('math'))
+
+    if (
+        cleanSub.includes('math')
+    )
         return 'mathematics';
 
-    if (cleanSub.includes('physic'))
+
+    if (
+        cleanSub.includes('physic')
+    )
         return 'physics';
 
-    if (cleanSub.includes('chem'))
+
+    if (
+        cleanSub.includes('chem')
+    )
         return 'chemistry';
 
-    if (cleanSub.includes('biol'))
+
+    if (
+        cleanSub.includes('biol')
+    )
         return 'biology';
 
-    if (cleanSub.includes('econ'))
+
+    if (
+        cleanSub.includes('econ')
+    )
         return 'economics';
 
-    if (cleanSub.includes('gov'))
+
+    if (
+        cleanSub.includes('gov')
+    )
         return 'government';
 
-    if (cleanSub.includes('comm'))
+
+    if (
+        cleanSub.includes('comm')
+    )
         return 'commerce';
 
-    if (cleanSub.includes('lit'))
+
+    if (
+        cleanSub.includes('lit')
+    )
         return 'literature';
 
-    if (cleanSub.includes('account'))
+
+    if (
+        cleanSub.includes('account')
+    )
         return 'accounting';
+
 
     if (
         cleanSub.includes('crs') ||
@@ -203,24 +243,33 @@ function formatSubjectForAPI(subject) {
     )
         return 'christian-religious-knowledge';
 
+
     if (
         cleanSub.includes('irs') ||
         cleanSub.includes('islamic')
     )
         return 'islamic-religious-knowledge';
 
-    if (cleanSub.includes('geog'))
+
+    if (
+        cleanSub.includes('geog')
+    )
         return 'geography';
 
-    if (cleanSub.includes('agric'))
+
+    if (
+        cleanSub.includes('agric')
+    )
         return 'agricultural-science';
 
+
     return cleanSub;
+
 }
 
 
 // ======================================
-// GET LOCAL QUESTION BANK
+// GET LOCAL QUESTIONS
 // ======================================
 
 function getLocalQuestions(subject) {
@@ -230,8 +279,11 @@ function getLocalQuestions(subject) {
             ? questionBank
             : {};
 
+
     if (
-        Array.isArray(rawBank[subject])
+        Array.isArray(
+            rawBank[subject]
+        )
     ) {
 
         return rawBank[subject];
@@ -242,8 +294,12 @@ function getLocalQuestions(subject) {
     const matchingKey =
         Object.keys(rawBank).find(
             key =>
-                key.toLowerCase().trim() ===
-                subject.toLowerCase().trim()
+                key
+                    .toLowerCase()
+                    .trim() ===
+                subject
+                    .toLowerCase()
+                    .trim()
         );
 
 
@@ -255,20 +311,28 @@ function getLocalQuestions(subject) {
 
 
     const apiSubject =
-        formatSubjectForAPI(subject);
+        formatSubjectForAPI(
+            subject
+        );
 
 
     const formattedKey =
         Object.keys(rawBank).find(
             key =>
-                key.toLowerCase().trim() ===
-                apiSubject.toLowerCase().trim()
+                key
+                    .toLowerCase()
+                    .trim() ===
+                apiSubject
+                    .toLowerCase()
+                    .trim()
         );
 
 
     if (formattedKey) {
 
-        return rawBank[formattedKey];
+        return rawBank[
+            formattedKey
+        ];
 
     }
 
@@ -288,11 +352,79 @@ function normalizeQuestion(item) {
         return null;
 
 
-    // ----------------------------------
-    // ONLINE API QUESTION
-    // ----------------------------------
+    // ==================================
+    // CURRENT ALOC FORMAT
+    // ==================================
 
-    if (item.option) {
+    if (
+        item.text &&
+        item.options &&
+        item.correctAnswer
+    ) {
+
+        const optionMap =
+            item.options || {};
+
+
+        const rawOptions = [
+            optionMap.a,
+            optionMap.b,
+            optionMap.c,
+            optionMap.d
+        ].filter(
+            value =>
+                value !== undefined &&
+                value !== null &&
+                String(value).trim() !== ''
+        );
+
+
+        const answerKey =
+            String(
+                item.correctAnswer
+            )
+            .toLowerCase()
+            .trim();
+
+
+        const correctAnswerText =
+            optionMap[answerKey];
+
+
+        if (
+            !correctAnswerText ||
+            rawOptions.length === 0
+        ) {
+
+            return null;
+
+        }
+
+
+        return {
+
+            question:
+                item.text,
+
+            options:
+                rawOptions,
+
+            answer:
+                correctAnswerText
+
+        };
+
+    }
+
+
+    // ==================================
+    // OLD ALOC FORMAT
+    // ==================================
+
+    if (
+        item.question &&
+        item.option
+    ) {
 
         const optionMap =
             item.option || {};
@@ -312,13 +444,17 @@ function normalizeQuestion(item) {
 
 
         const rawAnswerKey =
-            String(item.answer || '')
-                .toLowerCase()
-                .trim();
+            String(
+                item.answer || ''
+            )
+            .toLowerCase()
+            .trim();
 
 
         const correctAnswerText =
-            optionMap[rawAnswerKey] ||
+            optionMap[
+                rawAnswerKey
+            ] ||
             item.answer;
 
 
@@ -338,9 +474,9 @@ function normalizeQuestion(item) {
     }
 
 
-    // ----------------------------------
-    // LOCAL QUESTION
-    // ----------------------------------
+    // ==================================
+    // LOCAL QUESTION FORMAT
+    // ==================================
 
     return {
 
@@ -350,7 +486,9 @@ function normalizeQuestion(item) {
             '',
 
         options:
-            Array.isArray(item.options)
+            Array.isArray(
+                item.options
+            )
                 ? item.options
                 : [],
 
@@ -363,7 +501,7 @@ function normalizeQuestion(item) {
 
 
 // ======================================
-// REMOVE DUPLICATE QUESTIONS
+// REMOVE DUPLICATES
 // ======================================
 
 function removeDuplicateQuestions(
@@ -414,107 +552,213 @@ function removeDuplicateQuestions(
 
 
 // ======================================
-// FETCH ONLINE QUESTIONS
+// FETCH ONLINE QUESTIONS FROM OUR
+// SECURE VERCEL API
 // ======================================
 
 async function fetchOnlineQuestions(
     apiSubject,
-    limit
+    requiredCount
 ) {
 
     try {
 
         console.log(
-            `Requesting ${limit} online ${apiSubject} questions...`
+            `Requesting ${requiredCount} ALOC questions for ${apiSubject}...`
         );
 
 
-        /*
-         * ALOC endpoint
-         *
-         * We request the questions directly.
-         */
+        let allQuestions = [];
 
-        const url =
-            `https://questions.aloc.com.ng/api/v2/q/${limit}?subject=${encodeURIComponent(apiSubject)}`;
+        let cursor = null;
+
+        let hasMore = true;
 
 
-        const response =
-            await fetch(
-                url,
-                {
-                    method: 'GET',
+        // ==================================
+        // ALOC MAXIMUM REQUEST = 50
+        // ==================================
 
-                    headers: {
-                        'Accept':
-                            'application/json',
-
-                        'Content-Type':
-                            'application/json',
-
-                        'AccessToken':
-                            'QB-69c5e3f16bf8f47'
-                    }
-                }
-            );
-
-
-        console.log(
-            `ALOC response for ${apiSubject}:`,
-            response.status
-        );
-
-
-        if (!response.ok) {
-
-            const errorText =
-                await response.text()
-                    .catch(() => '');
-
-
-            console.warn(
-                `ALOC returned HTTP ${response.status} for ${apiSubject}`,
-                errorText
-            );
-
-
-            return [];
-
-        }
-
-
-        const result =
-            await response.json();
-
-
-        console.log(
-            `ALOC data for ${apiSubject}:`,
-            result
-        );
-
-
-        if (
-            result &&
-            Array.isArray(result.data)
+        while (
+            allQuestions.length <
+                requiredCount &&
+            hasMore
         ) {
 
-            return result.data
-                .map(
-                    normalizeQuestion
+            const remaining =
+                requiredCount -
+                allQuestions.length;
+
+
+            const requestLimit =
+                Math.min(
+                    remaining,
+                    50
+                );
+
+
+            const params =
+                new URLSearchParams();
+
+
+            params.set(
+                'subject',
+                apiSubject
+            );
+
+
+            params.set(
+                'limit',
+                String(requestLimit)
+            );
+
+
+            if (cursor) {
+
+                params.set(
+                    'cursor',
+                    cursor
+                );
+
+            }
+
+
+            const url =
+                `/api/aloc?${params.toString()}`;
+
+
+            console.log(
+                'Calling:',
+                url
+            );
+
+
+            const response =
+                await fetch(
+                    url,
+                    {
+                        method: 'GET',
+
+                        headers: {
+                            'Accept':
+                                'application/json'
+                        }
+                    }
+                );
+
+
+            const result =
+                await response.json();
+
+
+            console.log(
+                `ALOC proxy response for ${apiSubject}:`,
+                response.status,
+                result
+            );
+
+
+            if (!response.ok) {
+
+                console.warn(
+                    `ALOC proxy returned ${response.status}`
+                );
+
+                break;
+
+            }
+
+
+            const pageQuestions =
+                Array.isArray(
+                    result.data
                 )
-                .filter(Boolean);
+                    ? result.data
+                    : [];
+
+
+            const normalized =
+                pageQuestions
+                    .map(
+                        normalizeQuestion
+                    )
+                    .filter(Boolean);
+
+
+            allQuestions = [
+                ...allQuestions,
+                ...normalized
+            ];
+
+
+            cursor =
+                result.pagination
+                    ?.nextCursor ||
+                null;
+
+
+            hasMore =
+                Boolean(
+                    result.pagination
+                        ?.hasMore
+                );
+
+
+            if (
+                pageQuestions.length === 0
+            ) {
+
+                break;
+
+            }
 
         }
 
 
-        return [];
+        // ==================================
+        // REMOVE DUPLICATES
+        // ==================================
+
+        allQuestions =
+            removeDuplicateQuestions(
+                allQuestions
+            );
+
+
+        // ==================================
+        // SHUFFLE
+        // ==================================
+
+        allQuestions =
+            shuffleArray(
+                allQuestions
+            );
+
+
+        // ==================================
+        // LIMIT
+        // ==================================
+
+        allQuestions =
+            allQuestions.slice(
+                0,
+                requiredCount
+            );
+
+
+        console.log(
+            `ALOC supplied ${allQuestions.length}/${requiredCount} ${apiSubject} questions`
+        );
+
+
+        return allQuestions;
 
     }
 
     catch (error) {
 
         console.warn(
-            `Could not fetch online questions for ${apiSubject}:`,
+            `Could not fetch ALOC questions for ${apiSubject}:`,
             error
         );
 
@@ -535,7 +779,7 @@ async function buildSubjectQuestions(
 ) {
 
     console.log(
-        `\n================================`
+        `================================`
     );
 
     console.log(
@@ -552,12 +796,14 @@ async function buildSubjectQuestions(
 
 
     // ==================================
-    // 1. ONLINE QUESTIONS FIRST
+    // 1. GET ONLINE QUESTIONS FIRST
     // ==================================
 
     let onlineQuestions =
         await fetchOnlineQuestions(
-            formatSubjectForAPI(subject),
+            formatSubjectForAPI(
+                subject
+            ),
             requiredCount
         );
 
@@ -568,26 +814,8 @@ async function buildSubjectQuestions(
         );
 
 
-    onlineQuestions =
-        shuffleArray(
-            onlineQuestions
-        );
-
-
-    onlineQuestions =
-        onlineQuestions.slice(
-            0,
-            requiredCount
-        );
-
-
-    console.log(
-        `${subject}: API supplied ${onlineQuestions.length}/${requiredCount}`
-    );
-
-
     // ==================================
-    // 2. CHECK REMAINING QUESTIONS
+    // 2. CHECK REMAINING
     // ==================================
 
     const remainingCount =
@@ -599,7 +827,13 @@ async function buildSubjectQuestions(
     // 3. LOCAL FALLBACK
     // ==================================
 
-    if (remainingCount > 0) {
+    if (
+        remainingCount > 0
+    ) {
+
+        console.log(
+            `${subject}: ALOC supplied ${onlineQuestions.length}.`
+        );
 
         console.log(
             `${subject}: Using local questions for remaining ${remainingCount}.`
@@ -620,16 +854,15 @@ async function buildSubjectQuestions(
                 .filter(Boolean);
 
 
-        // Remove duplicates inside local bank
-
         normalizedLocalQuestions =
             removeDuplicateQuestions(
                 normalizedLocalQuestions
             );
 
 
-        // Remove questions already
-        // supplied by online API
+        // ==================================
+        // REMOVE ONLINE DUPLICATES
+        // ==================================
 
         const onlineQuestionTexts =
             new Set(
@@ -679,7 +912,7 @@ async function buildSubjectQuestions(
 
 
     // ==================================
-    // 4. FINAL CLEANUP
+    // FINAL CLEANUP
     // ==================================
 
     onlineQuestions =
@@ -693,10 +926,6 @@ async function buildSubjectQuestions(
             onlineQuestions
         );
 
-
-    // ==================================
-    // 5. FINAL SAFETY LIMIT
-    // ==================================
 
     onlineQuestions =
         onlineQuestions.slice(
@@ -716,7 +945,7 @@ async function buildSubjectQuestions(
 
 
 // ======================================
-// FETCH / BUILD ALL QUIZ QUESTIONS
+// INITIALIZE QUIZ SESSION
 // ======================================
 
 async function initializeQuizSession() {
@@ -758,6 +987,11 @@ async function initializeQuizSession() {
             cleanSubject ===
                 'english';
 
+
+        // ==================================
+        // ENGLISH = 60
+        // OTHER SUBJECTS = 40
+        // ==================================
 
         const requiredCount =
             isEnglish
@@ -852,11 +1086,15 @@ window.addEventListener(
 
 
         const waitingRoom =
-            getEl('waiting-room');
+            getEl(
+                'waiting-room'
+            );
 
 
         const quizContent =
-            getEl('quiz-content');
+            getEl(
+                'quiz-content'
+            );
 
 
         if (waitingRoom)
@@ -870,7 +1108,9 @@ window.addEventListener(
 
 
         const studentNameEl =
-            getEl('student-name');
+            getEl(
+                'student-name'
+            );
 
 
         if (studentNameEl) {
@@ -1435,9 +1675,9 @@ document.addEventListener(
     'click',
     function (e) {
 
-        // --------------------------------
+        // ==================================
         // NEXT
-        // --------------------------------
+        // ==================================
 
         if (
             e.target &&
@@ -1472,9 +1712,9 @@ document.addEventListener(
         }
 
 
-        // --------------------------------
+        // ==================================
         // PREVIOUS
-        // --------------------------------
+        // ==================================
 
         if (
             e.target &&
@@ -1496,9 +1736,9 @@ document.addEventListener(
         }
 
 
-        // --------------------------------
+        // ==================================
         // SUBMIT
-        // --------------------------------
+        // ==================================
 
         if (
             e.target &&
