@@ -10,19 +10,13 @@ import { supabase } from './supabase.js';
 // ======================================
 
 const loggedInStudent =
-    JSON.parse(
-        localStorage.getItem('loggedInStudent')
-    ) || {};
+    JSON.parse(localStorage.getItem('loggedInStudent')) || {};
 
 const studentData =
-    JSON.parse(
-        localStorage.getItem('studentData')
-    ) || {};
+    JSON.parse(localStorage.getItem('studentData')) || {};
 
 const joinedQuiz =
-    JSON.parse(
-        localStorage.getItem('joinedQuiz')
-    ) || {};
+    JSON.parse(localStorage.getItem('joinedQuiz')) || {};
 
 
 // ======================================
@@ -64,10 +58,7 @@ if (
     Array.isArray(joinedQuiz.subjects) &&
     joinedQuiz.subjects.length > 0
 ) {
-
-    selectedSubjects =
-        joinedQuiz.subjects;
-
+    selectedSubjects = joinedQuiz.subjects;
 }
 
 else if (
@@ -75,10 +66,7 @@ else if (
     Array.isArray(studentData.subjects) &&
     studentData.subjects.length > 0
 ) {
-
-    selectedSubjects =
-        studentData.subjects;
-
+    selectedSubjects = studentData.subjects;
 }
 
 else if (
@@ -86,21 +74,16 @@ else if (
     Array.isArray(loggedInStudent.subjects) &&
     loggedInStudent.subjects.length > 0
 ) {
-
-    selectedSubjects =
-        loggedInStudent.subjects;
-
+    selectedSubjects = loggedInStudent.subjects;
 }
 
 else {
-
     selectedSubjects = [
         'Use of English',
         'Mathematics',
         'Physics',
         'Chemistry'
     ];
-
 }
 
 
@@ -109,15 +92,12 @@ else {
 // ======================================
 
 let currentSubjectIndex = 0;
-
 let currentQuestionIndex = 0;
 
 let activeSessionQuestions = {};
-
 let userAnswers = {};
 
 let timerInterval = null;
-
 let timeRemaining = 7200;
 
 let quizSubmitting = false;
@@ -139,11 +119,7 @@ function shuffleArray(array) {
 
     const arr = [...array];
 
-    for (
-        let i = arr.length - 1;
-        i > 0;
-        i--
-    ) {
+    for (let i = arr.length - 1; i > 0; i--) {
 
         const j =
             Math.floor(
@@ -157,11 +133,9 @@ function shuffleArray(array) {
             arr[j],
             arr[i]
         ];
-
     }
 
     return arr;
-
 }
 
 
@@ -172,70 +146,39 @@ function shuffleArray(array) {
 function formatSubjectForAPI(subject) {
 
     const cleanSub =
-        subject
+        String(subject)
             .toLowerCase()
             .trim();
 
-
-    if (
-        cleanSub.includes('english')
-    )
+    if (cleanSub.includes('english'))
         return 'english';
 
-
-    if (
-        cleanSub.includes('math')
-    )
+    if (cleanSub.includes('math'))
         return 'mathematics';
 
-
-    if (
-        cleanSub.includes('physic')
-    )
+    if (cleanSub.includes('physic'))
         return 'physics';
 
-
-    if (
-        cleanSub.includes('chem')
-    )
+    if (cleanSub.includes('chem'))
         return 'chemistry';
 
-
-    if (
-        cleanSub.includes('biol')
-    )
+    if (cleanSub.includes('biol'))
         return 'biology';
 
-
-    if (
-        cleanSub.includes('econ')
-    )
+    if (cleanSub.includes('econ'))
         return 'economics';
 
-
-    if (
-        cleanSub.includes('gov')
-    )
+    if (cleanSub.includes('gov'))
         return 'government';
 
-
-    if (
-        cleanSub.includes('comm')
-    )
+    if (cleanSub.includes('comm'))
         return 'commerce';
 
-
-    if (
-        cleanSub.includes('lit')
-    )
+    if (cleanSub.includes('lit'))
         return 'literature';
 
-
-    if (
-        cleanSub.includes('account')
-    )
+    if (cleanSub.includes('account'))
         return 'accounting';
-
 
     if (
         cleanSub.includes('crs') ||
@@ -243,33 +186,24 @@ function formatSubjectForAPI(subject) {
     )
         return 'christian-religious-knowledge';
 
-
     if (
         cleanSub.includes('irs') ||
         cleanSub.includes('islamic')
     )
         return 'islamic-religious-knowledge';
 
-
-    if (
-        cleanSub.includes('geog')
-    )
+    if (cleanSub.includes('geog'))
         return 'geography';
 
-
-    if (
-        cleanSub.includes('agric')
-    )
+    if (cleanSub.includes('agric'))
         return 'agricultural-science';
 
-
     return cleanSub;
-
 }
 
 
 // ======================================
-// GET LOCAL QUESTIONS
+// GET LOCAL QUESTION BANK
 // ======================================
 
 function getLocalQuestions(subject) {
@@ -279,66 +213,38 @@ function getLocalQuestions(subject) {
             ? questionBank
             : {};
 
-
     if (
-        Array.isArray(
-            rawBank[subject]
-        )
+        Array.isArray(rawBank[subject])
     ) {
-
         return rawBank[subject];
-
     }
-
 
     const matchingKey =
         Object.keys(rawBank).find(
             key =>
-                key
-                    .toLowerCase()
-                    .trim() ===
-                subject
-                    .toLowerCase()
-                    .trim()
+                key.toLowerCase().trim() ===
+                subject.toLowerCase().trim()
         );
-
 
     if (matchingKey) {
-
         return rawBank[matchingKey];
-
     }
 
-
     const apiSubject =
-        formatSubjectForAPI(
-            subject
-        );
-
+        formatSubjectForAPI(subject);
 
     const formattedKey =
         Object.keys(rawBank).find(
             key =>
-                key
-                    .toLowerCase()
-                    .trim() ===
-                apiSubject
-                    .toLowerCase()
-                    .trim()
+                key.toLowerCase().trim() ===
+                apiSubject.toLowerCase().trim()
         );
 
-
     if (formattedKey) {
-
-        return rawBank[
-            formattedKey
-        ];
-
+        return rawBank[formattedKey];
     }
 
-
     return [];
-
 }
 
 
@@ -353,18 +259,16 @@ function normalizeQuestion(item) {
 
 
     // ==================================
-    // CURRENT ALOC FORMAT
+    // CURRENT ALOC API FORMAT
     // ==================================
 
     if (
         item.text &&
-        item.options &&
-        item.correctAnswer
+        item.options
     ) {
 
         const optionMap =
             item.options || {};
-
 
         const rawOptions = [
             optionMap.a,
@@ -378,28 +282,19 @@ function normalizeQuestion(item) {
                 String(value).trim() !== ''
         );
 
-
         const answerKey =
             String(
-                item.correctAnswer
+                item.correctAnswer ||
+                item.answer ||
+                ''
             )
             .toLowerCase()
             .trim();
 
-
         const correctAnswerText =
-            optionMap[answerKey];
-
-
-        if (
-            !correctAnswerText ||
-            rawOptions.length === 0
-        ) {
-
-            return null;
-
-        }
-
+            optionMap[answerKey] ||
+            item.correctAnswer ||
+            item.answer;
 
         return {
 
@@ -413,22 +308,17 @@ function normalizeQuestion(item) {
                 correctAnswerText
 
         };
-
     }
 
 
     // ==================================
-    // OLD ALOC FORMAT
+    // LEGACY ALOC FORMAT
     // ==================================
 
-    if (
-        item.question &&
-        item.option
-    ) {
+    if (item.option) {
 
         const optionMap =
             item.option || {};
-
 
         const rawOptions = [
             optionMap.a,
@@ -442,7 +332,6 @@ function normalizeQuestion(item) {
                 String(value).trim() !== ''
         );
 
-
         const rawAnswerKey =
             String(
                 item.answer || ''
@@ -450,13 +339,9 @@ function normalizeQuestion(item) {
             .toLowerCase()
             .trim();
 
-
         const correctAnswerText =
-            optionMap[
-                rawAnswerKey
-            ] ||
+            optionMap[rawAnswerKey] ||
             item.answer;
-
 
         return {
 
@@ -470,7 +355,6 @@ function normalizeQuestion(item) {
                 correctAnswerText
 
         };
-
     }
 
 
@@ -486,9 +370,7 @@ function normalizeQuestion(item) {
             '',
 
         options:
-            Array.isArray(
-                item.options
-            )
+            Array.isArray(item.options)
                 ? item.options
                 : [],
 
@@ -496,269 +378,177 @@ function normalizeQuestion(item) {
             item.answer
 
     };
-
 }
 
 
 // ======================================
-// REMOVE DUPLICATES
+// REMOVE DUPLICATE QUESTIONS
 // ======================================
 
-function removeDuplicateQuestions(
-    questions
-) {
+function removeDuplicateQuestions(questions) {
 
-    const seen =
-        new Set();
+    const seen = new Set();
 
+    return questions.filter(q => {
 
-    return questions.filter(
-        q => {
+        const questionText =
+            String(
+                q.question || ''
+            )
+            .trim()
+            .toLowerCase();
 
-            const questionText =
-                String(
-                    q.question || ''
-                )
-                .trim()
-                .toLowerCase();
+        if (!questionText)
+            return false;
 
+        if (seen.has(questionText))
+            return false;
 
-            if (!questionText)
-                return false;
+        seen.add(questionText);
 
-
-            if (
-                seen.has(
-                    questionText
-                )
-            ) {
-
-                return false;
-
-            }
-
-
-            seen.add(
-                questionText
-            );
-
-
-            return true;
-
-        }
-    );
-
+        return true;
+    });
 }
 
 
 // ======================================
-// FETCH ONLINE QUESTIONS FROM OUR
-// SECURE VERCEL API
+// FETCH ONLINE QUESTIONS
 // ======================================
 
 async function fetchOnlineQuestions(
     apiSubject,
-    requiredCount
+    limit
 ) {
 
     try {
 
         console.log(
-            `Requesting ${requiredCount} ALOC questions for ${apiSubject}...`
+            `Requesting ${limit} online ${apiSubject} questions...`
         );
 
 
-        let allQuestions = [];
-
-        let cursor = null;
-
-        let hasMore = true;
-
-
         // ==================================
-        // ALOC MAXIMUM REQUEST = 50
+        // CALL OUR VERCEL SERVERLESS FUNCTION
         // ==================================
 
-        while (
-            allQuestions.length <
-                requiredCount &&
-            hasMore
-        ) {
-
-            const remaining =
-                requiredCount -
-                allQuestions.length;
+        const url =
+            `/api/aloc?subject=${encodeURIComponent(apiSubject)}&limit=${limit}`;
 
 
-            const requestLimit =
-                Math.min(
-                    remaining,
-                    50
-                );
+        const response =
+            await fetch(
+                url,
+                {
+                    method: 'GET',
 
-
-            const params =
-                new URLSearchParams();
-
-
-            params.set(
-                'subject',
-                apiSubject
-            );
-
-
-            params.set(
-                'limit',
-                String(requestLimit)
-            );
-
-
-            if (cursor) {
-
-                params.set(
-                    'cursor',
-                    cursor
-                );
-
-            }
-
-
-            const url =
-                `/api/aloc?${params.toString()}`;
-
-
-            console.log(
-                'Calling:',
-                url
-            );
-
-
-            const response =
-                await fetch(
-                    url,
-                    {
-                        method: 'GET',
-
-                        headers: {
-                            'Accept':
-                                'application/json'
-                        }
+                    headers: {
+                        'Accept':
+                            'application/json'
                     }
-                );
-
-
-            const result =
-                await response.json();
-
-
-            console.log(
-                `ALOC proxy response for ${apiSubject}:`,
-                response.status,
-                result
-            );
-
-
-            if (!response.ok) {
-
-                console.warn(
-                    `ALOC proxy returned ${response.status}`
-                );
-
-                break;
-
-            }
-
-
-            const pageQuestions =
-                Array.isArray(
-                    result.data
-                )
-                    ? result.data
-                    : [];
-
-
-            const normalized =
-                pageQuestions
-                    .map(
-                        normalizeQuestion
-                    )
-                    .filter(Boolean);
-
-
-            allQuestions = [
-                ...allQuestions,
-                ...normalized
-            ];
-
-
-            cursor =
-                result.pagination
-                    ?.nextCursor ||
-                null;
-
-
-            hasMore =
-                Boolean(
-                    result.pagination
-                        ?.hasMore
-                );
-
-
-            if (
-                pageQuestions.length === 0
-            ) {
-
-                break;
-
-            }
-
-        }
-
-
-        // ==================================
-        // REMOVE DUPLICATES
-        // ==================================
-
-        allQuestions =
-            removeDuplicateQuestions(
-                allQuestions
-            );
-
-
-        // ==================================
-        // SHUFFLE
-        // ==================================
-
-        allQuestions =
-            shuffleArray(
-                allQuestions
-            );
-
-
-        // ==================================
-        // LIMIT
-        // ==================================
-
-        allQuestions =
-            allQuestions.slice(
-                0,
-                requiredCount
+                }
             );
 
 
         console.log(
-            `ALOC supplied ${allQuestions.length}/${requiredCount} ${apiSubject} questions`
+            `ALOC server response for ${apiSubject}:`,
+            response.status
         );
 
 
-        return allQuestions;
+        if (!response.ok) {
+
+            const errorText =
+                await response.text()
+                    .catch(() => '');
+
+            console.error(
+                `ALOC request failed for ${apiSubject}:`,
+                response.status,
+                errorText
+            );
+
+            return [];
+
+        }
+
+
+        const result =
+            await response.json();
+
+
+        console.log(
+            `ALOC data for ${apiSubject}:`,
+            result
+        );
+
+
+        // ==================================
+        // FIND QUESTION ARRAY
+        // ==================================
+
+        let questionData = [];
+
+
+        if (
+            result &&
+            Array.isArray(result.data)
+        ) {
+
+            questionData =
+                result.data;
+
+        }
+
+        else if (
+            result &&
+            Array.isArray(result.questions)
+        ) {
+
+            questionData =
+                result.questions;
+
+        }
+
+        else if (
+            Array.isArray(result)
+        ) {
+
+            questionData =
+                result;
+
+        }
+
+
+        if (
+            !Array.isArray(questionData)
+        ) {
+
+            console.warn(
+                `ALOC returned no question array for ${apiSubject}.`
+            );
+
+            return [];
+
+        }
+
+
+        return questionData
+            .map(normalizeQuestion)
+            .filter(Boolean)
+            .filter(
+                q =>
+                    q.question &&
+                    q.options &&
+                    q.options.length > 0 &&
+                    q.answer
+            );
 
     }
 
     catch (error) {
 
-        console.warn(
-            `Could not fetch ALOC questions for ${apiSubject}:`,
+        console.error(
+            `Could not fetch online questions for ${apiSubject}:`,
             error
         );
 
@@ -796,14 +586,12 @@ async function buildSubjectQuestions(
 
 
     // ==================================
-    // 1. GET ONLINE QUESTIONS FIRST
+    // 1. ONLINE QUESTIONS FIRST
     // ==================================
 
     let onlineQuestions =
         await fetchOnlineQuestions(
-            formatSubjectForAPI(
-                subject
-            ),
+            formatSubjectForAPI(subject),
             requiredCount
         );
 
@@ -814,8 +602,26 @@ async function buildSubjectQuestions(
         );
 
 
+    onlineQuestions =
+        shuffleArray(
+            onlineQuestions
+        );
+
+
+    onlineQuestions =
+        onlineQuestions.slice(
+            0,
+            requiredCount
+        );
+
+
+    console.log(
+        `${subject}: API supplied ${onlineQuestions.length}/${requiredCount}`
+    );
+
+
     // ==================================
-    // 2. CHECK REMAINING
+    // 2. CHECK REMAINING QUESTIONS
     // ==================================
 
     const remainingCount =
@@ -827,30 +633,20 @@ async function buildSubjectQuestions(
     // 3. LOCAL FALLBACK
     // ==================================
 
-    if (
-        remainingCount > 0
-    ) {
+    if (remainingCount > 0) {
 
-        console.log(
-            `${subject}: ALOC supplied ${onlineQuestions.length}.`
-        );
-
-        console.log(
-            `${subject}: Using local questions for remaining ${remainingCount}.`
+        console.warn(
+            `${subject}: API supplied only ${onlineQuestions.length}. Using local questions for remaining ${remainingCount}.`
         );
 
 
         const localQuestions =
-            getLocalQuestions(
-                subject
-            );
+            getLocalQuestions(subject);
 
 
         let normalizedLocalQuestions =
             localQuestions
-                .map(
-                    normalizeQuestion
-                )
+                .map(normalizeQuestion)
                 .filter(Boolean);
 
 
@@ -859,10 +655,6 @@ async function buildSubjectQuestions(
                 normalizedLocalQuestions
             );
 
-
-        // ==================================
-        // REMOVE ONLINE DUPLICATES
-        // ==================================
 
         const onlineQuestionTexts =
             new Set(
@@ -912,7 +704,7 @@ async function buildSubjectQuestions(
 
 
     // ==================================
-    // FINAL CLEANUP
+    // 4. FINAL CLEANUP
     // ==================================
 
     onlineQuestions =
@@ -926,6 +718,10 @@ async function buildSubjectQuestions(
             onlineQuestions
         );
 
+
+    // ==================================
+    // 5. FINAL SAFETY LIMIT
+    // ==================================
 
     onlineQuestions =
         onlineQuestions.slice(
@@ -945,7 +741,7 @@ async function buildSubjectQuestions(
 
 
 // ======================================
-// INITIALIZE QUIZ SESSION
+// FETCH / BUILD ALL QUIZ QUESTIONS
 // ======================================
 
 async function initializeQuizSession() {
@@ -976,7 +772,7 @@ async function initializeQuizSession() {
     ) {
 
         const cleanSubject =
-            sub
+            String(sub)
                 .toLowerCase()
                 .trim();
 
@@ -987,11 +783,6 @@ async function initializeQuizSession() {
             cleanSubject ===
                 'english';
 
-
-        // ==================================
-        // ENGLISH = 60
-        // OTHER SUBJECTS = 40
-        // ==================================
 
         const requiredCount =
             isEnglish
@@ -1086,15 +877,11 @@ window.addEventListener(
 
 
         const waitingRoom =
-            getEl(
-                'waiting-room'
-            );
+            getEl('waiting-room');
 
 
         const quizContent =
-            getEl(
-                'quiz-content'
-            );
+            getEl('quiz-content');
 
 
         if (waitingRoom)
@@ -1108,9 +895,7 @@ window.addEventListener(
 
 
         const studentNameEl =
-            getEl(
-                'student-name'
-            );
+            getEl('student-name');
 
 
         if (studentNameEl) {
@@ -1298,7 +1083,6 @@ function renderSubjectTabs() {
 
 
                 renderSubjectTabs();
-
 
                 loadQuestion();
 
@@ -1704,7 +1488,6 @@ document.addEventListener(
 
                 currentQuestionIndex++;
 
-
                 loadQuestion();
 
             }
@@ -1727,7 +1510,6 @@ document.addEventListener(
             ) {
 
                 currentQuestionIndex--;
-
 
                 loadQuestion();
 
