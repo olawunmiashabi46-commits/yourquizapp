@@ -1,0 +1,345 @@
+/* ======================================
+   FIXED SINGLE-LAYOUT (NO SCROLL / NO ZOOM)
+====================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 15px;
+    overflow-x: hidden; /* Prevents side-to-side scrolling */
+    color: #1e293b;
+}
+
+.result-container {
+    width: 100%;
+    max-width: 600px; /* Fixed maximum width for structured results */
+    margin: auto;
+}
+
+/* ======================================
+   HEADER
+====================================== */
+.result-header {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.result-header h1 {
+    font-size: 26px;
+    color: #0f172a; /* Deep Navy Header */
+    margin-bottom: 10px;
+}
+
+#student-name {
+    font-size: 17px;
+    font-weight: bold;
+    color: #1e3a8a; /* Deep Navy */
+    margin-bottom: 8px;
+}
+
+.result-message {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ======================================
+   STUDENT PERFORMANCE
+====================================== */
+.performance-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.performance-card h2 {
+    color: #0f172a;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.performance-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.performance-item {
+    padding: 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.performance-item span {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.performance-item strong {
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.performance-item.correct strong {
+    color: #059669; /* Emerald Green */
+}
+
+.performance-item.wrong strong {
+    color: #dc2626; /* Crimson Red */
+}
+
+.performance-item.score-item {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.performance-item.score-item strong {
+    font-size: 30px;
+    color: #1e3a8a; /* Deep Navy */
+}
+
+.performance-message {
+    margin-top: 20px;
+    padding: 18px;
+    background: #f8fafc;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.performance-message h3 {
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.performance-message p {
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* ======================================
+   GENERAL RESULT CARDS
+====================================== */
+.result-card,
+.improvement-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.result-card h2,
+.improvement-card h2 {
+    color: #0f172a;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* ======================================
+   SUBJECT SCORES
+====================================== */
+.score-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+}
+
+.score-card:last-child {
+    margin-bottom: 0;
+}
+
+.subject {
+    font-weight: bold;
+    color: #334155;
+}
+
+.score {
+    font-size: 21px;
+    font-weight: bold;
+    color: #059669; /* Emerald Green */
+}
+
+/* ======================================
+   FEEDBACK
+====================================== */
+.feedback-card {
+    padding: 16px;
+    border-left: 4px solid #1e3a8a; /* Deep Navy Accent */
+    background: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.feedback-card:last-child {
+    margin-bottom: 0;
+}
+
+.feedback-card h3 {
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.feedback-card p {
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* ======================================
+   AREA TO IMPROVE
+====================================== */
+.improvement-card {
+    text-align: center;
+}
+
+#improvement-message {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* ======================================
+   REVIEW ANSWERS
+====================================== */
+.review-intro {
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.review-question {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    background: #f8fafc;
+}
+
+.review-question:last-child {
+    margin-bottom: 0;
+}
+
+.review-subject {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.review-number {
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.review-question-text {
+    color: #334155;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Student answer */
+.student-answer {
+    padding: 11px 13px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.student-answer.correct {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.student-answer.incorrect {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Correct answer */
+.correct-answer {
+    padding: 11px 13px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+    font-size: 14px;
+}
+
+/* No answer */
+.no-answer {
+    padding: 11px 13px;
+    border-radius: 8px;
+    background: #fffbe6;
+    color: #92400e;
+    border: 1px solid #fef08a;
+    font-size: 14px;
+}
+
+/* ======================================
+   BUTTONS
+====================================== */
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.result-buttons button {
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#go-back-button {
+    background: #1e3a8a; /* Deep Navy */
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+}
+
+#go-back-button:hover {
+    background: #1e40af;
+}
+
+#try-again-button {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%); /* Emerald Gradient */
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+#try-again-button:hover {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+    box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+}

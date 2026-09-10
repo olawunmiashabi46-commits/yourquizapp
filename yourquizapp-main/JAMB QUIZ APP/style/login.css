@@ -1,0 +1,163 @@
+/* ======================================
+   GLOBAL RESET & FONTS
+====================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+    overflow-x: hidden;
+    color: #1e293b;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.login-box {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #0f172a; /* Deep Navy Header */
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #334155;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    color: #0f172a;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #059669; /* Emerald Green focus */
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+/* Password Field Wrapper & Eye Button Layout */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 45px !important;
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 14px;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0;
+    line-height: 1;
+    color: #64748b;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.toggle-password-btn:hover {
+    opacity: 1;
+    color: #0f172a;
+}
+
+#login-button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #059669 0%, #047857 100%); /* Emerald Gradient */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+#login-button:hover {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+    box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+}
+
+#error-message {
+    text-align: center;
+    color: #dc2626; /* Crimson Red */
+    margin-top: 15px;
+    min-height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.account-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+#create-account-button {
+    border: none;
+    background: none;
+    color: #1e3a8a; /* Deep Navy Link */
+    font-weight: bold;
+    cursor: pointer;
+    font-size: inherit;
+    transition: color 0.2s ease;
+}
+
+#create-account-button:hover {
+    color: #059669;
+    text-decoration: underline;
+}
