@@ -1,0 +1,166 @@
+/* ======================================
+    FIXED SINGLE-LAYOUT (MATCHED TO QUIZ.CSS)
+====================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8; /* Soft blue-gray background matching Quiz theme */
+    color: #1e293b;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Prevents side-to-side scrolling */
+}
+
+.container {
+    width: 100%;
+    max-width: 480px; /* Fixed card size for both desktop & mobile */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.welcome-box {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); /* Soft elevated shadow */
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #0f172a; /* Deep Navy text */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #64748b; /* Muted Slate text */
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+    font-size: 14px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #f8fafc;
+    color: #0f172a;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #059669; /* Emerald Green focus ring */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+/* ======================================
+   SUBJECT SELECTION 2-COLUMN GRID (EMERALD & NAVY THEME)
+====================================== */
+#subjects-container,
+.subjects-grid,
+.subjects-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Forces 2 subjects per row */
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+}
+
+#subjects-container label,
+.subjects-grid label,
+.subjects-container label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 12px 10px !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    background: #f8fafc !important;
+    color: #334155 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease !important;
+}
+
+#subjects-container label:hover,
+.subjects-grid label:hover,
+.subjects-container label:hover {
+    background: #ecfdf5 !important; /* Soft Emerald tint on hover */
+    border-color: #059669 !important;
+    color: #065f46 !important;
+}
+
+#subjects-container input[type="checkbox"],
+.subjects-grid input[type="checkbox"],
+.subjects-container input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    cursor: pointer !important;
+    accent-color: #059669 !important; /* Green checkmark matching quiz buttons */
+    flex-shrink: 0 !important;
+}
+
+/* Primary Action Button (Emerald Green Gradient) */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#error-message {
+    color: #dc2626;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
