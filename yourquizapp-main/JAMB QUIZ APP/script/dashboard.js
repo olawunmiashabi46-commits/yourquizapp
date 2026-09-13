@@ -24,6 +24,7 @@ const resultsButton = document.getElementById('results-button');
 const leaderboardButton = document.getElementById('leaderboard-button');
 const joinQuizButton = document.getElementById('join-quiz-button');
 const createQuizButton = document.getElementById('create-quiz-button');
+const adminLoginButton = document.getElementById('admin-login-button');
 const logoutButton = document.getElementById('logout-button');
 
 // ======================================
@@ -59,7 +60,7 @@ if (startQuizButton) {
 if (resultsButton) {
     resultsButton.addEventListener('click', function () {
         const studentResult = JSON.parse(
-            localStorage.getItem('studentResult')
+            localStorage.getItem('lastQuizResult')
         );
 
         if (!studentResult) {
@@ -103,6 +104,16 @@ if (joinQuizButton) {
 if (createQuizButton) {
     createQuizButton.addEventListener('click', function () {
         window.location.href = 'create-quiz.html';
+    });
+}
+
+// ======================================
+// ADMIN LOGIN
+// ======================================
+
+if (adminLoginButton) {
+    adminLoginButton.addEventListener('click', function () {
+        window.location.href = 'admin-login.html';
     });
 }
 
