@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/JAMB%20QUIZ%20APP/index.html"
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/JAMB%20QUIZ%20APP/:path*"
     }
   ]
 }
