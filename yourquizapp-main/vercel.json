@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/JAMB%20QUIZ%20APP/index.html"
+    }
+  ]
+}
