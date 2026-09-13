@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Admin Dashboard | JAMB Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="style/admin.css"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="admin-dashboard">
+
+            <!-- ==============================
+                 HEADER
+            =============================== -->
+
+            <div class="dashboard-header">
+
+                <div>
+
+                    <h1>Admin Dashboard</h1>
+
+                    <p class="subtitle">
+                        Select a subject to add questions.
+                    </p>
+
+                </div>
+
+                <div class="admin-icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 SUBJECTS
+            =============================== -->
+
+            <div class="form-group">
+
+                <label>
+                    Select Subject
+                </label>
+
+
+                <div class="subjects-grid">
+
+
+                    <!-- ENGLISH -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="English"
+                    >
+
+                        <i data-lucide="book-open"></i>
+
+                        <span>
+                            English
+                        </span>
+
+                    </button>
+
+
+                    <!-- MATHEMATICS -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Mathematics"
+                    >
+
+                        <i data-lucide="calculator"></i>
+
+                        <span>
+                            Mathematics
+                        </span>
+
+                    </button>
+
+
+                    <!-- PHYSICS -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Physics"
+                    >
+
+                        <i data-lucide="atom"></i>
+
+                        <span>
+                            Physics
+                        </span>
+
+                    </button>
+
+
+                    <!-- CHEMISTRY -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Chemistry"
+                    >
+
+                        <i data-lucide="flask-conical"></i>
+
+                        <span>
+                            Chemistry
+                        </span>
+
+                    </button>
+
+
+                    <!-- BIOLOGY -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Biology"
+                    >
+
+                        <i data-lucide="leaf"></i>
+
+                        <span>
+                            Biology
+                        </span>
+
+                    </button>
+
+
+                    <!-- ECONOMICS -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Economics"
+                    >
+
+                        <i data-lucide="trending-up"></i>
+
+                        <span>
+                            Economics
+                        </span>
+
+                    </button>
+
+
+                    <!-- GOVERNMENT -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Government"
+                    >
+
+                        <i data-lucide="landmark"></i>
+
+                        <span>
+                            Government
+                        </span>
+
+                    </button>
+
+
+                    <!-- LITERATURE -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Literature in English"
+                    >
+
+                        <i data-lucide="library"></i>
+
+                        <span>
+                            Literature in English
+                        </span>
+
+                    </button>
+
+
+                    <!-- HISTORY -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="History"
+                    >
+
+                        <i data-lucide="scroll-text"></i>
+
+                        <span>
+                            History
+                        </span>
+
+                    </button>
+
+
+                    <!-- AGRICULTURAL SCIENCE -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Agricultural Science"
+                    >
+
+                        <i data-lucide="wheat"></i>
+
+                        <span>
+                            Agricultural Science
+                        </span>
+
+                    </button>
+
+
+                    <!-- CRK -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="CRK"
+                    >
+
+                        <i data-lucide="book-marked"></i>
+
+                        <span>
+                            CRK
+                        </span>
+
+                    </button>
+
+
+                    <!-- FINANCIAL ACCOUNTING -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Financial Accounting"
+                    >
+
+                        <i data-lucide="file-spreadsheet"></i>
+
+                        <span>
+                            Financial Accounting
+                        </span>
+
+                    </button>
+
+
+                    <!-- COMMERCE -->
+
+                    <button
+                        class="subject-button"
+                        data-subject="Commerce"
+                    >
+
+                        <i data-lucide="shopping-bag"></i>
+
+                        <span>
+                            Commerce
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 BACK TO HOME
+            =============================== -->
+
+            <a
+                href="index.html"
+                class="back-link"
+            >
+
+                <i data-lucide="arrow-left"></i>
+
+                Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- LUCIDE ICONS -->
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+
+    <!-- ADMIN JAVASCRIPT -->
+
+    <script src="script/admin.js"></script>
+
+</body>
+
+</html>

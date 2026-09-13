@@ -5,8 +5,11 @@
 
     <meta charset="UTF-8">
 
-    <!-- ADD THIS tag to force full desktop layout on phones: -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
     <title>Create Account | JAMB Quiz</title>
 
     <link
@@ -22,7 +25,10 @@
 
         <div class="register-box">
 
-            <h1>🎓 JAMB QUIZ</h1>
+            <h1>
+                <i data-lucide="graduation-cap"></i>
+                JAMB QUIZ
+            </h1>
 
             <p class="subtitle">
                 Create your student account
@@ -63,23 +69,66 @@
             </div>
 
 
-            <!-- Password Field in register.html -->
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <div class="password-wrapper">
-                        <input type="password" id="password" placeholder="Create a password" />
-                        <button type="button" id="toggle-password" class="toggle-password-btn">👁️</button>
-                    </div>
-                    </div>
+            <!-- PASSWORD -->
 
-                    <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <div class="password-wrapper">
-                        <input type="password" id="confirm-password" placeholder="Confirm your password" />
-                        <button type="button" id="toggle-confirm-password" class="toggle-password-btn">👁️</button>
-                    </div>
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                    />
+
+                    <button
+                        type="button"
+                        id="toggle-password"
+                        class="toggle-password-btn"
+                        aria-label="Show or hide password"
+                    >
+                        <i data-lucide="eye"></i>
+                    </button>
+
                 </div>
-                
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="form-group">
+
+                <label for="confirm-password">
+                    Confirm Password
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Confirm your password"
+                    />
+
+                    <button
+                        type="button"
+                        id="toggle-confirm-password"
+                        class="toggle-password-btn"
+                        aria-label="Show or hide confirm password"
+                    >
+                        <i data-lucide="eye"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
             <!-- REGISTER -->
 
             <button id="register-button">
@@ -109,7 +158,18 @@
     </div>
 
 
-    <script type="module" src="script/register.js"></script>
+    <!-- Lucide Icons -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script
+        type="module"
+        src="script/register.js"
+    ></script>
 
 </body>
 

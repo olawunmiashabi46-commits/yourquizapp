@@ -2,29 +2,67 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <!-- ADD THIS tag to force full desktop layout on phones: -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
     <title>Leaderboard</title>
-    <link rel="stylesheet" href="style/leaderboard.css">
+
+    <link
+        rel="stylesheet"
+        href="style/leaderboard.css"
+    >
+
 </head>
 
 <body>
 
     <div class="leaderboard-container">
 
+
+        <!-- HEADER -->
+
         <div class="leaderboard-header">
-            <h1>🏆 Leaderboard</h1>
-            <p>See how students performed.</p>
+
+            <h1>
+
+                <i data-lucide="trophy"></i>
+
+                Leaderboard
+
+            </h1>
+
+            <p>
+                See how students performed.
+            </p>
+
         </div>
+
+
+        <!-- LEADERBOARD TABLE -->
 
         <div class="leaderboard-card">
 
             <div class="table-header">
-                <span>Position</span>
-                <span>Student</span>
-                <span>Score</span>
+
+                <span>
+                    Position
+                </span>
+
+                <span>
+                    Student
+                </span>
+
+                <span>
+                    Score
+                </span>
+
             </div>
+
 
             <div id="leaderboard-container">
                 <!-- Students will appear here -->
@@ -32,14 +70,35 @@
 
         </div>
 
+
+        <!-- BACK BUTTON -->
+
         <button id="back-button">
-            ← Back to Dashboard
+
+            <i data-lucide="arrow-left"></i>
+
+            Back to Dashboard
+
         </button>
 
     </div>
 
-    <!-- Script updated to ES module -->
-    <script type="module" src="script/leaderboard.js"></script>
+
+    <!-- Lucide Icons -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+
+    <!-- Script -->
+
+    <script
+        type="module"
+        src="script/leaderboard.js"
+    ></script>
 
 </body>
 

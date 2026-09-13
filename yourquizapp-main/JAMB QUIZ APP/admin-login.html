@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | JAMB Quiz</title>
+
+  <link rel="stylesheet" href="style/admin-login.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <main class="admin-login-container">
+    <section class="admin-login-card">
+      <div class="admin-icon">
+        <i data-lucide="shield-check"></i>
+      </div>
+
+      <h1>Admin Access</h1>
+      <p class="subtitle">
+        Enter your private admin pass key to continue.
+      </p>
+
+      <form id="adminLoginForm">
+        <div class="input-group">
+          <label for="adminKey">Admin Pass Key</label>
+
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="adminKey"
+              placeholder="Enter admin pass key"
+              required
+            />
+
+            <button
+              type="button"
+              id="toggleAdminKey"
+              class="toggle-password"
+              aria-label="Show or hide pass key"
+            >
+              <i data-lucide="eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="login-button">
+          <i data-lucide="log-in"></i>
+          Enter Dashboard
+        </button>
+
+        <p id="adminMessage" class="message"></p>
+      </form>
+
+      <a href="index.html" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        Back to Home
+      </a>
+    </section>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script type="module" src="script/admin-login.js"></script>
+</body>
+</html>

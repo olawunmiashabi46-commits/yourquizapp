@@ -3710,2874 +3710,2818 @@ const questionBank = {
             answer: "pronunciation"
         },
   {
-    id: 620,
-    question: "Choose the option nearest in meaning to the underlined word: The minister's **ephemeral** popularity faded quickly after the election.",
-    options: ["A. Short-lived", "B. Everlasting", "C. Remarkable", "D. Growing"],
-    answer: "A",
-    explanation: "'Ephemeral' means lasting for a very short time."
+    "id": 620,
+    "question": "Choose the option nearest in meaning to the underlined word: The minister's **ephemeral** popularity faded quickly after the election.",
+    "options": ["Short-lived", "Everlasting", "Remarkable", "Growing"],
+    "answer": "A",
+    "explanation": "'Ephemeral' means lasting for a very short time."
   },
   {
-    id: 621,
-    question: "Choose the option opposite in meaning to the underlined word: The witness gave a **laconic** response to the prosecutor's question.",
-    options: ["A. Concise", "B. Verbose", "C. Brief", "D. Sullen"],
-    answer: "B",
-    explanation: "'Laconic' means using very few words; the opposite is 'verbose' (using more words than needed)."
+    "id": 622,
+    "question": "Choose the option that correctly completes the sentence: The team, together with their coaches, _____ arriving tonight.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "When a subject is joined with phrases like 'together with', the verb agrees with the singular main subject ('team')."
   },
   {
-    id: 622,
-    question: "Choose the option that correctly completes the sentence: The team, together with their coaches, _____ arriving tonight.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "When a subject is joined with phrases like 'together with', the verb agrees with the singular main subject ('team')."
+    "id": 623,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: f**ee**t",
+    "options": ["Bit", "Beat", "Bet", "Bat"],
+    "answer": "B",
+    "explanation": "Both 'feet' and 'beat' contain the long vowel sound /iː/."
   },
   {
-    id: 623,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: f**ee**t",
-    options: ["A. Bit", "B. Beat", "C. Bet", "D. Bat"],
-    answer: "B",
-    explanation: "Both 'feet' and 'beat' contain the long vowel sound /iː/."
+    "id": 624,
+    "question": "Choose the option that best explains the idiom: To **burn the candle at both ends** means to:",
+    "options": ["Waste resources foolishly", "Work exhaustively from early morning till late night", "Be careless with fire", "Spend money recklessly"],
+    "answer": "B",
+    "explanation": "'To burn the candle at both ends' means to overwork oneself by going to bed late and getting up early."
   },
   {
-    id: 624,
-    question: "Choose the option that best explains the idiom: To **burn the candle at both ends** means to:",
-    options: ["A. Waste resources foolishly", "B. Work exhaustively from early morning till late night", "C. Be careless with fire", "D. Spend money recklessly"],
-    answer: "B",
-    explanation: "'To burn the candle at both ends' means to overwork oneself by going to bed late and getting up early."
+    "id": 625,
+    "question": "Choose the option that correctly completes the sentence: You had better _____ the instructions carefully before starting.",
+    "options": ["read", "to read", "reading", "have read"],
+    "answer": "A",
+    "explanation": "'Had better' is followed by a bare infinitive (verb in its base form without 'to')."
   },
   {
-    id: 625,
-    question: "Choose the option that correctly completes the sentence: You had better _____ the instructions carefully before starting.",
-    options: ["A. read", "B. to read", "C. reading", "D. have read"],
-    answer: "A",
-    explanation: "'Had better' is followed by a bare infinitive (verb in its base form without 'to')."
+    "id": 626,
+    "question": "Choose the option nearest in meaning to the underlined word: Her **meticulous** approach to research impressed the supervisors.",
+    "options": ["Careful", "Careless", "Hasty", "Casual"],
+    "answer": "A",
+    "explanation": "'Meticulous' means showing great attention to detail and being very careful."
   },
   {
-    id: 626,
-    question: "Choose the option nearest in meaning to the underlined word: Her **meticulous** approach to research impressed the supervisors.",
-    options: ["A. Careful", "B. Careless", "C. Hasty", "D. Casual"],
-    answer: "A",
-    explanation: "'Meticulous' means showing great attention to detail and being very careful."
+    "id": 627,
+    "question": "Choose the option opposite in meaning to the underlined word: The judge declared the contract **null and void**.",
+    "options": ["Invalid", "Binding", "Cancelled", "Useless"],
+    "answer": "B",
+    "explanation": "'Null and void' means having no legal force; the opposite is 'binding' (legally valid)."
   },
   {
-    id: 627,
-    question: "Choose the option opposite in meaning to the underlined word: The judge declared the contract **null and void**.",
-    options: ["A. Invalid", "B. Binding", "C. Cancelled", "D. Useless"],
-    answer: "B",
-    explanation: "'Null and void' means having no legal force; the opposite is 'binding' (legally valid)."
+    "id": 628,
+    "question": "Choose the option with the correct stress pattern for the word: **PHOTOGRAPH**",
+    "options": ["PHO-to-graph", "pho-TO-graph", "pho-to-GRAPH", "PHO-TO-graph"],
+    "answer": "A",
+    "explanation": "The primary stress in the noun 'photograph' is on the first syllable (/ˈfəʊ.tə.ɡrɑːf/)."
   },
   {
-    id: 628,
-    question: "Choose the option with the correct stress pattern for the word: **PHOTOGRAPH**",
-    options: ["A. PHO-to-graph", "B. pho-TO-graph", "C. pho-to-GRAPH", "D. PHO-TO-graph"],
-    answer: "A",
-    explanation: "The primary stress in the noun 'photograph' is on the first syllable (/ˈfəʊ.tə.ɡrɑːf/)."
+    "id": 629,
+    "question": "Choose the option that correctly completes the sentence: Scarcely had I entered the room _____ the bell rang.",
+    "options": ["than", "when", "then", "as"],
+    "answer": "B",
+    "explanation": "'Scarcely... when' or 'Hardly... when' are standard correlative conjunction pairs."
   },
   {
-    id: 629,
-    question: "Choose the option that correctly completes the sentence: Scarcely had I entered the room _____ the bell rang.",
-    options: ["A. than", "B. when", "C. then", "D. as"],
-    answer: "B",
-    explanation: "'Scarcely... when' or 'Hardly... when' are standard correlative conjunction pairs."
+    "id": 630,
+    "question": "Choose the option nearest in meaning to the underlined word: The board decided to **ameliorate** the working conditions.",
+    "options": ["Worsen", "Improve", "Maintain", "Ignore"],
+    "answer": "B",
+    "explanation": "'Ameliorate' means to make something bad or unsatisfactory better."
   },
   {
-    id: 630,
-    question: "Choose the option nearest in meaning to the underlined word: The board decided to **ameliorate** the working conditions.",
-    options: ["A. Worsen", "B. Improve", "C. Maintain", "D. Ignore"],
-    answer: "B",
-    explanation: "'Ameliorate' means to make something bad or unsatisfactory better."
+    "id": 631,
+    "question": "Choose the option opposite in meaning to the underlined word: The climate in the region is notoriously **capricious**.",
+    "options": ["Predictable", "Unpredictable", "Changing", "Harsh"],
+    "answer": "A",
+    "explanation": "'Capricious' means given to sudden and unaccountable changes of mood or behavior; opposite is 'predictable'."
   },
   {
-    id: 631,
-    question: "Choose the option opposite in meaning to the underlined word: The climate in the region is notoriously **capricious**.",
-    options: ["A. Predictable", "B. Unpredictable", "C. Changing", "D. Harsh"],
-    answer: "A",
-    explanation: "'Capricious' means given to sudden and unaccountable changes of mood or behavior; opposite is 'predictable'."
+    "id": 632,
+    "question": "Choose the option that correctly completes the sentence: I would rather you _____ home now.",
+    "options": ["go", "went", "gone", "to go"],
+    "answer": "B",
+    "explanation": "'Would rather' followed by a pronoun/subject takes the past subjunctive form (went) for present/future reference."
   },
   {
-    id: 632,
-    question: "Choose the option that correctly completes the sentence: I would rather you _____ home now.",
-    options: ["A. go", "B. went", "C. gone", "D. to go"],
-    answer: "B",
-    explanation: "'Would rather' followed by a pronoun/subject takes the past subjunctive form (went) for present/future reference."
+    "id": 633,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**ink",
+    "options": ["This", "Three", "Then", "That"],
+    "answer": "B",
+    "explanation": "'Think' and 'three' both share the voiceless dental fricative sound /θ/."
   },
   {
-    id: 633,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**ink",
-    options: ["A. This", "B. Three", "C. Then", "D. That"],
-    answer: "B",
-    explanation: "'Think' and 'three' both share the voiceless dental fricative sound /θ/."
+    "id": 634,
+    "question": "Choose the option that best explains the idiom: To **take something with a grain of salt** means to:",
+    "options": ["Add spice to a meal", "Skeptically accept a statement", "Take a decision seriously", "Reject an offer completely"],
+    "answer": "B",
+    "explanation": "To take something with a grain of salt means to regard it with skepticism or not swallow it completely as truth."
   },
   {
-    id: 634,
-    question: "Choose the option that best explains the idiom: To **take something with a grain of salt** means to:",
-    options: ["A. Add spice to a meal", "B. Skeptically accept a statement", "C. Take a decision seriously", "D. Reject an offer completely"],
-    answer: "B",
-    explanation: "To take something with a grain of salt means to regard it with skepticism or not swallow it completely as truth."
+    "id": 635,
+    "question": "Choose the option that correctly completes the sentence: The news of the accident _____ broadcast last night.",
+    "options": ["was", "were", "have been", "are"],
+    "answer": "A",
+    "explanation": "'News' is an uncountable noun in English and takes a singular verb ('was')."
   },
   {
-    id: 635,
-    question: "Choose the option that correctly completes the sentence: The news of the accident _____ broadcast last night.",
-    options: ["A. was", "B. were", "C. have been", "D. are"],
-    answer: "A",
-    explanation: "'News' is an uncountable noun in English and takes a singular verb ('was')."
+    "id": 636,
+    "question": "Choose the option nearest in meaning to the underlined word: His **ostentatious** display of wealth alienated his neighbors.",
+    "options": ["Showy", "Modest", "Hidden", "Generous"],
+    "answer": "A",
+    "explanation": "'Ostentatious' means characterized by pretentious or showy display designed to impress."
   },
   {
-    id: 636,
-    question: "Choose the option nearest in meaning to the underlined word: His **ostentatious** display of wealth alienated his neighbors.",
-    options: ["A. Showy", "B. Modest", "C. Hidden", "D. Generous"],
-    answer: "A",
-    explanation: "'Ostentatious' means characterized by pretentious or showy display designed to impress."
+    "id": 637,
+    "question": "Choose the option opposite in meaning to the underlined word: The suspect was **exonerated** after new evidence emerged.",
+    "options": ["Absolved", "Convicted", "Pardoned", "Released"],
+    "answer": "B",
+    "explanation": "'Exonerate' means to clear of blame; the opposite is 'convict'."
   },
   {
-    id: 637,
-    question: "Choose the option opposite in meaning to the underlined word: The suspect was **exonerated** after new evidence emerged.",
-    options: ["A. Absolved", "B. Convicted", "C. Pardoned", "D. Released"],
-    answer: "B",
-    explanation: "'Exonerate' means to clear of blame; the opposite is 'convict'."
+    "id": 638,
+    "question": "Choose the option that correctly completes the sentence: Either the principal or the teachers _____ responsible for the decision.",
+    "options": ["is", "are", "was", "has been"],
+    "answer": "B",
+    "explanation": "With 'either... or', the verb agrees with the subject closest to it ('teachers' -> plural 'are')."
   },
   {
-    id: 638,
-    question: "Choose the option that correctly completes the sentence: Either the principal or the teachers _____ responsible for the decision.",
-    options: ["A. is", "B. are", "C. was", "D. has been"],
-    answer: "B",
-    explanation: "With 'either... or', the verb agrees with the subject closest to it ('teachers' -> plural 'are')."
+    "id": 639,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**t",
+    "options": ["Plait", "Cart", "Caught", "Late"],
+    "answer": "A",
+    "explanation": "'Cat' and 'plait' share the short vowel sound /æ/."
   },
   {
-    id: 639,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**t",
-    options: ["A. Plait", "B. Cart", "C. Caught", "D. Late"],
-    answer: "A",
-    explanation: "'Cat' and 'plait' share the short vowel sound /æ/."
+    "id": 640,
+    "question": "Choose the option that best explains the idiom: To **hit the nail on the head** means to:",
+    "options": ["Do manual labor", "Make an accurate statement", "Cause an injury", "Fail terribly"],
+    "answer": "B",
+    "explanation": "'Hit the nail on the head' means to describe exactly what is causing a situation or problem."
   },
   {
-    id: 640,
-    question: "Choose the option that best explains the idiom: To **hit the nail on the head** means to:",
-    options: ["A. Do manual labor", "B. Make an accurate statement", "C. Cause an injury", "D. Fail terribly"],
-    answer: "B",
-    explanation: "'Hit the nail on the head' means to describe exactly what is causing a situation or problem."
+    "id": 641,
+    "question": "Choose the option that correctly completes the sentence: He insisted on _____ the bill himself.",
+    "options": ["pay", "to pay", "paying", "paid"],
+    "answer": "C",
+    "explanation": "The preposition 'on' is followed by a gerund ('paying')."
   },
   {
-    id: 641,
-    question: "Choose the option that correctly completes the sentence: He insisted on _____ the bill himself.",
-    options: ["A. pay", "B. to pay", "C. paying", "D. paid"],
-    answer: "C",
-    explanation: "The preposition 'on' is followed by a gerund ('paying')."
+    "id": 642,
+    "question": "Choose the option nearest in meaning to the underlined word: The old man led a **solitary** life in the mountains.",
+    "options": ["Lonely", "Social", "Busy", "Crowded"],
+    "answer": "A",
+    "explanation": "'Solitary' means done or existing alone."
   },
   {
-    id: 642,
-    question: "Choose the option nearest in meaning to the underlined word: The old man led a **solitary** life in the mountains.",
-    options: ["A. Lonely", "B. Social", "C. Busy", "D. Crowded"],
-    answer: "A",
-    explanation: "'Solitary' means done or existing alone."
+    "id": 643,
+    "question": "Choose the option opposite in meaning to the underlined word: The government's policies have proven to be **detrimental** to small businesses.",
+    "options": ["Harmful", "Beneficial", "Damaging", "Severe"],
+    "answer": "B",
+    "explanation": "'Detrimental' means tending to cause harm; the opposite is 'beneficial'."
   },
   {
-    id: 643,
-    question: "Choose the option opposite in meaning to the underlined word: The government's policies have proven to be **detrimental** to small businesses.",
-    options: ["A. Harmful", "B. Beneficial", "C. Damaging", "D. Severe"],
-    answer: "B",
-    explanation: "'Detrimental' means tending to cause harm; the opposite is 'beneficial'."
+    "id": 644,
+    "question": "Choose the option with the correct stress pattern for the word: **ECONOMICS**",
+    "options": ["e-CO-no-mics", "e-co-NO-mics", "E-co-no-mics", "e-co-no-MICS"],
+    "answer": "B",
+    "explanation": "Words ending in '-ics' generally have stress on the penultimate (second to last) syllable: e-co-NO-mics."
   },
   {
-    id: 644,
-    question: "Choose the option with the correct stress pattern for the word: **ECONOMICS**",
-    options: ["A. e-CO-no-mics", "B. e-co-NO-mics", "C. E-co-no-mics", "D. e-co-no-MICS"],
-    answer: "B",
-    explanation: "Words ending in '-ics' generally have stress on the penultimate (second to last) syllable: e-co-NO-mics."
+    "id": 645,
+    "question": "Choose the option that correctly completes the sentence: No sooner had the doctor left the ward _____ the patient fainted.",
+    "options": ["when", "than", "as", "before"],
+    "answer": "B",
+    "explanation": "'No sooner' is always paired with 'than'."
   },
   {
-    id: 645,
-    question: "Choose the option that correctly completes the sentence: No sooner had the doctor left the ward _____ the patient fainted.",
-    options: ["A. when", "B. than", "C. as", "D. before"],
-    answer: "B",
-    explanation: "'No sooner' is always paired with 'than'."
+    "id": 646,
+    "question": "Choose the option nearest in meaning to the underlined word: The student was scolded for making **frivolous** remarks in class.",
+    "options": ["Serious", "Trivial", "Intelligent", "Polite"],
+    "answer": "B",
+    "explanation": "'Frivolous' means not having any serious purpose or value; trivial."
   },
   {
-    id: 646,
-    question: "Choose the option nearest in meaning to the underlined word: The student was scolded for making **frivolous** remarks in class.",
-    options: ["A. Serious", "B. Trivial", "C. Intelligent", "D. Polite"],
-    answer: "B",
-    explanation: "'Frivolous' means not having any serious purpose or value; trivial."
+    "id": 647,
+    "question": "Choose the option opposite in meaning to the underlined word: The general issued an **implicit** order to his soldiers.",
+    "options": ["Tacit", "Explicit", "Hidden", "Indirect"],
+    "answer": "B",
+    "explanation": "'Implicit' means implied though not plainly expressed; 'explicit' means stated clearly and directly."
   },
   {
-    id: 647,
-    question: "Choose the option opposite in meaning to the underlined word: The general issued an **implicit** order to his soldiers.",
-    options: ["A. Tacit", "B. Explicit", "C. Hidden", "D. Indirect"],
-    answer: "B",
-    explanation: "'Implicit' means implied though not plainly expressed; 'explicit' means stated clearly and directly."
+    "id": 648,
+    "question": "Choose the option that correctly completes the sentence: If I _____ you, I would accept the offer immediately.",
+    "options": ["am", "was", "were", "be"],
+    "answer": "C",
+    "explanation": "In hypothetical/unreal conditional statements, 'were' is used for all pronouns."
   },
   {
-    id: 648,
-    question: "Choose the option that correctly completes the sentence: If I _____ you, I would accept the offer immediately.",
-    options: ["A. am", "B. was", "C. were", "D. be"],
-    answer: "C",
-    explanation: "In hypothetical/unreal conditional statements, 'were' is used for all pronouns."
+    "id": 649,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **ch**urch",
+    "options": ["Chef", "Feature", "Machine", "Character"],
+    "answer": "B",
+    "explanation": "'Church' and 'feature' both contain the /tʃ/ sound (as in 't' before 'ure')."
   },
   {
-    id: 649,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **ch**urch",
-    options: ["A. Chef", "B. Feature", "C. Machine", "D. Character"],
-    answer: "B",
-    explanation: "'Church' and 'feature' both contain the /tʃ/ sound (as in 't' before 'ure')."
+    "id": 650,
+    "question": "Choose the option that best explains the idiom: To **bite the bullet** means to:",
+    "options": ["Taste something bitter", "Face a difficult situation with courage", "Act violently without thinking", "Refuse to cooperate"],
+    "answer": "B",
+    "explanation": "'Bite the bullet' means to force oneself to undergo something difficult or unpleasant."
   },
   {
-    id: 650,
-    question: "Choose the option that best explains the idiom: To **bite the bullet** means to:",
-    options: ["A. Taste something bitter", "B. Face a difficult situation with courage", "C. Act violently without thinking", "D. Refuse to cooperate"],
-    answer: "B",
-    explanation: "'Bite the bullet' means to force oneself to undergo something difficult or unpleasant."
+    "id": 651,
+    "question": "Choose the option that correctly completes the sentence: By this time next year, I _____ my degree course.",
+    "options": ["will finish", "will have finished", "finished", "am finishing"],
+    "answer": "B",
+    "explanation": "The future perfect tense ('will have finished') is used for actions that will be completed by a specified future time."
   },
   {
-    id: 651,
-    question: "Choose the option that correctly completes the sentence: By this time next year, I _____ my degree course.",
-    options: ["A. will finish", "B. will have finished", "C. finished", "D. am finishing"],
-    answer: "B",
-    explanation: "The future perfect tense ('will have finished') is used for actions that will be completed by a specified future time."
+    "id": 652,
+    "question": "Choose the option nearest in meaning to the underlined word: The union leaders called for an **impromptu** meeting.",
+    "options": ["Planned", "Unrehearsed", "Long", "Formal"],
+    "answer": "B",
+    "explanation": "'Impromptu' means done without being planned or rehearsed."
   },
   {
-    id: 652,
-    question: "Choose the option nearest in meaning to the underlined word: The union leaders called for an **impromptu** meeting.",
-    options: ["A. Planned", "B. Unrehearsed", "C. Long", "D. Formal"],
-    answer: "B",
-    explanation: "'Impromptu' means done without being planned or rehearsed."
+    "id": 653,
+    "question": "Choose the option opposite in meaning to the underlined word: His **altruistic** acts earned him praise across the community.",
+    "options": ["Generous", "Selfish", "Charitable", "Kind"],
+    "answer": "B",
+    "explanation": "'Altruistic' means showing a disinterested and selfless concern for others; opposite is 'selfish'."
   },
   {
-    id: 653,
-    question: "Choose the option opposite in meaning to the underlined word: His **altruistic** acts earned him praise across the community.",
-    options: ["A. Generous", "B. Selfish", "C. Charitable", "D. Kind"],
-    answer: "B",
-    explanation: "'Altruistic' means showing a disinterested and selfless concern for others; opposite is 'selfish'."
+    "id": 654,
+    "question": "Choose the option with the correct stress pattern for the word: **DEMOCRACY**",
+    "options": ["DE-mo-cra-cy", "de-MO-cra-cy", "de-mo-CRA-cy", "de-mo-cra-CY"],
+    "answer": "B",
+    "explanation": "Words ending in '-cracy' carry stress on the antepenultimate (third from end) syllable: de-MO-cra-cy."
   },
   {
-    id: 654,
-    question: "Choose the option with the correct stress pattern for the word: **DEMOCRACY**",
-    options: ["A. DE-mo-cra-cy", "B. de-MO-cra-cy", "C. de-mo-CRA-cy", "D. de-mo-cra-CY"],
-    answer: "B",
-    explanation: "Words ending in '-cracy' carry stress on the antepenultimate (third from end) syllable: de-MO-cra-cy."
+    "id": 655,
+    "question": "Choose the option that correctly completes the sentence: The boy was accused _____ stealing the missing wristwatch.",
+    "options": ["for", "of", "with", "about"],
+    "answer": "B",
+    "explanation": "The verb 'accused' takes the preposition 'of'."
   },
   {
-    id: 655,
-    question: "Choose the option that correctly completes the sentence: The boy was accused _____ stealing the missing wristwatch.",
-    options: ["A. for", "B. of", "C. with", "D. about"],
-    answer: "B",
-    explanation: "The verb 'accused' takes the preposition 'of'."
+    "id": 656,
+    "question": "Choose the option nearest in meaning to the underlined word: The **gullible** man was easily cheated by fraudsters.",
+    "options": ["Naive", "Shrewd", "Clever", "Cautious"],
+    "answer": "A",
+    "explanation": "'Gullible' means easily persuaded to believe something; naive."
   },
   {
-    id: 656,
-    question: "Choose the option nearest in meaning to the underlined word: The **gullible** man was easily cheated by fraudsters.",
-    options: ["A. Naive", "B. Shrewd", "C. Clever", "D. Cautious"],
-    answer: "A",
-    explanation: "'Gullible' means easily persuaded to believe something; naive."
+    "id": 657,
+    "question": "Choose the option opposite in meaning to the underlined word: The company operates in a **turbulent** market environment.",
+    "options": ["Violent", "Calm", "Unstable", "Stormy"],
+    "answer": "B",
+    "explanation": "'Turbulent' means characterized by conflict, disorder, or confusion; opposite is 'calm'."
   },
   {
-    id: 657,
-    question: "Choose the option opposite in meaning to the underlined word: The company operates in a **turbulent** market environment.",
-    options: ["A. Violent", "B. Calm", "C. Unstable", "D. Stormy"],
-    answer: "B",
-    explanation: "'Turbulent' means characterized by conflict, disorder, or confusion; opposite is 'calm'."
+    "id": 658,
+    "question": "Choose the option that correctly completes the sentence: Every student and teacher _____ expected to attend the assembly.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "When nouns are preceded by 'every', the subject remains singular and requires a singular verb ('is')."
   },
   {
-    id: 658,
-    question: "Choose the option that correctly completes the sentence: Every student and teacher _____ expected to attend the assembly.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "When nouns are preceded by 'every', the subject remains singular and requires a singular verb ('is')."
+    "id": 659,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: l**oo**k",
+    "options": ["Boot", "Put", "Pool", "Rule"],
+    "answer": "B",
+    "explanation": "Both 'look' and 'put' share the short vowel sound /ʊ/."
   },
   {
-    id: 659,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: l**oo**k",
-    options: ["A. Boot", "B. Put", "C. Pool", "D. Rule"],
-    answer: "B",
-    explanation: "Both 'look' and 'put' share the short vowel sound /ʊ/."
+    "id": 660,
+    "question": "Choose the option that best explains the idiom: To **add fuel to the fire** means to:",
+    "options": ["Start a bonfire", "Worsen a conflict or bad situation", "Solve a disagreement quickly", "Provide financial assistance"],
+    "answer": "B",
+    "explanation": "'Add fuel to the fire' means to say or do something that makes a bad situation or argument worse."
   },
   {
-    id: 660,
-    question: "Choose the option that best explains the idiom: To **add fuel to the fire** means to:",
-    options: ["A. Start a bonfire", "B. Worsen a conflict or bad situation", "C. Solve a disagreement quickly", "D. Provide financial assistance"],
-    answer: "B",
-    explanation: "'Add fuel to the fire' means to say or do something that makes a bad situation or argument worse."
+    "id": 661,
+    "question": "Choose the option nearest in meaning to the underlined word: The old woman was known for her **benevolent** gestures toward orphans.",
+    "options": ["Kind", "Hostile", "Selfish", "Cold"],
+    "answer": "A",
+    "explanation": "'Benevolent' means well-meaning, kindly, or charitable."
   },
   {
-    id: 661,
-    question: "Choose the option nearest in meaning to the underlined word: The old woman was known for her **benevolent** gestures toward orphans.",
-    options: ["A. Kind", "B. Hostile", "C. Selfish", "D. Cold"],
-    answer: "A",
-    explanation: "'Benevolent' means well-meaning, kindly, or charitable."
+    "id": 662,
+    "question": "Choose the option opposite in meaning to the underlined word: The witness gave a **plausible** explanation for her absence.",
+    "options": ["Believable", "Incredible", "Reasonable", "Logical"],
+    "answer": "B",
+    "explanation": "'Plausible' means seeming reasonable or probable; its opposite is 'incredible' (unbelievable)."
   },
   {
-    id: 662,
-    question: "Choose the option opposite in meaning to the underlined word: The witness gave a **plausible** explanation for her absence.",
-    options: ["A. Believable", "B. Incredible", "C. Reasonable", "D. Logical"],
-    answer: "B",
-    explanation: "'Plausible' means seeming reasonable or probable; its opposite is 'incredible' (unbelievable)."
+    "id": 663,
+    "question": "Choose the option that correctly completes the sentence: The police _____ investigating the cause of the fire outburst.",
+    "options": ["is", "are", "was", "has been"],
+    "answer": "B",
+    "explanation": "'Police' is a collective noun that takes a plural verb ('are')."
   },
   {
-    id: 663,
-    question: "Choose the option that correctly completes the sentence: The police _____ investigating the cause of the fire outburst.",
-    options: ["A. is", "B. are", "C. was", "D. has been"],
-    answer: "B",
-    explanation: "'Police' is a collective noun that takes a plural verb ('are')."
+    "id": 664,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**r",
+    "options": ["Cat", "Pass", "Pack", "Late"],
+    "answer": "B",
+    "explanation": "Both 'car' and 'pass' (in standard RP English) share the long vowel sound /ɑː/."
   },
   {
-    id: 664,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**r",
-    options: ["A. Cat", "B. Pass", "C. Pack", "D. Late"],
-    answer: "B",
-    explanation: "Both 'car' and 'pass' (in standard RP English) share the long vowel sound /ɑː/."
+    "id": 665,
+    "question": "Choose the option that best explains the idiom: To **cry over spilt milk** means to:",
+    "options": ["Clean up a messy room", "Express regret over past actions that cannot be undone", "Complain about bad food", "Ask for help in times of trouble"],
+    "answer": "B",
+    "explanation": "'Cry over spilt milk' means wasting time worrying about something that has already happened and cannot be changed."
   },
   {
-    id: 665,
-    question: "Choose the option that best explains the idiom: To **cry over spilt milk** means to:",
-    options: ["A. Clean up a messy room", "B. Express regret over past actions that cannot be undone", "C. Complain about bad food", "D. Ask for help in times of trouble"],
-    answer: "B",
-    explanation: "'Cry over spilt milk' means wasting time worrying about something that has already happened and cannot be changed."
+    "id": 666,
+    "question": "Choose the option that correctly completes the sentence: She congratulated him _____ passing his final examination.",
+    "options": ["for", "on", "at", "with"],
+    "answer": "B",
+    "explanation": "The verb 'congratulate' collocates with the preposition 'on'."
   },
   {
-    id: 666,
-    question: "Choose the option that correctly completes the sentence: She congratulated him _____ passing his final examination.",
-    options: ["A. for", "B. on", "C. at", "D. with"],
-    answer: "B",
-    explanation: "The verb 'congratulate' collocates with the preposition 'on'."
+    "id": 667,
+    "question": "Choose the option nearest in meaning to the underlined word: The suspect offered an **equivocal** answer during questioning.",
+    "options": ["Ambiguous", "Clear", "Honest", "Decisive"],
+    "answer": "A",
+    "explanation": "'Equivocal' means open to more than one interpretation; ambiguous or uncertain."
   },
   {
-    id: 667,
-    question: "Choose the option nearest in meaning to the underlined word: The suspect offered an **equivocal** answer during questioning.",
-    options: ["A. Ambiguous", "B. Clear", "C. Honest", "D. Decisive"],
-    answer: "A",
-    explanation: "'Equivocal' means open to more than one interpretation; ambiguous or uncertain."
+    "id": 668,
+    "question": "Choose the option opposite in meaning to the underlined word: The manager preferred **hostile** debate to false agreement.",
+    "options": ["Antagonistic", "Friendly", "Fierce", "Aggressive"],
+    "answer": "B",
+    "explanation": "'Hostile' means showing unfriendliness or opposition; the opposite is 'friendly'."
   },
   {
-    id: 668,
-    question: "Choose the option opposite in meaning to the underlined word: The manager preferred **hostile** debate to false agreement.",
-    options: ["A. Antagonistic", "B. Friendly", "C. Fierce", "D. Aggressive"],
-    answer: "B",
-    explanation: "'Hostile' means showing unfriendliness or opposition; the opposite is 'friendly'."
+    "id": 669,
+    "question": "Choose the option with the correct stress pattern for the word: **PHOTOGRAPHY**",
+    "options": ["PHO-to-gra-phy", "pho-TO-gra-phy", "pho-to-GRA-phy", "pho-to-gra-PHY"],
+    "answer": "B",
+    "explanation": "In words ending with '-graphy', stress falls on the antepenultimate syllable: pho-TO-gra-phy."
   },
   {
-    id: 669,
-    question: "Choose the option with the correct stress pattern for the word: **PHOTOGRAPHY**",
-    options: ["A. PHO-to-gra-phy", "B. pho-TO-gra-phy", "C. pho-to-GRA-phy", "D. pho-to-gra-PHY"],
-    answer: "B",
-    explanation: "In words ending with '-graphy', stress falls on the antepenultimate syllable: pho-TO-gra-phy."
+    "id": 670,
+    "question": "Choose the option that correctly completes the sentence: Neither of the two applicants _____ qualified for the job.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' when used as a pronoun takes a singular verb ('is')."
   },
   {
-    id: 670,
-    question: "Choose the option that correctly completes the sentence: Neither of the two applicants _____ qualified for the job.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' when used as a pronoun takes a singular verb ('is')."
+    "id": 671,
+    "question": "Choose the option nearest in meaning to the underlined word: The accountant was caught attempting to **embezzle** public funds.",
+    "options": ["Misappropriate", "Donate", "Invest", "Save"],
+    "answer": "A",
+    "explanation": "'Embezzle' means to steal or misappropriate money placed in one's trust."
   },
   {
-    id: 671,
-    question: "Choose the option nearest in meaning to the underlined word: The accountant was caught attempting to **embezzle** public funds.",
-    options: ["A. Misappropriate", "B. Donate", "C. Invest", "D. Save"],
-    answer: "A",
-    explanation: "'Embezzle' means to steal or misappropriate money placed in one's trust."
+    "id": 672,
+    "question": "Choose the option opposite in meaning to the underlined word: The teacher gave a **lucid** explanation of the complex topic.",
+    "options": ["Clear", "Confusing", "Bright", "Direct"],
+    "answer": "B",
+    "explanation": "'Lucid' means expressed clearly or easy to understand; the opposite is 'confusing'."
   },
   {
-    id: 672,
-    question: "Choose the option opposite in meaning to the underlined word: The teacher gave a **lucid** explanation of the complex topic.",
-    options: ["A. Clear", "B. Confusing", "C. Bright", "D. Direct"],
-    answer: "B",
-    explanation: "'Lucid' means expressed clearly or easy to understand; the opposite is 'confusing'."
+    "id": 673,
+    "question": "Choose the option that correctly completes the sentence: The doctor advised him to abstain _____ alcohol.",
+    "options": ["from", "off", "with", "against"],
+    "answer": "A",
+    "explanation": "The verb 'abstain' is correctly followed by the preposition 'from'."
   },
   {
-    id: 673,
-    question: "Choose the option that correctly completes the sentence: The doctor advised him to abstain _____ alcohol.",
-    options: ["A. from", "B. off", "C. with", "D. against"],
-    answer: "A",
-    explanation: "The verb 'abstain' is correctly followed by the preposition 'from'."
+    "id": 674,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **z**ebra",
+    "options": ["Sue", "Resign", "Rice", "Preach"],
+    "answer": "B",
+    "explanation": "The 's' in 'resign' is pronounced as /z/, matching the /z/ sound in 'zebra'."
   },
   {
-    id: 674,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **z**ebra",
-    options: ["A. Sue", "B. Resign", "C. Rice", "D. Preach"],
-    answer: "B",
-    explanation: "The 's' in 'resign' is pronounced as /z/, matching the /z/ sound in 'zebra'."
+    "id": 675,
+    "question": "Choose the option that best explains the idiom: To **let the cat out of the bag** means to:",
+    "options": ["Release a trapped animal", "Reveal a secret accidentally", "Start a argument", "Lose something valuable"],
+    "answer": "B",
+    "explanation": "'Let the cat out of the bag' is an idiom meaning to reveal facts or secrets unintentionally."
   },
   {
-    id: 675,
-    question: "Choose the option that best explains the idiom: To **let the cat out of the bag** means to:",
-    options: ["A. Release a trapped animal", "B. Reveal a secret accidentally", "C. Start a argument", "D. Lose something valuable"],
-    answer: "B",
-    explanation: "'Let the cat out of the bag' is an idiom meaning to reveal facts or secrets unintentionally."
+    "id": 676,
+    "question": "Choose the option that correctly completes the sentence: One of the students _____ not submit the assignment on time.",
+    "options": ["did", "do", "were", "have"],
+    "answer": "A",
+    "explanation": "'One of...' takes a singular verb construction ('did not' applies singularly to 'One')."
   },
   {
-    id: 676,
-    question: "Choose the option that correctly completes the sentence: One of the students _____ not submit the assignment on time.",
-    options: ["A. did", "B. do", "C. were", "D. have"],
-    answer: "A",
-    explanation: "'One of...' takes a singular verb construction ('did not' applies singularly to 'One')."
+    "id": 677,
+    "question": "Choose the option nearest in meaning to the underlined word: The leader's **audacious** plan surprised everyone at the summit.",
+    "options": ["Daring", "Timid", "Cowardly", "Foolish"],
+    "answer": "A",
+    "explanation": "'Audacious' means showing a willingness to take surprisingly bold risks; daring."
   },
   {
-    id: 677,
-    question: "Choose the option nearest in meaning to the underlined word: The leader's **audacious** plan surprised everyone at the summit.",
-    options: ["A. Daring", "B. Timid", "C. Cowardly", "D. Foolish"],
-    answer: "A",
-    explanation: "'Audacious' means showing a willingness to take surprisingly bold risks; daring."
+    "id": 678,
+    "question": "Choose the option opposite in meaning to the underlined word: Her **arrogant** attitude alienated her colleagues.",
+    "options": ["Haughty", "Humble", "Proud", "Rude"],
+    "answer": "B",
+    "explanation": "'Arrogant' means having an exaggerated sense of one's own importance; the opposite is 'humble'."
   },
   {
-    id: 678,
-    question: "Choose the option opposite in meaning to the underlined word: Her **arrogant** attitude alienated her colleagues.",
-    options: ["A. Haughty", "B. Humble", "C. Proud", "D. Rude"],
-    answer: "B",
-    explanation: "'Arrogant' means having an exaggerated sense of one's own importance; the opposite is 'humble'."
+    "id": 679,
+    "question": "Choose the option with the correct stress pattern for the word: **GEOGRAPHY**",
+    "options": ["GE-o-gra-phy", "ge-O-gra-phy", "ge-o-GRA-phy", "ge-o-gra-PHY"],
+    "answer": "B",
+    "explanation": "Nouns ending in '-graphy' stress the antepenultimate syllable: ge-O-gra-phy."
   },
   {
-    id: 679,
-    question: "Choose the option with the correct stress pattern for the word: **GEOGRAPHY**",
-    options: ["A. GE-o-gra-phy", "B. ge-O-gra-phy", "C. ge-o-GRA-phy", "D. ge-o-gra-PHY"],
-    answer: "B",
-    explanation: "Nouns ending in '-graphy' stress the antepenultimate syllable: ge-O-gra-phy."
+    "id": 680,
+    "question": "Choose the option that correctly completes the sentence: The chairman insisted that the secretary _____ the minutes immediately.",
+    "options": ["writes", "write", "wrote", "is writing"],
+    "answer": "B",
+    "explanation": "Mandative subjunctive verbs after 'insisted that' take the base form of the verb ('write')."
   },
   {
-    id: 680,
-    question: "Choose the option that correctly completes the sentence: The chairman insisted that the secretary _____ the minutes immediately.",
-    options: ["A. writes", "B. write", "C. wrote", "D. is writing"],
-    answer: "B",
-    explanation: "Mandative subjunctive verbs after 'insisted that' take the base form of the verb ('write')."
+    "id": 681,
+    "question": "Choose the option nearest in meaning to the underlined word: His remarks were deemed **superfluous** during the debate.",
+    "options": ["Unnecessary", "Essential", "Important", "Vital"],
+    "answer": "A",
+    "explanation": "'Superfluous' means unnecessary, especially through being more than enough."
   },
   {
-    id: 681,
-    question: "Choose the option nearest in meaning to the underlined word: His remarks were deemed **superfluous** during the debate.",
-    options: ["A. Unnecessary", "B. Essential", "C. Important", "D. Vital"],
-    answer: "A",
-    explanation: "'Superfluous' means unnecessary, especially through being more than enough."
+    "id": 682,
+    "question": "Choose the option opposite in meaning to the underlined word: The river's flow was **sluggish** during the dry season.",
+    "options": ["Slow", "Rapid", "Dull", "Heavy"],
+    "answer": "B",
+    "explanation": "'Sluggish' means slow-moving or inactive; the opposite is 'rapid'."
   },
   {
-    id: 682,
-    question: "Choose the option opposite in meaning to the underlined word: The river's flow was **sluggish** during the dry season.",
-    options: ["A. Slow", "B. Rapid", "C. Dull", "D. Heavy"],
-    answer: "B",
-    explanation: "'Sluggish' means slow-moving or inactive; the opposite is 'rapid'."
+    "id": 683,
+    "question": "Choose the option that correctly completes the sentence: They have been friends _____ childhood.",
+    "options": ["for", "since", "from", "in"],
+    "answer": "B",
+    "explanation": "'Since' denotes a specific starting point in time in the past up to the present."
   },
   {
-    id: 683,
-    question: "Choose the option that correctly completes the sentence: They have been friends _____ childhood.",
-    options: ["A. for", "B. since", "C. from", "D. in"],
-    answer: "B",
-    explanation: "'Since' denotes a specific starting point in time in the past up to the present."
+    "id": 684,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: s**u**n",
+    "options": ["Son", "Soon", "Song", "Soar"],
+    "answer": "A",
+    "explanation": "'Sun' and 'son' are homophones and share the exact same short vowel sound /ʌ/."
   },
   {
-    id: 684,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: s**u**n",
-    options: ["A. Son", "B. Soon", "C. Song", "D. Soar"],
-    answer: "A",
-    explanation: "'Sun' and 'son' are homophones and share the exact same short vowel sound /ʌ/."
+    "id": 685,
+    "question": "Choose the option that best explains the idiom: To **turn a blind eye** means to:",
+    "options": ["Suffer from vision impairment", "Deliberately ignore something", "Look away out of fear", "Protect someone from danger"],
+    "answer": "B",
+    "explanation": "'Turn a blind eye' means to pretend not to notice or deliberately ignore an action."
   },
   {
-    id: 685,
-    question: "Choose the option that best explains the idiom: To **turn a blind eye** means to:",
-    options: ["A. Suffer from vision impairment", "B. Deliberately ignore something", "C. Look away out of fear", "D. Protect someone from danger"],
-    answer: "B",
-    explanation: "'Turn a blind eye' means to pretend not to notice or deliberately ignore an action."
+    "id": 686,
+    "question": "Choose the option that correctly completes the sentence: Neither my brother nor I _____ ready to leave.",
+    "options": ["am", "is", "are", "be"],
+    "answer": "A",
+    "explanation": "With 'neither... nor', the verb agrees with the closer subject ('I' -> 'am')."
   },
   {
-    id: 686,
-    question: "Choose the option that correctly completes the sentence: Neither my brother nor I _____ ready to leave.",
-    options: ["A. am", "B. is", "C. are", "D. be"],
-    answer: "A",
-    explanation: "With 'neither... nor', the verb agrees with the closer subject ('I' -> 'am')."
+    "id": 687,
+    "question": "Choose the option nearest in meaning to the underlined word: The speaker's **eloquent** speech moved the audience to tears.",
+    "options": ["Persuasive", "Boring", "Confusing", "Inarticulate"],
+    "answer": "A",
+    "explanation": "'Eloquent' means fluent or persuasive in speaking or writing."
   },
   {
-    id: 687,
-    question: "Choose the option nearest in meaning to the underlined word: The speaker's **eloquent** speech moved the audience to tears.",
-    options: ["A. Persuasive", "B. Boring", "C. Confusing", "D. Inarticulate"],
-    answer: "A",
-    explanation: "'Eloquent' means fluent or persuasive in speaking or writing."
+    "id": 688,
+    "question": "Choose the option opposite in meaning to the underlined word: The soldier was rewarded for his **valiant** efforts in battle.",
+    "options": ["Brave", "Cowardly", "Heroic", "Fearless"],
+    "answer": "B",
+    "explanation": "'Valiant' means possessing or showing courage or determination; opposite is 'cowardly'."
   },
   {
-    id: 688,
-    question: "Choose the option opposite in meaning to the underlined word: The soldier was rewarded for his **valiant** efforts in battle.",
-    options: ["A. Brave", "B. Cowardly", "C. Heroic", "D. Fearless"],
-    answer: "B",
-    explanation: "'Valiant' means possessing or showing courage or determination; opposite is 'cowardly'."
+    "id": 689,
+    "question": "Choose the option with the correct stress pattern for the word: **INFORMATION**",
+    "options": ["IN-for-ma-tion", "in-FOR-ma-tion", "in-for-MA-tion", "in-for-ma-TION"],
+    "answer": "C",
+    "explanation": "Words ending in '-tion' place the primary stress on the penultimate syllable: in-for-MA-tion."
   },
   {
-    id: 689,
-    question: "Choose the option with the correct stress pattern for the word: **INFORMATION**",
-    options: ["A. IN-for-ma-tion", "B. in-FOR-ma-tion", "C. in-for-MA-tion", "D. in-for-ma-TION"],
-    answer: "C",
-    explanation: "Words ending in '-tion' place the primary stress on the penultimate syllable: in-for-MA-tion."
+    "id": 690,
+    "question": "Choose the option that correctly completes the sentence: The furniture in the living room _____ imported from Italy.",
+    "options": ["was", "were", "have been", "are"],
+    "answer": "A",
+    "explanation": "'Furniture' is an uncountable noun and takes a singular verb ('was')."
   },
   {
-    id: 690,
-    question: "Choose the option that correctly completes the sentence: The furniture in the living room _____ imported from Italy.",
-    options: ["A. was", "B. were", "C. have been", "D. are"],
-    answer: "A",
-    explanation: "'Furniture' is an uncountable noun and takes a singular verb ('was')."
+    "id": 691,
+    "question": "Choose the option nearest in meaning to the underlined word: The court issued a **verdict** after listening to all witnesses.",
+    "options": ["Decision", "Question", "Delay", "Charge"],
+    "answer": "A",
+    "explanation": "A 'verdict' is a decision on an issue of fact in a civil or criminal case."
   },
   {
-    id: 691,
-    question: "Choose the option nearest in meaning to the underlined word: The court issued a **verdict** after listening to all witnesses.",
-    options: ["A. Decision", "B. Question", "C. Delay", "D. Charge"],
-    answer: "A",
-    explanation: "A 'verdict' is a decision on an issue of fact in a civil or criminal case."
+    "id": 692,
+    "question": "Choose the option opposite in meaning to the underlined word: The suspect made a **spontaneous** confession to the officer.",
+    "options": ["Unplanned", "Rehearsed", "Sudden", "Impromptu"],
+    "answer": "B",
+    "explanation": "'Spontaneous' means performed or occurring as a result of a sudden impulse; opposite is 'rehearsed'."
   },
   {
-    id: 692,
-    question: "Choose the option opposite in meaning to the underlined word: The suspect made a **spontaneous** confession to the officer.",
-    options: ["A. Unplanned", "B. Rehearsed", "C. Sudden", "D. Impromptu"],
-    answer: "B",
-    explanation: "'Spontaneous' means performed or occurring as a result of a sudden impulse; opposite is 'rehearsed'."
+    "id": 693,
+    "question": "Choose the option that correctly completes the sentence: He spoke as though he _____ everything about the subject.",
+    "options": ["knows", "knew", "has known", "is knowing"],
+    "answer": "B",
+    "explanation": "'As though' takes past tense ('knew') when expressing an unreal or hypothetical situation."
   },
   {
-    id: 693,
-    question: "Choose the option that correctly completes the sentence: He spoke as though he _____ everything about the subject.",
-    options: ["A. knows", "B. knew", "C. has known", "D. is knowing"],
-    answer: "B",
-    explanation: "'As though' takes past tense ('knew') when expressing an unreal or hypothetical situation."
+    "id": 694,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **ph**one",
+    "options": ["Laugh", "Page", "Plough", "Pan"],
+    "answer": "A",
+    "explanation": "The 'ph' in 'phone' and the 'gh' in 'laugh' both represent the /f/ sound."
   },
   {
-    id: 694,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **ph**one",
-    options: ["A. Laugh", "B. Page", "C. Plough", "D. Pan"],
-    answer: "A",
-    explanation: "The 'ph' in 'phone' and the 'gh' in 'laugh' both represent the /f/ sound."
+    "id": 695,
+    "question": "Choose the option that best explains the idiom: To **spill the beans** means to:",
+    "options": ["Make a mess while cooking", "Reveal secret information", "Waste food carelessly", "Cause an unexpected problem"],
+    "answer": "B",
+    "explanation": "'Spill the beans' is a common idiom meaning to disclose secret information."
   },
   {
-    id: 695,
-    question: "Choose the option that best explains the idiom: To **spill the beans** means to:",
-    options: ["A. Make a mess while cooking", "B. Reveal secret information", "C. Waste food carelessly", "D. Cause an unexpected problem"],
-    answer: "B",
-    explanation: "'Spill the beans' is a common idiom meaning to disclose secret information."
+    "id": 696,
+    "question": "Choose the option that correctly completes the sentence: I would prefer swimming _____ running in the afternoon.",
+    "options": ["than", "to", "over", "rather than"],
+    "answer": "B",
+    "explanation": "The verb 'prefer' takes the preposition 'to' when comparing two activities."
   },
   {
-    id: 696,
-    question: "Choose the option that correctly completes the sentence: I would prefer swimming _____ running in the afternoon.",
-    options: ["A. than", "B. to", "C. over", "D. rather than"],
-    answer: "B",
-    explanation: "The verb 'prefer' takes the preposition 'to' when comparing two activities."
+    "id": 697,
+    "question": "Choose the option nearest in meaning to the underlined word: The student was notorious for his **dilatory** habits.",
+    "options": ["Prompt", "Slow", "Energetic", "Intelligent"],
+    "answer": "B",
+    "explanation": "'Dilatory' means slow to act or intended to cause delay."
   },
   {
-    id: 697,
-    question: "Choose the option nearest in meaning to the underlined word: The student was notorious for his **dilatory** habits.",
-    options: ["A. Prompt", "B. Slow", "C. Energetic", "D. Intelligent"],
-    answer: "B",
-    explanation: "'Dilatory' means slow to act or intended to cause delay."
+    "id": 698,
+    "question": "Choose the option opposite in meaning to the underlined word: The old building has become **dilapidated** over time.",
+    "options": ["Ruined", "Renovated", "Decayed", "Broken"],
+    "answer": "B",
+    "explanation": "'Dilapidated' means in a state of disrepair or ruin; the opposite is 'renovated'."
   },
   {
-    id: 698,
-    question: "Choose the option opposite in meaning to the underlined word: The old building has become **dilapidated** over time.",
-    options: ["A. Ruined", "B. Renovated", "C. Decayed", "D. Broken"],
-    answer: "B",
-    explanation: "'Dilapidated' means in a state of disrepair or ruin; the opposite is 'renovated'."
+    "id": 699,
+    "question": "Choose the option with the correct stress pattern for the word: **COMMUNICATION**",
+    "options": ["com-MU-ni-ca-tion", "com-mu-NI-ca-tion", "com-mu-ni-CA-tion", "com-mu-ni-ca-TION"],
+    "answer": "C",
+    "explanation": "Words ending in '-tion' take primary stress on the penultimate syllable: com-mu-ni-CA-tion."
   },
   {
-    id: 699,
-    question: "Choose the option with the correct stress pattern for the word: **COMMUNICATION**",
-    options: ["A. com-MU-ni-ca-tion", "B. com-mu-NI-ca-tion", "C. com-mu-ni-CA-tion", "D. com-mu-ni-ca-TION"],
-    answer: "C",
-    explanation: "Words ending in '-tion' take primary stress on the penultimate syllable: com-mu-ni-CA-tion."
+    "id": 700,
+    "question": "Choose the option that correctly completes the sentence: The teacher asked the pupils to put _____ their toys before leaving.",
+    "options": ["away", "off", "out", "down"],
+    "answer": "A",
+    "explanation": "'Put away' means to store something in its proper place when finished using it."
   },
   {
-    id: 700,
-    question: "Choose the option that correctly completes the sentence: The teacher asked the pupils to put _____ their toys before leaving.",
-    options: ["A. away", "B. off", "C. out", "D. down"],
-    answer: "A",
-    explanation: "'Put away' means to store something in its proper place when finished using it."
+    "id": 701,
+    "question": "Choose the option nearest in meaning to the underlined word: The ambassador maintained a **neutral** position during the dispute.",
+    "options": ["Impartial", "Biased", "Hostile", "Active"],
+    "answer": "A",
+    "explanation": "'Neutral' means not supporting or helping either side in a conflict; impartial."
   },
   {
-    id: 701,
-    question: "Choose the option nearest in meaning to the underlined word: The ambassador maintained a **neutral** position during the dispute.",
-    options: ["A. Impartial", "B. Biased", "C. Hostile", "D. Active"],
-    answer: "A",
-    explanation: "'Neutral' means not supporting or helping either side in a conflict; impartial."
+    "id": 702,
+    "question": "Choose the option opposite in meaning to the underlined word: The country has experienced **rapid** economic growth this decade.",
+    "options": ["Swift", "Slow", "Sudden", "Fast"],
+    "answer": "B",
+    "explanation": "'Rapid' means happening or moving quickly; its opposite is 'slow'."
   },
   {
-    id: 702,
-    question: "Choose the option opposite in meaning to the underlined word: The country has experienced **rapid** economic growth this decade.",
-    options: ["A. Swift", "B. Slow", "C. Sudden", "D. Fast"],
-    answer: "B",
-    explanation: "'Rapid' means happening or moving quickly; its opposite is 'slow'."
+    "id": 703,
+    "question": "Choose the option that correctly completes the sentence: The jury _____ divided in their opinion regarding the case.",
+    "options": ["was", "were", "is", "has been"],
+    "answer": "B",
+    "explanation": "When a collective noun like 'jury' acts as individuals taking different stances, a plural verb ('were') is used."
   },
   {
-    id: 703,
-    question: "Choose the option that correctly completes the sentence: The jury _____ divided in their opinion regarding the case.",
-    options: ["A. was", "B. were", "C. is", "D. has been"],
-    answer: "B",
-    explanation: "When a collective noun like 'jury' acts as individuals taking different stances, a plural verb ('were') is used."
+    "id": 704,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: p**e**n",
+    "options": ["Pan", "Said", "Pain", "Pin"],
+    "answer": "B",
+    "explanation": "Both 'pen' and 'said' contain the short vowel sound /e/."
   },
   {
-    id: 704,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: p**e**n",
-    options: ["A. Pan", "B. Said", "C. Pain", "D. Pin"],
-    answer: "B",
-    explanation: "Both 'pen' and 'said' contain the short vowel sound /e/."
+    "id": 705,
+    "question": "Choose the option that best explains the idiom: To **hit the sack** means to:",
+    "options": ["Go to sleep", "Attack someone", "Clean the house", "Fail an exam"],
+    "answer": "A",
+    "explanation": "'Hit the sack' is an informal idiomatic expression meaning to go to bed or go to sleep."
   },
   {
-    id: 705,
-    question: "Choose the option that best explains the idiom: To **hit the sack** means to:",
-    options: ["A. Go to sleep", "B. Attack someone", "C. Clean the house", "D. Fail an exam"],
-    answer: "A",
-    explanation: "'Hit the sack' is an informal idiomatic expression meaning to go to bed or go to sleep."
+    "id": 706,
+    "question": "Choose the option that correctly completes the sentence: He succeeded _____ convincing the committee to approve the budget.",
+    "options": ["at", "in", "for", "with"],
+    "answer": "B",
+    "explanation": "The verb 'succeed' takes the preposition 'in' followed by a gerund."
   },
   {
-    id: 706,
-    question: "Choose the option that correctly completes the sentence: He succeeded _____ convincing the committee to approve the budget.",
-    options: ["A. at", "B. in", "C. for", "D. with"],
-    answer: "B",
-    explanation: "The verb 'succeed' takes the preposition 'in' followed by a gerund."
+    "id": 707,
+    "question": "Choose the option nearest in meaning to the underlined word: The director was known for his **meticulous** attention to details.",
+    "options": ["Thorough", "Careless", "Quick", "Negligent"],
+    "answer": "A",
+    "explanation": "'Meticulous' means very careful and precise; showing great attention to detail."
   },
   {
-    id: 707,
-    question: "Choose the option nearest in meaning to the underlined word: The director was known for his **meticulous** attention to details.",
-    options: ["A. Thorough", "B. Careless", "C. Quick", "D. Negligent"],
-    answer: "A",
-    explanation: "'Meticulous' means very careful and precise; showing great attention to detail."
+    "id": 708,
+    "question": "Choose the option opposite in meaning to the underlined word: The suspect was **cooperative** during the interrogation.",
+    "options": ["Helpful", "Uncooperative", "Friendly", "Obedient"],
+    "answer": "B",
+    "explanation": "'Cooperative' means willing to assist; the opposite is 'uncooperative'."
   },
   {
-    id: 708,
-    question: "Choose the option opposite in meaning to the underlined word: The suspect was **cooperative** during the interrogation.",
-    options: ["A. Helpful", "B. Uncooperative", "C. Friendly", "D. Obedient"],
-    answer: "B",
-    explanation: "'Cooperative' means willing to assist; the opposite is 'uncooperative'."
+    "id": 709,
+    "question": "Choose the option with the correct stress pattern for the word: **CERTIFICATE** (noun)",
+    "options": ["CER-ti-fi-cate", "cer-TI-fi-cate", "cer-ti-FI-cate", "cer-ti-fi-CATE"],
+    "answer": "B",
+    "explanation": "The noun 'certificate' is stressed on the second syllable: cer-TI-fi-cate."
   },
   {
-    id: 709,
-    question: "Choose the option with the correct stress pattern for the word: **CERTIFICATE** (noun)",
-    options: ["A. CER-ti-fi-cate", "B. cer-TI-fi-cate", "C. cer-ti-FI-cate", "D. cer-ti-fi-CATE"],
-    answer: "B",
-    explanation: "The noun 'certificate' is stressed on the second syllable: cer-TI-fi-cate."
+    "id": 710,
+    "question": "Choose the option that correctly completes the sentence: Neither of the girls _____ going to the party tonight.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular subject and takes a singular verb ('is')."
   },
   {
-    id: 710,
-    question: "Choose the option that correctly completes the sentence: Neither of the girls _____ going to the party tonight.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular subject and takes a singular verb ('is')."
+    "id": 711,
+    "question": "Choose the option nearest in meaning to the underlined word: The old mansion had an **ominous** atmosphere.",
+    "options": ["Threatening", "Cheerful", "Welcoming", "Bright"],
+    "answer": "A",
+    "explanation": "'Ominous' means giving the impression that something bad or unpleasant is going to happen."
   },
   {
-    id: 711,
-    question: "Choose the option nearest in meaning to the underlined word: The old mansion had an **ominous** atmosphere.",
-    options: ["A. Threatening", "B. Cheerful", "C. Welcoming", "D. Bright"],
-    answer: "A",
-    explanation: "'Ominous' means giving the impression that something bad or unpleasant is going to happen."
+    "id": 712,
+    "question": "Choose the option opposite in meaning to the underlined word: Her speech was very **coherent** and easy to follow.",
+    "options": ["Clear", "Incoherent", "Logical", "Fluid"],
+    "answer": "B",
+    "explanation": "'Coherent' means logical and consistent; its antonym is 'incoherent'."
   },
   {
-    id: 712,
-    question: "Choose the option opposite in meaning to the underlined word: Her speech was very **coherent** and easy to follow.",
-    options: ["A. Clear", "B. Incoherent", "C. Logical", "D. Fluid"],
-    answer: "B",
-    explanation: "'Coherent' means logical and consistent; its antonym is 'incoherent'."
+    "id": 713,
+    "question": "Choose the option that correctly completes the sentence: She prefers tea _____ coffee in the mornings.",
+    "options": ["than", "to", "over", "before"],
+    "answer": "B",
+    "explanation": "The verb 'prefer' requires 'to' when expressing a preference between two choices."
   },
   {
-    id: 713,
-    question: "Choose the option that correctly completes the sentence: She prefers tea _____ coffee in the mornings.",
-    options: ["A. than", "B. to", "C. over", "D. before"],
-    answer: "B",
-    explanation: "The verb 'prefer' requires 'to' when expressing a preference between two choices."
+    "id": 714,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **c**at",
+    "options": ["City", "Key", "Cell", "Ocean"],
+    "answer": "B",
+    "explanation": "The initial letter 'c' in 'cat' and 'k' in 'key' both represent the /k/ sound."
   },
   {
-    id: 714,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **c**at",
-    options: ["A. City", "B. Key", "C. Cell", "D. Ocean"],
-    answer: "B",
-    explanation: "The initial letter 'c' in 'cat' and 'k' in 'key' both represent the /k/ sound."
+    "id": 715,
+    "question": "Choose the option that best explains the idiom: To **cost an arm and a leg** means to:",
+    "options": ["Be very expensive", "Cause bodily harm", "Be extremely cheap", "Require manual effort"],
+    "answer": "A",
+    "explanation": "'Cost an arm and a leg' means to be very expensive or overpriced."
   },
   {
-    id: 715,
-    question: "Choose the option that best explains the idiom: To **cost an arm and a leg** means to:",
-    options: ["A. Be very expensive", "B. Cause bodily harm", "C. Be extremely cheap", "D. Require manual effort"],
-    answer: "A",
-    explanation: "'Cost an arm and a leg' means to be very expensive or overpriced."
+    "id": 716,
+    "question": "Choose the option that correctly completes the sentence: The team has been practicing hard _____ last month.",
+    "options": ["for", "since", "during", "from"],
+    "answer": "B",
+    "explanation": "'Since' is used when pointing to a specific starting moment in the past ('last month')."
   },
   {
-    id: 716,
-    question: "Choose the option that correctly completes the sentence: The team has been practicing hard _____ last month.",
-    options: ["A. for", "B. since", "C. during", "D. from"],
-    answer: "B",
-    explanation: "'Since' is used when pointing to a specific starting moment in the past ('last month')."
+    "id": 717,
+    "question": "Choose the option nearest in meaning to the underlined word: The company decided to **terminate** the contract immediately.",
+    "options": ["End", "Extend", "Renew", "Begin"],
+    "answer": "A",
+    "explanation": "'Terminate' means to bring to an end or to stop."
   },
   {
-    id: 717,
-    question: "Choose the option nearest in meaning to the underlined word: The company decided to **terminate** the contract immediately.",
-    options: ["A. End", "B. Extend", "C. Renew", "D. Begin"],
-    answer: "A",
-    explanation: "'Terminate' means to bring to an end or to stop."
+    "id": 718,
+    "question": "Choose the option opposite in meaning to the underlined word: His response was surprisingly **candid**.",
+    "options": ["Frank", "Secretive", "Honest", "Open"],
+    "answer": "B",
+    "explanation": "'Candid' means truthful and straightforward; its opposite is 'secretive'."
   },
   {
-    id: 718,
-    question: "Choose the option opposite in meaning to the underlined word: His response was surprisingly **candid**.",
-    options: ["A. Frank", "B. Secretive", "C. Honest", "D. Open"],
-    answer: "B",
-    explanation: "'Candid' means truthful and straightforward; its opposite is 'secretive'."
+    "id": 719,
+    "question": "Choose the option with the correct stress pattern for the word: **EDUCATION**",
+    "options": ["E-du-ca-tion", "e-DU-ca-tion", "e-du-CA-tion", "e-du-ca-TION"],
+    "answer": "C",
+    "explanation": "Words ending in '-tion' place the primary stress on the penultimate syllable: e-du-CA-tion."
   },
   {
-    id: 719,
-    question: "Choose the option with the correct stress pattern for the word: **EDUCATION**",
-    options: ["A. E-du-ca-tion", "B. e-DU-ca-tion", "C. e-du-CA-tion", "D. e-du-ca-TION"],
-    answer: "C",
-    explanation: "Words ending in '-tion' place the primary stress on the penultimate syllable: e-du-CA-tion."
+    "id": 720,
+    "question": "Choose the option that correctly completes the sentence: If I _____ known about the meeting, I would have attended.",
+    "options": ["have", "had", "was", "am"],
+    "answer": "B",
+    "explanation": "Third conditional structures use 'had + past participle' in the condition clause."
   },
   {
-    id: 720,
-    question: "Choose the option that correctly completes the sentence: If I _____ known about the meeting, I would have attended.",
-    options: ["A. have", "B. had", "C. was", "D. am"],
-    answer: "B",
-    explanation: "Third conditional structures use 'had + past participle' in the condition clause."
+    "id": 721,
+    "question": "Choose the option nearest in meaning to the underlined word: The student gave a **succinct** summary of the chapter.",
+    "options": ["Concise", "Wordy", "Detailed", "Lengthy"],
+    "answer": "A",
+    "explanation": "'Succinct' means briefly and clearly expressed; concise."
   },
   {
-    id: 721,
-    question: "Choose the option nearest in meaning to the underlined word: The student gave a **succinct** summary of the chapter.",
-    options: ["A. Concise", "B. Wordy", "C. Detailed", "D. Lengthy"],
-    answer: "A",
-    explanation: "'Succinct' means briefly and clearly expressed; concise."
+    "id": 722,
+    "question": "Choose the option opposite in meaning to the underlined word: The climate in the area is **monotonous** throughout the year.",
+    "options": ["Dull", "Varied", "Repetitive", "Boring"],
+    "answer": "B",
+    "explanation": "'Monotonous' means lacking in variety and interest; the opposite is 'varied'."
   },
   {
-    id: 722,
-    question: "Choose the option opposite in meaning to the underlined word: The climate in the area is **monotonous** throughout the year.",
-    options: ["A. Dull", "B. Varied", "C. Repetitive", "D. Boring"],
-    answer: "B",
-    explanation: "'Monotonous' means lacking in variety and interest; the opposite is 'varied'."
+    "id": 723,
+    "question": "Choose the option that correctly completes the sentence: The teacher divided the sweets _____ the four pupils.",
+    "options": ["between", "among", "with", "for"],
+    "answer": "B",
+    "explanation": "'Among' is used when distributing or referring to three or more people or items."
   },
   {
-    id: 723,
-    question: "Choose the option that correctly completes the sentence: The teacher divided the sweets _____ the four pupils.",
-    options: ["A. between", "B. among", "C. with", "D. for"],
-    answer: "B",
-    explanation: "'Among' is used when distributing or referring to three or more people or items."
+    "id": 724,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: f**a**st",
+    "options": ["First", "Palm", "Flat", "Fate"],
+    "answer": "B",
+    "explanation": "Both 'fast' and 'palm' contain the long vowel sound /ɑː/."
   },
   {
-    id: 724,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: f**a**st",
-    options: ["A. First", "B. Palm", "C. Flat", "D. Fate"],
-    answer: "B",
-    explanation: "Both 'fast' and 'palm' contain the long vowel sound /ɑː/."
+    "id": 725,
+    "question": "Choose the option that best explains the idiom: To **break the ice** means to:",
+    "options": ["Freeze water quickly", "Make people feel more comfortable", "Start an argument", "Fracture something fragile"],
+    "answer": "B",
+    "explanation": "'Break the ice' means to initiate conversation and relieve tension in a social setting."
   },
   {
-    id: 725,
-    question: "Choose the option that best explains the idiom: To **break the ice** means to:",
-    options: ["A. Freeze water quickly", "B. Make people feel more comfortable", "C. Start an argument", "D. Fracture something fragile"],
-    answer: "B",
-    explanation: "'Break the ice' means to initiate conversation and relieve tension in a social setting."
+    "id": 726,
+    "question": "Choose the option that correctly completes the sentence: Bread and butter _____ my favorite breakfast.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "When two compound items form a single unit or meal concept, a singular verb ('is') is used."
   },
   {
-    id: 726,
-    question: "Choose the option that correctly completes the sentence: Bread and butter _____ my favorite breakfast.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "When two compound items form a single unit or meal concept, a singular verb ('is') is used."
+    "id": 727,
+    "question": "Choose the option nearest in meaning to the underlined word: The soldiers showed **unwavering** bravery during the siege.",
+    "options": ["Firm", "Unsteady", "Changing", "Weak"],
+    "answer": "A",
+    "explanation": "'Unwavering' means steady, resolute, and firm."
   },
   {
-    id: 727,
-    question: "Choose the option nearest in meaning to the underlined word: The soldiers showed **unwavering** bravery during the siege.",
-    options: ["A. Firm", "B. Unsteady", "C. Changing", "D. Weak"],
-    answer: "A",
-    explanation: "'Unwavering' means steady, resolute, and firm."
+    "id": 728,
+    "question": "Choose the option opposite in meaning to the underlined word: The task proved to be remarkably **arduous**.",
+    "options": ["Strenuous", "Easy", "Difficult", "Demanding"],
+    "answer": "B",
+    "explanation": "'Arduous' means involving or requiring strenuous effort; the opposite is 'easy'."
   },
   {
-    id: 728,
-    question: "Choose the option opposite in meaning to the underlined word: The task proved to be remarkably **arduous**.",
-    options: ["A. Strenuous", "B. Easy", "C. Difficult", "D. Demanding"],
-    answer: "B",
-    explanation: "'Arduous' means involving or requiring strenuous effort; the opposite is 'easy'."
+    "id": 729,
+    "question": "Choose the option with the correct stress pattern for the word: **BIOLOGY**",
+    "options": ["BI-o-lo-gy", "bi-O-lo-gy", "bi-o-LO-gy", "bi-o-lo-GY"],
+    "answer": "B",
+    "explanation": "Words ending in '-logy' take primary stress on the antepenultimate syllable: bi-O-lo-gy."
   },
   {
-    id: 729,
-    question: "Choose the option with the correct stress pattern for the word: **BIOLOGY**",
-    options: ["A. BI-o-lo-gy", "B. bi-O-lo-gy", "C. bi-o-LO-gy", "D. bi-o-lo-GY"],
-    answer: "B",
-    explanation: "Words ending in '-logy' take primary stress on the antepenultimate syllable: bi-O-lo-gy."
+    "id": 730,
+    "question": "Choose the option that correctly completes the sentence: Not only the teacher but also the students _____ excited about the excursion.",
+    "options": ["is", "are", "was", "has been"],
+    "answer": "B",
+    "explanation": "With 'not only... but also', the verb agrees with the subject closest to it ('students' -> 'are')."
   },
   {
-    id: 730,
-    question: "Choose the option that correctly completes the sentence: Not only the teacher but also the students _____ excited about the excursion.",
-    options: ["A. is", "B. are", "C. was", "D. has been"],
-    answer: "B",
-    explanation: "With 'not only... but also', the verb agrees with the subject closest to it ('students' -> 'are')."
+    "id": 731,
+    "question": "Choose the option nearest in meaning to the underlined word: The politician made an **equivocal** statement to avoid controversy.",
+    "options": ["Ambiguous", "Direct", "Clear", "Decisive"],
+    "answer": "A",
+    "explanation": "'Equivocal' means open to more than one interpretation; deliberately ambiguous."
   },
   {
-    id: 731,
-    question: "Choose the option nearest in meaning to the underlined word: The politician made an **equivocal** statement to avoid controversy.",
-    options: ["A. Ambiguous", "B. Direct", "C. Clear", "D. Decisive"],
-    answer: "A",
-    explanation: "'Equivocal' means open to more than one interpretation; deliberately ambiguous."
+    "id": 732,
+    "question": "Choose the option opposite in meaning to the underlined word: Her arguments were completely **irrelevant** to the debate.",
+    "options": ["Unconnected", "Pertinent", "Unrelated", "Trivial"],
+    "answer": "B",
+    "explanation": "'Irrelevant' means not connected with or relevant to something; opposite is 'pertinent'."
   },
   {
-    id: 732,
-    question: "Choose the option opposite in meaning to the underlined word: Her arguments were completely **irrelevant** to the debate.",
-    options: ["A. Unconnected", "B. Pertinent", "C. Unrelated", "D. Trivial"],
-    answer: "B",
-    explanation: "'Irrelevant' means not connected with or relevant to something; opposite is 'pertinent'."
+    "id": 733,
+    "question": "Choose the option that correctly completes the sentence: She insisted _____ paying for her own meal.",
+    "options": ["on", "at", "for", "with"],
+    "answer": "A",
+    "explanation": "The verb 'insist' collocates with the preposition 'on'."
   },
   {
-    id: 733,
-    question: "Choose the option that correctly completes the sentence: She insisted _____ paying for her own meal.",
-    options: ["A. on", "B. at", "C. for", "D. with"],
-    answer: "A",
-    explanation: "The verb 'insist' collocates with the preposition 'on'."
+    "id": 734,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **sh**ip",
+    "options": ["Chef", "Chip", "Catch", "Case"],
+    "answer": "A",
+    "explanation": "The 'sh' in 'ship' and the 'ch' in 'chef' both represent the /ʃ/ sound."
   },
   {
-    id: 734,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **sh**ip",
-    options: ["A. Chef", "B. Chip", "C. Catch", "D. Case"],
-    answer: "A",
-    explanation: "The 'sh' in 'ship' and the 'ch' in 'chef' both represent the /ʃ/ sound."
+    "id": 735,
+    "question": "Choose the option that best explains the idiom: To **bite off more than you can chew** means to:",
+    "options": ["Eat too fast", "Take on a task that is too big", "Argue unnecessarily", "Choke on food"],
+    "answer": "B",
+    "explanation": "'Bite off more than you can chew' means to commit to doing something beyond your capabilities."
   },
   {
-    id: 735,
-    question: "Choose the option that best explains the idiom: To **bite off more than you can chew** means to:",
-    options: ["A. Eat too fast", "B. Take on a task that is too big", "C. Argue unnecessarily", "D. Choke on food"],
-    answer: "B",
-    explanation: "'Bite off more than you can chew' means to commit to doing something beyond your capabilities."
+    "id": 736,
+    "question": "Choose the option that correctly completes the sentence: Ten miles _____ a long distance to walk in one day.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Quantities representing a single unit of measurement (distance, time, money) take a singular verb ('is')."
   },
   {
-    id: 736,
-    question: "Choose the option that correctly completes the sentence: Ten miles _____ a long distance to walk in one day.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Quantities representing a single unit of measurement (distance, time, money) take a singular verb ('is')."
+    "id": 737,
+    "question": "Choose the option nearest in meaning to the underlined word: The **pivotal** role of the leader was acknowledged by all.",
+    "options": ["Crucial", "Minor", "Unimportant", "Secondary"],
+    "answer": "A",
+    "explanation": "'Pivotal' means of crucial importance in relation to the development or success of something."
   },
   {
-    id: 737,
-    question: "Choose the option nearest in meaning to the underlined word: The **pivotal** role of the leader was acknowledged by all.",
-    options: ["A. Crucial", "B. Minor", "C. Unimportant", "D. Secondary"],
-    answer: "A",
-    explanation: "'Pivotal' means of crucial importance in relation to the development or success of something."
+    "id": 738,
+    "question": "Choose the option opposite in meaning to the underlined word: The town was known for its **tranquil** surroundings.",
+    "options": ["Peaceful", "Turbulent", "Quiet", "Calm"],
+    "answer": "B",
+    "explanation": "'Tranquil' means free from disturbance; calm. Its opposite is 'turbulent'."
   },
   {
-    id: 738,
-    question: "Choose the option opposite in meaning to the underlined word: The town was known for its **tranquil** surroundings.",
-    options: ["A. Peaceful", "B. Turbulent", "C. Quiet", "D. Calm"],
-    answer: "B",
-    explanation: "'Tranquil' means free from disturbance; calm. Its opposite is 'turbulent'."
+    "id": 739,
+    "question": "Choose the option with the correct stress pattern for the word: **ECONOMY**",
+    "options": ["E-co-no-my", "e-CO-no-my", "e-co-NO-my", "e-co-no-MY"],
+    "answer": "B",
+    "explanation": "Words ending in '-my' or '-y' preceded by a consonant often stress the antepenultimate syllable: e-CO-no-my."
   },
   {
-    id: 739,
-    question: "Choose the option with the correct stress pattern for the word: **ECONOMY**",
-    options: ["A. E-co-no-my", "B. e-CO-no-my", "C. e-co-NO-my", "D. e-co-no-MY"],
-    answer: "B",
-    explanation: "Words ending in '-my' or '-y' preceded by a consonant often stress the antepenultimate syllable: e-CO-no-my."
+    "id": 740,
+    "question": "Choose the option that correctly completes the sentence: Scarcely had she finished speaking _____ the crowd began to cheer.",
+    "options": ["than", "when", "then", "as"],
+    "answer": "B",
+    "explanation": "'Scarcely' is paired with 'when' in standard inverted sentence structures."
   },
   {
-    id: 740,
-    question: "Choose the option that correctly completes the sentence: Scarcely had she finished speaking _____ the crowd began to cheer.",
-    options: ["A. than", "B. when", "C. then", "D. as"],
-    answer: "B",
-    explanation: "'Scarcely' is paired with 'when' in standard inverted sentence structures."
+    "id": 741,
+    "question": "Choose the option nearest in meaning to the underlined word: The researcher attempted to **corroborate** the findings.",
+    "options": ["Confirm", "Refute", "Ignore", "Reject"],
+    "answer": "A",
+    "explanation": "'Corroborate' means to confirm or give support to a statement, theory, or finding."
   },
   {
-    id: 741,
-    question: "Choose the option nearest in meaning to the underlined word: The researcher attempted to **corroborate** the findings.",
-    options: ["A. Confirm", "B. Refute", "C. Ignore", "D. Reject"],
-    answer: "A",
-    explanation: "'Corroborate' means to confirm or give support to a statement, theory, or finding."
+    "id": 742,
+    "question": "Choose the option opposite in meaning to the underlined word: His **frugal** lifestyle enabled him to save money.",
+    "options": ["Thrifty", "Extravagant", "Economical", "Careful"],
+    "answer": "B",
+    "explanation": "'Frugal' means economical in regard to money or food; the opposite is 'extravagant'."
   },
   {
-    id: 742,
-    question: "Choose the option opposite in meaning to the underlined word: His **frugal** lifestyle enabled him to save money.",
-    options: ["A. Thrifty", "B. Extravagant", "C. Economical", "D. Careful"],
-    answer: "B",
-    explanation: "'Frugal' means economical in regard to money or food; the opposite is 'extravagant'."
+    "id": 743,
+    "question": "Choose the option that correctly completes the sentence: Neither the manager nor his assistants _____ arrived yet.",
+    "options": ["has", "have", "is", "was"],
+    "answer": "B",
+    "explanation": "When using 'neither... nor', the verb agrees with the closer subject ('assistants' -> plural 'have')."
   },
   {
-    id: 743,
-    question: "Choose the option that correctly completes the sentence: Neither the manager nor his assistants _____ arrived yet.",
-    options: ["A. has", "B. have", "C. is", "D. was"],
-    answer: "B",
-    explanation: "When using 'neither... nor', the verb agrees with the closer subject ('assistants' -> plural 'have')."
+    "id": 744,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: b**ir**d",
+    "options": ["Fern", "Bin", "Fear", "Board"],
+    "answer": "A",
+    "explanation": "Both 'bird' and 'fern' contain the central vowel sound /ɜː/."
   },
   {
-    id: 744,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: b**ir**d",
-    options: ["A. Fern", "B. Bin", "C. Fear", "D. Board"],
-    answer: "A",
-    explanation: "Both 'bird' and 'fern' contain the central vowel sound /ɜː/."
+    "id": 745,
+    "question": "Choose the option that best explains the idiom: To **burn the midnight oil** means to:",
+    "options": ["Waste fuel", "Work or study late into the night", "Set something ablaze", "Wake up very early"],
+    "answer": "B",
+    "explanation": "'Burn the midnight oil' means to read, study, or work late into the night."
   },
   {
-    id: 745,
-    question: "Choose the option that best explains the idiom: To **burn the midnight oil** means to:",
-    options: ["A. Waste fuel", "B. Work or study late into the night", "C. Set something ablaze", "D. Wake up very early"],
-    answer: "B",
-    explanation: "'Burn the midnight oil' means to read, study, or work late into the night."
+    "id": 746,
+    "question": "Choose the option that correctly completes the sentence: The prisoner was charged _____ armed robbery.",
+    "options": ["for", "with", "of", "on"],
+    "answer": "B",
+    "explanation": "The verb 'charged' takes the preposition 'with' when referring to a crime."
   },
   {
-    id: 746,
-    question: "Choose the option that correctly completes the sentence: The prisoner was charged _____ armed robbery.",
-    options: ["A. for", "B. with", "C. of", "D. on"],
-    answer: "B",
-    explanation: "The verb 'charged' takes the preposition 'with' when referring to a crime."
+    "id": 747,
+    "question": "Choose the option nearest in meaning to the underlined word: The doctor prescribed a **potent** medicine for the ailment.",
+    "options": ["Powerful", "Weak", "Mild", "Harmless"],
+    "answer": "A",
+    "explanation": "'Potent' means having great power, influence, or effect."
   },
   {
-    id: 747,
-    question: "Choose the option nearest in meaning to the underlined word: The doctor prescribed a **potent** medicine for the ailment.",
-    options: ["A. Powerful", "B. Weak", "C. Mild", "D. Harmless"],
-    answer: "A",
-    explanation: "'Potent' means having great power, influence, or effect."
+    "id": 748,
+    "question": "Choose the option opposite in meaning to the underlined word: Her actions were considered **reprehensible** by the board.",
+    "options": ["Blameworthy", "Praiseworthy", "Unforgivable", "Shameful"],
+    "answer": "B",
+    "explanation": "'Reprehensible' means deserving censure or condemnation; its opposite is 'praiseworthy'."
   },
   {
-    id: 748,
-    question: "Choose the option opposite in meaning to the underlined word: Her actions were considered **reprehensible** by the board.",
-    options: ["A. Blameworthy", "B. Praiseworthy", "C. Unforgivable", "D. Shameful"],
-    answer: "B",
-    explanation: "'Reprehensible' means deserving censure or condemnation; its opposite is 'praiseworthy'."
+    "id": 749,
+    "question": "Choose the option with the correct stress pattern for the word: **PHOTOGRAPHER**",
+    "options": ["PHO-to-gra-pher", "pho-TO-gra-pher", "pho-to-GRA-pher", "pho-to-gra-PHER"],
+    "answer": "B",
+    "explanation": "Nouns ending in '-grapher' place stress on the antepenultimate syllable: pho-TO-gra-pher."
   },
   {
-    id: 749,
-    question: "Choose the option with the correct stress pattern for the word: **PHOTOGRAPHER**",
-    options: ["A. PHO-to-gra-pher", "B. pho-TO-gra-pher", "C. pho-to-GRA-pher", "D. pho-to-gra-PHER"],
-    answer: "B",
-    explanation: "Nouns ending in '-grapher' place stress on the antepenultimate syllable: pho-TO-gra-pher."
+    "id": 750,
+    "question": "Choose the option that correctly completes the sentence: Hard work and perseverance _____ required for success.",
+    "options": ["is", "are", "was", "has been"],
+    "answer": "B",
+    "explanation": "Two distinct abstract nouns joined by 'and' form a plural subject taking 'are'."
   },
   {
-    id: 750,
-    question: "Choose the option that correctly completes the sentence: Hard work and perseverance _____ required for success.",
-    options: ["A. is", "B. are", "C. was", "D. has been"],
-    answer: "B",
-    explanation: "Two distinct abstract nouns joined by 'and' form a plural subject taking 'are'."
+    "id": 751,
+    "question": "Choose the option nearest in meaning to the underlined word: The old man lived an **austere** life in the village.",
+    "options": ["Luxurious", "Simple", "Extravagant", "Complex"],
+    "answer": "B",
+    "explanation": "'Austere' means living severely simple and plain without comforts or luxuries."
   },
   {
-    id: 751,
-    question: "Choose the option nearest in meaning to the underlined word: The old man lived an **austere** life in the village.",
-    options: ["A. Luxurious", "B. Simple", "C. Extravagant", "D. Complex"],
-    answer: "B",
-    explanation: "'Austere' means living severely simple and plain without comforts or luxuries."
+    "id": 752,
+    "question": "Choose the option opposite in meaning to the underlined word: The speech was filled with **obscure** literary allusions.",
+    "options": ["Unclear", "Vague", "Clear", "Hidden"],
+    "answer": "C",
+    "explanation": "'Obscure' means not discovered or known about; uncertain. The opposite is 'clear'."
   },
   {
-    id: 752,
-    question: "Choose the option opposite in meaning to the underlined word: The speech was filled with **obscure** literary allusions.",
-    options: ["A. Unclear", "B. Vague", "C. Clear", "D. Hidden"],
-    answer: "C",
-    explanation: "'Obscure' means not discovered or known about; uncertain. The opposite is 'clear'."
+    "id": 753,
+    "question": "Choose the option that correctly completes the sentence: I would rather you _____ not disturb him now.",
+    "options": ["do", "did", "have", "will"],
+    "answer": "B",
+    "explanation": "'Would rather' followed by a pronoun subject takes the past subjunctive ('did')."
   },
   {
-    id: 753,
-    question: "Choose the option that correctly completes the sentence: I would rather you _____ not disturb him now.",
-    options: ["A. do", "B. did", "C. have", "D. will"],
-    answer: "B",
-    explanation: "'Would rather' followed by a pronoun subject takes the past subjunctive ('did')."
+    "id": 754,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **v**an",
+    "options": ["Fan", "Of", "Off", "Pan"],
+    "answer": "B",
+    "explanation": "The word 'of' is pronounced /ɒv/, sharing the /v/ sound with 'van'."
   },
   {
-    id: 754,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **v**an",
-    options: ["A. Fan", "B. Of", "C. Off", "D. Pan"],
-    answer: "B",
-    explanation: "The word 'of' is pronounced /ɒv/, sharing the /v/ sound with 'van'."
+    "id": 755,
+    "question": "Choose the option that best explains the idiom: To **throw in the towel** means to:",
+    "options": ["Clean up", "Admit defeat", "Start a fight", "Exercise hard"],
+    "answer": "B",
+    "explanation": "'Throw in the towel' is an idiom that means to surrender or admit defeat."
   },
   {
-    id: 755,
-    question: "Choose the option that best explains the idiom: To **throw in the towel** means to:",
-    options: ["A. Clean up", "B. Admit defeat", "C. Start a fight", "D. Exercise hard"],
-    answer: "B",
-    explanation: "'Throw in the towel' is an idiom that means to surrender or admit defeat."
+    "id": 756,
+    "question": "Choose the option that correctly completes the sentence: She accused her friend _____ divulging her secret.",
+    "options": ["of", "for", "with", "on"],
+    "answer": "A",
+    "explanation": "The verb 'accused' is always followed by the preposition 'of'."
   },
   {
-    id: 756,
-    question: "Choose the option that correctly completes the sentence: She accused her friend _____ divulging her secret.",
-    options: ["A. of", "B. for", "C. with", "D. on"],
-    answer: "A",
-    explanation: "The verb 'accused' is always followed by the preposition 'of'."
+    "id": 757,
+    "question": "Choose the option nearest in meaning to the underlined word: The company achieved **unprecedented** growth this year.",
+    "options": ["Unmatched", "Ordinary", "Common", "Expected"],
+    "answer": "A",
+    "explanation": "'Unprecedented' means never done or known before; unmatched."
   },
   {
-    id: 757,
-    question: "Choose the option nearest in meaning to the underlined word: The company achieved **unprecedented** growth this year.",
-    options: ["A. Unmatched", "B. Ordinary", "C. Common", "D. Expected"],
-    answer: "A",
-    explanation: "'Unprecedented' means never done or known before; unmatched."
+    "id": 758,
+    "question": "Choose the option opposite in meaning to the underlined word: The contract contains **explicit** terms for termination.",
+    "options": ["Clear", "Implicit", "Direct", "Precise"],
+    "answer": "B",
+    "explanation": "'Explicit' means stated clearly and in detail; its opposite is 'implicit' (implied)."
   },
   {
-    id: 758,
-    question: "Choose the option opposite in meaning to the underlined word: The contract contains **explicit** terms for termination.",
-    options: ["A. Clear", "B. Implicit", "C. Direct", "D. Precise"],
-    answer: "B",
-    explanation: "'Explicit' means stated clearly and in detail; its opposite is 'implicit' (implied)."
+    "id": 759,
+    "question": "Choose the option with the correct stress pattern for the word: **POLITICS**",
+    "options": ["PO-li-tics", "po-LI-tics", "po-li-TICS", "PO-LI-tics"],
+    "answer": "A",
+    "explanation": "The noun 'politics' carries primary stress on the first syllable: PO-li-tics."
   },
   {
-    id: 759,
-    question: "Choose the option with the correct stress pattern for the word: **POLITICS**",
-    options: ["A. PO-li-tics", "B. po-LI-tics", "C. po-li-TICS", "D. PO-LI-tics"],
-    answer: "A",
-    explanation: "The noun 'politics' carries primary stress on the first syllable: PO-li-tics."
+    "id": 760,
+    "question": "Choose the option that correctly completes the sentence: Neither of the answers _____ correct.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' when used as a pronoun takes a singular verb ('is')."
   },
   {
-    id: 760,
-    question: "Choose the option that correctly completes the sentence: Neither of the answers _____ correct.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' when used as a pronoun takes a singular verb ('is')."
+    "id": 761,
+    "question": "Choose the option nearest in meaning to the underlined word: The court gave an **impartial** ruling on the dispute.",
+    "options": ["Biased", "Unbiased", "Subjective", "Unfair"],
+    "answer": "B",
+    "explanation": "'Impartial' means treating all rivals or disputants equally; unbiased."
   },
   {
-    id: 761,
-    question: "Choose the option nearest in meaning to the underlined word: The court gave an **impartial** ruling on the dispute.",
-    options: ["A. Biased", "B. Unbiased", "C. Subjective", "D. Unfair"],
-    answer: "B",
-    explanation: "'Impartial' means treating all rivals or disputants equally; unbiased."
+    "id": 762,
+    "question": "Choose the option opposite in meaning to the underlined word: The project received **tepid** support from the community.",
+    "options": ["Lukewarm", "Enthusiastic", "Indifferent", "Cold"],
+    "answer": "B",
+    "explanation": "'Tepid' means showing little enthusiasm; its opposite is 'enthusiastic'."
   },
   {
-    id: 762,
-    question: "Choose the option opposite in meaning to the underlined word: The project received **tepid** support from the community.",
-    options: ["A. Lukewarm", "B. Enthusiastic", "C. Indifferent", "D. Cold"],
-    answer: "B",
-    explanation: "'Tepid' means showing little enthusiasm; its opposite is 'enthusiastic'."
+    "id": 763,
+    "question": "Choose the option that correctly completes the sentence: The principal, alongside the teachers, _____ attending the seminar.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Alongside' does not make the subject plural; the verb agrees with 'principal' (singular 'is')."
   },
   {
-    id: 763,
-    question: "Choose the option that correctly completes the sentence: The principal, alongside the teachers, _____ attending the seminar.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Alongside' does not make the subject plural; the verb agrees with 'principal' (singular 'is')."
+    "id": 764,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**tch",
+    "options": ["Plait", "Late", "Cart", "Caught"],
+    "answer": "A",
+    "explanation": "Both 'catch' and 'plait' share the short vowel sound /æ/."
   },
   {
-    id: 764,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**tch",
-    options: ["A. Plait", "B. Late", "C. Cart", "D. Caught"],
-    answer: "A",
-    explanation: "Both 'catch' and 'plait' share the short vowel sound /æ/."
+    "id": 765,
+    "question": "Choose the option that best explains the idiom: To **play second fiddle** means to:",
+    "options": ["Play a musical instrument", "Take a subordinate role", "Lead a team", "Waste time"],
+    "answer": "B",
+    "explanation": "'Play second fiddle' means to be in a position of less importance or subordinate to someone else."
   },
   {
-    id: 765,
-    question: "Choose the option that best explains the idiom: To **play second fiddle** means to:",
-    options: ["A. Play a musical instrument", "B. Take a subordinate role", "C. Lead a team", "D. Waste time"],
-    answer: "B",
-    explanation: "'Play second fiddle' means to be in a position of less importance or subordinate to someone else."
+    "id": 766,
+    "question": "Choose the option that correctly completes the sentence: By five o'clock tomorrow, we _____ the assignment.",
+    "options": ["finish", "will have finished", "finished", "will finish"],
+    "answer": "B",
+    "explanation": "'By [time in future]' calls for the future perfect tense ('will have finished')."
   },
   {
-    id: 766,
-    question: "Choose the option that correctly completes the sentence: By five o'clock tomorrow, we _____ the assignment.",
-    options: ["A. finish", "B. will have finished", "C. finished", "D. will finish"],
-    answer: "B",
-    explanation: "'By [time in future]' calls for the future perfect tense ('will have finished')."
+    "id": 767,
+    "question": "Choose the option nearest in meaning to the underlined word: The new policy created a **convivial** atmosphere in the office.",
+    "options": ["Friendly", "Hostile", "Tense", "Formal"],
+    "answer": "A",
+    "explanation": "'Convivial' means friendly, lively, and enjoyable."
   },
   {
-    id: 767,
-    question: "Choose the option nearest in meaning to the underlined word: The new policy created a **convivial** atmosphere in the office.",
-    options: ["A. Friendly", "B. Hostile", "C. Tense", "D. Formal"],
-    answer: "A",
-    explanation: "'Convivial' means friendly, lively, and enjoyable."
+    "id": 768,
+    "question": "Choose the option opposite in meaning to the underlined word: The witness gave a **fallacious** statement during trial.",
+    "options": ["False", "True", "Misleading", "Erroneous"],
+    "answer": "B",
+    "explanation": "'Fallacious' means based on a mistaken belief or false; the opposite is 'true'."
   },
   {
-    id: 768,
-    question: "Choose the option opposite in meaning to the underlined word: The witness gave a **fallacious** statement during trial.",
-    options: ["A. False", "B. True", "C. Misleading", "D. Erroneous"],
-    answer: "B",
-    explanation: "'Fallacious' means based on a mistaken belief or false; the opposite is 'true'."
+    "id": 769,
+    "question": "Choose the option with the correct stress pattern for the word: **INVESTIGATION**",
+    "options": ["in-ves-ti-GA-tion", "in-VES-ti-ga-tion", "IN-ves-ti-ga-tion", "in-ves-ti-ga-TION"],
+    "answer": "A",
+    "explanation": "Words ending in '-tion' place primary stress on the penultimate syllable: in-ves-ti-GA-tion."
   },
   {
-    id: 769,
-    question: "Choose the option with the correct stress pattern for the word: **INVESTIGATION**",
-    options: ["A. in-ves-ti-GA-tion", "B. in-VES-ti-ga-tion", "C. IN-ves-ti-ga-tion", "D. in-ves-ti-ga-TION"],
-    answer: "A",
-    explanation: "Words ending in '-tion' place primary stress on the penultimate syllable: in-ves-ti-GA-tion."
+    "id": 770,
+    "question": "Choose the option that correctly completes the sentence: Hardly had the train stopped _____ the passengers rushed out.",
+    "options": ["than", "when", "then", "before"],
+    "answer": "B",
+    "explanation": "'Hardly' is paired with 'when' in standard inverted structure."
   },
   {
-    id: 770,
-    question: "Choose the option that correctly completes the sentence: Hardly had the train stopped _____ the passengers rushed out.",
-    options: ["A. than", "B. when", "C. then", "D. before"],
-    answer: "B",
-    explanation: "'Hardly' is paired with 'when' in standard inverted structure."
+    "id": 771,
+    "question": "Choose the option nearest in meaning to the underlined word: The manager was forced to **relinquish** his control.",
+    "options": ["Surrender", "Retain", "Claim", "Hold"],
+    "answer": "A",
+    "explanation": "'Relinquish' means to voluntarily cease to keep or claim; surrender."
   },
   {
-    id: 771,
-    question: "Choose the option nearest in meaning to the underlined word: The manager was forced to **relinquish** his control.",
-    options: ["A. Surrender", "B. Retain", "C. Claim", "D. Hold"],
-    answer: "A",
-    explanation: "'Relinquish' means to voluntarily cease to keep or claim; surrender."
+    "id": 772,
+    "question": "Choose the option opposite in meaning to the underlined word: The village was known for its **barren** lands.",
+    "options": ["Unfertile", "Fertile", "Dry", "Arid"],
+    "answer": "B",
+    "explanation": "'Barren' means land too poor to produce vegetation; opposite is 'fertile'."
   },
   {
-    id: 772,
-    question: "Choose the option opposite in meaning to the underlined word: The village was known for its **barren** lands.",
-    options: ["A. Unfertile", "B. Fertile", "C. Dry", "D. Arid"],
-    answer: "B",
-    explanation: "'Barren' means land too poor to produce vegetation; opposite is 'fertile'."
+    "id": 773,
+    "question": "Choose the option that correctly completes the sentence: The doctor recommended that the patient _____ more rest.",
+    "options": ["gets", "get", "got", "is getting"],
+    "answer": "B",
+    "explanation": "Subjunctive structures after verbs of suggestion/recommendation use the base verb ('get')."
   },
   {
-    id: 773,
-    question: "Choose the option that correctly completes the sentence: The doctor recommended that the patient _____ more rest.",
-    options: ["A. gets", "B. get", "C. got", "D. is getting"],
-    answer: "B",
-    explanation: "Subjunctive structures after verbs of suggestion/recommendation use the base verb ('get')."
+    "id": 774,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **j**udge",
+    "options": ["Game", "Giant", "Go", "Gear"],
+    "answer": "B",
+    "explanation": "The initial letter 'g' in 'giant' makes the /dʒ/ sound, matching 'judge'."
   },
   {
-    id: 774,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **j**udge",
-    options: ["A. Game", "B. Giant", "C. Go", "D. Gear"],
-    answer: "B",
-    explanation: "The initial letter 'g' in 'giant' makes the /dʒ/ sound, matching 'judge'."
+    "id": 775,
+    "question": "Choose the option that best explains the idiom: To **keep someone at arm's length** means to:",
+    "options": ["Hug someone tightly", "Avoid becoming too friendly with someone", "Measure distance physically", "Help someone in need"],
+    "answer": "B",
+    "explanation": "'Keep someone at arm's length' means to maintain distance and avoid close familiarity."
   },
   {
-    id: 775,
-    question: "Choose the option that best explains the idiom: To **keep someone at arm's length** means to:",
-    options: ["A. Hug someone tightly", "B. Avoid becoming too friendly with someone", "C. Measure distance physically", "D. Help someone in need"],
-    answer: "B",
-    explanation: "'Keep someone at arm's length' means to maintain distance and avoid close familiarity."
+    "id": 776,
+    "question": "Choose the option that correctly completes the sentence: Mathematics _____ a compulsory subject for science students.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Academic subjects ending in '-ics' (like Mathematics) take a singular verb ('is')."
   },
   {
-    id: 776,
-    question: "Choose the option that correctly completes the sentence: Mathematics _____ a compulsory subject for science students.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Academic subjects ending in '-ics' (like Mathematics) take a singular verb ('is')."
+    "id": 777,
+    "question": "Choose the option nearest in meaning to the underlined word: The student was praised for her **exemplary** performance.",
+    "options": ["Commendable", "Poor", "Average", "Careless"],
+    "answer": "A",
+    "explanation": "'Exemplary' means serving as a desirable model; commendable."
   },
   {
-    id: 777,
-    question: "Choose the option nearest in meaning to the underlined word: The student was praised for her **exemplary** performance.",
-    options: ["A. Commendable", "B. Poor", "C. Average", "D. Careless"],
-    answer: "A",
-    explanation: "'Exemplary' means serving as a desirable model; commendable."
+    "id": 778,
+    "question": "Choose the option opposite in meaning to the underlined word: The company made a **substantial** profit last quarter.",
+    "options": ["Large", "Negligible", "Significant", "Huge"],
+    "answer": "B",
+    "explanation": "'Substantial' means of considerable importance, size, or worth; opposite is 'negligible'."
   },
   {
-    id: 778,
-    question: "Choose the option opposite in meaning to the underlined word: The company made a **substantial** profit last quarter.",
-    options: ["A. Large", "B. Negligible", "C. Significant", "D. Huge"],
-    answer: "B",
-    explanation: "'Substantial' means of considerable importance, size, or worth; opposite is 'negligible'."
+    "id": 779,
+    "question": "Choose the option with the correct stress pattern for the word: **CONTROVERSY**",
+    "options": ["CON-tro-ver-sy", "con-TRO-ver-sy", "con-tro-VER-sy", "con-tro-ver-SY"],
+    "answer": "A",
+    "explanation": "The noun 'controversy' is conventionally stressed on the first syllable: CON-tro-ver-sy."
   },
   {
-    id: 779,
-    question: "Choose the option with the correct stress pattern for the word: **CONTROVERSY**",
-    options: ["A. CON-tro-ver-sy", "B. con-TRO-ver-sy", "C. con-tro-VER-sy", "D. con-tro-ver-SY"],
-    answer: "A",
-    explanation: "The noun 'controversy' is conventionally stressed on the first syllable: CON-tro-ver-sy."
+    "id": 780,
+    "question": "Choose the option that correctly completes the sentence: The committee has completed _____ report.",
+    "options": ["its", "their", "his", "our"],
+    "answer": "A",
+    "explanation": "When a collective noun acts as a single unified entity, the singular pronoun 'its' is used."
   },
   {
-    id: 780,
-    question: "Choose the option that correctly completes the sentence: The committee has completed _____ report.",
-    options: ["A. its", "B. their", "C. his", "D. our"],
-    answer: "A",
-    explanation: "When a collective noun acts as a single unified entity, the singular pronoun 'its' is used."
+    "id": 781,
+    "question": "Choose the option nearest in meaning to the underlined word: The speaker's **passionate** plea moved the audience.",
+    "options": ["Fervent", "Cold", "Indifferent", "Weak"],
+    "answer": "A",
+    "explanation": "'Passionate' means showing or caused by strong feelings; fervent."
   },
   {
-    id: 781,
-    question: "Choose the option nearest in meaning to the underlined word: The speaker's **passionate** plea moved the audience.",
-    options: ["A. Fervent", "B. Cold", "C. Indifferent", "D. Weak"],
-    answer: "A",
-    explanation: "'Passionate' means showing or caused by strong feelings; fervent."
+    "id": 782,
+    "question": "Choose the option opposite in meaning to the underlined word: He was criticized for his **extravagant** spending habits.",
+    "options": ["Wasteful", "Frugal", "Generous", "Reckless"],
+    "answer": "B",
+    "explanation": "'Extravagant' means spending money or resources excessively; opposite is 'frugal'."
   },
   {
-    id: 782,
-    question: "Choose the option opposite in meaning to the underlined word: He was criticized for his **extravagant** spending habits.",
-    options: ["A. Wasteful", "B. Frugal", "C. Generous", "D. Reckless"],
-    answer: "B",
-    explanation: "'Extravagant' means spending money or resources excessively; opposite is 'frugal'."
+    "id": 783,
+    "question": "Choose the option that correctly completes the sentence: I haven't seen him _____ last Tuesday.",
+    "options": ["since", "for", "from", "in"],
+    "answer": "A",
+    "explanation": "'Since' denotes a specific past point in time up to the present moment."
   },
   {
-    id: 783,
-    question: "Choose the option that correctly completes the sentence: I haven't seen him _____ last Tuesday.",
-    options: ["A. since", "B. for", "C. from", "D. in"],
-    answer: "A",
-    explanation: "'Since' denotes a specific past point in time up to the present moment."
+    "id": 784,
+    "question": "Choose the option nearest in meaning to the underlined word: The old man was known for his **eccentric** behavior.",
+    "options": ["Peculiar", "Normal", "Conventional", "Ordinary"],
+    "answer": "A",
+    "explanation": "'Eccentric' means unconventional and slightly strange or peculiar."
   },
   {
-    id: 784,
-    question: "Choose the option nearest in meaning to the underlined word: The old man was known for his **eccentric** behavior.",
-    options: ["A. Peculiar", "B. Normal", "C. Conventional", "D. Ordinary"],
-    answer: "A",
-    explanation: "'Eccentric' means unconventional and slightly strange or peculiar."
+    "id": 785,
+    "question": "Choose the option opposite in meaning to the underlined word: The union called for a **compulsory** meeting for all staff.",
+    "options": ["Mandatory", "Optional", "Obligatory", "Enforced"],
+    "answer": "B",
+    "explanation": "'Compulsory' means required by law or a rule; the opposite is 'optional'."
   },
   {
-    id: 785,
-    question: "Choose the option opposite in meaning to the underlined word: The union called for a **compulsory** meeting for all staff.",
-    options: ["A. Mandatory", "B. Optional", "C. Obligatory", "D. Enforced"],
-    answer: "B",
-    explanation: "'Compulsory' means required by law or a rule; the opposite is 'optional'."
+    "id": 786,
+    "question": "Choose the option that correctly completes the sentence: The list of successful candidates _____ been published.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "The subject of the sentence is 'list' (singular), which requires the singular verb 'has'."
   },
   {
-    id: 786,
-    question: "Choose the option that correctly completes the sentence: The list of successful candidates _____ been published.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "The subject of the sentence is 'list' (singular), which requires the singular verb 'has'."
+    "id": 787,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: p**oo**l",
+    "options": ["Pull", "Rule", "Foot", "Bull"],
+    "answer": "B",
+    "explanation": "Both 'pool' and 'rule' share the long vowel sound /uː/."
   },
   {
-    id: 787,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: p**oo**l",
-    options: ["A. Pull", "B. Rule", "C. Foot", "D. Bull"],
-    answer: "B",
-    explanation: "Both 'pool' and 'rule' share the long vowel sound /uː/."
+    "id": 788,
+    "question": "Choose the option that best explains the idiom: To **bury the hatchet** means to:",
+    "options": ["Hide a weapon", "Make peace", "Dig a hole", "Start a war"],
+    "answer": "B",
+    "explanation": "'Bury the hatchet' is an idiom meaning to end a conflict or make peace."
   },
   {
-    id: 788,
-    question: "Choose the option that best explains the idiom: To **bury the hatchet** means to:",
-    options: ["A. Hide a weapon", "B. Make peace", "C. Dig a hole", "D. Start a war"],
-    answer: "B",
-    explanation: "'Bury the hatchet' is an idiom meaning to end a conflict or make peace."
+    "id": 789,
+    "question": "Choose the option that correctly completes the sentence: She disposed _____ all the old newspapers yesterday.",
+    "options": ["of", "off", "away", "with"],
+    "answer": "A",
+    "explanation": "The phrasal verb 'dispose of' takes a single 'f'."
   },
   {
-    id: 789,
-    question: "Choose the option that correctly completes the sentence: She disposed _____ all the old newspapers yesterday.",
-    options: ["A. of", "B. off", "C. away", "D. with"],
-    answer: "A",
-    explanation: "The phrasal verb 'dispose of' takes a single 'f'."
+    "id": 790,
+    "question": "Choose the option nearest in meaning to the underlined word: The general made a **tactical** withdrawal from the frontline.",
+    "options": ["Strategic", "Reckless", "Hasty", "Accidental"],
+    "answer": "A",
+    "explanation": "'Tactical' means done or planned to achieve a specific end; strategic."
   },
   {
-    id: 790,
-    question: "Choose the option nearest in meaning to the underlined word: The general made a **tactical** withdrawal from the frontline.",
-    options: ["A. Strategic", "B. Reckless", "C. Hasty", "D. Accidental"],
-    answer: "A",
-    explanation: "'Tactical' means done or planned to achieve a specific end; strategic."
+    "id": 791,
+    "question": "Choose the option opposite in meaning to the underlined word: The atmosphere in the courtroom was **tense**.",
+    "options": ["Strained", "Relaxed", "Hostile", "Anxious"],
+    "answer": "B",
+    "explanation": "'Tense' means causing or characterized by anxiety or nervous strain; opposite is 'relaxed'."
   },
   {
-    id: 791,
-    question: "Choose the option opposite in meaning to the underlined word: The atmosphere in the courtroom was **tense**.",
-    options: ["A. Strained", "B. Relaxed", "C. Hostile", "D. Anxious"],
-    answer: "B",
-    explanation: "'Tense' means causing or characterized by anxiety or nervous strain; opposite is 'relaxed'."
+    "id": 792,
+    "question": "Choose the option with the correct stress pattern for the word: **NATIONALITY**",
+    "options": ["NA-tio-na-li-ty", "na-tio-NA-li-ty", "na-tio-na-LI-ty", "na-tio-na-li-TY"],
+    "answer": "C",
+    "explanation": "Words ending in '-ity' carry stress on the antepenultimate syllable: na-tio-na-LI-ty."
   },
   {
-    id: 792,
-    question: "Choose the option with the correct stress pattern for the word: **NATIONALITY**",
-    options: ["A. NA-tio-na-li-ty", "B. na-tio-NA-li-ty", "C. na-tio-na-LI-ty", "D. na-tio-na-li-TY"],
-    answer: "C",
-    explanation: "Words ending in '-ity' carry stress on the antepenultimate syllable: na-tio-na-LI-ty."
+    "id": 793,
+    "question": "Choose the option that correctly completes the sentence: No sooner had we stepped outside _____ it started raining.",
+    "options": ["when", "than", "then", "as"],
+    "answer": "B",
+    "explanation": "'No sooner' is strictly followed by 'than'."
   },
   {
-    id: 793,
-    question: "Choose the option that correctly completes the sentence: No sooner had we stepped outside _____ it started raining.",
-    options: ["A. when", "B. than", "C. then", "D. as"],
-    answer: "B",
-    explanation: "'No sooner' is strictly followed by 'than'."
+    "id": 794,
+    "question": "Choose the option nearest in meaning to the underlined word: The court found the evidence **inconclusive**.",
+    "options": ["Indecisive", "Clear", "Final", "Convincing"],
+    "answer": "A",
+    "explanation": "'Inconclusive' means not leading to a firm conclusion or result; indecisive."
   },
   {
-    id: 794,
-    question: "Choose the option nearest in meaning to the underlined word: The court found the evidence **inconclusive**.",
-    options: ["A. Indecisive", "B. Clear", "C. Final", "D. Convincing"],
-    answer: "A",
-    explanation: "'Inconclusive' means not leading to a firm conclusion or result; indecisive."
+    "id": 795,
+    "question": "Choose the option opposite in meaning to the underlined word: The village head was known for his **arrogance**.",
+    "options": ["Pride", "Humility", "Haughtiness", "Conceit"],
+    "answer": "B",
+    "explanation": "'Arrogance' means unpleasantly proud and overbearing behavior; opposite is 'humility'."
   },
   {
-    id: 795,
-    question: "Choose the option opposite in meaning to the underlined word: The village head was known for his **arrogance**.",
-    options: ["A. Pride", "B. Humility", "C. Haughtiness", "D. Conceit"],
-    answer: "B",
-    explanation: "'Arrogance' means unpleasantly proud and overbearing behavior; opposite is 'humility'."
+    "id": 796,
+    "question": "Choose the option that correctly completes the sentence: My brother, together with his friends, _____ travelling to Abuja today.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Parenthetical expressions like 'together with' do not change the subject number ('brother' -> singular 'is')."
   },
   {
-    id: 796,
-    question: "Choose the option that correctly completes the sentence: My brother, together with his friends, _____ travelling to Abuja today.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Parenthetical expressions like 'together with' do not change the subject number ('brother' -> singular 'is')."
+    "id": 797,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**ere",
+    "options": ["Thick", "Weather", "Thought", "Theft"],
+    "answer": "B",
+    "explanation": "Both 'there' and 'weather' share the voiced dental fricative sound /ð/."
   },
   {
-    id: 797,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**ere",
-    options: ["A. Thick", "B. Weather", "C. Thought", "D. Theft"],
-    answer: "B",
-    explanation: "Both 'there' and 'weather' share the voiced dental fricative sound /ð/."
+    "id": 798,
+    "question": "Choose the option that best explains the idiom: To **bark up the wrong tree** means to:",
+    "options": ["Make a mistake in target or choice", "Shout at a dog", "Climb an unstable tree", "Chase animals away"],
+    "answer": "A",
+    "explanation": "'Bark up the wrong tree' means to pursue a mistaken line of thought or course of action."
   },
   {
-    id: 798,
-    question: "Choose the option that best explains the idiom: To **bark up the wrong tree** means to:",
-    options: ["A. Make a mistake in target or choice", "B. Shout at a dog", "C. Climb an unstable tree", "D. Chase animals away"],
-    answer: "A",
-    explanation: "'Bark up the wrong tree' means to pursue a mistaken line of thought or course of action."
+    "id": 799,
+    "question": "Choose the option that correctly completes the sentence: The students were prevented _____ entering the laboratory without lab coats.",
+    "options": ["to", "from", "against", "off"],
+    "answer": "B",
+    "explanation": "The verb 'prevent' collocates with 'from'."
   },
   {
-    id: 799,
-    question: "Choose the option that correctly completes the sentence: The students were prevented _____ entering the laboratory without lab coats.",
-    options: ["A. to", "B. from", "C. against", "D. off"],
-    answer: "B",
-    explanation: "The verb 'prevent' collocates with 'from'."
+    "id": 800,
+    "question": "Choose the option nearest in meaning to the underlined word: The manager gave a **curt** reply to the customer's query.",
+    "options": ["Abrupt", "Detailed", "Polite", "Lengthy"],
+    "answer": "A",
+    "explanation": "'Curt' means rudely brief or abrupt."
   },
   {
-    id: 800,
-    question: "Choose the option nearest in meaning to the underlined word: The manager gave a **curt** reply to the customer's query.",
-    options: ["A. Abrupt", "B. Detailed", "C. Polite", "D. Lengthy"],
-    answer: "A",
-    explanation: "'Curt' means rudely brief or abrupt."
+    "id": 801,
+    "question": "Choose the option opposite in meaning to the underlined word: She lives in an **affluent** neighborhood.",
+    "options": ["Wealthy", "Poor", "Rich", "Prosperous"],
+    "answer": "B",
+    "explanation": "'Affluent' means having a great deal of money; wealthy. The opposite is 'poor'."
   },
   {
-    id: 801,
-    question: "Choose the option opposite in meaning to the underlined word: She lives in an **affluent** neighborhood.",
-    options: ["A. Wealthy", "B. Poor", "C. Rich", "D. Prosperous"],
-    answer: "B",
-    explanation: "'Affluent' means having a great deal of money; wealthy. The opposite is 'poor'."
+    "id": 802,
+    "question": "Choose the option with the correct stress pattern for the word: **DETERMINATION**",
+    "options": ["DE-ter-mi-na-tion", "de-ter-MI-na-tion", "de-ter-mi-NA-tion", "de-ter-mi-na-TION"],
+    "answer": "C",
+    "explanation": "Words with '-tion' suffix carry primary stress on the second syllable from the end: de-ter-mi-NA-tion."
   },
   {
-    id: 802,
-    question: "Choose the option with the correct stress pattern for the word: **DETERMINATION**",
-    options: ["A. DE-ter-mi-na-tion", "B. de-ter-MI-na-tion", "C. de-ter-mi-NA-tion", "D. de-ter-mi-na-TION"],
-    answer: "C",
-    explanation: "Words with '-tion' suffix carry primary stress on the second syllable from the end: de-ter-mi-NA-tion."
+    "id": 803,
+    "question": "Choose the option that correctly completes the sentence: Neither of the suspects _____ admitted committing the crime.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular subject and takes 'has'."
   },
   {
-    id: 803,
-    question: "Choose the option that correctly completes the sentence: Neither of the suspects _____ admitted committing the crime.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular subject and takes 'has'."
+    "id": 804,
+    "question": "Choose the option nearest in meaning to the underlined word: His remarks served to **exacerbate** the conflict.",
+    "options": ["Worsen", "Soothe", "Calm", "Resolve"],
+    "answer": "A",
+    "explanation": "'Exacerbate' means to make a problem, bad situation, or negative feeling worse."
   },
   {
-    id: 804,
-    question: "Choose the option nearest in meaning to the underlined word: His remarks served to **exacerbate** the conflict.",
-    options: ["A. Worsen", "B. Soothe", "C. Calm", "D. Resolve"],
-    answer: "A",
-    explanation: "'Exacerbate' means to make a problem, bad situation, or negative feeling worse."
+    "id": 805,
+    "question": "Choose the option opposite in meaning to the underlined word: The document was verified to be **authentic**.",
+    "options": ["Genuine", "Fake", "Original", "Real"],
+    "answer": "B",
+    "explanation": "'Authentic' means genuine or real; the opposite is 'fake'."
   },
   {
-    id: 805,
-    question: "Choose the option opposite in meaning to the underlined word: The document was verified to be **authentic**.",
-    options: ["A. Genuine", "B. Fake", "C. Original", "D. Real"],
-    answer: "B",
-    explanation: "'Authentic' means genuine or real; the opposite is 'fake'."
+    "id": 806,
+    "question": "Choose the option that correctly completes the sentence: I would rather he _____ the project himself.",
+    "options": ["handle", "handled", "handles", "will handle"],
+    "answer": "B",
+    "explanation": "'Would rather' followed by a pronoun subject takes the past subjunctive form ('handled')."
   },
   {
-    id: 806,
-    question: "Choose the option that correctly completes the sentence: I would rather he _____ the project himself.",
-    options: ["A. handle", "B. handled", "C. handles", "D. will handle"],
-    answer: "B",
-    explanation: "'Would rather' followed by a pronoun subject takes the past subjunctive form ('handled')."
+    "id": 807,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: h**e**rtz",
+    "options": ["Heart", "Dirt", "Hat", "Hit"],
+    "answer": "B",
+    "explanation": "Both 'hertz' and 'dirt' share the central vowel sound /ɜː/."
   },
   {
-    id: 807,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: h**e**rtz",
-    options: ["A. Heart", "B. Dirt", "C. Hat", "D. Hit"],
-    answer: "B",
-    explanation: "Both 'hertz' and 'dirt' share the central vowel sound /ɜː/."
+    "id": 808,
+    "question": "Choose the option that best explains the idiom: To **add insult to injury** means to:",
+    "options": ["Make a bad situation worse", "Hurt someone physically", "Apologize sincerely", "Treat an infected wound"],
+    "answer": "A",
+    "explanation": "'Add insult to injury' means to act in a way that worsens an already bad situation for someone."
   },
   {
-    id: 808,
-    question: "Choose the option that best explains the idiom: To **add insult to injury** means to:",
-    options: ["A. Make a bad situation worse", "B. Hurt someone physically", "C. Apologize sincerely", "D. Treat an infected wound"],
-    answer: "A",
-    explanation: "'Add insult to injury' means to act in a way that worsens an already bad situation for someone."
+    "id": 809,
+    "question": "Choose the option that correctly completes the sentence: The cattle _____ grazing in the field.",
+    "options": ["is", "are", "was", "has been"],
+    "answer": "B",
+    "explanation": "'Cattle' is a plural noun and takes a plural verb ('are')."
   },
   {
-    id: 809,
-    question: "Choose the option that correctly completes the sentence: The cattle _____ grazing in the field.",
-    options: ["A. is", "B. are", "C. was", "D. has been"],
-    answer: "B",
-    explanation: "'Cattle' is a plural noun and takes a plural verb ('are')."
+    "id": 810,
+    "question": "Choose the option nearest in meaning to the underlined word: The government plans to **subsidize** public transport.",
+    "options": ["Fund", "Tax", "Ban", "Ignore"],
+    "answer": "A",
+    "explanation": "'Subsidize' means to support financially or pay part of the cost of something."
   },
   {
-    id: 810,
-    question: "Choose the option nearest in meaning to the underlined word: The government plans to **subsidize** public transport.",
-    options: ["A. Fund", "B. Tax", "C. Ban", "D. Ignore"],
-    answer: "A",
-    explanation: "'Subsidize' means to support financially or pay part of the cost of something."
+    "id": 811,
+    "question": "Choose the option opposite in meaning to the underlined word: The old man was known to be **frugal** with his savings.",
+    "options": ["Extravagant", "Thrifty", "Careful", "Modest"],
+    "answer": "A",
+    "explanation": "'Frugal' means economical; its opposite is 'extravagant'."
   },
   {
-    id: 811,
-    question: "Choose the option opposite in meaning to the underlined word: The old man was known to be **frugal** with his savings.",
-    options: ["A. Extravagant", "B. Thrifty", "C. Careful", "D. Modest"],
-    answer: "A",
-    explanation: "'Frugal' means economical; its opposite is 'extravagant'."
+    "id": 812,
+    "question": "Choose the option with the correct stress pattern for the word: **ACADEMIC**",
+    "options": ["A-ca-de-mic", "a-CA-de-mic", "a-ca-DE-mic", "a-ca-de-MIC"],
+    "answer": "C",
+    "explanation": "Words ending in '-ic' carry stress on the penultimate syllable: a-ca-DE-mic."
   },
   {
-    id: 812,
-    question: "Choose the option with the correct stress pattern for the word: **ACADEMIC**",
-    options: ["A. A-ca-de-mic", "B. a-CA-de-mic", "C. a-ca-DE-mic", "D. a-ca-de-MIC"],
-    answer: "C",
-    explanation: "Words ending in '-ic' carry stress on the penultimate syllable: a-ca-DE-mic."
+    "id": 813,
+    "question": "Choose the option that correctly completes the sentence: Either the teacher or the students _____ going to clean the board.",
+    "options": ["is", "are", "was", "has"],
+    "answer": "B",
+    "explanation": "With 'either... or', the verb agrees with the closer subject ('students' -> plural 'are')."
   },
   {
-    id: 813,
-    question: "Choose the option that correctly completes the sentence: Either the teacher or the students _____ going to clean the board.",
-    options: ["A. is", "B. are", "C. was", "D. has"],
-    answer: "B",
-    explanation: "With 'either... or', the verb agrees with the closer subject ('students' -> plural 'are')."
+    "id": 814,
+    "question": "Choose the option nearest in meaning to the underlined word: The candidate's success was due to his **indefatigable** spirit.",
+    "options": ["Tireless", "Weak", "Lazy", "Hesitant"],
+    "answer": "A",
+    "explanation": "'Indefatigable' means persisting tirelessly in effort or energy."
   },
   {
-    id: 814,
-    question: "Choose the option nearest in meaning to the underlined word: The candidate's success was due to his **indefatigable** spirit.",
-    options: ["A. Tireless", "B. Weak", "C. Lazy", "D. Hesitant"],
-    answer: "A",
-    explanation: "'Indefatigable' means persisting tirelessly in effort or energy."
+    "id": 815,
+    "question": "Choose the option opposite in meaning to the underlined word: The river flows in a **crooked** path.",
+    "options": ["Straight", "Curved", "Twisted", "Bended"],
+    "answer": "A",
+    "explanation": "'Crooked' means bent or twisted; the opposite is 'straight'."
   },
   {
-    id: 815,
-    question: "Choose the option opposite in meaning to the underlined word: The river flows in a **crooked** path.",
-    options: ["A. Straight", "B. Curved", "C. Twisted", "D. Bended"],
-    answer: "A",
-    explanation: "'Crooked' means bent or twisted; the opposite is 'straight'."
+    "id": 816,
+    "question": "Choose the option that correctly completes the sentence: She has lived in this town _____ ten years.",
+    "options": ["since", "for", "during", "from"],
+    "answer": "B",
+    "explanation": "'For' is used to state a period or duration of time ('ten years')."
   },
   {
-    id: 816,
-    question: "Choose the option that correctly completes the sentence: She has lived in this town _____ ten years.",
-    options: ["A. since", "B. for", "C. during", "D. from"],
-    answer: "B",
-    explanation: "'For' is used to state a period or duration of time ('ten years')."
+    "id": 817,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **c**at",
+    "options": ["Cell", "Chorus", "City", "Ceiling"],
+    "answer": "B",
+    "explanation": "The 'ch' in 'chorus' makes the /k/ sound, matching the initial sound of 'cat'."
   },
   {
-    id: 817,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **c**at",
-    options: ["A. Cell", "B. Chorus", "C. City", "D. Ceiling"],
-    answer: "B",
-    explanation: "The 'ch' in 'chorus' makes the /k/ sound, matching the initial sound of 'cat'."
+    "id": 818,
+    "question": "Choose the option that best explains the idiom: To **hit the nail on the head** means to:",
+    "options": ["State something accurately", "Do hard manual work", "Injure oneself accidentally", "Make a guess"],
+    "answer": "A",
+    "explanation": "'Hit the nail on the head' means to describe exactly a situation or problem."
   },
   {
-    id: 818,
-    question: "Choose the option that best explains the idiom: To **hit the nail on the head** means to:",
-    options: ["A. State something accurately", "B. Do hard manual work", "C. Injure oneself accidentally", "D. Make a guess"],
-    answer: "A",
-    explanation: "'Hit the nail on the head' means to describe exactly a situation or problem."
+    "id": 819,
+    "question": "Choose the option that correctly completes the sentence: Five hundred naira _____ enough for lunch these days.",
+    "options": ["is not", "are not", "were not", "have not"],
+    "answer": "A",
+    "explanation": "Amounts of money take singular verbs ('is not')."
   },
   {
-    id: 819,
-    question: "Choose the option that correctly completes the sentence: Five hundred naira _____ enough for lunch these days.",
-    options: ["A. is not", "B. are not", "C. were not", "D. have not"],
-    answer: "A",
-    explanation: "Amounts of money take singular verbs ('is not')."
+    "id": 820,
+    "question": "Choose the option nearest in meaning to the underlined word: The suspect was **coerced** into making a statement.",
+    "options": ["Forced", "Persuaded", "Invited", "Begged"],
+    "answer": "A",
+    "explanation": "'Coerce' means to persuade an unwilling person to do something by using force or threats."
   },
   {
-    id: 820,
-    question: "Choose the option nearest in meaning to the underlined word: The suspect was **coerced** into making a statement.",
-    options: ["A. Forced", "B. Persuaded", "C. Invited", "D. Begged"],
-    answer: "A",
-    explanation: "'Coerce' means to persuade an unwilling person to do something by using force or threats."
+    "id": 821,
+    "question": "Choose the option opposite in meaning to the underlined word: His answers were **vague** and incomplete.",
+    "options": ["Clear", "Ambiguous", "Obscure", "Unclear"],
+    "answer": "A",
+    "explanation": "'Vague' means thinking or communicating in an unfocused or unclear way; opposite is 'clear'."
   },
   {
-    id: 821,
-    question: "Choose the option opposite in meaning to the underlined word: His answers were **vague** and incomplete.",
-    options: ["A. Clear", "B. Ambiguous", "C. Obscure", "D. Unclear"],
-    answer: "A",
-    explanation: "'Vague' means thinking or communicating in an unfocused or unclear way; opposite is 'clear'."
+    "id": 822,
+    "question": "Choose the option with the correct stress pattern for the word: **EXPERIMENT** (noun)",
+    "options": ["EX-pe-ri-ment", "ex-PE-ri-ment", "ex-pe-RI-ment", "ex-pe-ri-MENT"],
+    "answer": "B",
+    "explanation": "The noun 'experiment' is stressed on the second syllable: ex-PE-ri-ment."
   },
   {
-    id: 822,
-    question: "Choose the option with the correct stress pattern for the word: **EXPERIMENT** (noun)",
-    options: ["A. EX-pe-ri-ment", "B. ex-PE-ri-ment", "C. ex-pe-RI-ment", "D. ex-pe-ri-MENT"],
-    answer: "B",
-    explanation: "The noun 'experiment' is stressed on the second syllable: ex-PE-ri-ment."
+    "id": 823,
+    "question": "Choose the option that correctly completes the sentence: You had better _____ your shoes before entering.",
+    "options": ["remove", "to remove", "removing", "removed"],
+    "answer": "A",
+    "explanation": "'Had better' takes a bare infinitive without 'to' ('remove')."
   },
   {
-    id: 823,
-    question: "Choose the option that correctly completes the sentence: You had better _____ your shoes before entering.",
-    options: ["A. remove", "B. to remove", "C. removing", "D. removed"],
-    answer: "A",
-    explanation: "'Had better' takes a bare infinitive without 'to' ('remove')."
+    "id": 824,
+    "question": "Choose the option nearest in meaning to the underlined word: The news left everyone **flabbergasted**.",
+    "options": ["Astonished", "Unmoved", "Bored", "Angry"],
+    "answer": "A",
+    "explanation": "'Flabbergasted' means greatly surprised or astonished."
   },
   {
-    id: 824,
-    question: "Choose the option nearest in meaning to the underlined word: The news left everyone **flabbergasted**.",
-    options: ["A. Astonished", "B. Unmoved", "C. Bored", "D. Angry"],
-    answer: "A",
-    explanation: "'Flabbergasted' means greatly surprised or astonished."
+    "id": 825,
+    "question": "Choose the option opposite in meaning to the underlined word: The general issued a **plausible** explanation for the tactical retreat.",
+    "options": ["Credible", "Improbable", "Reasonable", "Logical"],
+    "answer": "B",
+    "explanation": "'Plausible' means believable; its opposite is 'improbable' or 'unbelievable'."
   },
   {
-    id: 825,
-    question: "Choose the option opposite in meaning to the underlined word: The general issued a **plausible** explanation for the tactical retreat.",
-    options: ["A. Credible", "B. Improbable", "C. Reasonable", "D. Logical"],
-    answer: "B",
-    explanation: "'Plausible' means believable; its opposite is 'improbable' or 'unbelievable'."
+    "id": 826,
+    "question": "Choose the option that correctly completes the sentence: Scarcely had the match ended _____ the fans invaded the pitch.",
+    "options": ["than", "when", "then", "before"],
+    "answer": "B",
+    "explanation": "'Scarcely' pairs with 'when' in inverted conditional clauses."
   },
   {
-    id: 826,
-    question: "Choose the option that correctly completes the sentence: Scarcely had the match ended _____ the fans invaded the pitch.",
-    options: ["A. than", "B. when", "C. then", "D. before"],
-    answer: "B",
-    explanation: "'Scarcely' pairs with 'when' in inverted conditional clauses."
+    "id": 827,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: s**ea**t",
+    "options": ["Sit", "Receive", "Set", "Sight"],
+    "answer": "B",
+    "explanation": "Both 'seat' and 'receive' share the long vowel sound /iː/."
   },
   {
-    id: 827,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: s**ea**t",
-    options: ["A. Sit", "B. Receive", "C. Set", "D. Sight"],
-    answer: "B",
-    explanation: "Both 'seat' and 'receive' share the long vowel sound /iː/."
+    "id": 828,
+    "question": "Choose the option that best explains the idiom: To **throw cold water on something** means to:",
+    "options": ["Extinguish a fire", "Discourage or criticize an idea", "Clean an object thoroughly", "Douse someone in anger"],
+    "answer": "B",
+    "explanation": "'Throw cold water on something' means to express disapproval or discouragement towards a plan or idea."
   },
   {
-    id: 828,
-    question: "Choose the option that best explains the idiom: To **throw cold water on something** means to:",
-    options: ["A. Extinguish a fire", "B. Discourage or criticize an idea", "C. Clean an object thoroughly", "D. Douse someone in anger"],
-    answer: "B",
-    explanation: "'Throw cold water on something' means to express disapproval or discouragement towards a plan or idea."
+    "id": 829,
+    "question": "Choose the option that correctly completes the sentence: The chairman, as well as his committee members, _____ present at the conference.",
+    "options": ["was", "were", "have been", "are"],
+    "answer": "A",
+    "explanation": "Parenthetical phrases like 'as well as' do not change the subject singular status ('chairman' -> 'was')."
   },
   {
-    id: 829,
-    question: "Choose the option that correctly completes the sentence: The chairman, as well as his committee members, _____ present at the conference.",
-    options: ["A. was", "B. were", "C. have been", "D. are"],
-    answer: "A",
-    explanation: "Parenthetical phrases like 'as well as' do not change the subject singular status ('chairman' -> 'was')."
+    "id": 830,
+    "question": "Choose the option nearest in meaning to the underlined word: The speaker gave an **incisive** analysis of the economic situation.",
+    "options": ["Sharp", "Dull", "Vague", "Confusing"],
+    "answer": "A",
+    "explanation": "'Incisive' means intelligently analytical and clear-thinking; sharp."
   },
   {
-    id: 830,
-    question: "Choose the option nearest in meaning to the underlined word: The speaker gave an **incisive** analysis of the economic situation.",
-    options: ["A. Sharp", "B. Dull", "C. Vague", "D. Confusing"],
-    answer: "A",
-    explanation: "'Incisive' means intelligently analytical and clear-thinking; sharp."
+    "id": 831,
+    "question": "Choose the option opposite in meaning to the underlined word: The suspect gave an **explicit** account of his whereabouts.",
+    "options": ["Clear", "Ambiguous", "Detailed", "Direct"],
+    "answer": "B",
+    "explanation": "'Explicit' means fully and clearly expressed; the opposite is 'ambiguous'."
   },
   {
-    id: 831,
-    question: "Choose the option opposite in meaning to the underlined word: The suspect gave an **explicit** account of his whereabouts.",
-    options: ["A. Clear", "B. Ambiguous", "C. Detailed", "D. Direct"],
-    answer: "B",
-    explanation: "'Explicit' means fully and clearly expressed; the opposite is 'ambiguous'."
+    "id": 832,
+    "question": "Choose the option with the correct stress pattern for the word: **INVESTMENT**",
+    "options": ["IN-vest-ment", "in-VEST-ment", "in-vest-MENT", "IN-VEST-ment"],
+    "answer": "B",
+    "explanation": "The noun 'investment' carries stress on the second syllable: in-VEST-ment."
   },
   {
-    id: 832,
-    question: "Choose the option with the correct stress pattern for the word: **INVESTMENT**",
-    options: ["A. IN-vest-ment", "B. in-VEST-ment", "C. in-vest-MENT", "D. IN-VEST-ment"],
-    answer: "B",
-    explanation: "The noun 'investment' carries stress on the second syllable: in-VEST-ment."
+    "id": 833,
+    "question": "Choose the option that correctly completes the sentence: It is high time we _____ home.",
+    "options": ["go", "went", "gone", "should go"],
+    "answer": "B",
+    "explanation": "'It is high time' is followed by a past simple verb ('went') to express present/future necessity."
   },
   {
-    id: 833,
-    question: "Choose the option that correctly completes the sentence: It is high time we _____ home.",
-    options: ["A. go", "B. went", "C. gone", "D. should go"],
-    answer: "B",
-    explanation: "'It is high time' is followed by a past simple verb ('went') to express present/future necessity."
+    "id": 834,
+    "question": "Choose the option nearest in meaning to the underlined word: Her **benevolent** nature made her beloved in the community.",
+    "options": ["Kind", "Malicious", "Greedy", "Haughty"],
+    "answer": "A",
+    "explanation": "'Benevolent' means well-meaning and kindly."
   },
   {
-    id: 834,
-    question: "Choose the option nearest in meaning to the underlined word: Her **benevolent** nature made her beloved in the community.",
-    options: ["A. Kind", "B. Malicious", "C. Greedy", "D. Haughty"],
-    answer: "A",
-    explanation: "'Benevolent' means well-meaning and kindly."
+    "id": 835,
+    "question": "Choose the option opposite in meaning to the underlined word: The old building is in a **dilapidated** state.",
+    "options": ["Ruined", "Restored", "Decayed", "Broken"],
+    "answer": "B",
+    "explanation": "'Dilapidated' means in disrepair or ruined; the opposite is 'restored'."
   },
   {
-    id: 835,
-    question: "Choose the option opposite in meaning to the underlined word: The old building is in a **dilapidated** state.",
-    options: ["A. Ruined", "B. Restored", "C. Decayed", "D. Broken"],
-    answer: "B",
-    explanation: "'Dilapidated' means in disrepair or ruined; the opposite is 'restored'."
+    "id": 836,
+    "question": "Choose the option that correctly completes the sentence: Neither of the answers _____ correct.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular subject and takes a singular verb ('is')."
   },
   {
-    id: 836,
-    question: "Choose the option that correctly completes the sentence: Neither of the answers _____ correct.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular subject and takes a singular verb ('is')."
+    "id": 837,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **ph**y-sics",
+    "options": ["Rough", "Page", "Pine", "Pear"],
+    "answer": "A",
+    "explanation": "The 'ph' in 'physics' and 'gh' in 'rough' both yield the /f/ sound."
   },
   {
-    id: 837,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **ph**y-sics",
-    options: ["A. Rough", "B. Page", "C. Pine", "D. Pear"],
-    answer: "A",
-    explanation: "The 'ph' in 'physics' and 'gh' in 'rough' both yield the /f/ sound."
+    "id": 838,
+    "question": "Choose the option that best explains the idiom: To **beat around the bush** means to:",
+    "options": ["Avoid main topic", "Search in the garden", "Clear bushes", "Make a direct statement"],
+    "answer": "A",
+    "explanation": "'Beat around the bush' means to discuss a matter without coming directly to the point."
   },
   {
-    id: 838,
-    question: "Choose the option that best explains the idiom: To **beat around the bush** means to:",
-    options: ["A. Avoid main topic", "B. Search in the garden", "C. Clear bushes", "D. Make a direct statement"],
-    answer: "A",
-    explanation: "'Beat around the bush' means to discuss a matter without coming directly to the point."
+    "id": 839,
+    "question": "Choose the option that correctly completes the sentence: Neither the students nor their teacher _____ present yesterday.",
+    "options": ["was", "were", "are", "have been"],
+    "answer": "A",
+    "explanation": "With 'neither... nor', the verb agrees with the nearest subject ('teacher' -> singular 'was')."
   },
   {
-    id: 839,
-    question: "Choose the option that correctly completes the sentence: Neither the students nor their teacher _____ present yesterday.",
-    options: ["A. was", "B. were", "C. are", "D. have been"],
-    answer: "A",
-    explanation: "With 'neither... nor', the verb agrees with the nearest subject ('teacher' -> singular 'was')."
+    "id": 840,
+    "question": "Choose the option nearest in meaning to the underlined word: The company recorded **astounding** profits this year.",
+    "options": ["Astonishing", "Expected", "Minimal", "Moderate"],
+    "answer": "A",
+    "explanation": "'Astounding' means surprisingly impressive or notable; astonishing."
   },
   {
-    id: 840,
-    question: "Choose the option nearest in meaning to the underlined word: The company recorded **astounding** profits this year.",
-    options: ["A. Astonishing", "B. Expected", "C. Minimal", "D. Moderate"],
-    answer: "A",
-    explanation: "'Astounding' means surprisingly impressive or notable; astonishing."
+    "id": 841,
+    "question": "Choose the option opposite in meaning to the underlined word: The witness gave a **fallacious** testimony.",
+    "options": ["False", "Accurate", "Misleading", "Erroneous"],
+    "answer": "B",
+    "explanation": "'Fallacious' means based on a mistaken belief or false; opposite is 'accurate'."
   },
   {
-    id: 841,
-    question: "Choose the option opposite in meaning to the underlined word: The witness gave a **fallacious** testimony.",
-    options: ["A. False", "B. Accurate", "C. Misleading", "D. Erroneous"],
-    answer: "B",
-    explanation: "'Fallacious' means based on a mistaken belief or false; opposite is 'accurate'."
+    "id": 842,
+    "question": "Choose the option with the correct stress pattern for the word: **GEOLOGY**",
+    "options": ["GE-o-lo-gy", "ge-O-lo-gy", "ge-o-LO-gy", "ge-o-lo-GY"],
+    "answer": "B",
+    "explanation": "Words ending in '-logy' stress the third syllable from the end: ge-O-lo-gy."
   },
   {
-    id: 842,
-    question: "Choose the option with the correct stress pattern for the word: **GEOLOGY**",
-    options: ["A. GE-o-lo-gy", "B. ge-O-lo-gy", "C. ge-o-LO-gy", "D. ge-o-lo-GY"],
-    answer: "B",
-    explanation: "Words ending in '-logy' stress the third syllable from the end: ge-O-lo-gy."
+    "id": 843,
+    "question": "Choose the option that correctly completes the sentence: Every man and woman _____ entitled to an opinion.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Nouns modified by 'every' take a singular verb ('is')."
   },
   {
-    id: 843,
-    question: "Choose the option that correctly completes the sentence: Every man and woman _____ entitled to an opinion.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Nouns modified by 'every' take a singular verb ('is')."
+    "id": 844,
+    "question": "Choose the option nearest in meaning to the underlined word: The police uncovered a **covert** operation in the city.",
+    "options": ["Secret", "Open", "Public", "Legal"],
+    "answer": "A",
+    "explanation": "'Covert' means not openly acknowledged or displayed; secret."
   },
   {
-    id: 844,
-    question: "Choose the option nearest in meaning to the underlined word: The police uncovered a **covert** operation in the city.",
-    options: ["A. Secret", "B. Open", "C. Public", "D. Legal"],
-    answer: "A",
-    explanation: "'Covert' means not openly acknowledged or displayed; secret."
+    "id": 845,
+    "question": "Choose the option opposite in meaning to the underlined word: The atmosphere in the town was **serene**.",
+    "options": ["Calm", "Agitated", "Peaceful", "Quiet"],
+    "answer": "B",
+    "explanation": "'Serene' means calm, peaceful, and untroubled; the opposite is 'agitated'."
   },
   {
-    id: 845,
-    question: "Choose the option opposite in meaning to the underlined word: The atmosphere in the town was **serene**.",
-    options: ["A. Calm", "B. Agitated", "C. Peaceful", "D. Quiet"],
-    answer: "B",
-    explanation: "'Serene' means calm, peaceful, and untroubled; the opposite is 'agitated'."
+    "id": 846,
+    "question": "Choose the option that correctly completes the sentence: I would prefer reading a book _____ watching television.",
+    "options": ["than", "to", "over", "instead"],
+    "answer": "B",
+    "explanation": "The verb 'prefer' takes the preposition 'to'."
   },
   {
-    id: 846,
-    question: "Choose the option that correctly completes the sentence: I would prefer reading a book _____ watching television.",
-    options: ["A. than", "B. to", "C. over", "D. instead"],
-    answer: "B",
-    explanation: "The verb 'prefer' takes the preposition 'to'."
+    "id": 847,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: f**a**r",
+    "options": ["Fat", "Heart", "Fate", "Fair"],
+    "answer": "B",
+    "explanation": "Both 'far' and 'heart' share the long vowel sound /ɑː/."
   },
   {
-    id: 847,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: f**a**r",
-    options: ["A. Fat", "B. Heart", "C. Fate", "D. Fair"],
-    answer: "B",
-    explanation: "Both 'far' and 'heart' share the long vowel sound /ɑː/."
+    "id": 848,
+    "question": "Choose the option that best explains the idiom: To **burn your bridges** means to:",
+    "options": ["Set property on fire", "Destroy relationships or path back", "Build new connections", "Travel across rivers"],
+    "answer": "B",
+    "explanation": "'Burn your bridges' means to act in a way that irreversibly cuts off a path or relationship."
   },
   {
-    id: 848,
-    question: "Choose the option that best explains the idiom: To **burn your bridges** means to:",
-    options: ["A. Set property on fire", "B. Destroy relationships or path back", "C. Build new connections", "D. Travel across rivers"],
-    answer: "B",
-    explanation: "'Burn your bridges' means to act in a way that irreversibly cuts off a path or relationship."
+    "id": 849,
+    "question": "Choose the option that correctly completes the sentence: The news of the loss _____ devastating to the family.",
+    "options": ["was", "were", "are", "have been"],
+    "answer": "A",
+    "explanation": "'News' is an uncountable noun requiring a singular verb ('was')."
   },
   {
-    id: 849,
-    question: "Choose the option that correctly completes the sentence: The news of the loss _____ devastating to the family.",
-    options: ["A. was", "B. were", "C. are", "D. have been"],
-    answer: "A",
-    explanation: "'News' is an uncountable noun requiring a singular verb ('was')."
+    "id": 850,
+    "question": "Choose the option nearest in meaning to the underlined word: The court gave a **definitive** ruling on the matter.",
+    "options": ["Conclusive", "Uncertain", "Temporary", "Tentative"],
+    "answer": "A",
+    "explanation": "'Definitive' means reach an authoritative and decisive state; conclusive."
   },
   {
-    id: 850,
-    question: "Choose the option nearest in meaning to the underlined word: The court gave a **definitive** ruling on the matter.",
-    options: ["A. Conclusive", "B. Uncertain", "C. Temporary", "D. Tentative"],
-    answer: "A",
-    explanation: "'Definitive' means reach an authoritative and decisive state; conclusive."
+    "id": 851,
+    "question": "Choose the option opposite in meaning to the underlined word: The man showed **hostility** toward the newcomers.",
+    "options": ["Antagonism", "Friendliness", "Enmity", "Hatred"],
+    "answer": "B",
+    "explanation": "'Hostility' means unfriendliness or opposition; the opposite is 'friendliness'."
   },
   {
-    id: 851,
-    question: "Choose the option opposite in meaning to the underlined word: The man showed **hostility** toward the newcomers.",
-    options: ["A. Antagonism", "B. Friendliness", "C. Enmity", "D. Hatred"],
-    answer: "B",
-    explanation: "'Hostility' means unfriendliness or opposition; the opposite is 'friendliness'."
+    "id": 852,
+    "question": "Choose the option with the correct stress pattern for the word: **CATASTROPHE**",
+    "options": ["CA-tas-tro-phe", "ca-TAS-tro-phe", "ca-tas-TRO-phe", "ca-tas-tro-PHE"],
+    "answer": "B",
+    "explanation": "The noun 'catastrophe' is stressed on the second syllable: ca-TAS-tro-phe."
   },
   {
-    id: 852,
-    question: "Choose the option with the correct stress pattern for the word: **CATASTROPHE**",
-    options: ["A. CA-tas-tro-phe", "B. ca-TAS-tro-phe", "C. ca-tas-TRO-phe", "D. ca-tas-tro-PHE"],
-    answer: "B",
-    explanation: "The noun 'catastrophe' is stressed on the second syllable: ca-TAS-tro-phe."
+    "id": 853,
+    "question": "Choose the option that correctly completes the sentence: She succeeded _____ passing all her papers with distinction.",
+    "options": ["in", "at", "on", "for"],
+    "answer": "A",
+    "explanation": "'Succeed' collocates with the preposition 'in'."
   },
   {
-    id: 853,
-    question: "Choose the option that correctly completes the sentence: She succeeded _____ passing all her papers with distinction.",
-    options: ["A. in", "B. at", "C. on", "D. for"],
-    answer: "A",
-    explanation: "'Succeed' collocates with the preposition 'in'."
+    "id": 854,
+    "question": "Choose the option nearest in meaning to the underlined word: The student gave a **cogent** explanation of his action.",
+    "options": ["Convincing", "Feeble", "Vague", "Confused"],
+    "answer": "A",
+    "explanation": "'Cogent' means clear, logical, and convincing."
   },
   {
-    id: 854,
-    question: "Choose the option nearest in meaning to the underlined word: The student gave a **cogent** explanation of his action.",
-    options: ["A. Convincing", "B. Feeble", "C. Vague", "D. Confused"],
-    answer: "A",
-    explanation: "'Cogent' means clear, logical, and convincing."
+    "id": 855,
+    "question": "Choose the option opposite in meaning to the underlined word: The river flows through a **barren** valley.",
+    "options": ["Arid", "Fertile", "Dry", "Deserted"],
+    "answer": "B",
+    "explanation": "'Barren' means infertile or lifeless; the opposite is 'fertile'."
   },
   {
-    id: 855,
-    question: "Choose the option opposite in meaning to the underlined word: The river flows through a **barren** valley.",
-    options: ["A. Arid", "B. Fertile", "C. Dry", "D. Deserted"],
-    answer: "B",
-    explanation: "'Barren' means infertile or lifeless; the opposite is 'fertile'."
+    "id": 856,
+    "question": "Choose the option that correctly completes the sentence: By this time tomorrow, the delegation _____ arrived in London.",
+    "options": ["will have", "will", "has", "had"],
+    "answer": "A",
+    "explanation": "'By [future time]' requires future perfect tense ('will have')."
   },
   {
-    id: 856,
-    question: "Choose the option that correctly completes the sentence: By this time tomorrow, the delegation _____ arrived in London.",
-    options: ["A. will have", "B. will", "C. has", "D. had"],
-    answer: "A",
-    explanation: "'By [future time]' requires future perfect tense ('will have')."
+    "id": 857,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**in",
+    "options": ["Smooth", "Growth", "This", "Father"],
+    "answer": "B",
+    "explanation": "Both 'thin' and 'growth' share the voiceless dental fricative sound /θ/."
   },
   {
-    id: 857,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**in",
-    options: ["A. Smooth", "B. Growth", "C. This", "D. Father"],
-    answer: "B",
-    explanation: "Both 'thin' and 'growth' share the voiceless dental fricative sound /θ/."
+    "id": 858,
+    "question": "Choose the option that best explains the idiom: To **spill the beans** means to:",
+    "options": ["Drop groceries", "Reveal secret info", "Waste food", "Make a mistake"],
+    "answer": "B",
+    "explanation": "'Spill the beans' means to disclose secret information prematurely or accidentally."
   },
   {
-    id: 858,
-    question: "Choose the option that best explains the idiom: To **spill the beans** means to:",
-    options: ["A. Drop groceries", "B. Reveal secret info", "C. Waste food", "D. Make a mistake"],
-    answer: "B",
-    explanation: "'Spill the beans' means to disclose secret information prematurely or accidentally."
+    "id": 859,
+    "question": "Choose the option that correctly completes the sentence: A range of mountains _____ visible from our hotel room.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'A range' is a singular collective subject taking 'is'."
   },
   {
-    id: 859,
-    question: "Choose the option that correctly completes the sentence: A range of mountains _____ visible from our hotel room.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'A range' is a singular collective subject taking 'is'."
+    "id": 860,
+    "question": "Choose the option nearest in meaning to the underlined word: The worker received an **exemplary** recommendation.",
+    "options": ["Commendable", "Average", "Poor", "Ordinary"],
+    "answer": "A",
+    "explanation": "'Exemplary' means serving as a desirable model; commendable."
   },
   {
-    id: 860,
-    question: "Choose the option nearest in meaning to the underlined word: The worker received an **exemplary** recommendation.",
-    options: ["A. Commendable", "B. Average", "C. Poor", "D. Ordinary"],
-    answer: "A",
-    explanation: "'Exemplary' means serving as a desirable model; commendable."
+    "id": 861,
+    "question": "Choose the option opposite in meaning to the underlined word: The manager showed **clemency** to the late worker.",
+    "options": ["Mercy", "Harshness", "Lenience", "Compassion"],
+    "answer": "B",
+    "explanation": "'Clemency' means mercy or leniency; the opposite is 'harshness'."
   },
   {
-    id: 861,
-    question: "Choose the option opposite in meaning to the underlined word: The manager showed **clemency** to the late worker.",
-    options: ["A. Mercy", "B. Harshness", "C. Lenience", "D. Compassion"],
-    answer: "B",
-    explanation: "'Clemency' means mercy or leniency; the opposite is 'harshness'."
+    "id": 862,
+    "question": "Choose the option with the correct stress pattern for the word: **EQUALITY**",
+    "options": ["E-qua-li-ty", "e-QUA-li-ty", "e-qua-LI-ty", "e-qua-li-TY"],
+    "answer": "B",
+    "explanation": "Words ending in '-ity' carry stress on the antepenultimate syllable: e-QUA-li-ty."
   },
   {
-    id: 862,
-    question: "Choose the option with the correct stress pattern for the word: **EQUALITY**",
-    options: ["A. E-qua-li-ty", "B. e-QUA-li-ty", "C. e-qua-LI-ty", "D. e-qua-li-TY"],
-    answer: "B",
-    explanation: "Words ending in '-ity' carry stress on the antepenultimate syllable: e-QUA-li-ty."
+    "id": 863,
+    "question": "Choose the option that correctly completes the sentence: The doctor recommended that he _____ off work for a week.",
+    "options": ["take", "takes", "took", "is taking"],
+    "answer": "A",
+    "explanation": "Subjunctive moods after recommendations use the base form verb ('take')."
   },
   {
-    id: 863,
-    question: "Choose the option that correctly completes the sentence: The doctor recommended that he _____ off work for a week.",
-    options: ["A. take", "B. takes", "C. took", "D. is taking"],
-    answer: "A",
-    explanation: "Subjunctive moods after recommendations use the base form verb ('take')."
+    "id": 864,
+    "question": "Choose the option nearest in meaning to the underlined word: The old man lived a **solitary** existence.",
+    "options": ["Lonely", "Social", "Active", "Busy"],
+    "answer": "A",
+    "explanation": "'Solitary' means done or existing alone."
   },
   {
-    id: 864,
-    question: "Choose the option nearest in meaning to the underlined word: The old man lived a **solitary** existence.",
-    options: ["A. Lonely", "B. Social", "C. Active", "D. Busy"],
-    answer: "A",
-    explanation: "'Solitary' means done or existing alone."
+    "id": 865,
+    "question": "Choose the option opposite in meaning to the underlined word: His statement was **consistent** with the facts.",
+    "options": ["Compatible", "Inconsistent", "Identical", "Concordant"],
+    "answer": "B",
+    "explanation": "'Consistent' means acting or done in the same way over time; opposite is 'inconsistent'."
   },
   {
-    id: 865,
-    question: "Choose the option opposite in meaning to the underlined word: His statement was **consistent** with the facts.",
-    options: ["A. Compatible", "B. Inconsistent", "C. Identical", "D. Concordant"],
-    answer: "B",
-    explanation: "'Consistent' means acting or done in the same way over time; opposite is 'inconsistent'."
+    "id": 866,
+    "question": "Choose the option nearest in meaning to the underlined word: The minister gave an **evasive** answer to the journalist's query.",
+    "options": ["Elusive", "Direct", "Clear", "Honest"],
+    "answer": "A",
+    "explanation": "'Evasive' means tending to avoid commitment or self-revelation; elusive."
   },
   {
-    id: 866,
-    question: "Choose the option nearest in meaning to the underlined word: The minister gave an **evasive** answer to the journalist's query.",
-    options: ["A. Elusive", "B. Direct", "C. Clear", "D. Honest"],
-    answer: "A",
-    explanation: "'Evasive' means tending to avoid commitment or self-revelation; elusive."
+    "id": 867,
+    "question": "Choose the option opposite in meaning to the underlined word: The company announced a **substantial** increase in profits.",
+    "options": ["Significant", "Negligible", "Considerable", "Substantial"],
+    "answer": "B",
+    "explanation": "'Substantial' means large in amount, size, or worth; the opposite is 'negligible'."
   },
   {
-    id: 867,
-    question: "Choose the option opposite in meaning to the underlined word: The company announced a **substantial** increase in profits.",
-    options: ["A. Significant", "B. Negligible", "C. Considerable", "D. Substantial"],
-    answer: "B",
-    explanation: "'Substantial' means large in amount, size, or worth; the opposite is 'negligible'."
+    "id": 868,
+    "question": "Choose the option that correctly completes the sentence: The team of researchers _____ completed the experiment.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "'Team' functions as a collective noun acting as a single unit here, requiring the singular verb 'has'."
   },
   {
-    id: 868,
-    question: "Choose the option that correctly completes the sentence: The team of researchers _____ completed the experiment.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "'Team' functions as a collective noun acting as a single unit here, requiring the singular verb 'has'."
+    "id": 869,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**r",
+    "options": ["Cat", "Palm", "Cake", "Care"],
+    "answer": "B",
+    "explanation": "Both 'car' and 'palm' share the long open back unrounded vowel sound /ɑː/."
   },
   {
-    id: 869,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**r",
-    options: ["A. Cat", "B. Palm", "C. Cake", "D. Care"],
-    answer: "B",
-    explanation: "Both 'car' and 'palm' share the long open back unrounded vowel sound /ɑː/."
+    "id": 870,
+    "question": "Choose the option that best explains the idiom: To **turn over a new leaf** means to:",
+    "options": ["Change books", "Start behaving better", "Plant a garden", "Travel abroad"],
+    "answer": "B",
+    "explanation": "'Turn over a new leaf' means to make a fresh start or improve one's conduct."
   },
   {
-    id: 870,
-    question: "Choose the option that best explains the idiom: To **turn over a new leaf** means to:",
-    options: ["A. Change books", "B. Start behaving better", "C. Plant a garden", "D. Travel abroad"],
-    answer: "B",
-    explanation: "'Turn over a new leaf' means to make a fresh start or improve one's conduct."
+    "id": 871,
+    "question": "Choose the option that correctly completes the sentence: She accused the boy _____ stealing her wallet.",
+    "options": ["for", "of", "with", "about"],
+    "answer": "B",
+    "explanation": "The verb 'accuse' collocates with the preposition 'of'."
   },
   {
-    id: 871,
-    question: "Choose the option that correctly completes the sentence: She accused the boy _____ stealing her wallet.",
-    options: ["A. for", "B. of", "C. with", "D. about"],
-    answer: "B",
-    explanation: "The verb 'accuse' collocates with the preposition 'of'."
+    "id": 872,
+    "question": "Choose the option nearest in meaning to the underlined word: The old man was **venerated** by the villagers.",
+    "options": ["Respected", "Hated", "Ignored", "Feared"],
+    "answer": "A",
+    "explanation": "'Venerate' means to regard with great respect or revere."
   },
   {
-    id: 872,
-    question: "Choose the option nearest in meaning to the underlined word: The old man was **venerated** by the villagers.",
-    options: ["A. Respected", "B. Hated", "C. Ignored", "D. Feared"],
-    answer: "A",
-    explanation: "'Venerate' means to regard with great respect or revere."
+    "id": 873,
+    "question": "Choose the option opposite in meaning to the underlined word: His action was considered **praiseworthy**.",
+    "options": ["Admirable", "Blameworthy", "Laudable", "Commendable"],
+    "answer": "B",
+    "explanation": "'Praiseworthy' means deserving approval; its opposite is 'blameworthy'."
   },
   {
-    id: 873,
-    question: "Choose the option opposite in meaning to the underlined word: His action was considered **praiseworthy**.",
-    options: ["A. Admirable", "B. Blameworthy", "C. Laudable", "D. Commendable"],
-    answer: "B",
-    explanation: "'Praiseworthy' means deserving approval; its opposite is 'blameworthy'."
+    "id": 874,
+    "question": "Choose the option with the correct stress pattern for the word: **PHOTOGRAPHY**",
+    "options": ["PHO-to-gra-phy", "pho-TO-gra-phy", "pho-to-GRA-phy", "pho-to-gra-PHY"],
+    "answer": "B",
+    "explanation": "Words ending in '-phy' carry primary stress on the antepenultimate syllable: pho-TO-gra-phy."
   },
   {
-    id: 874,
-    question: "Choose the option with the correct stress pattern for the word: **PHOTOGRAPHY**",
-    options: ["A. PHO-to-gra-phy", "B. pho-TO-gra-phy", "C. pho-to-GRA-phy", "D. pho-to-gra-PHY"],
-    answer: "B",
-    explanation: "Words ending in '-phy' carry primary stress on the antepenultimate syllable: pho-TO-gra-phy."
+    "id": 875,
+    "question": "Choose the option that correctly completes the sentence: Hardly had the plane taken off _____ the engine failed.",
+    "options": ["than", "when", "then", "as"],
+    "answer": "B",
+    "explanation": "'Hardly' is correctly paired with 'when' in inverted time structures."
   },
   {
-    id: 875,
-    question: "Choose the option that correctly completes the sentence: Hardly had the plane taken off _____ the engine failed.",
-    options: ["A. than", "B. when", "C. then", "D. as"],
-    answer: "B",
-    explanation: "'Hardly' is correctly paired with 'when' in inverted time structures."
+    "id": 876,
+    "question": "Choose the option nearest in meaning to the underlined word: The students showed a **dormant** talent for painting.",
+    "options": ["Inactive", "Active", "Bright", "Obvious"],
+    "answer": "A",
+    "explanation": "'Dormant' means temporarily inactive or quiet."
   },
   {
-    id: 876,
-    question: "Choose the option nearest in meaning to the underlined word: The students showed a **dormant** talent for painting.",
-    options: ["A. Inactive", "B. Active", "C. Bright", "D. Obvious"],
-    answer: "A",
-    explanation: "'Dormant' means temporarily inactive or quiet."
+    "id": 877,
+    "question": "Choose the option opposite in meaning to the underlined word: The new laws were deemed **draconian**.",
+    "options": ["Severe", "Gentle", "Harsh", "Strict"],
+    "answer": "B",
+    "explanation": "'Draconian' means excessively harsh or severe; the opposite is 'gentle' or 'mild'."
   },
   {
-    id: 877,
-    question: "Choose the option opposite in meaning to the underlined word: The new laws were deemed **draconian**.",
-    options: ["A. Severe", "B. Gentle", "C. Harsh", "D. Strict"],
-    answer: "B",
-    explanation: "'Draconian' means excessively harsh or severe; the opposite is 'gentle' or 'mild'."
+    "id": 878,
+    "question": "Choose the option that correctly completes the sentence: Neither my uncle nor my aunts _____ coming to the party.",
+    "options": ["is", "are", "was", "has been"],
+    "answer": "B",
+    "explanation": "With 'neither... nor', the verb agrees with the closer subject ('aunts' -> plural 'are')."
   },
   {
-    id: 878,
-    question: "Choose the option that correctly completes the sentence: Neither my uncle nor my aunts _____ coming to the party.",
-    options: ["A. is", "B. are", "C. was", "D. has been"],
-    answer: "B",
-    explanation: "With 'neither... nor', the verb agrees with the closer subject ('aunts' -> plural 'are')."
+    "id": 879,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **ch**urch",
+    "options": ["Machine", "Nature", "Character", "Chef"],
+    "answer": "B",
+    "explanation": "The 't' in 'nature' produces the same /tʃ/ sound as 'ch' in 'church'."
   },
   {
-    id: 879,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **ch**urch",
-    options: ["A. Machine", "B. Nature", "C. Character", "D. Chef"],
-    answer: "B",
-    explanation: "The 't' in 'nature' produces the same /tʃ/ sound as 'ch' in 'church'."
+    "id": 880,
+    "question": "Choose the option that best explains the idiom: To **burn the midnight oil** means to:",
+    "options": ["Work late into the night", "Waste energy", "Cook at midnight", "Start a fire"],
+    "answer": "A",
+    "explanation": "'Burn the midnight oil' means to study or work late into the night."
   },
   {
-    id: 880,
-    question: "Choose the option that best explains the idiom: To **burn the midnight oil** means to:",
-    options: ["A. Work late into the night", "B. Waste energy", "C. Cook at midnight", "D. Start a fire"],
-    answer: "A",
-    explanation: "'Burn the midnight oil' means to study or work late into the night."
+    "id": 881,
+    "question": "Choose the option that correctly completes the sentence: He congratulated me _____ my performance.",
+    "options": ["for", "on", "with", "over"],
+    "answer": "B",
+    "explanation": "The verb 'congratulate' takes the preposition 'on'."
   },
   {
-    id: 881,
-    question: "Choose the option that correctly completes the sentence: He congratulated me _____ my performance.",
-    options: ["A. for", "B. on", "C. with", "D. over"],
-    answer: "B",
-    explanation: "The verb 'congratulate' takes the preposition 'on'."
+    "id": 882,
+    "question": "Choose the option nearest in meaning to the underlined word: The diplomat's speech was **concise** and clear.",
+    "options": ["Brief", "Lengthy", "Detailed", "Verbose"],
+    "answer": "A",
+    "explanation": "'Concise' means giving a lot of information clearly and in few words; brief."
   },
   {
-    id: 882,
-    question: "Choose the option nearest in meaning to the underlined word: The diplomat's speech was **concise** and clear.",
-    options: ["A. Brief", "B. Lengthy", "C. Detailed", "D. Verbose"],
-    answer: "A",
-    explanation: "'Concise' means giving a lot of information clearly and in few words; brief."
+    "id": 883,
+    "question": "Choose the option opposite in meaning to the underlined word: The soil in this region is **fertile**.",
+    "options": ["Productive", "Barren", "Rich", "Yielding"],
+    "answer": "B",
+    "explanation": "'Fertile' means capable of producing abundant vegetation; opposite is 'barren'."
   },
   {
-    id: 883,
-    question: "Choose the option opposite in meaning to the underlined word: The soil in this region is **fertile**.",
-    options: ["A. Productive", "B. Barren", "C. Rich", "D. Yielding"],
-    answer: "B",
-    explanation: "'Fertile' means capable of producing abundant vegetation; opposite is 'barren'."
+    "id": 884,
+    "question": "Choose the option with the correct stress pattern for the word: **CERTIFICATE** (noun)",
+    "options": ["CER-ti-fi-cate", "cer-TI-fi-cate", "cer-ti-FI-cate", "cer-ti-fi-CATE"],
+    "answer": "B",
+    "explanation": "The noun 'certificate' is stressed on the second syllable: cer-TI-fi-cate."
   },
   {
-    id: 884,
-    question: "Choose the option with the correct stress pattern for the word: **CERTIFICATE** (noun)",
-    options: ["A. CER-ti-fi-cate", "B. cer-TI-fi-cate", "C. cer-ti-FI-cate", "D. cer-ti-fi-CATE"],
-    answer: "B",
-    explanation: "The noun 'certificate' is stressed on the second syllable: cer-TI-fi-cate."
+    "id": 885,
+    "question": "Choose the option that correctly completes the sentence: One of the boys _____ broken the window glass.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "'One of the [plural noun]' takes a singular verb ('has')."
   },
   {
-    id: 885,
-    question: "Choose the option that correctly completes the sentence: One of the boys _____ broken the window glass.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "'One of the [plural noun]' takes a singular verb ('has')."
+    "id": 886,
+    "question": "Choose the option nearest in meaning to the underlined word: The suspect was **interrogated** for five hours.",
+    "options": ["Questioned", "Released", "Praised", "Warned"],
+    "answer": "A",
+    "explanation": "'Interrogate' means to ask questions closely, aggressively, or formally."
   },
   {
-    id: 886,
-    question: "Choose the option nearest in meaning to the underlined word: The suspect was **interrogated** for five hours.",
-    options: ["A. Questioned", "B. Released", "C. Praised", "D. Warned"],
-    answer: "A",
-    explanation: "'Interrogate' means to ask questions closely, aggressively, or formally."
+    "id": 887,
+    "question": "Choose the option opposite in meaning to the underlined word: The market is filled with **synthetic** materials.",
+    "options": ["Artificial", "Natural", "Fake", "Man-made"],
+    "answer": "B",
+    "explanation": "'Synthetic' means made by chemical synthesis, artificial; opposite is 'natural'."
   },
   {
-    id: 887,
-    question: "Choose the option opposite in meaning to the underlined word: The market is filled with **synthetic** materials.",
-    options: ["A. Artificial", "B. Natural", "C. Fake", "D. Man-made"],
-    answer: "B",
-    explanation: "'Synthetic' means made by chemical synthesis, artificial; opposite is 'natural'."
+    "id": 888,
+    "question": "Choose the option that correctly completes the sentence: If I _____ you, I would take the offer.",
+    "options": ["am", "were", "was", "be"],
+    "answer": "B",
+    "explanation": "Subjunctive conditionals ('If I...') use 'were' regardless of the subject."
   },
   {
-    id: 888,
-    question: "Choose the option that correctly completes the sentence: If I _____ you, I would take the offer.",
-    options: ["A. am", "B. were", "C. was", "D. be"],
-    answer: "B",
-    explanation: "Subjunctive conditionals ('If I...') use 'were' regardless of the subject."
+    "id": 889,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: b**ir**d",
+    "options": ["Beard", "Turn", "Bed", "Board"],
+    "answer": "B",
+    "explanation": "Both 'bird' and 'turn' share the open-mid central unrounded vowel sound /ɜː/."
   },
   {
-    id: 889,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: b**ir**d",
-    options: ["A. Beard", "B. Turn", "C. Bed", "D. Board"],
-    answer: "B",
-    explanation: "Both 'bird' and 'turn' share the open-mid central unrounded vowel sound /ɜː/."
+    "id": 890,
+    "question": "Choose the option that best explains the idiom: To **bite the bullet** means to:",
+    "options": ["Face a difficult situation bravely", "Chew hard food", "Get shot in battle", "Act foolishly"],
+    "answer": "A",
+    "explanation": "'Bite the bullet' means to face an inevitable painful or difficult situation with courage."
   },
   {
-    id: 890,
-    question: "Choose the option that best explains the idiom: To **bite the bullet** means to:",
-    options: ["A. Face a difficult situation bravely", "B. Chew hard food", "C. Get shot in battle", "D. Act foolishly"],
-    answer: "A",
-    explanation: "'Bite the bullet' means to face an inevitable painful or difficult situation with courage."
+    "id": 891,
+    "question": "Choose the option that correctly completes the sentence: Ten kilometres _____ a long distance to walk.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Measurements of distance are treated as singular quantities and take singular verbs ('is')."
   },
   {
-    id: 891,
-    question: "Choose the option that correctly completes the sentence: Ten kilometres _____ a long distance to walk.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Measurements of distance are treated as singular quantities and take singular verbs ('is')."
+    "id": 892,
+    "question": "Choose the option nearest in meaning to the underlined word: The witness gave a **vivid** description of the incident.",
+    "options": ["Graphic", "Dull", "Vague", "Faint"],
+    "answer": "A",
+    "explanation": "'Vivid' means producing powerful feelings or strong, clear images in the mind; graphic."
   },
   {
-    id: 892,
-    question: "Choose the option nearest in meaning to the underlined word: The witness gave a **vivid** description of the incident.",
-    options: ["A. Graphic", "B. Dull", "C. Vague", "D. Faint"],
-    answer: "A",
-    explanation: "'Vivid' means producing powerful feelings or strong, clear images in the mind; graphic."
+    "id": 893,
+    "question": "Choose the option opposite in meaning to the underlined word: The officer was commended for his **valiant** efforts.",
+    "options": ["Brave", "Cowardly", "Heroic", "Courageous"],
+    "answer": "B",
+    "explanation": "'Valiant' means possessing or showing courage or determination; opposite is 'cowardly'."
   },
   {
-    id: 893,
-    question: "Choose the option opposite in meaning to the underlined word: The officer was commended for his **valiant** efforts.",
-    options: ["A. Brave", "B. Cowardly", "C. Heroic", "D. Courageous"],
-    answer: "B",
-    explanation: "'Valiant' means possessing or showing courage or determination; opposite is 'cowardly'."
+    "id": 894,
+    "question": "Choose the option with the correct stress pattern for the word: **DEMOCRACY**",
+    "options": ["DE-mo-cra-cy", "de-MO-cra-cy", "de-mo-CRA-cy", "de-mo-cra-CY"],
+    "answer": "B",
+    "explanation": "Words ending in '-cracy' carry primary stress on the antepenultimate syllable: de-MO-cra-cy."
   },
   {
-    id: 894,
-    question: "Choose the option with the correct stress pattern for the word: **DEMOCRACY**",
-    options: ["A. DE-mo-cra-cy", "B. de-MO-cra-cy", "C. de-mo-CRA-cy", "D. de-mo-cra-CY"],
-    answer: "B",
-    explanation: "Words ending in '-cracy' carry primary stress on the antepenultimate syllable: de-MO-cra-cy."
+    "id": 895,
+    "question": "Choose the option that correctly completes the sentence: The principal insisted that all rules _____ observed.",
+    "options": ["be", "are", "were", "must be"],
+    "answer": "A",
+    "explanation": "Mandative subjunctive structures ('insisted that...') take the base verb 'be'."
   },
   {
-    id: 895,
-    question: "Choose the option that correctly completes the sentence: The principal insisted that all rules _____ observed.",
-    options: ["A. be", "B. are", "C. were", "D. must be"],
-    answer: "A",
-    explanation: "Mandative subjunctive structures ('insisted that...') take the base verb 'be'."
+    "id": 896,
+    "question": "Choose the option nearest in meaning to the underlined word: The old structure was completely **demolished**.",
+    "options": ["Destroyed", "Built", "Repaired", "RenTargeted"],
+    "answer": "A",
+    "explanation": "'Demolish' means to pull down or destroy completely."
   },
   {
-    id: 896,
-    question: "Choose the option nearest in meaning to the underlined word: The old structure was completely **demolished**.",
-    options: ["A. Destroyed", "B. Built", "C. Repaired", "D. RenTargeted"],
-    answer: "A",
-    explanation: "'Demolish' means to pull down or destroy completely."
+    "id": 897,
+    "question": "Choose the option opposite in meaning to the underlined word: She lives a very **frugal** lifestyle.",
+    "options": ["Extravagant", "Economical", "Thrifty", "Simple"],
+    "answer": "A",
+    "explanation": "'Frugal' means sparing or economical with regard to money; opposite is 'extravagant'."
   },
   {
-    id: 897,
-    question: "Choose the option opposite in meaning to the underlined word: She lives a very **frugal** lifestyle.",
-    options: ["A. Extravagant", "B. Economical", "C. Thrifty", "D. Simple"],
-    answer: "A",
-    explanation: "'Frugal' means sparing or economical with regard to money; opposite is 'extravagant'."
+    "id": 898,
+    "question": "Choose the option that correctly completes the sentence: Neither of the girls _____ going to the cinema tonight.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular subject taking 'is'."
   },
   {
-    id: 898,
-    question: "Choose the option that correctly completes the sentence: Neither of the girls _____ going to the cinema tonight.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular subject taking 'is'."
+    "id": 899,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **z**oo",
+    "options": ["Sip", "Has", "Shoe", "Place"],
+    "answer": "B",
+    "explanation": "The 's' in 'has' makes the voiced alveolar fricative sound /z/, matching 'zoo'."
   },
   {
-    id: 899,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **z**oo",
-    options: ["A. Sip", "B. Has", "C. Shoe", "D. Place"],
-    answer: "B",
-    explanation: "The 's' in 'has' makes the voiced alveolar fricative sound /z/, matching 'zoo'."
+    "id": 900,
+    "question": "Choose the option that best explains the idiom: To **let the cat out of the bag** means to:",
+    "options": ["Reveal a secret accidentally", "Set a pet free", "Make a mess", "Cause confusion"],
+    "answer": "A",
+    "explanation": "'Let the cat out of the bag' means to reveal a secret, usually unthinkingly."
   },
   {
-    id: 900,
-    question: "Choose the option that best explains the idiom: To **let the cat out of the bag** means to:",
-    options: ["A. Reveal a secret accidentally", "B. Set a pet free", "C. Make a mess", "D. Cause confusion"],
-    answer: "A",
-    explanation: "'Let the cat out of the bag' means to reveal a secret, usually unthinkingly."
+    "id": 901,
+    "question": "Choose the option that correctly completes the sentence: The furniture in the main hall _____ polished yesterday.",
+    "options": ["was", "were", "are", "have been"],
+    "answer": "A",
+    "explanation": "'Furniture' is an uncountable noun taking a singular verb ('was')."
   },
   {
-    id: 901,
-    question: "Choose the option that correctly completes the sentence: The furniture in the main hall _____ polished yesterday.",
-    options: ["A. was", "B. were", "C. are", "D. have been"],
-    answer: "A",
-    explanation: "'Furniture' is an uncountable noun taking a singular verb ('was')."
+    "id": 902,
+    "question": "Choose the option nearest in meaning to the underlined word: The manager was **reluctant** to sign the agreement.",
+    "options": ["Unwilling", "Eager", "Willing", "Excited"],
+    "answer": "A",
+    "explanation": "'Reluctant' means unwilling and hesitant."
   },
   {
-    id: 902,
-    question: "Choose the option nearest in meaning to the underlined word: The manager was **reluctant** to sign the agreement.",
-    options: ["A. Unwilling", "B. Eager", "C. Willing", "D. Excited"],
-    answer: "A",
-    explanation: "'Reluctant' means unwilling and hesitant."
+    "id": 903,
+    "question": "Choose the option opposite in meaning to the underlined word: The weather today is exceptionally **tranquil**.",
+    "options": ["Calm", "Stormy", "Peaceful", "Quiet"],
+    "answer": "B",
+    "explanation": "'Tranquil' means calm and peaceful; the opposite is 'stormy'."
   },
   {
-    id: 903,
-    question: "Choose the option opposite in meaning to the underlined word: The weather today is exceptionally **tranquil**.",
-    options: ["A. Calm", "B. Stormy", "C. Peaceful", "D. Quiet"],
-    answer: "B",
-    explanation: "'Tranquil' means calm and peaceful; the opposite is 'stormy'."
-  },
-  {
-    id: 904,
-    question: "Choose the option with the correct stress pattern for the word: **ECONOMY**",
-    options: ["A. E-co-no-my", "B. e-CO-no-my", "C. e-co-NO-my", "D. e-co-no-MY"],
-    answer: "B",
-    explanation: "The noun 'economy' carries primary stress on the second syllable: e-CO-no-my."
+    "id": 904,
+    "question": "Choose the option with the correct stress pattern for the word: **ECONOMY**",
+    "options": ["E-co-no-my", "e-CO-no-my", "e-co-NO-my", "e-co-no-MY"],
+    "answer": "B",
+    "explanation": "The noun 'economy' carries primary stress on the antepenultimate syllable: e-CO-no-my."
   },
   {
     id: 905,
     question: "Choose the option that correctly completes the sentence: You had better _____ your lessons before the exam.",
-    options: ["A. revise", "B. to revise", "C. revising", "D. revised"],
+    options: ["revise", "to revise", "revising", "revised"],
     answer: "A",
     explanation: "'Had better' is followed by the bare infinitive ('revise')."
   },
   {
     id: 906,
     question: "Choose the option nearest in meaning to the underlined word: The doctor prescribed a **potent** medicine.",
-    options: ["A. Powerful", "B. Weak", "C. Mild", "D. Useless"],
+    options: ["Powerful", "Weak", "Mild", "Useless"],
     answer: "A",
     explanation: "'Potent' means having great power, influence, or effect; powerful."
   },
   {
-    id: 907,
-    question: "Choose the option opposite in meaning to the underlined word: The general gave an **explicit** command to the troops.",
-    options: ["A. Clear", "B. Vague", "C. Direct", "D. Precise"],
-    answer: "B",
-    explanation: "'Explicit' means fully and clearly expressed; the opposite is 'vague' or 'unclear'."
+    "id": 905,
+    "question": "Choose the option that correctly completes the sentence: You had better _____ your lessons before the exam.",
+    "options": ["revise", "to revise", "revising", "revised"],
+    "answer": "A",
+    "explanation": "'Had better' is followed by the bare infinitive ('revise')."
   },
   {
-    id: 908,
-    question: "Choose the option that correctly completes the sentence: No sooner had the bell rung _____ the students ran out.",
-    options: ["A. when", "B. than", "C. then", "D. as"],
-    answer: "B",
-    explanation: "'No sooner' is strictly followed by 'than' in inverted sentence structures."
+    "id": 906,
+    "question": "Choose the option nearest in meaning to the underlined word: The doctor prescribed a **potent** medicine.",
+    "options": ["Powerful", "Weak", "Mild", "Useless"],
+    "answer": "A",
+    "explanation": "'Potent' means having great power, influence, or effect; powerful."
   },
   {
-    id: 909,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: f**oo**d",
-    options: ["A. Good", "B. Loose", "C. Look", "D. Foot"],
-    answer: "B",
-    explanation: "Both 'food' and 'loose' share the long vowel sound /uː/."
+    "id": 907,
+    "question": "Choose the option opposite in meaning to the underlined word: The general gave an **explicit** command to the troops.",
+    "options": ["Clear", "Vague", "Direct", "Precise"],
+    "answer": "B",
+    "explanation": "'Explicit' means fully and clearly expressed; the opposite is 'vague' or 'unclear'."
   },
   {
-    id: 910,
-    question: "Choose the option that best explains the idiom: To **kick the bucket** means to:",
-    options: ["A. Spill a liquid", "B. Die", "C. Start a fight", "D. Stumble"],
-    answer: "B",
-    explanation: "'Kick the bucket' is a common idiom that means to die."
+    "id": 908,
+    "question": "Choose the option that correctly completes the sentence: No sooner had the bell rung _____ the students ran out.",
+    "options": ["when", "than", "then", "as"],
+    "answer": "B",
+    "explanation": "'No sooner' is strictly followed by 'than' in inverted sentence structures."
   },
   {
-    id: 911,
-    question: "Choose the option that correctly completes the sentence: The governor, accompanied by his aides, _____ arriving today.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Intervening phrases like 'accompanied by' do not pluralize the main singular subject ('governor' -> 'is')."
+    "id": 909,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: f**oo**d",
+    "options": ["Good", "Loose", "Look", "Foot"],
+    "answer": "B",
+    "explanation": "Both 'food' and 'loose' share the long vowel sound /uː/."
   },
   {
-    id: 912,
-    question: "Choose the option nearest in meaning to the underlined word: The witness gave a **candid** account of the incident.",
-    options: ["A. Frank", "B. Deceitful", "C. Clever", "D. Guarded"],
-    answer: "A",
-    explanation: "'Candid' means truthful and straightforward; frank."
+    "id": 910,
+    "question": "Choose the option that best explains the idiom: To **kick the bucket** means to:",
+    "options": ["Spill a liquid", "Die", "Start a fight", "Stumble"],
+    "answer": "B",
+    "explanation": "'Kick the bucket' is a common idiom that means to die."
   },
   {
-    id: 913,
-    question: "Choose the option opposite in meaning to the underlined word: The students were **obedient** throughout the assembly.",
-    options: ["A. Dutiful", "B. Rebellious", "C. Respectful", "D. Submissive"],
-    answer: "B",
-    explanation: "'Obedient' means complying with order or authority; opposite is 'rebellious'."
+    "id": 911,
+    "question": "Choose the option that correctly completes the sentence: The governor, accompanied by his aides, _____ arriving today.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Intervening phrases like 'accompanied by' do not pluralize the main singular subject ('governor' -> 'is')."
   },
   {
-    id: 914,
-    question: "Choose the option with the correct stress pattern for the word: **BIOLOGY**",
-    options: ["A. BI-o-lo-gy", "B. bi-O-lo-gy", "C. bi-o-LO-gy", "D. bi-o-lo-GY"],
-    answer: "B",
-    explanation: "Words ending in '-logy' stress the third syllable from the end: bi-O-lo-gy."
+    "id": 912,
+    "question": "Choose the option nearest in meaning to the underlined word: The witness gave a **candid** account of the incident.",
+    "options": ["Frank", "Deceitful", "Clever", "Guarded"],
+    "answer": "A",
+    "explanation": "'Candid' means truthful and straightforward; frank."
   },
   {
-    id: 915,
-    question: "Choose the option that correctly completes the sentence: She insisted _____ paying for the meal.",
-    options: ["A. at", "B. on", "C. for", "D. in"],
-    answer: "B",
-    explanation: "The verb 'insist' collocates with the preposition 'on'."
+    "id": 913,
+    "question": "Choose the option opposite in meaning to the underlined word: The students were **obedient** throughout the assembly.",
+    "options": ["Dutiful", "Rebellious", "Respectful", "Submissive"],
+    "answer": "B",
+    "explanation": "'Obedient' means complying with order or authority; opposite is 'rebellious'."
   },
   {
-    id: 916,
-    question: "Choose the option nearest in meaning to the underlined word: The novel received a **glowingly** positive review.",
-    options: ["A. Highly", "B. Barely", "C. Poorly", "D. Moderately"],
-    answer: "A",
-    explanation: "'Glowing' praise or reviews are highly enthusiastic and positive."
+    "id": 914,
+    "question": "Choose the option that correctly completes the sentence: She insisted _____ paying for the meal.",
+    "options": ["at", "on", "for", "in"],
+    "answer": "B",
+    "explanation": "The verb 'insist' collocates with the preposition 'on'."
   },
   {
-    id: 917,
-    question: "Choose the option opposite in meaning to the underlined word: The old man was very **miserly** with his possessions.",
-    options: ["A. Generous", "B. Stingy", "C. Greedy", "D. Mean"],
-    answer: "A",
-    explanation: "'Miserly' means hoarders or unwilling to spend money; opposite is 'generous'."
+    "id": 915,
+    "question": "Choose the option nearest in meaning to the underlined word: The novel received a **glowingly** positive review.",
+    "options": ["Highly", "Barely", "Poorly", "Moderately"],
+    "answer": "A",
+    "explanation": "'Glowing' praise or reviews are highly enthusiastic and positive."
   },
   {
-    id: 918,
-    question: "Choose the option that correctly completes the sentence: Neither of the two proposals _____ acceptable to the board.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular subject taking 'is'."
+    "id": 916,
+    "question": "Choose the option opposite in meaning to the underlined word: The old man was very **miserly** with his possessions.",
+    "options": ["Generous", "Stingy", "Greedy", "Mean"],
+    "answer": "A",
+    "explanation": "'Miserly' means hoarding or unwilling to spend money; opposite is 'generous'."
   },
   {
-    id: 919,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **v**ine",
-    options: ["A. Fine", "B. Of", "C. Off", "D. Pine"],
-    answer: "B",
-    explanation: "The single 'f' in 'of' makes the voiced labiodental fricative sound /v/, matching 'vine'."
+    "id": 917,
+    "question": "Choose the option that correctly completes the sentence: Neither of the two proposals _____ acceptable to the board.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular subject taking 'is'."
   },
   {
-    id: 920,
-    question: "Choose the option that best explains the idiom: To **hit the sack** means to:",
-    options: ["A. Go to sleep", "B. Start a fight", "C. Carry a load", "D. Punch a target"],
-    answer: "A",
-    explanation: "'Hit the sack' (or hit the hay) is an informal idiom meaning to go to bed or sleep."
+    "id": 918,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **v**ine",
+    "options": ["Fine", "Of", "Off", "Pine"],
+    "answer": "B",
+    "explanation": "The single 'f' in 'of' makes the voiced labiodental fricative sound /v/, matching 'vine'."
   },
   {
-    id: 921,
-    question: "Choose the option that correctly completes the sentence: The boy was accused _____ stealing the missing watch.",
-    options: ["A. for", "B. of", "C. with", "D. about"],
-    answer: "B",
-    explanation: "The verb 'accuse' takes the preposition 'of'."
+    "id": 919,
+    "question": "Choose the option that best explains the idiom: To **hit the sack** means to:",
+    "options": ["Go to sleep", "Start a fight", "Carry a load", "Punch a target"],
+    "answer": "A",
+    "explanation": "'Hit the sack' (or hit the hay) is an informal idiom meaning to go to bed or sleep."
   },
   {
-    id: 922,
-    question: "Choose the option nearest in meaning to the underlined word: The team showed a **resilient** spirit during the tournament.",
-    options: ["A. Tough", "B. Weak", "C. Fragile", "D. Passive"],
-    answer: "A",
-    explanation: "'Resilient' means able to withstand or recover quickly from difficult conditions; tough."
+    "id": 920,
+    "question": "Choose the option that correctly completes the sentence: The boy was accused _____ stealing the missing watch.",
+    "options": ["for", "of", "with", "about"],
+    "answer": "B",
+    "explanation": "The verb 'accuse' takes the preposition 'of'."
   },
   {
-    id: 923,
-    question: "Choose the option opposite in meaning to the underlined word: The atmosphere during the meeting was **harmonious**.",
-    options: ["A. Peaceful", "B. Discordant", "C. Friendly", "D. Amicable"],
-    answer: "B",
-    explanation: "'Harmonious' means tuned or agreeing well together; the opposite is 'discordant'."
+    "id": 921,
+    "question": "Choose the option nearest in meaning to the underlined word: The team showed a **resilient** spirit during the tournament.",
+    "options": ["Tough", "Weak", "Fragile", "Passive"],
+    "answer": "A",
+    "explanation": "'Resilient' means able to withstand or recover quickly from difficult conditions; tough."
   },
   {
-    id: 924,
-    question: "Choose the option with the correct stress pattern for the word: **GEOGRAPHY**",
-    options: ["A. GE-o-gra-phy", "B. ge-O-gra-phy", "C. ge-o-GRA-phy", "D. ge-o-gra-PHY"],
-    answer: "B",
-    explanation: "Words ending in '-phy' stress the antepenultimate syllable: ge-O-gra-phy."
+    "id": 922,
+    "question": "Choose the option opposite in meaning to the underlined word: The atmosphere during the meeting was **harmonious**.",
+    "options": ["Peaceful", "Discordant", "Friendly", "Amicable"],
+    "answer": "B",
+    "explanation": "'Harmonious' means tuned or agreeing well together; the opposite is 'discordant'."
   },
   {
-    id: 925,
-    question: "Choose the option that correctly completes the sentence: It is essential that he _____ present at the meeting.",
-    options: ["A. be", "B. is", "C. was", "D. should be"],
-    answer: "A",
-    explanation: "Mandative subjunctive structures ('It is essential that...') require the base form verb 'be'."
+    "id": 923,
+    "question": "Choose the option that correctly completes the sentence: It is essential that he _____ present at the meeting.",
+    "options": ["be", "is", "was", "should be"],
+    "answer": "A",
+    "explanation": "Mandative subjunctive structures ('It is essential that...') require the base form verb 'be'."
   },
   {
-    id: 926,
-    question: "Choose the option nearest in meaning to the underlined word: His arguments were **superficial** and unconvincing.",
-    options: ["A. Shallow", "B. Deep", "C. Thorough", "D. Sound"],
-    answer: "A",
-    explanation: "'Superficial' means existing or occurring on the surface, lacking depth; shallow."
+    "id": 924,
+    "question": "Choose the option nearest in meaning to the underlined word: His arguments were **superficial** and unconvincing.",
+    "options": ["Shallow", "Deep", "Thorough", "Sound"],
+    "answer": "A",
+    "explanation": "'Superficial' means existing or occurring on the surface, lacking depth; shallow."
   },
   {
-    id: 927,
-    question: "Choose the option opposite in meaning to the underlined word: The town experienced a **dextrous** administrative transition.",
-    options: ["A. Skillful", "B. Clumsy", "C. Adroit", "D. Efficient"],
-    answer: "B",
-    explanation: "'Dextrous' means showing neat skill or cleverness; the opposite is 'clumsy'."
+    "id": 925,
+    "question": "Choose the option opposite in meaning to the underlined word: The town experienced a **dextrous** administrative transition.",
+    "options": ["Skillful", "Clumsy", "Adroit", "Efficient"],
+    "answer": "B",
+    "explanation": "'Dextrous' means showing neat skill or cleverness; the opposite is 'clumsy'."
   },
   {
-    id: 928,
-    question: "Choose the option that correctly completes the sentence: Neither the manager nor his assistants _____ informed about the policy change.",
-    options: ["A. was", "B. were", "C. has been", "D. is"],
-    answer: "B",
-    explanation: "In 'neither... nor' constructions, the verb agrees with the nearest subject ('assistants' -> plural 'were')."
+    "id": 926,
+    "question": "Choose the option that correctly completes the sentence: Neither the manager nor his assistants _____ informed about the policy change.",
+    "options": ["was", "were", "has been", "is"],
+    "answer": "B",
+    "explanation": "In 'neither... nor' constructions, the verb agrees with the nearest subject ('assistants' -> plural 'were')."
   },
   {
-    id: 929,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: m**e**n",
-    options: ["A. Man", "B. Said", "C. Machine", "D. Marine"],
-    answer: "B",
-    explanation: "Both 'men' and 'said' share the short front vowel sound /e/."
+    "id": 927,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: m**e**n",
+    "options": ["Man", "Said", "Machine", "Marine"],
+    "answer": "B",
+    "explanation": "Both 'men' and 'said' share the short front vowel sound /e/."
   },
   {
-    id: 930,
-    question: "Choose the option that best explains the idiom: To **cost an arm and a leg** means to:",
-    options: ["A. Be extremely expensive", "B. Cause bodily injury", "C. Require a sacrifice", "D. Be very cheap"],
-    answer: "A",
-    explanation: "'Cost an arm and a leg' means to be extremely expensive."
+    "id": 928,
+    "question": "Choose the option that best explains the idiom: To **cost an arm and a leg** means to:",
+    "options": ["Be extremely expensive", "Cause bodily injury", "Require a sacrifice", "Be very cheap"],
+    "answer": "A",
+    "explanation": "'Cost an arm and a leg' means to be extremely expensive."
   },
   {
-    id: 931,
-    question: "Choose the option that correctly completes the sentence: Statistics _____ a compulsory subject for economics students.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Academic disciplines ending in '-ics' take a singular verb when treated as a single subject ('is')."
+    "id": 929,
+    "question": "Choose the option that correctly completes the sentence: Statistics _____ a compulsory subject for economics students.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Academic disciplines ending in '-ics' take a singular verb when treated as a single subject ('is')."
   },
   {
-    id: 932,
-    question: "Choose the option nearest in meaning to the underlined word: The CEO made a **prudent** decision regarding the investment.",
-    options: ["A. Wise", "B. Foolish", "C. Careless", "D. Rash"],
-    answer: "A",
-    explanation: "'Prudent' means acting with or showing care and thought for the future; wise."
+    "id": 930,
+    "question": "Choose the option nearest in meaning to the underlined word: The CEO made a **prudent** decision regarding the investment.",
+    "options": ["Wise", "Foolish", "Careless", "Rash"],
+    "answer": "A",
+    "explanation": "'Prudent' means acting with or showing care and thought for the future; wise."
   },
   {
-    id: 933,
-    question: "Choose the option opposite in meaning to the underlined word: The boy showed **reverence** toward his teachers.",
-    options: ["A. Respect", "B. Disrespect", "C. Admiration", "D. Honor"],
-    answer: "B",
-    explanation: "'Reverence' means deep respect or awe; the opposite is 'disrespect'."
+    "id": 931,
+    "question": "Choose the option opposite in meaning to the underlined word: The boy showed **reverence** toward his teachers.",
+    "options": ["Respect", "Disrespect", "Admiration", "Honor"],
+    "answer": "B",
+    "explanation": "'Reverence' means deep respect or awe; the opposite is 'disrespect'."
   },
   {
-    id: 934,
-    question: "Choose the option with the correct stress pattern for the word: **CONTROVERSY**",
-    options: ["A. CON-tro-ver-sy", "B. con-TRO-ver-sy", "C. con-tro-VER-sy", "D. con-tro-ver-SY"],
-    answer: "A",
-    explanation: "Standard English places primary stress on the first syllable: CON-tro-ver-sy."
+    "id": 932,
+    "question": "Choose the option that correctly completes the sentence: By next December, we _____ in this apartment for five years.",
+    "options": ["will have lived", "will live", "have lived", "had lived"],
+    "answer": "A",
+    "explanation": "Future duration marked by 'by [time limit]' requires the future perfect tense ('will have lived')."
   },
   {
-    id: 935,
-    question: "Choose the option that correctly completes the sentence: By next December, we _____ in this apartment for five years.",
-    options: ["A. will have lived", "B. will live", "C. have lived", "D. had lived"],
-    answer: "A",
-    explanation: "Future duration marked by 'by [time limit]' requires the future perfect tense ('will have lived')."
+    "id": 933,
+    "question": "Choose the option nearest in meaning to the underlined word: The suspect gave an **ambiguous** response during questioning.",
+    "options": ["Unclear", "Precise", "Direct", "Explicit"],
+    "answer": "A",
+    "explanation": "'Ambiguous' means open to more than one interpretation or double-meaning; unclear."
   },
   {
-    id: 936,
-    question: "Choose the option nearest in meaning to the underlined word: The suspect gave an **ambiguous** response during questioning.",
-    options: ["A. Unclear", "B. Precise", "C. Direct", "D. Explicit"],
-    answer: "A",
-    explanation: "'Ambiguous' means open to more than one interpretation or double-meaning; unclear."
+    "id": 934,
+    "question": "Choose the option opposite in meaning to the underlined word: The town was known for its **tranquil** surroundings.",
+    "options": ["Serene", "Turbulent", "Peaceful", "Quiet"],
+    "answer": "B",
+    "explanation": "'Tranquil' means calm and quiet; the opposite is 'turbulent'."
   },
   {
-    id: 937,
-    question: "Choose the option opposite in meaning to the underlined word: The town was known for its **tranquil** surroundings.",
-    options: ["A. Serene", "B. Turbulent", "C. Peaceful", "D. Quiet"],
-    answer: "B",
-    explanation: "'Tranquil' means calm and quiet; the opposite is 'turbulent'."
+    "id": 935,
+    "question": "Choose the option that correctly completes the sentence: One of the children _____ lost the key.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "The subject 'One' takes a singular verb ('has')."
   },
   {
-    id: 938,
-    question: "Choose the option that correctly completes the sentence: One of the children _____ lost the key.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "The subject 'One' takes a singular verb ('has')."
+    "id": 936,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **k**ing",
+    "options": ["Know", "Chemical", "Knife", "Knight"],
+    "answer": "B",
+    "explanation": "The 'ch' in 'chemical' makes the /k/ sound, matching 'king'."
   },
   {
-    id: 939,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **k**ing",
-    options: ["A. Know", "B. Chemical", "C. Knife", "D. Knight"],
-    answer: "B",
-    explanation: "The 'ch' in 'chemical' makes the /k/ sound, matching 'king'."
+    "id": 937,
+    "question": "Choose the option that best explains the idiom: To **take something with a grain of salt** means to:",
+    "options": ["Doubt its absolute truth", "Season your meal", "Reject an offer completely", "Accept something blindly"],
+    "answer": "A",
+    "explanation": "'Take with a grain of salt' means to view something with skepticism or doubt."
   },
   {
-    id: 940,
-    question: "Choose the option that best explains the idiom: To **take something with a grain of salt** means to:",
-    options: ["A. Doubt its absolute truth", "B. Season your meal", "C. Reject an offer completely", "D. Accept something blindly"],
-    answer: "A",
-    explanation: "'Take with a grain of salt' means to view something with skepticism or doubt."
+    "id": 938,
+    "question": "Choose the option that correctly completes the sentence: Measles _____ a disease that affects mostly children.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Names of specific diseases ending in '-s' take a singular verb ('is')."
   },
   {
-    id: 941,
-    question: "Choose the option that correctly completes the sentence: Measles _____ a disease that affects mostly children.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Names of specific diseases ending in '-s' take a singular verb ('is')."
+    "id": 939,
+    "question": "Choose the option nearest in meaning to the underlined word: The new policy created a **commotion** among staff.",
+    "options": ["Disturbance", "Peace", "Order", "Calmness"],
+    "answer": "A",
+    "explanation": "'Commotion' means a state of confused and noisy disturbance."
   },
   {
-    id: 942,
-    question: "Choose the option nearest in meaning to the underlined word: The new policy created a **commotion** among staff.",
-    options: ["A. Disturbance", "B. Peace", "C. Order", "D. Calmness"],
-    answer: "A",
-    explanation: "'Commotion' means a state of confused and noisy disturbance."
+    "id": 940,
+    "question": "Choose the option opposite in meaning to the underlined word: The speaker was very **articulate** during the presentation.",
+    "options": ["Eloquent", "Incoherent", "Clear", "Fluent"],
+    "answer": "B",
+    "explanation": "'Articulate' means fluent and clear in speech; the opposite is 'incoherent'."
   },
   {
-    id: 943,
-    question: "Choose the option opposite in meaning to the underlined word: The speaker was very **articulate** during the presentation.",
-    options: ["A. Eloquent", "B. Incoherent", "C. Clear", "D. Fluent"],
-    answer: "B",
-    explanation: "'Articulate' means fluent and clear in speech; the opposite is 'incoherent'."
+    "id": 941,
+    "question": "Choose the option that correctly completes the sentence: She would rather stay at home than _____ to the party.",
+    "options": ["go", "going", "went", "to go"],
+    "answer": "A",
+    "explanation": "'Would rather [verb] than [verb]' uses bare infinitives ('go')."
   },
   {
-    id: 944,
-    question: "Choose the option with the correct stress pattern for the word: **INTERRUPT**",
-    options: ["A. IN-ter-rupt", "B. in-TER-rupt", "C. in-ter-RUPT", "D. IN-TER-rupt"],
-    answer: "C",
-    explanation: "The verb 'interrupt' carries primary stress on the final syllable: in-ter-RUPT."
+    "id": 942,
+    "question": "Choose the option nearest in meaning to the underlined word: The old castle remains **intact** after centuries.",
+    "options": ["Unharmed", "Damaged", "Broken", "Ruined"],
+    "answer": "A",
+    "explanation": "'Intact' means not damaged or impaired; whole and unharmed."
   },
   {
-    id: 945,
-    question: "Choose the option that correctly completes the sentence: She would rather stay at home than _____ to the party.",
-    options: ["A. go", "B. going", "C. went", "D. to go"],
-    answer: "A",
-    explanation: "'Would rather [verb] than [verb]' uses bare infinitives ('go')."
+    "id": 943,
+    "question": "Choose the option opposite in meaning to the underlined word: The court passed a **stringent** measure on default offenders.",
+    "options": ["Strict", "Lenient", "Rigid", "Severe"],
+    "answer": "B",
+    "explanation": "'Stringent' means strict or precise; the opposite is 'lenient'."
   },
   {
-    id: 946,
-    question: "Choose the option nearest in meaning to the underlined word: The old castle remains **intact** after centuries.",
-    options: ["A. Unharmed", "B. Damaged", "C. Broken", "D. Ruined"],
-    answer: "A",
-    explanation: "'Intact' means not damaged or impaired; whole and unharmed."
+    "id": 944,
+    "question": "Choose the option that correctly completes the sentence: Scarcely had I entered the room _____ the lights went out.",
+    "options": ["than", "when", "then", "before"],
+    "answer": "B",
+    "explanation": "'Scarcely' pairs with 'when' in inverted conditional clauses."
   },
   {
-    id: 947,
-    question: "Choose the option opposite in meaning to the underlined word: The court passed a **stringent** measure on default offenders.",
-    options: ["A. Strict", "B. Lenient", "C. Rigid", "D. Severe"],
-    answer: "B",
-    explanation: "'Stringent' means strict or precise; the opposite is 'lenient'."
+    "id": 945,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**t",
+    "options": ["Plaid", "Palm", "Gate", "Cart"],
+    "answer": "A",
+    "explanation": "Both 'cat' and 'plaid' share the short front open unrounded vowel sound /æ/."
   },
   {
-    id: 948,
-    question: "Choose the option that correctly completes the sentence: Scarcely had I entered the room _____ the lights went out.",
-    options: ["A. than", "B. when", "C. then", "D. before"],
-    answer: "B",
-    explanation: "'Scarcely' pairs with 'when' in inverted conditional clauses."
+    "id": 946,
+    "question": "Choose the option that best explains the idiom: To **burn the candle at both ends** means to:",
+    "options": ["Exhaust oneself by overworking", "Save electricity", "Light up a dark room", "Waste precious resources"],
+    "answer": "A",
+    "explanation": "'Burn the candle at both ends' means to work extremely hard or stay up late and get up early, leading to exhaustion."
   },
   {
-    id: 949,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**t",
-    options: ["A. Plaid", "B. Palm", "C. Gate", "D. Cart"],
-    answer: "A",
-    explanation: "Both 'cat' and 'plaid' share the short front open unrounded vowel sound /æ/."
+    "id": 947,
+    "question": "Choose the option that correctly completes the sentence: The list of items on the agenda _____ not yet been finalized.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "The subject is 'list' (singular), which requires the singular verb 'has'."
   },
   {
-    id: 950,
-    question: "Choose the option that best explains the idiom: To **burn the candle at both ends** means to:",
-    options: ["A. Exhaust oneself by overworking", "B. Save electricity", "C. Light up a dark room", "D. Waste precious resources"],
-    answer: "A",
-    explanation: "'Burn the candle at both ends' means to work extremely hard or stay up late and get up early, leading to exhaustion."
+    "id": 948,
+    "question": "Choose the option nearest in meaning to the underlined word: The general made an **inadvertent** disclosure during the interview.",
+    "options": ["Unintentional", "Deliberate", "Calculated", "Purposeful"],
+    "answer": "A",
+    "explanation": "'Inadvertent' means not resulting from or achieved through deliberate planning; unintentional."
   },
   {
-    id: 951,
-    question: "Choose the option that correctly completes the sentence: The list of items on the agenda _____ not yet been finalized.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "The subject is 'list' (singular), which requires the singular verb 'has'."
+    "id": 949,
+    "question": "Choose the option opposite in meaning to the underlined word: The court gave a **harsh** penalty to the offender.",
+    "options": ["Severe", "Lenient", "Strict", "Rigid"],
+    "answer": "B",
+    "explanation": "'Harsh' means unpleasantly severe or strict; the opposite is 'lenient'."
   },
   {
-    id: 952,
-    question: "Choose the option nearest in meaning to the underlined word: The general made an **inadvertent** disclosure during the interview.",
-    options: ["A. Unintentional", "B. Deliberate", "C. Calculated", "D. Purposeful"],
-    answer: "A",
-    explanation: "'Inadvertent' means not resulting from or achieved through deliberate planning; unintentional."
+    "id": 950,
+    "question": "Choose the option that correctly completes the sentence: She is accustomed _____ waking up early every morning.",
+    "options": ["to", "with", "for", "at"],
+    "answer": "A",
+    "explanation": "The adjective 'accustomed' collocates with the preposition 'to' followed by a gerund."
   },
   {
-    id: 953,
-    question: "Choose the option opposite in meaning to the underlined word: The court gave a **harsh** penalty to the offender.",
-    options: ["A. Severe", "B. Lenient", "C. Strict", "D. Rigid"],
-    answer: "B",
-    explanation: "'Harsh' means unpleasantly severe or strict; the opposite is 'lenient'."
+    "id": 951,
+    "question": "Choose the option nearest in meaning to the underlined word: The community leader was known for his **altruistic** deeds.",
+    "options": ["Unselfish", "Egotistical", "Greedy", "Selfish"],
+    "answer": "A",
+    "explanation": "'Altruistic' means showing a disinterested and selfless concern for the well-being of others."
   },
   {
-    id: 954,
-    question: "Choose the option with the correct stress pattern for the word: **DETERMINATION**",
-    options: ["A. DE-ter-mi-na-tion", "B. de-ter-MI-na-tion", "C. de-ter-mi-NA-tion", "D. de-ter-mi-na-TION"],
-    answer: "C",
-    explanation: "Words with the '-tion' suffix take primary stress on the penultimate syllable: de-ter-mi-NA-tion."
+    "id": 952,
+    "question": "Choose the option opposite in meaning to the underlined word: The contract contains several **ambiguous** clauses.",
+    "options": ["Vague", "Clear", "Obscure", "Dubious"],
+    "answer": "B",
+    "explanation": "'Ambiguous' means open to more than one interpretation; its opposite is 'clear'."
   },
   {
-    id: 955,
-    question: "Choose the option that correctly completes the sentence: She is accustomed _____ waking up early every morning.",
-    options: ["A. to", "B. with", "C. for", "D. at"],
-    answer: "A",
-    explanation: "The adjective 'accustomed' collocates with the preposition 'to' followed by a gerund."
+    "id": 953,
+    "question": "Choose the option that correctly completes the sentence: Neither of the answers provided by the candidate _____ satisfactory.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular subject and takes a singular verb ('is')."
   },
   {
-    id: 956,
-    question: "Choose the option nearest in meaning to the underlined word: The community leader was known for his **altruistic** deeds.",
-    options: ["A. Unselfish", "B. Egotistical", "C. Greedy", "D. Selfish"],
-    answer: "A",
-    explanation: "'Altruistic' means showing a disinterested and selfless concern for the well-being of others."
+    "id": 954,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **sh**ip",
+    "options": ["Chef", "Chip", "Chair", "Catch"],
+    "answer": "A",
+    "explanation": "The 'ch' in 'chef' is pronounced /ʃ/, matching the sound in 'ship'."
   },
   {
-    id: 957,
-    question: "Choose the option opposite in meaning to the underlined word: The contract contains several **ambiguous** clauses.",
-    options: ["A. Vague", "B. Clear", "C. Obscure", "D. Dubious"],
-    answer: "B",
-    explanation: "'Ambiguous' means open to more than one interpretation; its opposite is 'clear'."
+    "id": 955,
+    "question": "Choose the option that best explains the idiom: To **bite off more than you can chew** means to:",
+    "options": ["Take on a task that is too big", "Eat food greedily", "Choke on something", "Act impolitely"],
+    "answer": "A",
+    "explanation": "'Bite off more than you can chew' means to commit to a task or responsibility that exceeds your capacity."
   },
   {
-    id: 958,
-    question: "Choose the option that correctly completes the sentence: Neither of the answers provided by the candidate _____ satisfactory.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular subject and takes a singular verb ('is')."
+    "id": 956,
+    "question": "Choose the option that correctly completes the sentence: The price of basic foodstuffs _____ risen sharply this month.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "The subject is 'price' (singular), which takes the singular verb 'has'."
   },
   {
-    id: 959,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **sh**ip",
-    options: ["A. Chef", "B. Chip", "C. Chair", "D. Catch"],
-    answer: "A",
-    explanation: "The 'ch' in 'chef' is pronounced /ʃ/, matching the sound in 'ship'."
+    "id": 957,
+    "question": "Choose the option nearest in meaning to the underlined word: The witness gave an **authentic** account of the occurrence.",
+    "options": ["Genuine", "Fake", "Dubious", "Counterfeit"],
+    "answer": "A",
+    "explanation": "'Authentic' means genuine, original, or true."
   },
   {
-    id: 960,
-    question: "Choose the option that best explains the idiom: To **bite off more than you can chew** means to:",
-    options: ["A. Take on a task that is too big", "B. Eat food greedily", "C. Choke on something", "D. Act impolitely"],
-    answer: "A",
-    explanation: "'Bite off more than you can chew' means to commit to a task or responsibility that exceeds your capacity."
+    "id": 958,
+    "question": "Choose the option opposite in meaning to the underlined word: His response to the question was **spontaneous**.",
+    "options": ["Rehearsed", "Impromptu", "Unplanned", "Natural"],
+    "answer": "A",
+    "explanation": "'Spontaneous' means performed or occurring as a result of a sudden impulse; the opposite is 'rehearsed'."
   },
   {
-    id: 961,
-    question: "Choose the option that correctly completes the sentence: The price of basic foodstuffs _____ risen sharply this month.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "The subject is 'price' (singular), which takes the singular verb 'has'."
+    "id": 959,
+    "question": "Choose the option that correctly completes the sentence: The doctor advised him to abstain _____ alcoholic drinks.",
+    "options": ["from", "with", "off", "against"],
+    "answer": "A",
+    "explanation": "The verb 'abstain' takes the preposition 'from'."
   },
   {
-    id: 962,
-    question: "Choose the option nearest in meaning to the underlined word: The witness gave an **authentic** account of the occurrence.",
-    options: ["A. Genuine", "B. Fake", "C. Dubious", "D. Counterfeit"],
-    answer: "A",
-    explanation: "'Authentic' means genuine, original, or true."
+    "id": 960,
+    "question": "Choose the option nearest in meaning to the underlined word: The old structure was **obsolete**.",
+    "options": ["Outdated", "Modern", "Durable", "Useful"],
+    "answer": "A",
+    "explanation": "'Obsolete' means no longer produced or used; out of date."
   },
   {
-    id: 963,
-    question: "Choose the option opposite in meaning to the underlined word: His response to the question was **spontaneous**.",
-    options: ["A. Rehearsed", "B. Impromptu", "C. Unplanned", "D. Natural"],
-    answer: "A",
-    explanation: "'Spontaneous' means performed or occurring as a result of a sudden impulse; the opposite is 'rehearsed'."
+    "id": 961,
+    "question": "Choose the option opposite in meaning to the underlined word: The suspect showed **remorse** for his crime.",
+    "options": ["Impenitence", "Regret", "Penitence", "Guilt"],
+    "answer": "A",
+    "explanation": "'Remorse' means deep regret or guilt; the opposite is 'impenitence' (lack of regret)."
   },
   {
-    id: 964,
-    question: "Choose the option with the correct stress pattern for the word: **ELECTRICITY**",
-    options: ["A. E-lec-tri-ci-ty", "B. e-LEC-tri-ci-ty", "C. e-lec-TRI-ci-ty", "D. e-lec-tri-CI-ty"],
-    answer: "D",
-    explanation: "Nouns ending in '-city' / '-ity' carry stress on the antepenultimate syllable: e-lec-tri-CI-ty."
+    "id": 962,
+    "question": "Choose the option that correctly completes the sentence: The teacher, together with all his pupils, _____ going on an excursion.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Phrases introduced by 'together with' do not affect the singular subject 'teacher' ('is')."
   },
   {
-    id: 965,
-    question: "Choose the option that correctly completes the sentence: The doctor advised him to abstain _____ alcoholic drinks.",
-    options: ["A. from", "B. with", "C. off", "D. against"],
-    answer: "A",
-    explanation: "The verb 'abstain' takes the preposition 'from'."
+    "id": 963,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: b**o**ok",
+    "options": ["Put", "Pool", "Moon", "Rude"],
+    "answer": "A",
+    "explanation": "Both 'book' and 'put' share the short near-close near-back rounded vowel sound /ʊ/."
   },
   {
-    id: 966,
-    question: "Choose the option nearest in meaning to the underlined word: The old structure was **obsolete**.",
-    options: ["A. Outdated", "B. Modern", "C. Durable", "D. Useful"],
-    answer: "A",
-    explanation: "'Obsolete' means no longer produced or used; out of date."
+    "id": 964,
+    "question": "Choose the option that best explains the idiom: To **cry over spilt milk** means to:",
+    "options": ["Regret past unchangeable mistakes", "Weep over spoiled food", "Complain about hard work", "Blame others for failure"],
+    "answer": "A",
+    "explanation": "'Cry over spilt milk' means to worry or complain about something that has already happened and cannot be changed."
   },
   {
-    id: 967,
-    question: "Choose the option opposite in meaning to the underlined word: The suspect showed **remorse** for his crime.",
-    options: ["A. Impenitence", "B. Regret", "C. Penitence", "D. Guilt"],
-    answer: "A",
-    explanation: "'Remorse' means deep regret or guilt; the opposite is 'impenitence' (lack of regret)."
+    "id": 965,
+    "question": "Choose the option that correctly completes the sentence: None of the equipment _____ brought to the laboratory yet.",
+    "options": ["has been", "have been", "were", "are"],
+    "answer": "A",
+    "explanation": "'Equipment' is an uncountable noun; 'none' referring to uncountable items takes singular ('has been')."
   },
   {
-    id: 968,
-    question: "Choose the option that correctly completes the sentence: The teacher, together with all his pupils, _____ going on an excursion.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Phrases introduced by 'together with' do not affect the singular subject 'teacher' ('is')."
+    "id": 966,
+    "question": "Choose the option nearest in meaning to the underlined word: The company made a **colossal** profit last year.",
+    "options": ["Huge", "Tiny", "Modest", "Average"],
+    "answer": "A",
+    "explanation": "'Colossal' means extremely large or huge."
   },
   {
-    id: 969,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: b**o**ok",
-    options: ["A. Put", "B. Pool", "C. Moon", "D. Rude"],
-    answer: "A",
-    explanation: "Both 'book' and 'put' share the short near-close near-back rounded vowel sound /ʊ/."
+    "id": 967,
+    "question": "Choose the option opposite in meaning to the underlined word: The manager was praised for his **prudent** financial management.",
+    "options": ["Reckless", "Careful", "Cautious", "Wise"],
+    "answer": "A",
+    "explanation": "'Prudent' means acting with care and thought; the opposite is 'reckless'."
   },
   {
-    id: 970,
-    question: "Choose the option that best explains the idiom: To **cry over spilt milk** means to:",
-    options: ["A. Regret past unchangeable mistakes", "B. Weep over spoiled food", "C. Complain about hard work", "D. Blame others for failure"],
-    answer: "A",
-    explanation: "'Cry over spilt milk' means to worry or complain about something that has already happened and cannot be changed."
+    "id": 968,
+    "question": "Choose the option that correctly completes the sentence: If I _____ known about the meeting earlier, I would have attended.",
+    "options": ["had", "have", "was", "would have"],
+    "answer": "A",
+    "explanation": "Third conditional sentences require past perfect ('had known') in the condition clause."
   },
   {
-    id: 971,
-    question: "Choose the option that correctly completes the sentence: None of the equipment _____ brought to the laboratory yet.",
-    options: ["A. has been", "B. have been", "C. were", "D. are"],
-    answer: "A",
-    explanation: "'Equipment' is an uncountable noun; 'none' referring to uncountable items takes singular ('has been')."
+    "id": 969,
+    "question": "Choose the option nearest in meaning to the underlined word: Her argument was **flawless**.",
+    "options": ["Impeccable", "Defective", "Imperfect", "Weak"],
+    "answer": "A",
+    "explanation": "'Flawless' means without any faults or mistakes; impeccable."
   },
   {
-    id: 972,
-    question: "Choose the option nearest in meaning to the underlined word: The company made a **colossal** profit last year.",
-    options: ["A. Huge", "B. Tiny", "C. Modest", "D. Average"],
-    answer: "A",
-    explanation: "'Colossal' means extremely large or huge."
+    "id": 970,
+    "question": "Choose the option opposite in meaning to the underlined word: The river flows through a **turbulent** reach.",
+    "options": ["Calm", "Rough", "Wild", "Violent"],
+    "answer": "A",
+    "explanation": "'Turbulent' means characterized by conflict, disorder, or confusion; opposite is 'calm'."
   },
   {
-    id: 973,
-    question: "Choose the option opposite in meaning to the underlined word: The manager was praised for his **prudent** financial management.",
-    options: ["A. Reckless", "B. Careful", "C. Cautious", "D. Wise"],
-    answer: "A",
-    explanation: "'Prudent' means acting with care and thought; the opposite is 'reckless'."
+    "id": 971,
+    "question": "Choose the option that correctly completes the sentence: Bread and butter _____ a wholesome breakfast.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Compound subjects that represent a single compound entity ('bread and butter') take a singular verb ('is')."
   },
   {
-    id: 974,
-    question: "Choose the option with the correct stress pattern for the word: **INVESTIGATION**",
-    options: ["A. IN-ves-ti-ga-tion", "B. in-VES-ti-ga-tion", "C. in-ves-TI-ga-tion", "D. in-ves-ti-GA-tion"],
-    answer: "D",
-    explanation: "Words ending with '-tion' have primary stress on the penultimate syllable: in-ves-ti-GA-tion."
+    "id": 972,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **j**udge",
+    "options": ["Giant", "Game", "Go", "Garage"],
+    "answer": "A",
+    "explanation": "The 'g' in 'giant' makes the voiced postalveolar affricate sound /dʒ/, matching 'judge'."
   },
   {
-    id: 975,
-    question: "Choose the option that correctly completes the sentence: If I _____ known about the meeting earlier, I would have attended.",
-    options: ["A. had", "B. have", "C. was", "D. would have"],
-    answer: "A",
-    explanation: "Third conditional sentences require past perfect ('had known') in the condition clause."
+    "id": 973,
+    "question": "Choose the option that best explains the idiom: To **let sleeping dogs lie** means to:",
+    "options": ["Avoid restarting settled conflicts", "Allow pets to sleep outdoors", "Ignore domestic animals", "Wake up early in the morning"],
+    "answer": "A",
+    "explanation": "'Let sleeping dogs lie' means to avoid restarting or interfering with a situation that isn't currently causing problems."
   },
   {
-    id: 976,
-    question: "Choose the option nearest in meaning to the underlined word: Her argument was **flawless**.",
-    options: ["A. Impeccable", "B. Defective", "C. Imperfect", "D. Weak"],
-    answer: "A",
-    explanation: "'Flawless' means without any faults or mistakes; impeccable."
+    "id": 974,
+    "question": "Choose the option that correctly completes the sentence: You are expected to conform _____ the rules of the institution.",
+    "options": ["to", "with", "by", "for"],
+    "answer": "A",
+    "explanation": "The verb 'conform' standardly collocates with the preposition 'to'."
   },
   {
-    id: 977,
-    question: "Choose the option opposite in meaning to the underlined word: The river flows through a **turbulent** reach.",
-    options: ["A. Calm", "B. Rough", "C. Wild", "D. Violent"],
-    answer: "A",
-    explanation: "'Turbulent' means characterized by conflict, disorder, or confusion; opposite is 'calm'."
+    "id": 975,
+    "question": "Choose the option nearest in meaning to the underlined word: The leader's speech was **inspiring**.",
+    "options": ["Uplifting", "Boring", "Dull", "Depressing"],
+    "answer": "A",
+    "explanation": "'Inspiring' means providing encouragement or inspiration; uplifting."
   },
   {
-    id: 978,
-    question: "Choose the option that correctly completes the sentence: Bread and butter _____ a wholesome breakfast.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Compound subjects that represent a single compound entity ('bread and butter') take a singular verb ('is')."
+    "id": 976,
+    "question": "Choose the option opposite in meaning to the underlined word: The town lived in **prosperity** for decades.",
+    "options": ["Poverty", "Wealth", "Affluence", "Abundance"],
+    "answer": "A",
+    "explanation": "'Prosperity' means the state of being prosperous; opposite is 'poverty'."
   },
   {
-    id: 979,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **j**udge",
-    options: ["A. Giant", "B. Game", "C. Go", "D. Garage"],
-    answer: "A",
-    explanation: "The 'g' in 'giant' makes the voiced postalveolar affricate sound /dʒ/, matching 'judge'."
+    "id": 977,
+    "question": "Choose the option that correctly completes the sentence: Neither the boys nor their sister _____ going to the market.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "With 'neither... nor', the verb agrees with the closer subject ('sister' -> singular 'is')."
   },
   {
-    id: 980,
-    question: "Choose the option that best explains the idiom: To **let sleeping dogs lie** means to:",
-    options: ["A. Avoid restarting settled conflicts", "B. Allow pets to sleep outdoors", "C. Ignore domestic animals", "D. Wake up early in the morning"],
-    answer: "A",
-    explanation: "'Let sleeping dogs lie' means to avoid restarting or interfering with a situation that isn't currently causing problems."
+    "id": 978,
+    "question": "Choose the option nearest in meaning to the underlined word: The old man lived a **secluded** life.",
+    "options": ["Isolated", "Public", "Social", "Crowded"],
+    "answer": "A",
+    "explanation": "'Secluded' means sheltered and private; isolated."
   },
   {
-    id: 981,
-    question: "Choose the option that correctly completes the sentence: You are expected to conform _____ the rules of the institution.",
-    options: ["A. to", "B. with", "C. by", "D. for"],
-    answer: "A",
-    explanation: "The verb 'conform' standardly collocates with the preposition 'to'."
+    "id": 979,
+    "question": "Choose the option opposite in meaning to the underlined word: The information provided was **reliable**.",
+    "options": ["Untrustworthy", "Dependable", "Accurate", "Authentic"],
+    "answer": "A",
+    "explanation": "'Reliable' means consistently good in quality or performance; opposite is 'untrustworthy'."
   },
   {
-    id: 982,
-    question: "Choose the option nearest in meaning to the underlined word: The leader's speech was **inspiring**.",
-    options: ["A. Uplifting", "B. Boring", "C. Dull", "D. Depressing"],
-    answer: "A",
-    explanation: "'Inspiring' means providing encouragement or inspiration; uplifting."
+    "id": 980,
+    "question": "Choose the option that correctly completes the sentence: I prefer tea _____ coffee in the mornings.",
+    "options": ["to", "than", "over", "from"],
+    "answer": "A",
+    "explanation": "The verb 'prefer' takes the preposition 'to' when comparing two items."
   },
   {
-    id: 983,
-    question: "Choose the option opposite in meaning to the underlined word: The town lived in **prosperity** for decades.",
-    options: ["A. Poverty", "B. Wealth", "C. Affluence", "D. Abundance"],
-    answer: "A",
-    explanation: "'Prosperity' means the state of being prosperous; opposite is 'poverty'."
+    "id": 981,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: f**ee**t",
+    "options": ["Machine", "Sit", "Fit", "Threat"],
+    "answer": "A",
+    "explanation": "Both 'feet' and 'machine' share the long front close vowel sound /iː/."
   },
   {
-    id: 984,
-    question: "Choose the option with the correct stress pattern for the word: **ORGANIZATION**",
-    options: ["A. OR-ga-ni-za-tion", "B. or-GA-ni-za-tion", "C. or-ga-NI-za-tion", "D. or-ga-ni-ZA-tion"],
-    answer: "D",
-    explanation: "Words ending with '-tion' take stress on the second-to-last syllable: or-ga-ni-ZA-tion."
+    "id": 982,
+    "question": "Choose the option that best explains the idiom: To **throw in the towel** means to:",
+    "options": ["Surrender or admit defeat", "Clean up a room", "Start a boxing match", "Offer assistance"],
+    "answer": "A",
+    "explanation": "'Throw in the towel' is an idiom originating from boxing that means to quit, surrender, or admit defeat."
   },
   {
-    id: 985,
-    question: "Choose the option that correctly completes the sentence: Neither the boys nor their sister _____ going to the market.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "With 'neither... nor', the verb agrees with the closer subject ('sister' -> singular 'is')."
+    "id": 983,
+    "question": "Choose the option that correctly completes the sentence: The jury _____ delivered its verdict after hours of deliberation.",
+    "options": ["has", "have", "are", "were"],
+    "answer": "A",
+    "explanation": "Collective nouns like 'jury' take a singular verb ('has') when acting as a single unified body."
   },
   {
-    id: 986,
-    question: "Choose the option nearest in meaning to the underlined word: The old man lived a **secluded** life.",
-    options: ["A. Isolated", "B. Public", "C. Social", "D. Crowded"],
-    answer: "A",
-    explanation: "'Secluded' means sheltered and private; isolated."
+    "id": 984,
+    "question": "Choose the option nearest in meaning to the underlined word: The government announced a **meticulous** plan to curb corruption.",
+    "options": ["Thorough", "Careless", "Hasty", "Negligent"],
+    "answer": "A",
+    "explanation": "'Meticulous' means showing great attention to detail; careful and thorough."
   },
   {
-    id: 987,
-    question: "Choose the option opposite in meaning to the underlined word: The information provided was **reliable**.",
-    options: ["A. Untrustworthy", "B. Dependable", "C. Accurate", "D. Authentic"],
-    answer: "A",
-    explanation: "'Reliable' means consistently good in quality or performance; opposite is 'untrustworthy'."
+    "id": 985,
+    "question": "Choose the option opposite in meaning to the underlined word: The witness gave a **voluntary** statement to the police.",
+    "options": ["Compulsory", "Willing", "Optional", "Uncoerced"],
+    "answer": "A",
+    "explanation": "'Voluntary' means done or given of one's own free will; the opposite is 'compulsory' or 'coerced'."
   },
   {
-    id: 988,
-    question: "Choose the option that correctly completes the sentence: I prefer tea _____ coffee in the mornings.",
-    options: ["A. to", "B. than", "C. over", "D. from"],
-    answer: "A",
-    explanation: "The verb 'prefer' takes the preposition 'to' when comparing two items."
+    "id": 986,
+    "question": "Choose the option that correctly completes the sentence: The principal, as well as the teachers, _____ present at the event.",
+    "options": ["was", "were", "are", "have been"],
+    "answer": "A",
+    "explanation": "Phrases starting with 'as well as' do not pluralize the main singular subject ('principal' -> 'was')."
   },
   {
-    id: 989,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: f**ee**t",
-    options: ["A. Machine", "B. Sit", "C. Fit", "D. Threat"],
-    answer: "A",
-    explanation: "Both 'feet' and 'machine' share the long front close vowel sound /iː/."
+    "id": 987,
+    "question": "Choose the option nearest in meaning to the underlined word: The athlete gave an **exemplary** performance.",
+    "options": ["Commendable", "Poor", "Average", "Mediocre"],
+    "answer": "A",
+    "explanation": "'Exemplary' means serving as a desirable model or representing the best of its kind; commendable."
   },
   {
-    id: 990,
-    question: "Choose the option that best explains the idiom: To **throw in the towel** means to:",
-    options: ["A. Surrender or admit defeat", "B. Clean up a room", "C. Start a boxing match", "D. Offer assistance"],
-    answer: "A",
-    explanation: "'Throw in the towel' is an idiom originating from boxing that means to quit, surrender, or admit defeat."
+    "id": 988,
+    "question": "Choose the option opposite in meaning to the underlined word: The community was known for its **frugal** spending habits.",
+    "options": ["Extravagant", "Thrifty", "Economical", "Careful"],
+    "answer": "A",
+    "explanation": "'Frugal' means economical or prudent regarding money; its opposite is 'extravagant'."
   },
   {
-    id: 991,
-    question: "Choose the option that correctly completes the sentence: The jury _____ delivered its verdict after hours of deliberation.",
-    options: ["A. has", "B. have", "C. are", "D. were"],
-    answer: "A",
-    explanation: "Collective nouns like 'jury' take a singular verb ('has') when acting as a single unified body."
+    "id": 989,
+    "question": "Choose the option that correctly completes the sentence: Hardly had the plane landed _____ the passengers unbuckled their seatbelts.",
+    "options": ["when", "than", "then", "as"],
+    "answer": "A",
+    "explanation": "'Hardly' is paired with 'when' in inverted time-clause structures."
   },
   {
-    id: 992,
-    question: "Choose the option nearest in meaning to the underlined word: The government announced a **meticulous** plan to curb corruption.",
-    options: ["A. Thorough", "B. Careless", "C. Hasty", "D. Negligent"],
-    answer: "A",
-    explanation: "'Meticulous' means showing great attention to detail; careful and thorough."
+    "id": 990,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**ink",
+    "options": ["Thing", "This", "That", "Them"],
+    "answer": "A",
+    "explanation": "Both 'think' and 'thing' feature the voiceless dental fricative sound /θ/."
   },
   {
-    id: 993,
-    question: "Choose the option opposite in meaning to the underlined word: The witness gave a **voluntary** statement to the police.",
-    options: ["A. Compulsory", "B. Willing", "C. Optional", "D. Uncoerced"],
-    answer: "A",
-    explanation: "'Voluntary' means done or given of one's own free will; the opposite is 'compulsory' or 'coerced'."
+    "id": 1000,
+    "question": "Choose the option that best explains the idiom: To **spill the beans** means to:",
+    "options": ["Reveal a secret", "Make a mess", "Cook a meal", "Drop a container"],
+    "answer": "A",
+    "explanation": "'Spill the beans' is an informal idiom that means to disclose secret information prematurely or unintentionally."
   },
   {
-    id: 994,
-    question: "Choose the option with the correct stress pattern for the word: **PHOTOGRAPHY**",
-    options: ["A. PHO-to-gra-phy", "B. pho-TO-gra-phy", "C. pho-to-GRA-phy", "D. pho-to-gra-PHY"],
-    answer: "B",
-    explanation: "Words ending in '-phy' take primary stress on the third syllable from the end: pho-TO-gra-phy."
+    "id": 1001,
+    "question": "Choose the option that correctly completes the sentence: Three-quarters of the crop _____ damaged by the flood.",
+    "options": ["was", "were", "are", "have been"],
+    "answer": "A",
+    "explanation": "Fractions take a singular verb when modifying an uncountable noun ('crop' -> 'was')."
   },
   {
-    id: 995,
-    question: "Choose the option that correctly completes the sentence: The principal, as well as the teachers, _____ present at the event.",
-    options: ["A. was", "B. were", "C. are", "D. have been"],
-    answer: "A",
-    explanation: "Phrases starting with 'as well as' do not pluralize the main singular subject ('principal' -> 'was')."
+    "id": 1002,
+    "question": "Choose the option nearest in meaning to the underlined word: The politician's speech was evasive.",
+    "options": ["Prevaricating", "Straightforward", "Direct", "Candid"],
+    "answer": "A",
+    "explanation": "'Evasive' means tending to avoid self-revelation or direct answers; prevaricating or elusive."
   },
   {
-    id: 996,
-    question: "Choose the option nearest in meaning to the underlined word: The athlete gave an **exemplary** performance.",
-    options: ["A. Commendable", "B. Poor", "C. Average", "D. Mediocre"],
-    answer: "A",
-    explanation: "'Exemplary' means serving as a desirable model or representing the best of its kind; commendable."
+    "id": 1003,
+    "question": "Choose the option opposite in meaning to the underlined word: The judge was praised for being impartial.",
+    "options": ["Biased", "Fair", "Objective", "Neutral"],
+    "answer": "A",
+    "explanation": "'Impartial' means treating all rivals or disputants equally; the opposite is 'biased'."
   },
   {
-    id: 997,
-    question: "Choose the option opposite in meaning to the underlined word: The community was known for its **frugal** spending habits.",
-    options: ["A. Extravagant", "B. Thrifty", "C. Economical", "D. Careful"],
-    answer: "A",
-    explanation: "'Frugal' means economical or prudent regarding money; its opposite is 'extravagant'."
+    "id": 1004,
+    "question": "Choose the option with the correct stress pattern for the word: DEMOCRACY",
+    "options": ["DE-mo-cra-cy", "de-MO-cra-cy", "de-mo-CRA-cy", "de-mo-cra-CY"],
+    "answer": "B",
+    "explanation": "Words ending in '-cracy' carry primary stress on the antepenultimate syllable: de-MO-cra-cy."
   },
   {
-    id: 998,
-    question: "Choose the option that correctly completes the sentence: Hardly had the plane landed _____ the passengers unbuckled their seatbelts.",
-    options: ["A. when", "B. than", "C. then", "D. as"],
-    answer: "A",
-    explanation: "'Hardly' is paired with 'when' in inverted time-clause structures."
+    "id": 1005,
+    "question": "Choose the option that correctly completes the sentence: Either the lecturer or the students _____ to blame for the mistake.",
+    "options": ["are", "is", "was", "has been"],
+    "answer": "A",
+    "explanation": "In 'either... or' constructions, the verb agrees with the closer subject ('students' -> plural 'are')."
   },
   {
-    id: 999,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **th**ink",
-    options: ["A. Thing", "B. This", "C. That", "D. Them"],
-    answer: "A",
-    explanation: "Both 'think' and 'thing' feature the voiceless dental fricative sound /θ/."
+    "id": 1006,
+    "question": "Choose the option nearest in meaning to the underlined word: The union leaders held a clandestine meeting yesterday.",
+    "options": ["Secret", "Public", "Open", "Formal"],
+    "answer": "A",
+    "explanation": "'Clandestine' means kept secret or done secretively."
   },
   {
-    id: 1000,
-    question: "Choose the option that best explains the idiom: To **burn the midnight oil** means to:",
-    options: ["A. Work or study late into the night", "B. Waste energy unnecessarily", "C. Cause a household accident", "D. Sleep late in the morning"],
-    answer: "A",
-    explanation: "'Burn the midnight oil' means to read, study, or work late into the night."
+    "id": 1007,
+    "question": "Choose the option opposite in meaning to the underlined word: The land was exceptionally fertile.",
+    "options": ["Barren", "Productive", "Rich", "Fruitful"],
+    "answer": "A",
+    "explanation": "'Fertile' means capable of producing abundant vegetation or crops; the opposite is 'barren'."
   },
   {
-    id: 1001,
-    question: "Choose the option that correctly completes the sentence: Three-quarters of the crop _____ damaged by the flood.",
-    options: ["A. was", "B. were", "C. are", "D. have been"],
-    answer: "A",
-    explanation: "Fractions take a singular verb when modifying an uncountable noun ('crop' -> 'was')."
+    "id": 1008,
+    "question": "Choose the option that correctly completes the sentence: The news of his sudden passing _____ a shock to everyone.",
+    "options": ["was", "were", "are", "have been"],
+    "answer": "A",
+    "explanation": "'News' is an uncountable noun that always takes a singular verb ('was')."
   },
   {
-    id: 1002,
-    question: "Choose the option nearest in meaning to the underlined word: The politician's speech was **evasive**.",
-    options: ["A. Prevaricating", "B. Straightforward", "C. Direct", "D. Candid"],
-    answer: "A",
-    explanation: "'Evasive' means tending to avoid self-revelation or direct answers; prevaricating or elusive."
+    "id": 1009,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: car",
+    "options": ["Heart", "Cat", "Gate", "Fair"],
+    "answer": "A",
+    "explanation": "Both 'car' and 'heart' share the long open back unrounded vowel sound /ɑː/."
   },
   {
-    id: 1003,
-    question: "Choose the option opposite in meaning to the underlined word: The judge was praised for being **impartial**.",
-    options: ["A. Biased", "B. Fair", "C. Objective", "D. Neutral"],
-    answer: "A",
-    explanation: "'Impartial' means treating all rivals or disputants equally; the opposite is 'biased'."
+    "id": 1010,
+    "question": "Choose the option that best explains the idiom: To spill the beans means to:",
+    "options": ["Reveal a secret prematurely", "Make a mess while cooking", "Waste valuable food", "Express anger openly"],
+    "answer": "A",
+    "explanation": "'Spill the beans' means to disclose secret information prematurely or unintentionally."
   },
   {
-    id: 1004,
-    question: "Choose the option with the correct stress pattern for the word: **DEMOCRACY**",
-    options: ["A. DE-mo-cra-cy", "B. de-MO-cra-cy", "C. de-mo-CRA-cy", "D. de-mo-cra-CY"],
-    answer: "B",
-    explanation: "Words ending in '-cracy' carry primary stress on the antepenultimate syllable: de-MO-cra-cy."
+    "id": 1011,
+    "question": "Choose the option that correctly completes the sentence: Neither of the accused men _____ guilty.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular pronoun taking the singular verb 'is'."
   },
   {
-    id: 1005,
-    question: "Choose the option that correctly completes the sentence: Either the lecturer or the students _____ to blame for the mistake.",
-    options: ["A. are", "B. is", "C. was", "D. has been"],
-    answer: "A",
-    explanation: "In 'either... or' constructions, the verb agrees with the closer subject ('students' -> plural 'are')."
+    "id": 1012,
+    "question": "Choose the option nearest in meaning to the underlined word: The old woman lived a frugal life.",
+    "options": ["Economical", "Wasteful", "Luxurious", "Extravagant"],
+    "answer": "A",
+    "explanation": "'Frugal' means sparing or economical with regard to money or food."
   },
   {
-    id: 1006,
-    question: "Choose the option nearest in meaning to the underlined word: The union leaders held a **clandestine** meeting yesterday.",
-    options: ["A. Secret", "B. Public", "C. Open", "D. Formal"],
-    answer: "A",
-    explanation: "'Clandestine' means kept secret or done secretively."
+    "id": 1013,
+    "question": "Choose the option opposite in meaning to the underlined word: The boy was praised for his arrogant behavior.",
+    "options": ["Humble", "Proud", "Haughty", "Impudent"],
+    "answer": "A",
+    "explanation": "'Arrogant' means having an exaggerated sense of one's own importance; the opposite is 'humble'."
   },
   {
-    id: 1007,
-    question: "Choose the option opposite in meaning to the underlined word: The land was exceptionally **fertile**.",
-    options: ["A. Barren", "B. Productive", "C. Rich", "D. Fruitful"],
-    answer: "A",
-    explanation: "'Fertile' means capable of producing abundant vegetation or crops; the opposite is 'barren'."
+    "id": 1014,
+    "question": "Choose the option with the correct stress pattern for the word: ECONOMICS",
+    "options": ["E-co-no-mics", "e-CO-no-mics", "e-co-NO-mics", "e-co-no-MICS"],
+    "answer": "C",
+    "explanation": "Words ending with the '-ics' suffix carry primary stress on the penultimate syllable: e-co-NO-mics."
   },
   {
-    id: 1008,
-    question: "Choose the option that correctly completes the sentence: The news of his sudden passing _____ a shock to everyone.",
-    options: ["A. was", "B. were", "C. are", "D. have been"],
-    answer: "A",
-    explanation: "'News' is an uncountable noun that always takes a singular verb ('was')."
+    "id": 1015,
+    "question": "Choose the option that correctly completes the sentence: Physics _____ my favorite subject in secondary school.",
+    "options": ["was", "were", "are", "have been"],
+    "answer": "A",
+    "explanation": "Names of subjects ending in '-ics' are singular and take singular verbs ('was')."
   },
   {
-    id: 1009,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: c**a**r",
-    options: ["A. Heart", "B. Cat", "C. Gate", "D. Fair"],
-    answer: "A",
-    explanation: "Both 'car' and 'heart' share the long open back unrounded vowel sound /ɑː/."
+    "id": 1016,
+    "question": "Choose the option nearest in meaning to the underlined word: The lawyer presented a cogent argument in court.",
+    "options": ["Convincing", "Weak", "Confusing", "Irrelevant"],
+    "answer": "A",
+    "explanation": "'Cogent' means clear, logical, and convincing."
   },
   {
-    id: 1010,
-    question: "Choose the option that best explains the idiom: To **spill the beans** means to:",
-    options: ["A. Reveal a secret prematurely", "B. Make a mess while cooking", "C. Waste valuable food", "D. Express anger openly"],
-    answer: "A",
-    explanation: "'Spill the beans' means to disclose secret information prematurely or unintentionally."
+    "id": 1017,
+    "question": "Choose the option opposite in meaning to the underlined word: The company made a lucrative investment.",
+    "options": ["Unprofitable", "Profitable", "Rewarding", "Gainful"],
+    "answer": "A",
+    "explanation": "'Lucrative' means producing a great deal of profit; the opposite is 'unprofitable'."
   },
   {
-    id: 1011,
-    question: "Choose the option that correctly completes the sentence: Neither of the accused men _____ guilty.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular pronoun taking the singular verb 'is'."
+    "id": 1018,
+    "question": "Choose the option that correctly completes the sentence: Not only the teacher but also the students _____ happy with the results.",
+    "options": ["were", "was", "is", "has been"],
+    "answer": "A",
+    "explanation": "In 'not only... but also' structures, the verb agrees with the closer subject ('students' -> plural 'were')."
   },
   {
-    id: 1012,
-    question: "Choose the option nearest in meaning to the underlined word: The old woman lived a **frugal** life.",
-    options: ["A. Economical", "B. Wasteful", "C. Luxurious", "D. Extravagant"],
-    answer: "A",
-    explanation: "'Frugal' means sparing or economical with regard to money or food."
+    "id": 1019,
+    "question": "Choose the option with the same consonant sound as the one represented by the underlined letter: zebra",
+    "options": ["Has", "Bus", "Face", "Cats"],
+    "answer": "A",
+    "explanation": "The 's' in 'has' makes the voiced alveolar sibilant sound /z/, matching 'zebra'."
   },
   {
-    id: 1013,
-    question: "Choose the option opposite in meaning to the underlined word: The boy was praised for his **arrogant** behavior.",
-    options: ["A. Humble", "B. Proud", "C. Haughty", "D. Impudent"],
-    answer: "A",
-    explanation: "'Arrogant' means having an exaggerated sense of one's own importance; the opposite is 'humble'."
+    "id": 1020,
+    "question": "Choose the option that best explains the idiom: To bark up the wrong tree means to:",
+    "options": ["Pursue a mistaken line of thought", "Make unnecessary noise", "Train a dog poorly", "Blame an innocent pet"],
+    "answer": "A",
+    "explanation": "'Bark up the wrong tree' means to follow a mistaken course of action or direct effort toward the wrong location/person."
   },
   {
-    id: 1014,
-    question: "Choose the option with the correct stress pattern for the word: **ECONOMICS**",
-    options: ["A. E-co-no-mics", "B. e-CO-no-mics", "C. e-co-NO-mics", "D. e-co-no-MICS"],
-    answer: "C",
-    explanation: "Words ending with the '-ics' suffix carry primary stress on the penultimate syllable: e-co-NO-mics."
+    "id": 1021,
+    "question": "Choose the option that correctly completes the sentence: Ten kilometers _____ a long distance to walk.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "Units of measurement, distance, or time take a singular verb when considered as a single unit ('is')."
   },
   {
-    id: 1015,
-    question: "Choose the option that correctly completes the sentence: Physics _____ my favorite subject in secondary school.",
-    options: ["A. was", "B. were", "C. are", "D. have been"],
-    answer: "A",
-    explanation: "Names of subjects ending in '-ics' are singular and take singular verbs ('was')."
+    "id": 1022,
+    "question": "Choose the option nearest in meaning to the underlined word: The manager was lenient with the latecomers.",
+    "options": ["Merciful", "Strict", "Severe", "Harsh"],
+    "answer": "A",
+    "explanation": "'Lenient' means tolerant, merciful, or gentle."
   },
   {
-    id: 1016,
-    question: "Choose the option nearest in meaning to the underlined word: The lawyer presented a **cogent** argument in court.",
-    options: ["A. Convincing", "B. Weak", "C. Confusing", "D. Irrelevant"],
-    answer: "A",
-    explanation: "'Cogent' means clear, logical, and convincing."
+    "id": 1023,
+    "question": "Choose the option opposite in meaning to the underlined word: His actions were praiseworthy.",
+    "options": ["Blameworthy", "Commendable", "Admirable", "Laudable"],
+    "answer": "A",
+    "explanation": "'Praiseworthy' means deserving praise; the opposite is 'blameworthy'."
   },
   {
-    id: 1017,
-    question: "Choose the option opposite in meaning to the underlined word: The company made a **lucrative** investment.",
-    options: ["A. Unprofitable", "B. Profitable", "C. Rewarding", "D. Gainful"],
-    answer: "A",
-    explanation: "'Lucrative' means producing a great deal of profit; the opposite is 'unprofitable'."
+    "id": 1024,
+    "question": "Choose the option with the correct stress pattern for the word: CERTIFICATE (noun)",
+    "options": ["CER-ti-fi-cate", "cer-TI-fi-cate", "cer-ti-FI-cate", "cer-ti-fi-CATE"],
+    "answer": "B",
+    "explanation": "The noun 'certificate' places primary stress on the second syllable: cer-TI-fi-cate."
   },
   {
-    id: 1018,
-    question: "Choose the option that correctly completes the sentence: Not only the teacher but also the students _____ happy with the results.",
-    options: ["A. were", "B. was", "C. is", "D. has been"],
-    answer: "A",
-    explanation: "In 'not only... but also' structures, the verb agrees with the closer subject ('students' -> plural 'were')."
+    "id": 1025,
+    "question": "Choose the option that correctly completes the sentence: You had better _____ the assignment now.",
+    "options": ["do", "doing", "done", "to do"],
+    "answer": "A",
+    "explanation": "The expression 'had better' is followed by a bare infinitive ('do')."
   },
   {
-    id: 1019,
-    question: "Choose the option with the same consonant sound as the one represented by the underlined letter: **z**ebra",
-    options: ["A. Has", "B. Bus", "C. Face", "D. Cats"],
-    answer: "A",
-    explanation: "The 's' in 'has' makes the voiced alveolar sibilant sound /z/, matching 'zebra'."
+    "id": 1026,
+    "question": "Choose the option nearest in meaning to the underlined word: The old man spoke in a feeble voice.",
+    "options": ["Weak", "Loud", "Strong", "Powerful"],
+    "answer": "A",
+    "explanation": "'Feeble' means lacking physical strength or vigor; weak."
   },
   {
-    id: 1020,
-    question: "Choose the option that best explains the idiom: To **bark up the wrong tree** means to:",
-    options: ["A. Pursue a mistaken line of thought", "B. Make unnecessary noise", "C. Train a dog poorly", "D. Blame an innocent pet"],
-    answer: "A",
-    explanation: "'Bark up the wrong tree' means to follow a mistaken course of action or direct effort toward the wrong location/person."
+    "id": 1027,
+    "question": "Choose the option opposite in meaning to the underlined word: The student gave a vague answer.",
+    "options": ["Clear", "Indefinite", "Unclear", "Ambiguous"],
+    "answer": "A",
+    "explanation": "'Vague' means thinking or communicating in an unfocused or unclear way; the opposite is 'clear'."
   },
   {
-    id: 1021,
-    question: "Choose the option that correctly completes the sentence: Ten kilometers _____ a long distance to walk.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "Units of measurement, distance, or time take a singular verb when considered as a single unit ('is')."
+    "id": 1028,
+    "question": "Choose the option that correctly completes the sentence: Neither of the options _____ feasible.",
+    "options": ["is", "are", "were", "have been"],
+    "answer": "A",
+    "explanation": "'Neither' functions as a singular subject taking a singular verb ('is')."
   },
   {
-    id: 1022,
-    question: "Choose the option nearest in meaning to the underlined word: The manager was **lenient** with the latecomers.",
-    options: ["A. Merciful", "B. Strict", "C. Severe", "D. Harsh"],
-    answer: "A",
-    explanation: "'Lenient' means tolerant, merciful, or gentle."
-  },
-  {
-    id: 1023,
-    question: "Choose the option opposite in meaning to the underlined word: His actions were **praiseworthy**.",
-    options: ["A. Blameworthy", "B. Commendable", "C. Admirable", "D. Laudable"],
-    answer: "A",
-    explanation: "'Praiseworthy' means deserving praise; the opposite is 'blameworthy'."
-  },
-  {
-    id: 1024,
-    question: "Choose the option with the correct stress pattern for the word: **CERTIFICATE** (noun)",
-    options: ["A. CER-ti-fi-cate", "B. cer-TI-fi-cate", "C. cer-ti-FI-cate", "D. cer-ti-fi-CATE"],
-    answer: "B",
-    explanation: "The noun 'certificate' places primary stress on the second syllable: cer-TI-fi-cate."
-  },
-  {
-    id: 1025,
-    question: "Choose the option that correctly completes the sentence: You had better _____ the assignment now.",
-    options: ["A. do", "B. doing", "C. done", "D. to do"],
-    answer: "A",
-    explanation: "The expression 'had better' is followed by a bare infinitive ('do')."
-  },
-  {
-    id: 1026,
-    question: "Choose the option nearest in meaning to the underlined word: The old man spoke in a **feeble** voice.",
-    options: ["A. Weak", "B. Loud", "C. Strong", "D. Powerful"],
-    answer: "A",
-    explanation: "'Feeble' means lacking physical strength or vigor; weak."
-  },
-  {
-    id: 1027,
-    question: "Choose the option opposite in meaning to the underlined word: The student gave a **vague** answer.",
-    options: ["A. Clear", "B. Indefinite", "C. Unclear", "D. Ambiguous"],
-    answer: "A",
-    explanation: "'Vague' means thinking or communicating in an unfocused or unclear way; the opposite is 'clear'."
-  },
-  {
-    id: 1028,
-    question: "Choose the option that correctly completes the sentence: Neither of the options _____ feasible.",
-    options: ["A. is", "B. are", "C. were", "D. have been"],
-    answer: "A",
-    explanation: "'Neither' functions as a singular subject taking a singular verb ('is')."
-  },
-  {
-    id: 1029,
-    question: "Choose the option with the same vowel sound as the one represented by the underlined letter: s**u**n",
-    options: ["A. Son", "B. Put", "C. Full", "D. Pull"],
-    answer: "A",
-    explanation: "Both 'sun' and 'son' share the short open-mid back unrounded vowel sound /ʌ/."
+    "id": 1029,
+    "question": "Choose the option with the same vowel sound as the one represented by the underlined letter: sun",
+    "options": ["Son", "Put", "Full", "Pull"],
+    "answer": "A",
+    "explanation": "Both 'sun' and 'son' share the short open-mid back unrounded vowel sound /ʌ/."
   }
     ],
 
@@ -7093,1165 +7037,1450 @@ const questionBank = {
       options: ["Equal to the angle at circumference", "Half the angle at circumference", "Twice the angle at circumference", "90°"],
       answer: "Twice the angle at circumference"
     },
-    {
-    id: 41,
-    question: "Evaluate: $11011_2 - 1001_2$ in base two.",
-    options: ["A. $10010_2$", "B. $10000_2$", "C. $10100_2$", "D. $1100_2$"],
-    answer: "A",
-    explanation: "$11011_2$ is equal to 27 in base 10, and $1001_2$ is equal to 9 in base 10. $27 - 9 = 18_{10}$. Converting 18 to base two gives $10010_2$."
-  },
   {
-    id: 42,
-    question: "Simplify: $\\frac{0.000018 \\times 0.0004}{0.000009}$.",
-    options: ["A. $8 \\times 10^{-4}$", "B. $8 \\times 10^{-3}$", "C. $8 \\times 10^{-5}$", "D. $8 \\times 10^{-2}$"],
-    answer: "A",
-    explanation: "Expressing in standard form: $\\frac{(1.8 \\times 10^{-5}) \\times (4 \\times 10^{-4})}{9 \\times 10^{-6}} = \\frac{7.2 \\times 10^{-9}}{9 \\times 10^{-6}} = 0.8 \\times 10^{-3} = 8 \\times 10^{-4}$."
-  },
-  {
-    id: 43,
-    question: "Find the sum of the prime factors of 120.",
-    options: ["A. 10", "B. 12", "C. 15", "D. 18"],
-    answer: "A",
-    explanation: "The prime factorization of 120 is $2^3 \\times 3 \\times 5$. The distinct prime factors are 2, 3, and 5. Their sum is $2 + 3 + 5 = 10$."
-  },
-  {
-    id: 44,
-    question: "If $\\log_2 x = 3$, find the value of $x$.",
-    options: ["A. 6", "B. 8", "C. 9", "D. 16"],
-    answer: "B",
-    explanation: "By the definition of logarithms, $\\log_b a = c \\implies a = b^c$. Therefore, $x = 2^3 = 8$."
-  },
-  {
-    id: 45,
-    question: "Simplify: $\\sqrt{75} - \\sqrt{12} + \\sqrt{27}$.",
-    options: ["A. $4\\sqrt{3}$", "B. $6\\sqrt{3}$", "C. $5\\sqrt{3}$", "D. $3\\sqrt{3}$"],
-    answer: "B",
-    explanation: "Simplifying the surds: $\\sqrt{75} = 5\\sqrt{3}$, $\\sqrt{12} = 2\\sqrt{3}$, and $\\sqrt{27} = 3\\sqrt{3}$. Thus, $5\\sqrt{3} - 2\\sqrt{3} + 3\\sqrt{3} = 6\\sqrt{3}$."
-  },
-  {
-    id: 46,
-    question: "Solve for $x$: $3^{2x+1} = 27$.",
-    options: ["A. 1", "B. 2", "C. 3", "D. 0"],
-    answer: "A",
-    explanation: "Express 27 as a power of 3: $3^{2x+1} = 3^3$. Equating exponents gives $2x + 1 = 3 \\implies 2x = 2 \\implies x = 1$."
-  },
-  {
-    id: 47,
-    question: "Find the 8th term of the Arithmetic Progression (A.P.): $-3, 1, 5, 9, ...$",
-    options: ["A. 25", "B. 27", "C. 29", "D. 31"],
-    answer: "A",
-    explanation: "First term $a = -3$, common difference $d = 1 - (-3) = 4$. Using $T_n = a + (n-1)d$: $T_8 = -3 + (8-1)(4) = -3 + 28 = 25$."
-  },
-  {
-    id: 48,
-    question: "Find the sum to infinity of the Geometric Progression (G.P.): $9, 3, 1, \\frac{1}{3}, ...$",
-    options: ["A. $\\frac{27}{2}$", "B. $13$", "C. $14$", "D. $\\frac{25}{2}$"],
-    answer: "A",
-    explanation: "First term $a = 9$, common ratio $r = \\frac{1}{3}$. $S_{\\infty} = \\frac{a}{1-r} = \\frac{9}{1 - \\frac{1}{3}} = \\frac{9}{\\frac{2}{3}} = \\frac{27}{2}$."
-  },
-  {
-    id: 49,
-    question: "Factorize completely: $2x^2 - 5x - 3$.",
-    options: ["A. $(2x+1)(x-3)$", "B. $(2x-1)(x+3)$", "C. $(2x+3)(x-1)$", "D. $(2x-3)(x+1)$"],
-    answer: "A",
-    explanation: "Split the middle term: $2x^2 - 6x + x - 3 = 2x(x-3) + 1(x-3) = (2x+1)(x-3)$."
-  },
-  {
-    id: 50,
-    question: "Solve the inequality: $3x - 4 < 5x + 6$.",
-    options: ["A. $x > -5$", "B. $x < -5$", "C. $x > 5$", "D. $x < 5$"],
-    answer: "A",
-    explanation: "$3x - 5x < 6 + 4 \\implies -2x < 10$. Dividing by $-2$ reverses the inequality sign: $x > -5$."
-  },
-  {
-    id: 51,
-    question: "If $P = \\{x : 1 \\le x \\le 10, x \\text{ is prime}\\}$ and $Q = \\{x : 1 \\le x \\le 10, x \\text{ is odd}\\}$, find $P \\cap Q$.",
-    options: ["A. $\\{3, 5, 7\\}$", "B. $\\{2, 3, 5, 7\\}$", "C. $\\{1, 3, 5, 7\\}$", "D. $\\{3, 5, 7, 9\\}$"],
-    answer: "A",
-    explanation: "$P = \\{2, 3, 5, 7\\}$ and $Q = \\{1, 3, 5, 7, 9\\}$. The intersection $P \\cap Q$ consists of elements in both sets: $\\{3, 5, 7\\}$."
-  },
-  {
-    id: 52,
-    question: "Find the inverse of the matrix $M = \\begin{pmatrix} 2 & 3 \\\\ 1 & 2 \\end{pmatrix}$.",
-    options: [
-      "A. $\\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix}$",
-      "B. $\\begin{pmatrix} -2 & 3 \\\\ 1 & -2 \\end{pmatrix}$",
-      "C. $\\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}$",
-      "D. $\\begin{pmatrix} -2 & -3 \\\\ -1 & -2 \\end{pmatrix}$"
+    "id": 41,
+    "question": "Evaluate: $11011_2 - 1001_2$ in base two.",
+    "options": [
+      "10010_2",
+      "10100_2",
+      "11010_2",
+      "10001_2"
     ],
-    answer: "A",
-    explanation: "Determinant $\\det(M) = (2)(2) - (3)(1) = 4 - 3 = 1$. The inverse is $\\frac{1}{1} \\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix}$."
-  },
-  {
-    id: 53,
-    question: "Evaluate the determinant of the matrix: $\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{pmatrix}$.",
-    options: ["A. 24", "B. 12", "C. 0", "D. 18"],
-    answer: "A",
-    explanation: "For an upper triangular matrix, the determinant is the product of its diagonal elements: $1 \\times 4 \\times 6 = 24$."
-  },
-  {
-    id: 54,
-    question: "Find the derivative of $y = 3x^4 - 5x^2 + 7$ with respect to $x$.",
-    options: ["A. $12x^3 - 10x$", "B. $12x^3 - 10x + 7$", "C. $7x^3 - 10x$", "D. $12x^2 - 5$"],
-    answer: "A",
-    explanation: "Using the power rule $\\frac{d}{dx}(x^n) = nx^{n-1}$: $\\frac{dy}{dx} = 3(4x^3) - 5(2x) + 0 = 12x^3 - 10x$."
-  },
-  {
-    id: 55,
-    question: "Evaluate $\\int (4x^3 - 2x + 5) \\, dx$.",
-    options: ["A. $x^4 - x^2 + 5x + C$", "B. $12x^2 - 2 + C$", "C. $x^4 - 2x^2 + 5x + C$", "D. $4x^4 - x^2 + 5x + C$"],
-    answer: "A",
-    explanation: "Integrating term-by-term: $\\frac{4x^4}{4} - \\frac{2x^2}{2} + 5x + C = x^4 - x^2 + 5x + C$."
-  },
-  {
-    id: 56,
-    question: "Find the gradient of the curve $y = 2x^2 - 3x + 1$ at the point where $x = 2$.",
-    options: ["A. 5", "B. 3", "C. 8", "D. 4"],
-    answer: "A",
-    explanation: "Gradient $\\frac{dy}{dx} = 4x - 3$. Substituting $x = 2$ gives $4(2) - 3 = 8 - 3 = 5$."
-  },
-  {
-    id: 57,
-    question: "Find the midpoint of the line segment joining points $A(-2, 4)$ and $B(6, -8)$.",
-    options: ["A. $(2, -2)$", "B. $(4, -4)$", "C. $(2, -4)$", "D. $(4, -2)$"],
-    answer: "A",
-    explanation: "Midpoint formula $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right) = \\left(\\frac{-2 + 6}{2}, \\frac{4 + (-8)}{2}\\right) = (2, -2)$."
-  },
-  {
-    id: 58,
-    question: "Find the distance between the points $P(3, -2)$ and $Q(7, 1)$.",
-    options: ["A. 5", "B. 6", "C. 7", "D. $\\sqrt{17}$"],
-    answer: "A",
-    explanation: "Distance formula $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(7-3)^2 + (1 - (-2))^2} = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = 5$."
-  },
-  {
-    id: 59,
-    question: "Find the gradient of the line perpendicular to the line $2y - 4x = 5$.",
-    options: ["A. $-\\frac{1}{2}$", "B. $2$", "C. $-2$", "D. $\\frac{1}{2}$"],
-    answer: "A",
-    explanation: "Rewrite equation in slope-intercept form: $y = 2x + \\frac{5}{2}$, so $m_1 = 2$. Perpendicular gradient $m_2 = -\\frac{1}{m_1} = -\\frac{1}{2}$."
-  },
-  {
-    id: 60,
-    question: "If $\\sin \\theta = \\frac{3}{5}$ and $\\theta$ is an acute angle, find $\\cos \\theta$.",
-    options: ["A. $\\frac{4}{5}$", "B. $\\frac{3}{4}$", "C. $\\frac{5}{4}$", "D. $\\frac{4}{3}$"],
-    answer: "A",
-    explanation: "Using $\\sin^2 \\theta + \\cos^2 \\theta = 1$: $\\cos \\theta = \\sqrt{1 - \\left(\\frac{3}{5}\\right)^2} = \\sqrt{1 - \\frac{9}{25}} = \\sqrt{\\frac{16}{25}} = \\frac{4}{5}$."
-  },
-  {
-    id: 61,
-    question: "Simplify: $\\frac{\\tan \\theta}{\\sin \\theta}$.",
-    options: ["A. $\\sec \\theta$", "B. $\\cos \\theta$", "C. $\\cot \\theta$", "D. $\\csc \\theta$"],
-    answer: "A",
-    explanation: "Since $\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$, $\\frac{\\tan \\theta}{\\sin \\theta} = \\frac{\\sin \\theta}{\\cos \\theta \\sin \\theta} = \\frac{1}{\\cos \\theta} = \\sec \\theta$."
-  },
-  {
-    id: 62,
-    question: "A ladder 10m long leans against a vertical wall making an angle of $60^\\circ$ with the ground. How high up the wall does the ladder reach?",
-    options: ["A. $5\\sqrt{3}\\text{ m}$", "B. $5\\text{ m}$", "C. $10\\sqrt{3}\\text{ m}$", "D. $\\frac{5}{\\sqrt{3}}\\text{ m}$"],
-    answer: "A",
-    explanation: "$\\sin 60^\\circ = \\frac{\\text{height}}{10} \\implies \\text{height} = 10 \\sin 60^\\circ = 10 \\left(\\frac{\\sqrt{3}}{2}\\right) = 5\\sqrt{3}\\text{ m}$."
-  },
-  {
-    id: 63,
-    question: "Find the area of a triangle with sides $a = 6\\text{ cm}$, $b = 8\\text{ cm}$ and included angle $C = 30^\\circ$.",
-    options: ["A. $12\\text{ cm}^2$", "B. $24\\text{ cm}^2$", "C. $12\\sqrt{3}\\text{ cm}^2$", "D. $18\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "$\\text{Area} = \\frac{1}{2} ab \\sin C = \\frac{1}{2} (6)(8) \\sin 30^\\circ = 24 \\left(\\frac{1}{2}\\right) = 12\\text{ cm}^2$."
-  },
-  {
-    id: 64,
-    question: "Calculate the mean of the numbers: 12, 15, 18, 21, 24, 30.",
-    options: ["A. 20", "B. 19", "C. 21", "D. 22"],
-    answer: "A",
-    explanation: "$\\text{Mean} = \\frac{12 + 15 + 18 + 21 + 24 + 30}{6} = \\frac{120}{6} = 20$."
-  },
-  {
-    id: 65,
-    question: "Find the median of the set of numbers: 8, 3, 5, 12, 10, 6, 14.",
-    options: ["A. 8", "B. 6", "C. 10", "D. 7"],
-    answer: "A",
-    explanation: "Arrange in ascending order: 3, 5, 6, 8, 10, 12, 14. The middle number (4th term) is 8."
-  },
-  {
-    id: 66,
-    question: "Find the variance of the numbers: 2, 4, 6, 8.",
-    options: ["A. 5", "B. 4", "C. 3", "D. 2"],
-    answer: "A",
-    explanation: "Mean $\\mu = 5$. Deviations: $(-3, -1, 1, 3)$. Squared deviations: $(9, 1, 1, 9)$. Sum of squares $= 20$. $\\text{Variance} = \\frac{20}{4} = 5$."
-  },
-  {
-    id: 67,
-    question: "A fair die is tossed once. What is the probability of getting a number greater than 4?",
-    options: ["A. $\\frac{1}{3}$", "B. $\\frac{1}{2}$", "C. $\\frac{1}{6}$", "D. $\\frac{2}{3}$"],
-    answer: "A",
-    explanation: "Favorable outcomes are $\\{5, 6\\}$ (2 outcomes). Total outcomes $= 6$. $P(X > 4) = \\frac{2}{6} = \\frac{1}{3}$."
-  },
-  {
-    id: 68,
-    question: "Two fair coins are tossed simultaneously. What is the probability of obtaining at least one head?",
-    options: ["A. $\\frac{3}{4}$", "B. $\\frac{1}{2}$", "C. $\\frac{1}{4}$", "D. $\\frac{2}{3}$"],
-    answer: "A",
-    explanation: "Sample space = $\\{HH, HT, TH, TT\\}$. Favorable outcomes with at least one head = $\\{HH, HT, TH\\}$ (3 outcomes). $P = \\frac{3}{4}$."
-  },
-  {
-    id: 69,
-    question: "If $y$ varies directly as $x^2$ and $y = 12$ when $x = 2$, find $y$ when $x = 3$.",
-    options: ["A. 27", "B. 18", "C. 36", "D. 24"],
-    answer: "A",
-    explanation: "$y = kx^2 \\implies 12 = k(2^2) = 4k \\implies k = 3$. When $x = 3$: $y = 3(3^2) = 27$."
-  },
-  {
-    id: 70,
-    question: "If $z$ varies inversely as $w$ and $z = 4$ when $w = 5$, find $z$ when $w = 10$.",
-    options: ["A. 2", "B. 8", "C. 1", "D. 4"],
-    answer: "A",
-    explanation: "$z = \\frac{k}{w} \\implies 4 = \\frac{k}{5} \\implies k = 20$. When $w = 10$: $z = \\frac{20}{10} = 2$."
-  },
-  {
-    id: 71,
-    question: "Express 0.003485 correct to 3 significant figures.",
-    options: ["A. 0.00349", "B. 0.00348", "C. 0.00350", "D. 0.003"],
-    answer: "A",
-    explanation: "The first non-zero digit is 3. The first three significant figures are 3, 4, 8. Since the following digit is 5, round up 8 to 9, giving 0.00349."
-  },
-  {
-    id: 72,
-    question: "If $a = 2$ and $b = -3$, evaluate $\\frac{a^2 - b^2}{a + b}$.",
-    options: ["A. 5", "B. -5", "C. -1", "D. 1"],
-    answer: "A",
-    explanation: "$\\frac{a^2 - b^2}{a + b} = \\frac{(a-b)(a+b)}{a+b} = a - b = 2 - (-3) = 5$."
-  },
-  {
-    id: 73,
-    question: "Solve the simultaneous equations: $2x + y = 7$ and $x - y = 2$.",
-    options: ["A. $x = 3, y = 1$", "B. $x = 1, y = 3$", "C. $x = 2, y = 3$", "D. $x = 3, y = -1$"],
-    answer: "A",
-    explanation: "Add the two equations: $3x = 9 \\implies x = 3$. Substitute $x = 3$ into $x - y = 2 \\implies 3 - y = 2 \\implies y = 1$."
-  },
-  {
-    id: 74,
-    question: "Find the roots of the equation $x^2 - 7x + 12 = 0$.",
-    options: ["A. 3 and 4", "B. -3 and -4", "C. 2 and 6", "D. -2 and -6"],
-    answer: "A",
-    explanation: "Factorize: $(x-3)(x-4) = 0 \\implies x = 3$ or $x = 4$."
-  },
-  {
-    id: 75,
-    question: "Find the radius of a circle whose circumference is $44\\text{ cm}$. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $7\\text{ cm}$", "B. $14\\text{ cm}$", "C. $3.5\\text{ cm}$", "D. $21\\text{ cm}$"],
-    answer: "A",
-    explanation: "$C = 2\\pi r \\implies 44 = 2 \\times \\frac{22}{7} \\times r \\implies 44 = \\frac{44}{7} r \\implies r = 7\\text{ cm}$."
-  },
-  {
-    id: 76,
-    question: "Calculate the total surface area of a solid cylinder of height $10\\text{ cm}$ and radius $7\\text{ cm}$. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $748\\text{ cm}^2$", "B. $440\\text{ cm}^2$", "C. $308\\text{ cm}^2$", "D. $616\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "$\\text{TSA} = 2\\pi r(r + h) = 2 \\times \\frac{22}{7} \\times 7 \\times (7 + 10) = 44 \\times 17 = 748\\text{ cm}^2$."
-  },
-  {
-    id: 77,
-    question: "The interior angle of a regular polygon is $140^\\circ$. How many sides does the polygon have?",
-    options: ["A. 9", "B. 8", "C. 10", "D. 12"],
-    answer: "A",
-    explanation: "Exterior angle $= 180^\\circ - 140^\\circ = 40^\\circ$. Number of sides $n = \\frac{360^\\circ}{40^\\circ} = 9$."
-  },
-  {
-    id: 78,
-    question: "If the simple interest on ₦20,000 for 3 years is ₦3,000, find the rate per annum.",
-    options: ["A. $5\\%$", "B. $4\\%$", "C. $6\\%$", "D. $2.5\\%$"],
-    answer: "A",
-    explanation: "$I = \\frac{P \\times R \\times T}{100} \\implies 3000 = \\frac{20000 \\times R \\times 3}{100} \\implies 3000 = 600R \\implies R = 5\\%$."
-  },
-  {
-    id: 79,
-    question: "Find the range of the numbers: 14, 27, 8, 19, 35, 21.",
-    options: ["A. 27", "B. 21", "C. 35", "D. 19"],
-    answer: "A",
-    explanation: "$\\text{Range} = \\text{Maximum value} - \\text{Minimum value} = 35 - 8 = 27$."
-  },
-  {
-    id: 80,
-    question: "In how many ways can the letters of the word **MATICS** be arranged?",
-    options: ["A. 720", "B. 120", "C. 360", "D. 24"],
-    answer: "A",
-    explanation: "The word MATICS consists of 6 distinct letters. Number of arrangements $= 6! = 720$."
-  },
-  {
-    id: 81,
-    question: "Convert $43_{10}$ to a number in base two.",
-    options: ["A. $101011_2$", "B. $101101_2$", "C. $110101_2$", "D. $100111_2$"],
-    answer: "A",
-    explanation: "Dividing 43 repeatedly by 2: 43 = 21 R 1, 21 = 10 R 1, 10 = 5 R 0, 5 = 2 R 1, 2 = 1 R 0, 1 = 0 R 1. Reading remainders bottom-up gives $101011_2$."
-  },
-  {
-    id: 82,
-    question: "Evaluate without using tables: $\\frac{\\log 81}{\\log 3}$.",
-    options: ["A. 4", "B. 3", "C. 27", "D. 9"],
-    answer: "A",
-    explanation: "Since $81 = 3^4$, $\\log 81 = \\log (3^4) = 4 \\log 3$. Therefore, $\\frac{4 \\log 3}{\\log 3} = 4$."
-  },
-  {
-    id: 83,
-    question: "Simplify: $\\frac{2\\sqrt{3} + \\sqrt{2}}{\\sqrt{3} - \\sqrt{2}}$ by rationalizing the denominator.",
-    options: ["A. $8 + 3\\sqrt{6}$", "B. $8 - 3\\sqrt{6}$", "C. $4 + 3\\sqrt{6}$", "D. $6 + 2\\sqrt{6}$"],
-    answer: "A",
-    explanation: "Multiply numerator and denominator by $(\\sqrt{3} + \\sqrt{2})$: $\\frac{(2\\sqrt{3} + \\sqrt{2})(\\sqrt{3} + \\sqrt{2})}{3 - 2} = (2\\times 3) + 2\\sqrt{6} + \\sqrt{6} + 2 = 8 + 3\\sqrt{6}$."
-  },
-  {
-    id: 84,
-    question: "Solve for $y$: $2^{3y-1} = 32$.",
-    options: ["A. 2", "B. 3", "C. 1", "D. 4"],
-    answer: "A",
-    explanation: "Express 32 as a power of 2: $2^{3y-1} = 2^5 \\implies 3y - 1 = 5 \\implies 3y = 6 \\implies y = 2$."
-  },
-  {
-    id: 85,
-    question: "Find the sum of the first 10 terms of the Arithmetic Progression (A.P.): $2, 5, 8, 11, ...$",
-    options: ["A. 155", "B. 145", "C. 165", "D. 150"],
-    answer: "A",
-    explanation: "$a = 2$, $d = 3$, $n = 10$. $S_n = \\frac{n}{2}[2a + (n-1)d] = \\frac{10}{2}[2(2) + 9(3)] = 5[4 + 27] = 5 \\times 31 = 155$."
-  },
-  {
-    id: 86,
-    question: "The 3rd term of a Geometric Progression (G.P.) is 12 and the 6th term is 96. Find the first term.",
-    options: ["A. 3", "B. 2", "C. 4", "D. 6"],
-    answer: "A",
-    explanation: "$T_3 = ar^2 = 12$ and $T_6 = ar^5 = 96$. Divide $T_6$ by $T_3$: $r^3 = \\frac{96}{12} = 8 \\implies r = 2$. Then $a(2^2) = 12 \\implies 4a = 12 \\implies a = 3$."
-  },
-  {
-    id: 87,
-    question: "Solve the quadratic equation: $3x^2 - 10x + 3 = 0$.",
-    options: ["A. $x = 3$ or $x = \\frac{1}{3}$", "B. $x = -3$ or $x = -\\frac{1}{3}$", "C. $x = 3$ or $x = -\\frac{1}{3}$", "D. $x = -3$ or $x = \\frac{1}{3}$"],
-    answer: "A",
-    explanation: "Factorize: $3x^2 - 9x - x + 3 = 0 \\implies 3x(x-3) - 1(x-3) = 0 \\implies (3x-1)(x-3) = 0 \\implies x = 3$ or $x = \\frac{1}{3}$."
-  },
-  {
-    id: 88,
-    question: "Find the solution set of the inequality: $x^2 - 5x + 6 \\le 0$.",
-    options: ["A. $2 \\le x \\le 3$", "B. $x \\le 2$ or $x \\ge 3$", "C. $-3 \\le x \\le -2$", "D. $x \\ge 3$"],
-    answer: "A",
-    explanation: "Factorize: $(x-2)(x-3) \\le 0$. The roots are 2 and 3. Testing intervals shows the expression is negative or zero between 2 and 3: $2 \\le x \\le 3$."
-  },
-  {
-    id: 89,
-    question: "In a class of 40 students, 25 study Mathematics, 18 study Physics, and 8 study both. How many students study neither subject?",
-    options: ["A. 5", "B. 3", "C. 7", "D. 10"],
-    answer: "A",
-    explanation: "Students studying at least one subject $= 25 + 18 - 8 = 35$. Students studying neither $= 40 - 35 = 5$."
-  },
-  {
-    id: 90,
-    question: "Find the determinant of the matrix $A = \\begin{pmatrix} 4 & -2 \\\\ 3 & 5 \\end{pmatrix}$.",
-    options: ["A. 26", "B. 14", "C. 20", "D. 11"],
-    answer: "A",
-    explanation: "$\\det(A) = (4)(5) - (-2)(3) = 20 - (-6) = 20 + 6 = 26$."
-  },
-  {
-    id: 91,
-    question: "Find $\\frac{dy}{dx}$ if $y = \\frac{2x+1}{x-3}$.",
-    options: ["A. $-\\frac{7}{(x-3)^2}$", "B. $\\frac{7}{(x-3)^2}$", "C. $-\\frac{5}{(x-3)^2}$", "D. $\\frac{1}{(x-3)^2}$"],
-    answer: "A",
-    explanation: "Using the quotient rule $\\frac{u'v - uv'}{v^2}$ with $u = 2x+1$ and $v = x-3$: $\\frac{2(x-3) - (2x+1)(1)}{(x-3)^2} = \\frac{2x-6-2x-1}{(x-3)^2} = -\\frac{7}{(x-3)^2}$."
-  },
-  {
-    id: 92,
-    question: "Evaluate: $\\int_{1}^{3} (3x^2 - 2x) \\, dx$.",
-    options: ["A. 18", "B. 20", "C. 16", "D. 22"],
-    answer: "A",
-    explanation: "$\\int (3x^2 - 2x) \\, dx = [x^3 - x^2]_{1}^{3} = (3^3 - 3^2) - (1^3 - 1^2) = (27 - 9) - (1 - 1) = 18$."
-  },
-  {
-    id: 93,
-    question: "Find the turning point of the curve $y = x^2 - 6x + 5$ and determine its nature.",
-    options: ["A. $(3, -4)$, Minimum", "B. $(3, -4)$, Maximum", "C. $(-3, 4)$, Minimum", "D. $(3, 4)$, Maximum"],
-    answer: "A",
-    explanation: "$\\frac{dy}{dx} = 2x - 6 = 0 \\implies x = 3$. At $x=3$, $y = 3^2 - 6(3) + 5 = -4$. Second derivative $\\frac{d^2y}{dx^2} = 2 > 0$, so it is a minimum point $(3, -4)$."
-  },
-  {
-    id: 94,
-    question: "Find the equation of the line passing through $(2, 3)$ with gradient 4.",
-    options: ["A. $y = 4x - 5$", "B. $y = 4x + 5$", "C. $y = 4x - 11$", "D. $y = 2x - 1$"],
-    answer: "A",
-    explanation: "Using point-slope form $y - y_1 = m(x - x_1)$: $y - 3 = 4(x - 2) \\implies y - 3 = 4x - 8 \\implies y = 4x - 5$."
-  },
-  {
-    id: 95,
-    question: "Calculate the angle between the lines $y = x + 2$ and $y = \\sqrt{3}x - 1$.",
-    options: ["A. $15^\\circ$", "B. $30^\\circ$", "C. $45^\\circ$", "D. $60^\\circ$"],
-    answer: "A",
-    explanation: "Gradients are $m_1 = 1 (\\theta_1 = 45^\\circ)$ and $m_2 = \\sqrt{3} (\\theta_2 = 60^\\circ)$. The angle between the lines is $\\theta_2 - \\theta_1 = 60^\\circ - 45^\\circ = 15^\\circ$."
-  },
-  {
-    id: 96,
-    question: "Find the radius of the circle given by the equation $x^2 + y^2 - 4x + 6y - 12 = 0$.",
-    options: ["A. 5", "B. 25", "C. 4", "D. $\\sqrt{12}$"],
-    answer: "A",
-    explanation: "Rewrite as $(x-2)^2 - 4 + (y+3)^2 - 9 - 12 = 0 \\implies (x-2)^2 + (y+3)^2 = 25$. Radius $r = \\sqrt{25} = 5$."
-  },
-  {
-    id: 97,
-    question: "Evaluate: $\\cos 120^\\circ$.",
-    options: ["A. $-\\frac{1}{2}$", "B. $\\frac{1}{2}$", "C. $-\\frac{\\sqrt{3}}{2}$", "D. $\\frac{\\sqrt{3}}{2}$"],
-    answer: "A",
-    explanation: "In the second quadrant, cosine is negative: $\\cos 120^\\circ = -\\cos(180^\\circ - 120^\\circ) = -\\cos 60^\\circ = -\\frac{1}{2}$."
-  },
-  {
-    id: 98,
-    question: "If $\\tan \\theta = \\frac{5}{12}$ and $\\theta$ is acute, find the value of $\\sin \\theta + \\cos \\theta$.",
-    options: ["A. $\\frac{17}{13}$", "B. $\\frac{12}{13}$", "C. $\\frac{7}{13}$", "D. $\\frac{13}{17}$"],
-    answer: "A",
-    explanation: "Opposite $= 5$, Adjacent $= 12$, Hypotenuse $= \\sqrt{5^2 + 12^2} = 13$. Thus $\\sin \\theta = \\frac{5}{13}$ and $\\cos \\theta = \\frac{12}{13}$. $\\sin \\theta + \\cos \\theta = \\frac{5+12}{13} = \\frac{17}{13}$."
-  },
-  {
-    id: 99,
-    question: "The angle of elevation of the top of a tower from a point on the ground 30m away from its base is $30^\\circ$. Find the height of the tower.",
-    options: ["A. $10\\sqrt{3}\\text{ m}$", "B. $30\\sqrt{3}\\text{ m}$", "C. $15\\text{ m}$", "D. $\\frac{10}{\\sqrt{3}}\\text{ m}$"],
-    answer: "A",
-    explanation: "$\\tan 30^\\circ = \\frac{h}{30} \\implies h = 30 \\tan 30^\\circ = 30 \\left(\\frac{1}{\\sqrt{3}}\\right) = \\frac{30\\sqrt{3}}{3} = 10\\sqrt{3}\\text{ m}$."
-  },
-  {
-    id: 100,
-    question: "Find the mean deviation of the set of numbers: 3, 6, 7, 8, 11.",
-    options: ["A. 2", "B. 2.4", "C. 3", "D. 1.8"],
-    answer: "A",
-    explanation: "Mean $\\mu = \\frac{3+6+7+8+11}{5} = 7$. Absolute deviations: $|3-7|=4, |6-7|=1, |7-7|=0, |8-7|=1, |11-7|=4$. Sum $= 10$. Mean deviation $= \\frac{10}{5} = 2$."
-  },
-  {
-    id: 101,
-    question: "The mean of five numbers is 12. If a sixth number is added, the new mean becomes 14. Find the sixth number.",
-    options: ["A. 24", "B. 22", "C. 20", "D. 26"],
-    answer: "A",
-    explanation: "Sum of 5 numbers $= 5 \\times 12 = 60$. Sum of 6 numbers $= 6 \\times 14 = 84$. Sixth number $= 84 - 60 = 24$."
-  },
-  {
-    id: 102,
-    question: "A bag contains 5 red balls and 3 blue balls. If two balls are drawn at random one after another without replacement, find the probability that both are red.",
-    options: ["A. $\\frac{5}{14}$", "B. $\\frac{25}{64}$", "C. $\\frac{15}{56}$", "D. $\\frac{5}{28}$"],
-    answer: "A",
-    explanation: "$P(\\text{1st Red}) = \\frac{5}{8}$, $P(\\text{2nd Red}) = \\frac{4}{7}$. $P(\\text{both Red}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$."
-  },
-  {
-    id: 103,
-    question: "In how many ways can a committee of 3 people be chosen from a group of 7 people?",
-    options: ["A. 35", "B. 210", "C. 42", "D. 70"],
-    answer: "A",
-    explanation: "Combination formula $^nC_r = \\frac{n!}{r!(n-r)!}$: $^7C_3 = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35$."
-  },
-  {
-    id: 104,
-    question: "Express the binary fraction $0.101_2$ as a base ten fraction.",
-    options: ["A. $\\frac{5}{8}$", "B. $\\frac{3}{8}$", "C. $\\frac{5}{4}$", "D. $\\frac{1}{2}$"],
-    answer: "A",
-    explanation: "$0.101_2 = 1 \\times 2^{-1} + 0 \\times 2^{-2} + 1 \\times 2^{-3} = \\frac{1}{2} + 0 + \\frac{1}{8} = \\frac{4+1}{8} = \\frac{5}{8}$."
-  },
-  {
-    id: 105,
-    question: "If $y$ varies directly as $x$ and inversely as $z$, and $y = 6$ when $x = 4$ and $z = 2$, find $y$ when $x = 8$ and $z = 3$.",
-    options: ["A. 8", "B. 6", "C. 12", "D. 9"],
-    answer: "A",
-    explanation: "$y = \\frac{kx}{z} \\implies 6 = \\frac{k(4)}{2} \\implies 2k = 6 \\implies k = 3$. When $x = 8, z = 3$: $y = \\frac{3(8)}{3} = 8$."
-  },
-  {
-    id: 106,
-    question: "A man bought an article for ₦12,000 and sold it for ₦15,000. Calculate his percentage profit.",
-    options: ["A. $25\\%$", "B. $20\\%$", "C. $30\\%$", "D. $15\\%$"],
-    answer: "A",
-    explanation: "Profit $= 15000 - 12000 = 3000$. Percentage profit $= \\frac{3000}{12000} \\times 100\\% = 25\\%$."
-  },
-  {
-    id: 107,
-    question: "Find the sum of the interior angles of a polygon with 8 sides (octagon).",
-    options: ["A. $1080^\\circ$", "B. $1440^\\circ$", "C. $900^\\circ$", "D. $1260^\\circ$"],
-    answer: "A",
-    explanation: "Sum of interior angles $= (n-2) \\times 180^\\circ = (8-2) \\times 180^\\circ = 6 \\times 180^\\circ = 1080^\\circ$."
-  },
-  {
-    id: 108,
-    question: "Find the volume of a sphere of radius $3\\text{ cm}$ in terms of $\\pi$.",
-    options: ["A. $36\\pi\\text{ cm}^3$", "B. $18\\pi\\text{ cm}^3$", "C. $108\\pi\\text{ cm}^3$", "D. $27\\pi\\text{ cm}^3$"],
-    answer: "A",
-    explanation: "$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (3^3) = \\frac{4}{3}\\pi (27) = 36\\pi\\text{ cm}^3$."
-  },
-  {
-    id: 109,
-    question: "Find the length of an arc of a circle of radius $14\\text{ cm}$ which subtends an angle of $60^\\circ$ at the center. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $14.67\\text{ cm}$", "B. $22.00\\text{ cm}$", "C. $7.33\\text{ cm}$", "D. $29.33\\text{ cm}$"],
-    answer: "A",
-    explanation: "Length of arc $= \\frac{\\theta}{360} \\times 2\\pi r = \\frac{60}{360} \\times 2 \\times \\frac{22}{7} \\times 14 = \\frac{1}{6} \\times 88 = 14.67\\text{ cm}$."
-  },
-  {
-    id: 110,
-    question: "Find the range of values of $x$ for which $2x - 3 > 7$.",
-    options: ["A. $x > 5$", "B. $x < 5$", "C. $x > 2$", "D. $x < 2$"],
-    answer: "A",
-    explanation: "$2x > 7 + 3 \\implies 2x > 10 \\implies x > 5$."
-  },
-  {
-    id: 111,
-    question: "Evaluate $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$.",
-    options: ["A. 4", "B. 2", "C. 0", "D. Undefined"],
-    answer: "A",
-    explanation: "Factorize numerator: $\\frac{(x-2)(x+2)}{x-2} = x+2$. Taking the limit as $x \\to 2$: $2 + 2 = 4$."
-  },
-  {
-    id: 112,
-    question: "If $\\mathbf{a} = 3\\mathbf{i} + 4\\mathbf{j}$ and $\\mathbf{b} = \\mathbf{i} - 2\\mathbf{j}$, find the magnitude of $\\mathbf{a} + \\mathbf{b}$.",
-    options: ["A. $2\\sqrt{5}$", "B. 5", "C. $4\\sqrt{2}$", "D. 6"],
-    answer: "A",
-    explanation: "$\\mathbf{a} + \\mathbf{b} = (3+1)\\mathbf{i} + (4-2)\\mathbf{j} = 4\\mathbf{i} + 2\\mathbf{j}$. Magnitude $= \\sqrt{4^2 + 2^2} = \\sqrt{16 + 4} = \\sqrt{20} = 2\\sqrt{5}$."
-  },
-  {
-    id: 113,
-    question: "Calculate the standard deviation of the numbers: 2, 4, 6, 8, 10.",
-    options: ["A. $2\\sqrt{2}$", "B. 2", "C. $\\sqrt{5}$", "D. 8"],
-    answer: "A",
-    explanation: "Mean $\\mu = 6$. Deviations: $-4, -2, 0, 2, 4$. Squared deviations: $16, 4, 0, 4, 16$. Sum $= 40$. Variance $= \\frac{40}{5} = 8$. Standard deviation $= \\sqrt{8} = 2\\sqrt{2}$."
-  },
-  {
-    id: 114,
-    question: "If a card is drawn at random from a standard deck of 52 playing cards, what is the probability of drawing a King or a Heart?",
-    options: ["A. $\\frac{4}{13}$", "B. $\\frac{17}{52}$", "C. $\\frac{9}{26}$", "D. $\\frac{1}{4}$"],
-    answer: "A",
-    explanation: "$P(\\text{King}) = \\frac{4}{52}$, $P(\\text{Heart}) = \\frac{13}{52}$, $P(\\text{King and Heart}) = \\frac{1}{52}$. $P(\\text{King or Heart}) = \\frac{4 + 13 - 1}{52} = \\frac{16}{52} = \\frac{4}{13}$."
-  },
-  {
-    id: 115,
-    question: "Solve for $x$ in the equation: $\\log_{10}(x+3) + \\log_{10} 2 = 1$.",
-    options: ["A. 2", "B. 3", "C. 5", "D. 1"],
-    answer: "A",
-    explanation: "Using logarithm product rule: $\\log_{10}[2(x+3)] = 1 \\implies 2(x+3) = 10^1 \\implies 2x + 6 = 10 \\implies 2x = 4 \\implies x = 2$."
-  },
-  {
-    id: 116,
-    question: "Find the perimeter of a sector of a circle of radius $7\\text{ cm}$ with a central angle of $90^\\circ$. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $25\\text{ cm}$", "B. $11\\text{ cm}$", "C. $18\\text{ cm}$", "D. $32\\text{ cm}$"],
-    answer: "A",
-    explanation: "Arc length $= \\frac{90}{360} \\times 2 \\times \\frac{22}{7} \\times 7 = 11\\text{ cm}$. Total perimeter $= \\text{Arc length} + 2r = 11 + 2(7) = 25\\text{ cm}$."
-  },
-  {
-    id: 117,
-    question: "Simplify: $\\frac{x^2 - 9}{x^2 - 5x + 6}$.",
-    options: ["A. $\\frac{x+3}{x-2}$", "B. $\\frac{x-3}{x-2}$", "C. $\\frac{x+3}{x+2}$", "D. $\\frac{x-3}{x+2}$"],
-    answer: "A",
-    explanation: "Factorize numerator and denominator: $\\frac{(x-3)(x+3)}{(x-3)(x-2)} = \\frac{x+3}{x-2}$."
-  },
-  {
-    id: 118,
-    question: "Find the 5th term of the Geometric Progression: $3, 6, 12, 24, ...$",
-    options: ["A. 48", "B. 96", "C. 36", "D. 72"],
-    answer: "A",
-    explanation: "$a = 3$, $r = 2$. $T_5 = ar^{5-1} = 3(2^4) = 3(16) = 48$."
-  },
-  {
-    id: 119,
-    question: "The binary operation $*$ is defined on real numbers by $a * b = a^2 + b - ab$. Evaluate $3 * 2$.",
-    options: ["A. 5", "B. 7", "C. 11", "D. 3"],
-    answer: "A",
-    explanation: "$3 * 2 = 3^2 + 2 - (3)(2) = 9 + 2 - 6 = 5$."
-  },
-  {
-    id: 120,
-    question: "Find the area of a trapezium with parallel sides of lengths $8\\text{ cm}$ and $12\\text{ cm}$, and vertical height $5\\text{ cm}$.",
-    options: ["A. $50\\text{ cm}^2$", "B. $100\\text{ cm}^2$", "C. $40\\text{ cm}^2$", "D. $60\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "$\\text{Area} = \\frac{1}{2}(a + b)h = \\frac{1}{2}(8 + 12)(5) = \\frac{1}{2}(20)(5) = 50\\text{ cm}^2$."
-  },
-  {
-    id: 121,
-    question: "Find the value of $x$ for which $3^{2x+1} = 81$.",
-    options: ["A. 1.5", "B. 2", "C. 2.5", "D. 1"],
-    answer: "A",
-    explanation: "Express 81 as a power of 3: $3^{2x+1} = 3^4 \\implies 2x + 1 = 4 \\implies 2x = 3 \\implies x = 1.5$."
-  },
-  {
-    id: 122,
-    question: "Evaluate: $\\int_{0}^{\\pi/2} \\cos x \\, dx$.",
-    options: ["A. 1", "B. 0", "C. -1", "D. $\\pi$"],
-    answer: "A",
-    explanation: "$\\int \\cos x \\, dx = [\\sin x]_{0}^{\\pi/2} = \\sin(\\pi/2) - \\sin(0) = 1 - 0 = 1$."
-  },
-  {
-    id: 123,
-    question: "A fair die is rolled twice. What is the probability of getting a total score of 7?",
-    options: ["A. $\\frac{1}{6}$", "B. $\\frac{5}{36}$", "C. $\\frac{1}{12}$", "D. $\\frac{7}{36}$"],
-    answer: "A",
-    explanation: "Favorable outcomes for sum of 7: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ — total 6 outcomes. Total possible outcomes $= 36$. $P(\\text{sum}=7) = \\frac{6}{36} = \\frac{1}{6}$."
-  },
-  {
-    id: 124,
-    question: "Find the gradient of the curve $y = 2x^3 - 5x + 3$ at $x = 2$.",
-    options: ["A. 19", "B. 12", "C. 14", "D. 24"],
-    answer: "A",
-    explanation: "$\\frac{dy}{dx} = 6x^2 - 5$. At $x = 2$: $6(2^2) - 5 = 6(4) - 5 = 24 - 5 = 19$."
-  },
-  {
-    id: 125,
-    question: "Express $0.000345$ in standard form.",
-    options: ["A. $3.45 \\times 10^{-4}$", "B. $3.45 \\times 10^{-3}$", "C. $34.5 \\times 10^{-5}$", "D. $3.45 \\times 10^{-5}$"],
-    answer: "A",
-    explanation: "Moving the decimal point 4 places to the right gives $3.45 \\times 10^{-4}$."
-  },
-  {
-    id: 126,
-    question: "If the inverse of matrix $A = \\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}$ is $A^{-1}$, find $A^{-1}$.",
-    options: [
-      "A. $\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}$",
-      "B. $\\begin{pmatrix} -2 & 1 \\\\ 3 & -2 \\end{pmatrix}$",
-      "C. $\\begin{pmatrix} 2 & 3 \\\\ 1 & 2 \\end{pmatrix}$",
-      "D. $\\begin{pmatrix} -2 & -1 \\\\ -3 & -2 \\end{pmatrix}$"
+    "answer": "A",
+    "explanation": "$11011_2$ is equal to 27 in base 10, and $1001_2$ is equal to 9 in base 10. $27 - 9 = 18_{10}$. Converting 18 to base two gives $10010_2$."
+  },
+  {
+    "id": 42,
+    "question": "Simplify: $\\frac{0.000018 \\times 0.0004}{0.000009}$.",
+    "options": [
+      "8 \\times 10^{-4}",
+      "8 \\times 10^{-5}",
+      "8 \\times 10^{-3}",
+      "8 \\times 10^{-6}"
     ],
-    answer: "A",
-    explanation: "$\\det(A) = (2)(2) - (1)(3) = 4 - 3 = 1$. The adjugate matrix swap main diagonal and negate off-diagonal elements: $\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}$."
+    "answer": "A",
+    "explanation": "Expressing in standard form: $\\frac{(1.8 \\times 10^{-5}) \\times (4 \\times 10^{-4})}{9 \\times 10^{-6}} = \\frac{7.2 \\times 10^{-9}}{9 \\times 10^{-6}} = 0.8 \\times 10^{-3} = 8 \\times 10^{-4}$."
   },
   {
-    id: 127,
-    question: "Find the value of $k$ if $x - 2$ is a factor of $x^3 - 3x^2 + kx - 4$.",
-    options: ["A. 4", "B. 2", "C. -4", "D. 8"],
-    answer: "A",
-    explanation: "By Factor Theorem, $f(2) = 0$: $2^3 - 3(2^2) + k(2) - 4 = 0 \\implies 8 - 12 + 2k - 4 = 0 \\implies 2k - 8 = 0 \\implies k = 4$."
-  },
-  {
-    id: 128,
-    question: "Simplify: $\\frac{\\sqrt{50} - \\sqrt{18}}{\\sqrt{8}}$.",
-    options: ["A. 1", "B. 2", "C. $\\sqrt{2}$", "D. $\\frac{1}{2}$"],
-    answer: "A",
-    explanation: "Simplify surds: $\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{18} = 3\\sqrt{2}$, $\\sqrt{8} = 2\\sqrt{2}$. So $\\frac{5\\sqrt{2} - 3\\sqrt{2}}{2\\sqrt{2}} = \\frac{2\\sqrt{2}}{2\\sqrt{2}} = 1$."
-  },
-  {
-    id: 129,
-    question: "Find the distance between the points $P(2, -3)$ and $Q(-2, 0)$.",
-    options: ["A. 5", "B. 25", "C. $\\sqrt{7}$", "D. 7"],
-    answer: "A",
-    explanation: "Distance $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(-2 - 2)^2 + (0 - (-3))^2} = \\sqrt{(-4)^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$."
-  },
-  {
-    id: 130,
-    question: "Find the midpoint of the line segment joining $(4, 8)$ and $(-2, 2)$.",
-    options: ["A. $(1, 5)$", "B. $(3, 5)$", "C. $(2, 6)$", "D. $(1, 3)$"],
-    answer: "A",
-    explanation: "Midpoint $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right) = \\left(\\frac{4 + (-2)}{2}, \\frac{8 + 2}{2}\\right) = (1, 5)$."
-  },
-  {
-    id: 131,
-    question: "Calculate the simple interest on ₦40,000 for 3 years at $5\\%$ per annum.",
-    options: ["A. ₦6,000", "B. ₦4,000", "C. ₦8,000", "D. ₦12,000"],
-    answer: "A",
-    explanation: "$I = \\frac{P \\times R \\times T}{100} = \\frac{40000 \\times 5 \\times 3}{100} = 6000$."
-  },
-  {
-    id: 132,
-    question: "If $2x + y = 7$ and $x - y = 2$, find the value of $xy$.",
-    options: ["A. 3", "B. 6", "C. 2", "D. 4"],
-    answer: "A",
-    explanation: "Add equations: $3x = 9 \\implies x = 3$. Substitute into $x - y = 2 \\implies 3 - y = 2 \\implies y = 1$. Product $xy = 3 \\times 1 = 3$."
-  },
-  {
-    id: 133,
-    question: "Solve for $x$: $\\frac{x+1}{3} - \\frac{x-2}{2} = 1$.",
-    options: ["A. 2", "B. -2", "C. 4", "D. -4"],
-    answer: "A",
-    explanation: "Multiply by 6: $2(x+1) - 3(x-2) = 6 \\implies 2x + 2 - 3x + 6 = 6 \\implies -x + 8 = 6 \\implies -x = -2 \\implies x = 2$."
-  },
-  {
-    id: 134,
-    question: "Find the sum to infinity of the geometric series: $8 + 4 + 2 + 1 + ...$",
-    options: ["A. 16", "B. 32", "C. 12", "D. 15"],
-    answer: "A",
-    explanation: "First term $a = 8$, common ratio $r = \\frac{1}{2}$. $S_\\infty = \\frac{a}{1 - r} = \\frac{8}{1 - 0.5} = \\frac{8}{0.5} = 16$."
-  },
-  {
-    id: 135,
-    question: "If $\\sin \\theta = \\frac{3}{5}$, find the value of $\\tan \\theta$ for an acute angle $\\theta$.",
-    options: ["A. $\\frac{3}{4}$", "B. $\\frac{4}{3}$", "C. $\\frac{4}{5}$", "D. $\\frac{3}{5}$"],
-    answer: "A",
-    explanation: "Opposite $= 3$, Hypotenuse $= 5 \\implies \\text{Adjacent} = \\sqrt{5^2 - 3^2} = 4$. So $\\tan \\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{3}{4}$."
-  },
-  {
-    id: 136,
-    question: "Find the derivative of $y = (2x + 3)^4$ with respect to $x$.",
-    options: [
-      "A. $8(2x + 3)^3$",
-      "B. $4(2x + 3)^3$",
-      "C. $2(2x + 3)^3$",
-      "D. $12(2x + 3)^3$"
+    "id": 43,
+    "question": "Find the sum of the prime factors of 120.",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "20"
     ],
-    answer: "A",
-    explanation: "Using Chain Rule: $\\frac{dy}{dx} = 4(2x+3)^3 \\times \\frac{d}{dx}(2x+3) = 4(2x+3)^3 \\times 2 = 8(2x+3)^3$."
+    "answer": "A",
+    "explanation": "The prime factorization of 120 is $2^3 \\times 3 \\times 5$. The distinct prime factors are 2, 3, and 5. Their sum is $2 + 3 + 5 = 10$."
   },
   {
-    id: 137,
-    question: "Find the mode of the numbers: 2, 5, 3, 7, 5, 8, 5, 2, 9.",
-    options: ["A. 5", "B. 2", "C. 5.1", "D. 7"],
-    answer: "A",
-    explanation: "The mode is the number that occurs most frequently. 5 appears three times."
-  },
-  {
-    id: 138,
-    question: "A cylinder has a radius of $7\\text{ cm}$ and a height of $10\\text{ cm}$. Calculate its total surface area. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $748\\text{ cm}^2$", "B. $440\\text{ cm}^2$", "C. $308\\text{ cm}^2$", "D. $616\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "$\\text{Total Surface Area} = 2\\pi r(r + h) = 2 \\times \\frac{22}{7} \\times 7 \\times (7 + 10) = 44 \\times 17 = 748\\text{ cm}^2$."
-  },
-  {
-    id: 139,
-    question: "If $y$ is inversely proportional to $x^2$ and $y = 2$ when $x = 3$, find $y$ when $x = 6$.",
-    options: ["A. $0.5$", "B. 1", "C. 0.25", "D. 2"],
-    answer: "A",
-    explanation: "$y = \\frac{k}{x^2} \\implies 2 = \\frac{k}{3^2} \\implies k = 18$. When $x = 6$: $y = \\frac{18}{6^2} = \\frac{18}{36} = 0.5$."
-  },
-  {
-    id: 140,
-    question: "The angle of a sector of a circle of radius $10.5\\text{ cm}$ is $120^\\circ$. Find the area of the sector. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $115.5\\text{ cm}^2$", "B. $231.0\\text{ cm}^2$", "C. $57.75\\text{ cm}^2$", "D. $120.0\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "$\\text{Area} = \\frac{\\theta}{360} \\times \\pi r^2 = \\frac{120}{360} \\times \\frac{22}{7} \\times (10.5)^2 = \\frac{1}{3} \\times \\frac{22}{7} \\times 110.25 = 115.5\\text{ cm}^2$."
-  },
-  {
-    id: 141,
-    question: "If $P = \\{1, 2, 3, 4, 5\\}$ and $Q = \\{2, 4, 6, 8\\}$, find $P \\cap Q$.",
-    options: ["A. $\\{2, 4\\}$", "B. $\\{1, 3, 5\\}$", "C. $\\{6, 8\\}$", "D. $\\{1, 2, 3, 4, 5, 6, 8\\}$"],
-    answer: "A",
-    explanation: "The intersection $P \\cap Q$ consists of elements common to both sets, which are 2 and 4."
-  },
-  {
-    id: 142,
-    question: "In how many distinct ways can the letters of the word 'SUCCESS' be arranged?",
-    options: ["A. 420", "B. 5040", "C. 210", "D. 840"],
-    answer: "A",
-    explanation: "'SUCCESS' has 7 letters with 3 S's and 2 C's. Number of permutations $= \\frac{7!}{3!2!} = \\frac{5040}{6 \\times 2} = \\frac{5040}{12} = 420$."
-  },
-  {
-    id: 143,
-    question: "Find the variance of the numbers: 3, 5, 7, 9.",
-    options: ["A. 5", "B. 4", "C. $\\sqrt{5}$", "D. 2"],
-    answer: "A",
-    explanation: "Mean $\\mu = \\frac{3+5+7+9}{4} = 6$. Squared deviations: $(3-6)^2 = 9, (5-6)^2 = 1, (7-6)^2 = 1, (9-6)^2 = 9$. Variance $= \\frac{9+1+1+9}{4} = \\frac{20}{4} = 5$."
-  },
-  {
-    id: 144,
-    question: "Evaluate: $\\log_2 32 - \\log_2 8$.",
-    options: ["A. 2", "B. 3", "C. 4", "D. 1"],
-    answer: "A",
-    explanation: "Using Quotient Rule: $\\log_2 \\left(\\frac{32}{8}\\right) = \\log_2 4 = 2$."
-  },
-  {
-    id: 145,
-    question: "The probability that John passes an exam is $\\frac{2}{3}$ and that Mary passes is $\\frac{3}{4}$. What is the probability that both pass?",
-    options: ["A. $\\frac{1}{2}$", "B. $\\frac{5}{12}$", "C. $\\frac{1}{4}$", "D. $\\frac{11}{12}$"],
-    answer: "A",
-    explanation: "Since events are independent, $P(\\text{both pass}) = \\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12} = \\frac{1}{2}$."
-  },
-  {
-    id: 146,
-    question: "Find the equation of the line perpendicular to $y = 2x + 1$ passing through $(0, 4)$.",
-    options: ["A. $y = -\\frac{1}{2}x + 4$", "B. $y = 2x + 4$", "C. $y = -2x + 4$", "D. $y = \\frac{1}{2}x + 4$"],
-    answer: "A",
-    explanation: "Gradient of given line is 2. Perpendicular gradient $m = -\\frac{1}{2}$. Y-intercept $c = 4$. Equation: $y = -\\frac{1}{2}x + 4$."
-  },
-  {
-    id: 147,
-    question: "Find the sum of the roots of the quadratic equation: $2x^2 - 8x + 5 = 0$.",
-    options: ["A. 4", "B. -4", "C. 2.5", "D. -2.5"],
-    answer: "A",
-    explanation: "For $ax^2 + bx + c = 0$, sum of roots $= -\\frac{b}{a} = -\\frac{-8}{2} = 4$."
-  },
-  {
-    id: 148,
-    question: "Convert $11011_2$ to base ten.",
-    options: ["A. 27", "B. 25", "C. 29", "D. 23"],
-    answer: "A",
-    explanation: "$11011_2 = 1(2^4) + 1(2^3) + 0(2^2) + 1(2^1) + 1(2^0) = 16 + 8 + 0 + 2 + 1 = 27$."
-  },
-  {
-    id: 149,
-    question: "Calculate the area of a triangle with sides $a = 6\\text{ cm}$, $b = 8\\text{ cm}$, and included angle $C = 30^\\circ$.",
-    options: ["A. $12\\text{ cm}^2$", "B. $24\\text{ cm}^2$", "C. $12\\sqrt{3}\\text{ cm}^2$", "D. $6\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "$\\text{Area} = \\frac{1}{2}ab \\sin C = \\frac{1}{2}(6)(8) \\sin 30^\\circ = 24 \\times 0.5 = 12\\text{ cm}^2$."
-  },
-  {
-    id: 150,
-    question: "Find the derivative of $y = \\sin(3x)$.",
-    options: ["A. $3\\cos(3x)$", "B. $\\cos(3x)$", "C. $-3\\cos(3x)$", "D. $\\frac{1}{3}\\cos(3x)$"],
-    answer: "A",
-    explanation: "Using Chain Rule: $\\frac{dy}{dx} = \\cos(3x) \\cdot \\frac{d}{dx}(3x) = 3\\cos(3x)$."
-  },
-  {
-    id: 151,
-    question: "Factorize completely: $4x^2 - 9y^2$.",
-    options: [
-      "A. $(2x - 3y)(2x + 3y)$",
-      "B. $(4x - 9y)(x + y)$",
-      "C. $(2x - 3y)^2$",
-      "D. $(2x + 3y)^2$"
+    "id": 44,
+    "question": "If $\\log_2 x = 3$, find the value of $x$.",
+    "options": [
+      "6",
+      "8",
+      "9",
+      "16"
     ],
-    answer: "A",
-    explanation: "Using difference of two squares $a^2 - b^2 = (a-b)(a+b)$ where $a = 2x$ and $b = 3y$: $(2x - 3y)(2x + 3y)$."
+    "answer": "B",
+    "explanation": "By the definition of logarithms, $\\log_b a = c \\implies a = b^c$. Therefore, $x = 2^3 = 8$."
   },
   {
-    id: 152,
-    question: "Solve the inequality: $\\frac{x}{2} + 3 < 5$.",
-    options: ["A. $x < 4$", "B. $x > 4$", "C. $x < 16$", "D. $x < 1$"],
-    answer: "A",
-    explanation: "$\\frac{x}{2} < 5 - 3 \\implies \\frac{x}{2} < 2 \\implies x < 4$."
-  },
-  {
-    id: 153,
-    question: "Find the 10th term of the sequence: $5, 10, 15, 20, ...$",
-    options: ["A. 50", "B. 45", "C. 55", "D. 60"],
-    answer: "A",
-    explanation: "$a = 5$, $d = 5$. $T_{10} = a + 9d = 5 + 9(5) = 5 + 45 = 50$."
-  },
-  {
-    id: 154,
-    question: "If $\\begin{pmatrix} x & 2 \\\\ 3 & 4 \\end{pmatrix}$ has a determinant of 10, find $x$.",
-    options: ["A. 4", "B. 2", "C. 5", "D. 3"],
-    answer: "A",
-    explanation: "$\\det = 4x - 6 = 10 \\implies 4x = 16 \\implies x = 4$."
-  },
-  {
-    id: 155,
-    question: "Find the magnitude of the vector $\\mathbf{v} = 6\\mathbf{i} - 8\\mathbf{j}$.",
-    options: ["A. 10", "B. 14", "C. 2", "D. 100"],
-    answer: "A",
-    explanation: "$|\\mathbf{v}| = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$."
-  },
-  {
-    id: 156,
-    question: "Evaluate: $\\int (4x^3 + 3x^2) \\, dx$.",
-    options: ["A. $x^4 + x^3 + C$", "B. $12x^2 + 6x + C$", "C. $x^4 + 3x^3 + C$", "D. $4x^4 + x^3 + C$"],
-    answer: "A",
-    explanation: "$\\int (4x^3 + 3x^2) \\, dx = \\frac{4x^4}{4} + \\frac{3x^3}{3} + C = x^4 + x^3 + C$."
-  },
-  {
-    id: 157,
-    question: "Find the bearing of $A$ from $B$ if the bearing of $B$ from $A$ is $060^\\circ$.",
-    options: ["A. $240^\\circ$", "B. $120^\\circ$", "C. $300^\\circ$", "D. $150^\\circ$"],
-    answer: "A",
-    explanation: "Back bearing $= 60^\\circ + 180^\\circ = 240^\\circ$."
-  },
-  {
-    id: 158,
-    question: "Calculate the height of a cone with radius $3\\text{ cm}$ and volume $12\\pi\\text{ cm}^3$.",
-    options: ["A. $4\\text{ cm}$", "B. $12\\text{ cm}$", "C. $3\\text{ cm}$", "D. $6\\text{ cm}$"],
-    answer: "A",
-    explanation: "$V = \\frac{1}{3}\\pi r^2 h \\implies 12\\pi = \\frac{1}{3}\\pi (3^2) h \\implies 12\\pi = 3\\pi h \\implies h = 4\\text{ cm}$."
-  },
-  {
-    id: 159,
-    question: "If $f(x) = 2x^2 - 3x + 1$, find $f(-2)$.",
-    options: ["A. 15", "B. 3", "C. -1", "D. 7"],
-    answer: "A",
-    explanation: "$f(-2) = 2(-2)^2 - 3(-2) + 1 = 2(4) + 6 + 1 = 8 + 6 + 1 = 15$."
-  },
-  {
-    id: 160,
-    question: "What is the probability of picking an even number at random from the set $\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$?",
-    options: ["A. $\\frac{1}{2}$", "B. $\\frac{2}{5}$", "C. $\\frac{3}{5}$", "D. $\\frac{1}{5}$"],
-    answer: "A",
-    explanation: "Even numbers in the set are $\\{2, 4, 6, 8, 10\\}$ (5 numbers). Probability $= \\frac{5}{10} = \\frac{1}{2}$."
-  },
-  {
-    id: 161,
-    question: "Evaluate $\\log_3 27 + \\log_3 1 - \\log_3 9$.",
-    options: ["A. 1", "B. 2", "C. 0", "D. 3"],
-    answer: "A",
-    explanation: "$\\log_3 27 = 3$, $\\log_3 1 = 0$, $\\log_3 9 = 2$. Thus, $3 + 0 - 2 = 1$."
-  },
-  {
-    id: 162,
-    question: "If $y = 3x^2 - 4x + 7$, find the equation of the normal to the curve at the point $(1, 6)$.",
-    options: ["A. $x + 2y - 13 = 0$", "B. $2x + y - 8 = 0$", "C. $x - 2y + 11 = 0$", "D. $2x - y + 4 = 0$"],
-    answer: "A",
-    explanation: "$\\frac{dy}{dx} = 6x - 4$. At $x = 1$, tangent slope $m_t = 6(1) - 4 = 2$. Normal slope $m_n = -\\frac{1}{2}$. Equation: $y - 6 = -\\frac{1}{2}(x - 1) \\implies 2y - 12 = -x + 1 \\implies x + 2y - 13 = 0$."
-  },
-  {
-    id: 163,
-    question: "Find the 8th term of the A.P. $-3, -1, 1, 3, ...$",
-    options: ["A. 11", "B. 13", "C. 15", "D. 9"],
-    answer: "A",
-    explanation: "$a = -3$, $d = 2$. $T_8 = a + 7d = -3 + 7(2) = -3 + 14 = 11$."
-  },
-  {
-    id: 164,
-    question: "Find the radius of a sphere whose surface area is $154\\text{ cm}^2$. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $3.5\\text{ cm}$", "B. $7.0\\text{ cm}$", "C. $2.1\\text{ cm}$", "D. $4.2\\text{ cm}$"],
-    answer: "A",
-    explanation: "$A = 4\\pi r^2 = 154 \\implies 4 \\times \\frac{22}{7} \\times r^2 = 154 \\implies \\frac{88}{7} r^2 = 154 \\implies r^2 = 12.25 \\implies r = 3.5\\text{ cm}$."
-  },
-  {
-    id: 165,
-    question: "Solve the simultaneous equations: $3x - 2y = 12$ and $x + 2y = 4$.",
-    options: ["A. $x = 4, y = 0$", "B. $x = 2, y = 1$", "C. $x = 3, y = -1.5$", "D. $x = 0, y = -6$"],
-    answer: "A",
-    explanation: "Add both equations: $4x = 16 \\implies x = 4$. Substitute into second equation: $4 + 2y = 4 \\implies 2y = 0 \\implies y = 0$."
-  },
-  {
-    id: 166,
-    question: "A box contains 4 red, 3 green, and 5 yellow balls. If a ball is selected at random, find the probability that it is NOT red.",
-    options: ["A. $\\frac{2}{3}$", "B. $\\frac{1}{3}$", "C. $\\frac{5}{12}$", "D. $\\frac{7}{12}$"],
-    answer: "A",
-    explanation: "Total balls $= 4 + 3 + 5 = 12$. Non-red balls $= 3 + 5 = 8$. $P(\\text{NOT red}) = \\frac{8}{12} = \\frac{2}{3}$."
-  },
-  {
-    id: 167,
-    question: "Simplify $\\frac{3}{x-2} - \\frac{2}{x+1}$.",
-    options: ["A. $\\frac{x+7}{(x-2)(x+1)}$", "B. $\\frac{x-1}{(x-2)(x+1)}$", "C. $\\frac{x+1}{(x-2)(x+1)}$", "D. $\\frac{5x-1}{(x-2)(x+1)}$"],
-    answer: "A",
-    explanation: "Combining over common denominator: $\\frac{3(x+1) - 2(x-2)}{(x-2)(x+1)} = \\frac{3x + 3 - 2x + 4}{(x-2)(x+1)} = \\frac{x + 7}{(x-2)(x+1)}$."
-  },
-  {
-    id: 168,
-    question: "Evaluate: $\\int_{0}^{1} (6x^2 + 4x - 1) \\, dx$.",
-    options: ["A. 3", "B. 4", "C. 2", "D. 5"],
-    answer: "A",
-    explanation: "$\\int (6x^2 + 4x - 1) \\, dx = [2x^3 + 2x^2 - x]_{0}^{1} = (2(1)^3 + 2(1)^2 - 1) - 0 = 2 + 2 - 1 = 3$."
-  },
-  {
-    id: 169,
-    question: "Find the matrix product $\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} \\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix}$.",
-    options: [
-      "A. $\\begin{pmatrix} 4 & 6 \\\\ 10 & 12 \\end{pmatrix}$",
-      "B. $\\begin{pmatrix} 2 & 6 \\\\ 10 & 12 \\end{pmatrix}$",
-      "C. $\\begin{pmatrix} 4 & 0 \\\\ 3 & 12 \\end{pmatrix}$",
-      "D. $\\begin{pmatrix} 3 & 2 \\\\ 4 & 7 \\end{pmatrix}$"
+    "id": 45,
+    "question": "Simplify: $\\sqrt{75} - \\sqrt{12} + \\sqrt{27}$.",
+    "options": [
+      "5\\sqrt{3}",
+      "6\\sqrt{3}",
+      "7\\sqrt{3}",
+      "4\\sqrt{3}"
     ],
-    answer: "A",
-    explanation: "Row 1: $[(1\\cdot2)+(2\\cdot1), (1\\cdot0)+(2\\cdot3)] = [4, 6]$. Row 2: $[(3\\cdot2)+(4\\cdot1), (3\\cdot0)+(4\\cdot3)] = [10, 12]$."
+    "answer": "B",
+    "explanation": "Simplifying the surds: $\\sqrt{75} = 5\\sqrt{3}$, $\\sqrt{12} = 2\\sqrt{3}$, and $\\sqrt{27} = 3\\sqrt{3}$. Thus, $5\\sqrt{3} - 2\\sqrt{3} + 3\\sqrt{3} = 6\\sqrt{3}$."
   },
   {
-    id: 170,
-    question: "If $16^x = 64$, find $x$.",
-    options: ["A. $1.5$", "B. $2$", "C. $0.75$", "D. $2.5$"],
-    answer: "A",
-    explanation: "$(2^4)^x = 2^6 \\implies 2^{4x} = 2^6 \\implies 4x = 6 \\implies x = 1.5$."
-  },
-  {
-    id: 171,
-    question: "Calculate the area of an equilateral triangle of side $6\\text{ cm}$.",
-    options: ["A. $9\\sqrt{3}\\text{ cm}^2$", "B. $18\\sqrt{3}\\text{ cm}^2$", "C. $36\\sqrt{3}\\text{ cm}^2$", "D. $12\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "$\\text{Area} = \\frac{\\sqrt{3}}{4} s^2 = \\frac{\\sqrt{3}}{4} (6^2) = \\frac{36\\sqrt{3}}{4} = 9\\sqrt{3}\\text{ cm}^2$."
-  },
-  {
-    id: 172,
-    question: "Find the geometric mean of 4 and 16.",
-    options: ["A. 8", "B. 10", "C. 6", "D. 12"],
-    answer: "A",
-    explanation: "$\\text{Geometric Mean} = \\sqrt{4 \\times 16} = \\sqrt{64} = 8$."
-  },
-  {
-    id: 173,
-    question: "Evaluate $\\lim_{x \\to 3} \\frac{x^2 - 9}{x^2 - 3x}$.",
-    options: ["A. 2", "B. 1", "C. 3", "D. 0"],
-    answer: "A",
-    explanation: "Factorize: $\\frac{(x-3)(x+3)}{x(x-3)} = \\frac{x+3}{x}$. As $x \\to 3$: $\\frac{3+3}{3} = \\frac{6}{3} = 2$."
-  },
-  {
-    id: 174,
-    question: "The probability of an event $A$ is $\frac{3}{8}$. What is the probability that event $A$ does not occur?",
-    options: ["A. $\\frac{5}{8}$", "B. $\\frac{3}{8}$", "C. $\\frac{1}{8}$", "D. $\\frac{7}{8}$"],
-    answer: "A",
-    explanation: "$P(A') = 1 - P(A) = 1 - \\frac{3}{8} = \\frac{5}{8}$."
-  },
-  {
-    id: 175,
-    question: "If $y = \\cos(2x)$, find $\\frac{dy}{dx}$.",
-    options: ["A. $-2\\sin(2x)$", "B. $2\\sin(2x)$", "C. $-\\sin(2x)$", "D. $-2\\cos(2x)$"],
-    answer: "A",
-    explanation: "Using Chain Rule: $\\frac{dy}{dx} = -\\sin(2x) \\cdot 2 = -2\\sin(2x)$."
-  },
-  {
-    id: 176,
-    question: "Find the sum of the first $n$ terms of an A.P. whose first term is 3 and $n$-th term is 21.",
-    options: ["A. $12n$", "B. $24n$", "C. $18n$", "D. $6n$"],
-    answer: "A",
-    explanation: "$S_n = \\frac{n}{2}(a + l) = \\frac{n}{2}(3 + 21) = \\frac{n}{2}(24) = 12n$."
-  },
-  {
-    id: 177,
-    question: "In how many ways can the word 'MATHS' be arranged?",
-    options: ["A. 120", "B. 24", "C. 60", "D. 720"],
-    answer: "A",
-    explanation: "'MATHS' has 5 distinct letters. Number of arrangements $= 5! = 120$."
-  },
-  {
-    id: 178,
-    question: "Find the angle between the vectors $\\mathbf{u} = 3\\mathbf{i} + 4\\mathbf{j}$ and $\\mathbf{v} = 4\\mathbf{i} - 3\\mathbf{j}$.",
-    options: ["A. $90^\\circ$", "B. $0^\\circ$", "C. $45^\\circ$", "D. $60^\\circ$"],
-    answer: "A",
-    explanation: "Dot product $\\mathbf{u} \\cdot \\mathbf{v} = (3)(4) + (4)(-3) = 12 - 12 = 0$. Since dot product is 0, the vectors are perpendicular ($90^\\circ$)."
-  },
-  {
-    id: 179,
-    question: "Find the range of the set of numbers: 12, 5, 27, 18, 3, 21.",
-    options: ["A. 24", "B. 22", "C. 25", "D. 27"],
-    answer: "A",
-    explanation: "$\\text{Range} = \\text{Maximum} - \\text{Minimum} = 27 - 3 = 24$."
-  },
-  {
-    id: 180,
-    question: "Simplify: $\\frac{1}{1 - \\sin^2 \\theta}$.",
-    options: ["A. $\\sec^2 \\theta$", "B. $\\cos^2 \\theta$", "C. $\\tan^2 \\theta$", "D. $\\csc^2 \\theta$"],
-    answer: "A",
-    explanation: "Since $1 - \\sin^2 \\theta = \\cos^2 \\theta$, $\\frac{1}{\\cos^2 \\theta} = \\sec^2 \\theta$."
-  },
-  {
-    id: 181,
-    question: "Find the coordinates of the center of the circle $x^2 + y^2 + 8x - 10y + 16 = 0$.",
-    options: ["A. $(-4, 5)$", "B. $(4, -5)$", "C. $(8, -10)$", "D. $(-8, 10)$"],
-    answer: "A",
-    explanation: "Comparing with $x^2 + y^2 + 2gx + 2fy + c = 0$: $2g = 8 \\implies g = 4$, $2f = -10 \\implies f = -5$. Center $= (-g, -f) = (-4, 5)$."
-  },
-  {
-    id: 182,
-    question: "A trader marks his goods $20\\%$ above cost price and then allows a discount of $10\\%$. Find his actual percentage profit.",
-    options: ["A. $8\\%$", "B. $10\\%$", "C. $12\\%$", "D. $15\\%$"],
-    answer: "A",
-    explanation: "Let cost price $= 100$. Marked price $= 120$. Selling price $= 120 - (10\\% \\text{ of } 120) = 120 - 12 = 108$. Profit $= 108 - 100 = 8\\%$."
-  },
-  {
-    id: 183,
-    question: "Solve for $x$: $2x^2 + 5x - 3 = 0$.",
-    options: ["A. $x = \\frac{1}{2}$ or $x = -3$", "B. $x = -\\frac{1}{2}$ or $x = 3$", "C. $x = 1$ or $x = -3$", "D. $x = \\frac{1}{2}$ or $x = 3$"],
-    answer: "A",
-    explanation: "$(2x - 1)(x + 3) = 0 \\implies x = \\frac{1}{2}$ or $x = -3$."
-  },
-  {
-    id: 184,
-    question: "Find the maximum value of $y = 5 + 4x - x^2$.",
-    options: ["A. 9", "B. 5", "C. 4", "D. 7"],
-    answer: "A",
-    explanation: "$\\frac{dy}{dx} = 4 - 2x = 0 \\implies x = 2$. At $x = 2$: $y = 5 + 4(2) - (2)^2 = 5 + 8 - 4 = 9$."
-  },
-  {
-    id: 185,
-    question: "Convert $75_{10}$ to octal (base 8).",
-    options: ["A. $113_8$", "B. $131_8$", "C. $105_8$", "D. $123_8$"],
-    answer: "A",
-    explanation: "$75 \\div 8 = 9$ R 3, $9 \\div 8 = 1$ R 1, $1 \\div 8 = 0$ R 1. Reading remainders bottom-up gives $113_8$."
-  },
-  {
-    id: 186,
-    question: "Find the volume of a right circular cone with base radius $6\\text{ cm}$ and height $7\\text{ cm}$. (Take $\\pi = \\frac{22}{7}$)",
-    options: ["A. $264\\text{ cm}^3$", "B. $132\\text{ cm}^3$", "C. $528\\text{ cm}^3$", "D. $792\\text{ cm}^3$"],
-    answer: "A",
-    explanation: "$V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3} \\times \\frac{22}{7} \\times 36 \\times 7 = \\frac{1}{3} \\times 22 \\times 36 = 264\\text{ cm}^3$."
-  },
-  {
-    id: 187,
-    question: "Rationalize the denominator: $\\frac{5}{\\sqrt{7} - \\sqrt{2}}$.",
-    options: [
-      "A. $\\sqrt{7} + \\sqrt{2}$",
-      "B. $5(\\sqrt{7} + \\sqrt{2})$",
-      "C. $\\frac{\\sqrt{7} + \\sqrt{2}}{5}$",
-      "D. $\\sqrt{7} - \\sqrt{2}$"
+    "id": 46,
+    "question": "Solve for $x$: $3^{2x+1} = 27$.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
     ],
-    answer: "A",
-    explanation: "Multiply numerator and denominator by $(\\sqrt{7} + \\sqrt{2})$: $\\frac{5(\\sqrt{7} + \\sqrt{2})}{7 - 2} = \\frac{5(\\sqrt{7} + \\sqrt{2})}{5} = \\sqrt{7} + \\sqrt{2}$."
+    "answer": "A",
+    "explanation": "Express 27 as a power of 3: $3^{2x+1} = 3^3$. Equating exponents gives $2x + 1 = 3 \\implies 2x = 2 \\implies x = 1$."
   },
   {
-    id: 188,
-    question: "If $f(x) = x^3 - 2x + 4$, find $f'(2)$.",
-    options: ["A. 10", "B. 8", "C. 12", "D. 6"],
-    answer: "A",
-    explanation: "$f'(x) = 3x^2 - 2$. At $x = 2$: $f'(2) = 3(2^2) - 2 = 12 - 2 = 10$."
-  },
-  {
-    id: 189,
-    question: "Find the median of the set of numbers: 14, 7, 22, 19, 3, 11, 18.",
-    options: ["A. 14", "B. 11", "C. 18", "D. 13"],
-    answer: "A",
-    explanation: "Arranging in ascending order: $3, 7, 11, 14, 18, 19, 22$. The middle value (4th position) is 14."
-  },
-  {
-    id: 190,
-    question: "Evaluate: $\\int e^{3x} \\, dx$.",
-    options: [
-      "A. $\\frac{1}{3}e^{3x} + C$",
-      "B. $3e^{3x} + C$",
-      "C. $e^{3x} + C$",
-      "D. $\\frac{1}{3}e^{x} + C$"
+    "id": 47,
+    "question": "Find the 8th term of the Arithmetic Progression (A.P.): $-3, 1, 5, 9, ...$",
+    "options": [
+      "25",
+      "28",
+      "29",
+      "31"
     ],
-    answer: "A",
-    explanation: "$\\int e^{kx} \\, dx = \\frac{1}{k}e^{kx} + C$. For $k = 3$, it yields $\\frac{1}{3}e^{3x} + C$."
+    "answer": "A",
+    "explanation": "First term $a = -3$, common difference $d = 1 - (-3) = 4$. Using $T_n = a + (n-1)d$: $T_8 = -3 + (8-1)(4) = -3 + 28 = 25$."
   },
   {
-    id: 191,
-    question: "Find the value of $x$ such that the matrix $\\begin{pmatrix} x & 3 \\\\ 2 & 6 \\end{pmatrix}$ is singular.",
-    options: ["A. 1", "B. 0", "C. 2", "D. 3"],
-    answer: "A",
-    explanation: "A singular matrix has determinant zero: $6x - (3)(2) = 0 \\implies 6x - 6 = 0 \\implies 6x = 6 \\implies x = 1$."
-  },
-  {
-    id: 192,
-    question: "Find the 4th term in the expansion of $(x + 2y)^5$.",
-    options: ["A. $80x^2 y^3$", "B. $40x^3 y^2$", "C. $80x^3 y^2$", "D. $32x y^4$"],
-    answer: "A",
-    explanation: "By Binomial Theorem, the 4th term is $T_4 = \\binom{5}{3} x^{5-3} (2y)^3 = 10 \\cdot x^2 \\cdot 8y^3 = 80x^2 y^3$."
-  },
-  {
-    id: 193,
-    question: "Express $\\frac{5\\pi}{6}$ radians in degrees.",
-    options: ["A. $150^\\circ$", "B. $120^\\circ$", "C. $210^\\circ$", "D. $135^\\circ$"],
-    answer: "A",
-    explanation: "$\\frac{5\\pi}{6} \\times \\frac{180^\\circ}{\\pi} = 5 \\times 30^\\circ = 150^\\circ$."
-  },
-  {
-    id: 194,
-    question: "Find the derivative of $y = \\ln(x^2 + 1)$.",
-    options: ["A. $\\frac{2x}{x^2 + 1}$", "B. $\\frac{1}{x^2 + 1}$", "C. $\\frac{x}{x^2 + 1}$", "D. $\\frac{2}{x^2 + 1}$"],
-    answer: "A",
-    explanation: "Using Chain Rule: $\\frac{d}{dx}[\\ln(u)] = \\frac{u'}{u} = \\frac{2x}{x^2 + 1}$."
-  },
-  {
-    id: 195,
-    question: "Calculate the compound interest on ₦50,000 for 2 years at $10\\%$ per annum, compounded annually.",
-    options: ["A. ₦10,500", "B. ₦10,000", "C. ₦60,500", "D. ₦11,000"],
-    answer: "A",
-    explanation: "Total Amount $A = P(1 + r)^n = 50000(1 + 0.10)^2 = 50000(1.21) = 60,500$. Compound Interest $= 60,500 - 50,000 = 10,500$."
-  },
-  {
-    id: 196,
-    question: "If $\\mathbf{a} = 2\\mathbf{i} + 5\\mathbf{j}$ and $\\mathbf{b} = 3\\mathbf{i} - 2\\mathbf{j}$, find $2\\mathbf{a} - \\mathbf{b}$.",
-    options: [
-      "A. $\\mathbf{i} + 12\\mathbf{j}$",
-      "B. $\\mathbf{i} + 8\\mathbf{j}$",
-      "C. $7\\mathbf{i} + 8\\mathbf{j}$",
-      "D. $-\\mathbf{i} + 12\\mathbf{j}$"
+    "id": 48,
+    "question": "Find the sum to infinity of the Geometric Progression (G.P.): $9, 3, 1, \\frac{1}{3}, ...$",
+    "options": [
+      "\\frac{27}{2}",
+      "\\frac{25}{2}",
+      "13",
+      "14"
     ],
-    answer: "A",
-    explanation: "$2\\mathbf{a} = 4\\mathbf{i} + 10\\mathbf{j}$. Then $2\\mathbf{a} - \\mathbf{b} = (4-3)\\mathbf{i} + (10 - (-2))\\mathbf{j} = \\mathbf{i} + 12\\mathbf{j}$."
+    "answer": "A",
+    "explanation": "First term $a = 9$, common ratio $r = \\frac{1}{3}$. $S_{\\infty} = \\frac{a}{1-r} = \\frac{9}{1 - \\frac{1}{3}} = \\frac{9}{\\frac{2}{3}} = \\frac{27}{2}$."
   },
   {
-    id: 197,
-    question: "Solve for $x$: $\\log_2 x + \\log_2 4 = 5$.",
-    options: ["A. 8", "B. 16", "C. 4", "D. 32"],
-    answer: "A",
-    explanation: "$\\log_2 (4x) = 5 \\implies 4x = 2^5 \\implies 4x = 32 \\implies x = 8$."
+    "id": 49,
+    "question": "Factorize completely: $2x^2 - 5x - 3$.",
+    "options": [
+      "(2x+1)(x-3)",
+      "(2x-1)(x+3)",
+      "(2x-3)(x+1)",
+      "(2x+3)(x-1)"
+    ],
+    "answer": "A",
+    "explanation": "Split the middle term: $2x^2 - 6x + x - 3 = 2x(x-3) + 1(x-3) = (2x+1)(x-3)$."
   },
   {
-    id: 198,
-    question: "Find the total surface area of a solid cube of side $4\\text{ cm}$.",
-    options: ["A. $96\\text{ cm}^2$", "B. $64\\text{ cm}^2$", "C. $48\\text{ cm}^2$", "D. $128\\text{ cm}^2$"],
-    answer: "A",
-    explanation: "Total surface area $= 6 s^2 = 6(4^2) = 6(16) = 96\\text{ cm}^2$."
+    "id": 50,
+    "question": "Solve the inequality: $3x - 4 < 5x + 6$.",
+    "options": [
+      "x > -5",
+      "x < -5",
+      "x > 5",
+      "x < 5"
+    ],
+    "answer": "A",
+    "explanation": "$3x - 5x < 6 + 4 \\implies -2x < 10$. Dividing by $-2$ reverses the inequality sign: $x > -5$."
   },
   {
-    id: 199,
-    question: "If $y \\propto \\sqrt{x}$ and $y = 6$ when $x = 9$, find $y$ when $x = 25$.",
-    options: ["A. 10", "B. 15", "C. 12", "D. 8"],
-    answer: "A",
-    explanation: "$y = k\\sqrt{x} \\implies 6 = k\\sqrt{9} \\implies 3k = 6 \\implies k = 2$. When $x = 25$: $y = 2\\sqrt{25} = 2(5) = 10$."
+    "id": 51,
+    "question": "If $P = \\{x : 1 \\le x \\le 10, x \\text{ is prime}\\}$ and $Q = \\{x : 1 \\le x \\le 10, x \\text{ is odd}\\}$, find $P \\cap Q$.",
+    "options": [
+      "\\{3, 5, 7\\}",
+      "\\{2, 3, 5, 7\\}",
+      "\\{1, 3, 5, 7, 9\\}",
+      "\\{3, 5, 7, 9\\}"
+    ],
+    "answer": "A",
+    "explanation": "$P = \\{2, 3, 5, 7\\}$ and $Q = \\{1, 3, 5, 7, 9\\}$. The intersection $P \\cap Q$ consists of elements in both sets: $\\{3, 5, 7\\}$."
   },
   {
-    id: 200,
-    question: "Evaluate $\\int_{0}^{\\pi/4} \\sec^2 x \\, dx$.",
-    options: ["A. 1", "B. 0", "C. $\\sqrt{2}$", "D. $\\frac{1}{2}$"],
-    answer: "A",
-    explanation: "$\\int \\sec^2 x \\, dx = [\\tan x]_{0}^{\\pi/4} = \\tan(\\pi/4) - \\tan(0) = 1 - 0 = 1$."
+    "id": 52,
+    "question": "Find the inverse of the matrix $M = \\begin{pmatrix} 2 & 3 \\\\ 1 & 2 \\end{pmatrix}$.",
+    "options": [
+      "\\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix}",
+      "\\begin{pmatrix} -2 & 3 \\\\ 1 & -2 \\end{pmatrix}",
+      "\\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}",
+      "\\begin{pmatrix} -2 & -3 \\\\ -1 & -2 \\end{pmatrix}"
+    ],
+    "answer": "A",
+    "explanation": "Determinant $\\det(M) = (2)(2) - (3)(1) = 4 - 3 = 1$. The inverse is $\\frac{1}{1} \\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix}$."
+  },
+  {
+    "id": 53,
+    "question": "Evaluate the determinant of the matrix: \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{pmatrix}.",
+    "options": [
+      "24",
+      "18",
+      "12",
+      "0"
+    ],
+    "answer": "A",
+    "explanation": "For an upper triangular matrix, the determinant is the product of its diagonal elements: $1 \\times 4 \\times 6 = 24$."
+  },
+  {
+    "id": 54,
+    "question": "Find the derivative of $y = 3x^4 - 5x^2 + 7$ with respect to $x$.",
+    "options": [
+      "12x^3 - 10x",
+      "12x^3 - 10x + 7",
+      "7x^3 - 10x",
+      "12x^3 - 5x"
+    ],
+    "answer": "A",
+    "explanation": "Using the power rule $\\frac{d}{dx}(x^n) = nx^{n-1}$: $\\frac{dy}{dx} = 3(4x^3) - 5(2x) + 0 = 12x^3 - 10x$."
+  },
+  {
+    "id": 55,
+    "question": "Evaluate $\\int (4x^3 - 2x + 5) \\, dx$.",
+    "options": [
+      "x^4 - x^2 + 5x + C",
+      "12x^2 - 2 + C",
+      "x^4 - 2x^2 + 5x + C",
+      "4x^4 - x^2 + 5x + C"
+    ],
+    "answer": "A",
+    "explanation": "Integrating term-by-term: $\\frac{4x^4}{4} - \\frac{2x^2}{2} + 5x + C = x^4 - x^2 + 5x + C$."
+  },
+  {
+    "id": 56,
+    "question": "Find the gradient of the curve $y = 2x^2 - 3x + 1$ at the point where $x = 2$.",
+    "options": [
+      "5",
+      "3",
+      "8",
+      "4"
+    ],
+    "answer": "A",
+    "explanation": "Gradient $\\frac{dy}{dx} = 4x - 3$. Substituting $x = 2$ gives $4(2) - 3 = 8 - 3 = 5$."
+  },
+  {
+    "id": 57,
+    "question": "Find the midpoint of the line segment joining points $A(-2, 4)$ and $B(6, -8)$.",
+    "options": [
+      "(2, -2)",
+      "(4, -4)",
+      "(-2, 2)",
+      "(2, 2)"
+    ],
+    "answer": "A",
+    "explanation": "Midpoint formula $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right) = \\left(\\frac{-2 + 6}{2}, \\frac{4 + (-8)}{2}\\right) = (2, -2)$."
+  },
+  {
+    "id": 58,
+    "question": "Find the distance between the points $P(3, -2)$ and $Q(7, 1)$.",
+    "options": [
+      "5",
+      "7",
+      "\\sqrt{7}",
+      "25"
+    ],
+    "answer": "A",
+    "explanation": "Distance formula $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(7-3)^2 + (1 - (-2))^2} = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = 5$."
+  },
+  {
+    "id": 59,
+    "question": "Find the gradient of the line perpendicular to the line $2y - 4x = 5$.",
+    "options": [
+      "-\\frac{1}{2}",
+      "2",
+      "-2",
+      "\\frac{1}{2}"
+    ],
+    "answer": "A",
+    "explanation": "Rewrite equation in slope-intercept form: $y = 2x + \\frac{5}{2}$, so $m_1 = 2$. Perpendicular gradient $m_2 = -\\frac{1}{m_1} = -\\frac{1}{2}$."
+  },
+  {
+    "id": 60,
+    "question": "If $\\sin \\theta = \\frac{3}{5}$ and $\\theta$ is an acute angle, find $\\cos \\theta$.",
+    "options": [
+      "\\frac{4}{5}",
+      "\\frac{3}{4}",
+      "\\frac{5}{4}",
+      "\\frac{1}{5}"
+    ],
+    "answer": "A",
+    "explanation": "Using $\\sin^2 \\theta + \\cos^2 \\theta = 1$: $\\cos \\theta = \\sqrt{1 - \\left(\\frac{3}{5}\\right)^2} = \\sqrt{1 - \\frac{9}{25}} = \\sqrt{\\frac{16}{25}} = \\frac{4}{5}$."
+  },
+  {
+    "id": 61,
+    "question": "Simplify: $\\frac{\\tan \\theta}{\\sin \\theta}$.",
+    "options": [
+      "\\sec \\theta",
+      "\\cos \\theta",
+      "\\cot \\theta",
+      "\\csc \\theta"
+    ],
+    "answer": "A",
+    "explanation": "Since $\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$, $\\frac{\\tan \\theta}{\\sin \\theta} = \\frac{\\sin \\theta}{\\cos \\theta \\sin \\theta} = \\frac{1}{\\cos \\theta} = \\sec \\theta$."
+  },
+  {
+    "id": 62,
+    "question": "A ladder 10m long leans against a vertical wall making an angle of $60^\\circ$ with the ground. How high up the wall does the ladder reach?",
+    "options": [
+      "5\\sqrt{3}\\text{ m}",
+      "5\\text{ m}",
+      "10\\sqrt{3}\\text{ m}",
+      "2.5\\text{ m}"
+    ],
+    "answer": "A",
+    "explanation": "$\\sin 60^\\circ = \\frac{\\text{height}}{10} \\implies \\text{height} = 10 \\sin 60^\\circ = 10 \\left(\\frac{\\sqrt{3}}{2}\\right) = 5\\sqrt{3}\\text{ m}$."
+  },
+  {
+    "id": 63,
+    "question": "Find the area of a triangle with sides $a = 6\\text{ cm}$, $b = 8\\text{ cm}$ and included angle $C = 30^\\circ$.",
+    "options": [
+      "12\\text{ cm}^2",
+      "24\\text{ cm}^2",
+      "48\\text{ cm}^2",
+      "18\\text{ cm}^2"
+    ],
+    "answer": "A",
+    "explanation": "$\\text{Area} = \\frac{1}{2} ab \\sin C = \\frac{1}{2} (6)(8) \\sin 30^\\circ = 24 \\left(\\frac{1}{2}\\right) = 12\\text{ cm}^2$."
+  },
+  {
+    "id": 64,
+    "question": "Calculate the mean of the numbers: 12, 15, 18, 21, 24, 30.",
+    "options": [
+      "20",
+      "19.5",
+      "21",
+      "22"
+    ],
+    "answer": "A",
+    "explanation": "$\\text{Mean} = \\frac{12 + 15 + 18 + 21 + 24 + 30}{6} = \\frac{120}{6} = 20$."
+  },
+  {
+    "id": 65,
+    "question": "Find the median of the set of numbers: 8, 3, 5, 12, 10, 6, 14.",
+    "options": [
+      "8",
+      "10",
+      "6",
+      "8.3"
+    ],
+    "answer": "A",
+    "explanation": "Arrange in ascending order: 3, 5, 6, 8, 10, 12, 14. The middle number (4th term) is 8."
+  },
+  {
+    "id": 66,
+    "question": "Find the variance of the numbers: 2, 4, 6, 8.",
+    "options": [
+      "5",
+      "2.24",
+      "4",
+      "6"
+    ],
+    "answer": "A",
+    "explanation": "Mean $\\mu = 5$. Deviations: $(-3, -1, 1, 3)$. Squared deviations: $(9, 1, 1, 9)$. Sum of squares $= 20$. $\\text{Variance} = \\frac{20}{4} = 5$."
+  },
+  {
+    "id": 67,
+    "question": "A fair die is tossed once. What is the probability of getting a number greater than 4?",
+    "options": [
+      "\\frac{1}{3}",
+      "\\frac{1}{2}",
+      "\\frac{1}{6}",
+      "\\frac{2}{3}"
+    ],
+    "answer": "A",
+    "explanation": "Favorable outcomes are $\\{5, 6\\}$ (2 outcomes). Total outcomes $= 6$. $P(X > 4) = \\frac{2}{6} = \\frac{1}{3}$."
+  },
+  {
+    "id": 68,
+    "question": "Two fair coins are tossed simultaneously. What is the probability of obtaining at least one head?",
+    "options": [
+      "\\frac{3}{4}",
+      "\\frac{1}{2}",
+      "\\frac{1}{4}",
+      "\\frac{2}{3}"
+    ],
+    "answer": "A",
+    "explanation": "Sample space = $\\{HH, HT, TH, TT\\}$. Favorable outcomes with at least one head = $\\{HH, HT, TH\\}$ (3 outcomes). $P = \\frac{3}{4}$."
+  },
+  {
+    "id": 69,
+    "question": "If $y$ varies directly as $x^2$ and $y = 12$ when $x = 2$, find $y$ when $x = 3$.",
+    "options": [
+      "27",
+      "18",
+      "36",
+      "24"
+    ],
+    "answer": "A",
+    "explanation": "$y = kx^2 \\implies 12 = k(2^2) = 4k \\implies k = 3$. When $x = 3$: $y = 3(3^2) = 27$."
+  },
+  {
+    "id": 70,
+    "question": "If $z$ varies inversely as $w$ and $z = 4$ when $w = 5$, find $z$ when $w = 10$.",
+    "options": [
+      "2",
+      "8",
+      "4",
+      "1"
+    ],
+    "answer": "A",
+    "explanation": "$z = \\frac{k}{w} \\implies 4 = \\frac{k}{5} \\implies k = 20$. When $w = 10$: $z = \\frac{20}{10} = 2$."
+  },
+  {
+    "id": 71,
+    "question": "Express 0.003485 correct to 3 significant figures.",
+    "options": [
+      "0.00349",
+      "0.00348",
+      "0.00350",
+      "0.003"
+    ],
+    "answer": "A",
+    "explanation": "The first non-zero digit is 3. The first three significant figures are 3, 4, 8. Since the following digit is 5, round up 8 to 9, giving 0.00349."
+  },
+  {
+    "id": 72,
+    "question": "If $a = 2$ and $b = -3$, evaluate $\\frac{a^2 - b^2}{a + b}$.",
+    "options": [
+      "5",
+      "-5",
+      "1",
+      "-1"
+    ],
+    "answer": "A",
+    "explanation": "$\\frac{a^2 - b^2}{a + b} = \\frac{(a-b)(a+b)}{a+b} = a - b = 2 - (-3) = 5$."
+  },
+  {
+    "id": 73,
+    "question": "Solve the simultaneous equations: $2x + y = 7$ and $x - y = 2$.",
+    "options": [
+      "x = 3, y = 1",
+      "x = 2, y = 3",
+      "x = 4, y = -1",
+      "x = 1, y = 5"
+    ],
+    "answer": "A",
+    "explanation": "Add the two equations: $3x = 9 \\implies x = 3$. Substitute $x = 3$ into $x - y = 2 \\implies 3 - y = 2 \\implies y = 1$."
+  },
+  {
+    "id": 74,
+    "question": "Find the roots of the equation $x^2 - 7x + 12 = 0$.",
+    "options": [
+      "3 and 4",
+      "-3 and -4",
+      "2 and 6",
+      "-2 and -6"
+    ],
+    "answer": "A",
+    "explanation": "Factorize: $(x-3)(x-4) = 0 \\implies x = 3$ or $x = 4$."
+  },
+  {
+    "id": 75,
+    "question": "Find the radius of a circle whose circumference is $44\\text{ cm}$. (Take $\\pi = \\frac{22}{7}$)",
+    "options": [
+      "7 cm",
+      "14 cm",
+      "3.5 cm",
+      "22 cm"
+    ],
+    "answer": "A",
+    "explanation": "$C = 2\\pi r \\implies 44 = 2 \\times \\frac{22}{7} \\times r \\implies 44 = \\frac{44}{7} r \\implies r = 7\\text{ cm}$."
+  },
+  {
+    "id": 76,
+    "question": "Calculate the total surface area of a solid cylinder of height $10\\text{ cm}$ and radius $7\\text{ cm}$. (Take $\\pi = \\frac{22}{7}$)",
+    "options": [
+      "748 cm^2",
+      "440 cm^2",
+      "308 cm^2",
+      "616 cm^2"
+    ],
+    "answer": "A",
+    "explanation": "$\\text{TSA} = 2\\pi r(r + h) = 2 \\times \\frac{22}{7} \\times 7 \\times (7 + 10) = 44 \\times 17 = 748\\text{ cm}^2$."
+  },
+  {
+    "id": 77,
+    "question": "The interior angle of a regular polygon is $140^\\circ$. How many sides does the polygon have?",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": "A",
+    "explanation": "Exterior angle $= 180^\\circ - 140^\\circ = 40^\\circ$. Number of sides $n = \\frac{360^\\circ}{40^\\circ} = 9$."
+  },
+  {
+    "id": 78,
+    "question": "If the simple interest on ₦20,000 for 3 years is ₦3,000, find the rate per annum.",
+    "options": [
+      "5%",
+      "6%",
+      "4%",
+      "7.5%"
+    ],
+    "answer": "A",
+    "explanation": "$I = \\frac{P \\times R \\times T}{100} \\implies 3000 = \\frac{20000 \\times R \\times 3}{100} \\implies 3000 = 600R \\implies R = 5\\%$."
+  },
+  {
+    "id": 79,
+    "question": "Find the range of the numbers: 14, 27, 8, 19, 35, 21.",
+    "options": [
+      "27",
+      "21",
+      "35",
+      "19"
+    ],
+    "answer": "A",
+    "explanation": "$\\text{Range} = \\text{Maximum value} - \\text{Minimum value} = 35 - 8 = 27$."
+  },
+  {
+    "id": 80,
+    "question": "In how many ways can the letters of the word **MATICS** be arranged?",
+    "options": [
+      "720",
+      "360",
+      "120",
+      "6"
+    ],
+    "answer": "A",
+    "explanation": "The word MATICS consists of 6 distinct letters. Number of arrangements $= 6! = 720$."
+  },
+  {
+    "id": 81,
+    "question": "Convert $43_{10}$ to a number in base two.",
+    "options": [
+      "101011_2",
+      "101101_2",
+      "110101_2",
+      "100111_2"
+    ],
+    "answer": "A",
+    "explanation": "Dividing 43 repeatedly by 2: 43 = 21 R 1, 21 = 10 R 1, 10 = 5 R 0, 5 = 2 R 1, 2 = 1 R 0, 1 = 0 R 1. Reading remainders bottom-up gives $101011_2$."
+  },
+  {
+    "id": 82,
+    "question": "Evaluate without using tables: $\\frac{\\log 81}{\\log 3}$.",
+    "options": [
+      "4",
+      "3",
+      "27",
+      "9"
+    ],
+    "answer": "A",
+    "explanation": "Since $81 = 3^4$, $\\log 81 = \\log (3^4) = 4 \\log 3$. Therefore, $\\frac{4 \\log 3}{\\log 3} = 4$."
+  },
+  {
+    "id": 83,
+    "question": "Simplify: $\\frac{2\\sqrt{3} + \\sqrt{2}}{\\sqrt{3} - \\sqrt{2}}$ by rationalizing the denominator.",
+    "options": [
+      "8 + 3\\sqrt{6}",
+      "6 + 3\\sqrt{6}",
+      "8 + \\sqrt{6}",
+      "4 + 2\\sqrt{6}"
+    ],
+    "answer": "A",
+    "explanation": "Multiply numerator and denominator by $(\\sqrt{3} + \\sqrt{2})$: $\\frac{(2\\sqrt{3} + \\sqrt{2})(\\sqrt{3} + \\sqrt{2})}{3 - 2} = (2\\times 3) + 2\\sqrt{6} + \\sqrt{6} + 2 = 8 + 3\\sqrt{6}$."
+  },
+  {
+    "id": 84,
+    "question": "Solve for $y$: $2^{3y-1} = 32$.",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "answer": "A",
+    "explanation": "Express 32 as a power of 2: $2^{3y-1} = 2^5 \\implies 3y - 1 = 5 \\implies 3y = 6 \\implies y = 2$."
+  },
+  {
+    "id": 85,
+    "question": "Find the sum of the first 10 terms of the Arithmetic Progression (A.P.): $2, 5, 8, 11, ...$",
+    "options": [
+      "155",
+      "145",
+      "165",
+      "175"
+    ],
+    "answer": "A",
+    "explanation": "$a = 2$, $d = 3$, $n = 10$. $S_n = \\frac{n}{2}[2a + (n-1)d] = \\frac{10}{2}[2(2) + 9(3)] = 5[4 + 27] = 5 \\times 31 = 155$."
+  },
+  {
+    "id": 86,
+    "question": "The 3rd term of a Geometric Progression (G.P.) is 12 and the 6th term is 96. Find the first term.",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "6"
+    ],
+    "answer": "A",
+    "explanation": "$T_3 = ar^2 = 12$ and $T_6 = ar^5 = 96$. Divide $T_6$ by $T_3$: $r^3 = \\frac{96}{12} = 8 \\implies r = 2$. Then $a(2^2) = 12 \\implies 4a = 12 \\implies a = 3$."
+  },
+  {
+    "id": 87,
+    "question": "Solve the quadratic equation: $3x^2 - 10x + 3 = 0$.",
+    "options": [
+      "x = 3 \\text{ or } x = \\frac{1}{3}",
+      "x = -3 \\text{ or } x = -\\frac{1}{3}",
+      "x = 1 \\text{ or } x = 3",
+      "x = 2 \\text{ or } x = \\frac{1}{2}"
+    ],
+    "answer": "A",
+    "explanation": "Factorize: $3x^2 - 9x - x + 3 = 0 \\implies 3x(x-3) - 1(x-3) = 0 \\implies (3x-1)(x-3) = 0 \\implies x = 3$ or $x = \\frac{1}{3}$."
+  },
+  {
+    "id": 88,
+    "question": "Find the solution set of the inequality: $x^2 - 5x + 6 \\le 0$.",
+    "options": [
+      "2 \\le x \\le 3",
+      "x \\le 2 \\text{ or } x \\ge 3",
+      "-3 \\le x \\le -2",
+      "0 \\le x \\le 5"
+    ],
+    "answer": "A",
+    "explanation": "Factorize: $(x-2)(x-3) \\le 0$. The roots are 2 and 3. Testing intervals shows the expression is negative or zero between 2 and 3: $2 \\le x \\le 3$."
+  },
+  {
+    "id": 89,
+    "question": "In a class of 40 students, 25 study Mathematics, 18 study Physics, and 8 study both. How many students study neither subject?",
+    "options": [
+      "5",
+      "7",
+      "3",
+      "10"
+    ],
+    "answer": "A",
+    "explanation": "Students studying at least one subject $= 25 + 18 - 8 = 35$. Students studying neither $= 40 - 35 = 5$."
+  },
+  {
+    "id": 90,
+    "question": "Find the determinant of the matrix $A = \\begin{pmatrix} 4 & -2 \\\\ 3 & 5 \\end{pmatrix}$.",
+    "options": [
+      "26",
+      "14",
+      "-26",
+      "20"
+    ],
+    "answer": "A",
+    "explanation": "$\\det(A) = (4)(5) - (-2)(3) = 20 - (-6) = 20 + 6 = 26$."
+  },
+  {
+    "id": 91,
+    "question": "Find $\\frac{dy}{dx}$ if $y = \\frac{2x+1}{x-3}$.",
+    "options": [
+      "-\\frac{7}{(x-3)^2}",
+      "\\frac{7}{(x-3)^2}",
+      "-\\frac{5}{(x-3)^2}",
+      "\\frac{2}{x-3}"
+    ],
+    "answer": "A",
+    "explanation": "Using the quotient rule $\\frac{u'v - uv'}{v^2}$ with $u = 2x+1$ and $v = x-3$: $\\frac{2(x-3) - (2x+1)(1)}{(x-3)^2} = \\frac{2x-6-2x-1}{(x-3)^2} = -\\frac{7}{(x-3)^2}$."
+  },
+  {
+    "id": 92,
+    "question": "Evaluate: $\\int_{1}^{3} (3x^2 - 2x) \\, dx$.",
+    "options": [
+      "18",
+      "20",
+      "16",
+      "22"
+    ],
+    "answer": "A",
+    "explanation": "$\\int (3x^2 - 2x) \\, dx = [x^3 - x^2]_{1}^{3} = (3^3 - 3^2) - (1^3 - 1^2) = (27 - 9) - (1 - 1) = 18$."
+  },
+  {
+    "id": 93,
+    "question": "Find the turning point of the curve $y = x^2 - 6x + 5$ and determine its nature.",
+    "options": [
+      "(3, -4) \\text{ minimum}",
+      "(3, -4) \\text{ maximum}",
+      "(-3, 4) \\text{ minimum}",
+      "(3, 4) \\text{ maximum}"
+    ],
+    "answer": "A",
+    "explanation": "$\\frac{dy}{dx} = 2x - 6 = 0 \\implies x = 3$. At $x=3$, $y = 3^2 - 6(3) + 5 = -4$. Second derivative $\\frac{d^2y}{dx^2} = 2 > 0$, so it is a minimum point $(3, -4)$."
+  },
+  {
+    "id": 94,
+    "question": "Find the equation of the line passing through $(2, 3)$ with gradient 4.",
+    "options": [
+      "y = 4x - 5",
+      "y = 4x + 5",
+      "y = 4x - 11",
+      "y = 2x + 1"
+    ],
+    "answer": "A",
+    "explanation": "Using point-slope form $y - y_1 = m(x - x_1)$: $y - 3 = 4(x - 2) \\implies y - 3 = 4x - 8 \\implies y = 4x - 5$."
+  },
+  {
+    "id": 95,
+    "question": "Calculate the angle between the lines $y = x + 2$ and $y = \\sqrt{3}x - 1$.",
+    "options": [
+      "15^\\circ",
+      "30^\\circ",
+      "45^\\circ",
+      "60^\\circ"
+    ],
+    "answer": "A",
+    "explanation": "Gradients are $m_1 = 1 (\\theta_1 = 45^\\circ)$ and $m_2 = \\sqrt{3} (\\theta_2 = 60^\\circ)$. The angle between the lines is $\\theta_2 - \\theta_1 = 60^\\circ - 45^\\circ = 15^\\circ$."
+  },
+  {
+    "id": 96,
+    "question": "Find the radius of the circle given by the equation $x^2 + y^2 - 4x + 6y - 12 = 0$.",
+    "options": [
+      "5",
+      "25",
+      "\\sqrt{12}",
+      "7"
+    ],
+    "answer": "A",
+    "explanation": "Rewrite as $(x-2)^2 - 4 + (y+3)^2 - 9 - 12 = 0 \\implies (x-2)^2 + (y+3)^2 = 25$. Radius $r = \\sqrt{25} = 5$."
+  },
+  {
+    "id": 97,
+    "question": "Evaluate: $\\cos 120^\\circ$.",
+    "options": [
+      "-\\frac{1}{2}",
+      "\\frac{1}{2}",
+      "-\\frac{\\sqrt{3}}{2}",
+      "\\frac{\\sqrt{3}}{2}"
+    ],
+    "answer": "A",
+    "explanation": "In the second quadrant, cosine is negative: $\\cos 120^\\circ = -\\cos(180^\\circ - 120^\\circ) = -\\cos 60^\\circ = -\\frac{1}{2}$."
+  },
+  {
+    "id": 98,
+    "question": "If $\\tan \\theta = \\frac{5}{12}$ and $\\theta$ is acute, find the value of $\\sin \\theta + \\cos \\theta$.",
+    "options": [
+      "\\frac{17}{13}",
+      "\\frac{12}{13}",
+      "\\frac{5}{13}",
+      "\\frac{7}{13}"
+    ],
+    "answer": "A",
+    "explanation": "Opposite $= 5$, Adjacent $= 12$, Hypotenuse $= \\sqrt{5^2 + 12^2} = 13$. Thus $\\sin \\theta = \\frac{5}{13}$ and $\\cos \\theta = \\frac{12}{13}$. $\\sin \\theta + \\cos \\theta = \\frac{5+12}{13} = \\frac{17}{13}$."
+  },
+  {
+    "id": 99,
+    "question": "The angle of elevation of the top of a tower from a point on the ground 30m away from its base is $30^\\circ$. Find the height of the tower.",
+    "options": [
+      "10\\sqrt{3}\\text{ m}",
+      "30\\sqrt{3}\\text{ m}",
+      "15\\text{ m}",
+      "20\\text{ m}"
+    ],
+    "answer": "A",
+    "explanation": "$\\tan 30^\\circ = \\frac{h}{30} \\implies h = 30 \\tan 30^\\circ = 30 \\left(\\frac{1}{\\sqrt{3}}\\right) = \\frac{30\\sqrt{3}}{3} = 10\\sqrt{3}\\text{ m}$."
+  },
+  {
+    "id": 100,
+    "question": "Find the mean deviation of the set of numbers: 3, 6, 7, 8, 11.",
+    "options": ["2", "2.4", "3", "1.8"],
+    "answer": "A",
+    "explanation": "Mean $\\mu = \\frac{3+6+7+8+11}{5} = 7$. Absolute deviations: $|3-7|=4, |6-7|=1, |7-7|=0, |8-7|=1, |11-7|=4$. Sum $= 10$. Mean deviation $= \\frac{10}{5} = 2$."
+  },
+  {
+    "id": 101,
+    "question": "The mean of five numbers is 12. If a sixth number is added, the new mean becomes 14. Find the sixth number.",
+    "options": ["24", "22", "20", "26"],
+    "answer": "A",
+    "explanation": "Sum of 5 numbers $= 5 \\times 12 = 60$. Sum of 6 numbers $= 6 \\times 14 = 84$. Sixth number $= 84 - 60 = 24$."
+  },
+  {
+    "id": 102,
+    "question": "A bag contains 5 red balls and 3 blue balls. If two balls are drawn at random one after another without replacement, find the probability that both are red.",
+    "options": ["$\\frac{5}{14}$", "$\\frac{25}{64}$", "$\\frac{15}{56}$", "$\\frac{5}{28}$"],
+    "answer": "A",
+    "explanation": "$P(\\text{1st Red}) = \\frac{5}{8}$, $P(\\text{2nd Red}) = \\frac{4}{7}$. $P(\\text{both Red}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$."
+  },
+  {
+    "id": 103,
+    "question": "In how many ways can a committee of 3 people be chosen from a group of 7 people?",
+    "options": ["35", "210", "42", "70"],
+    "answer": "A",
+    "explanation": "Combination formula $^nC_r = \\frac{n!}{r!(n-r)!}$: $^7C_3 = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35$."
+  },
+  {
+    "id": 104,
+    "question": "Express the binary fraction $0.101_2$ as a base ten fraction.",
+    "options": ["$\\frac{5}{8}$", "$\\frac{3}{8}$", "$\\frac{5}{4}$", "$\\frac{1}{2}$"],
+    "answer": "A",
+    "explanation": "$0.101_2 = 1 \\times 2^{-1} + 0 \\times 2^{-2} + 1 \\times 2^{-3} = \\frac{1}{2} + 0 + \\frac{1}{8} = \\frac{4+1}{8} = \\frac{5}{8}$."
+  },
+  {
+    "id": 105,
+    "question": "If $y$ varies directly as $x$ and inversely as $z$, and $y = 6$ when $x = 4$ and $z = 2$, find $y$ when $x = 8$ and $z = 3$.",
+    "options": ["8", "6", "12", "9"],
+    "answer": "A",
+    "explanation": "$y = \\frac{kx}{z} \\implies 6 = \\frac{k(4)}{2} \\implies 2k = 6 \\implies k = 3$. When $x = 8, z = 3$: $y = \\frac{3(8)}{3} = 8$."
+  },
+  {
+    "id": 106,
+    "question": "A man bought an article for ₦12,000 and sold it for ₦15,000. Calculate his percentage profit.",
+    "options": ["$25\\%$", "$20\\%$", "$30\\%$", "$15\\%$"],
+    "answer": "A",
+    "explanation": "Profit $= 15000 - 12000 = 3000$. Percentage profit $= \\frac{3000}{12000} \\times 100\\% = 25\\%$."
+  },
+  {
+    "id": 107,
+    "question": "Find the sum of the interior angles of a polygon with 8 sides (octagon).",
+    "options": ["$1080^\\circ$", "$1440^\\circ$", "$900^\\circ$", "$1260^\\circ$"],
+    "answer": "A",
+    "explanation": "Sum of interior angles $= (n-2) \\times 180^\\circ = (8-2) \\times 180^\\circ = 6 \\times 180^\\circ = 1080^\\circ$."
+  },
+  {
+    "id": 108,
+    "question": "Find the volume of a sphere of radius $3\\text{ cm}$ in terms of $\\pi$.",
+    "options": ["$36\\pi\\text{ cm}^3$", "$18\\pi\\text{ cm}^3$", "$108\\pi\\text{ cm}^3$", "$27\\pi\\text{ cm}^3$"],
+    "answer": "A",
+    "explanation": "$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (3^3) = \\frac{4}{3}\\pi (27) = 36\\pi\\text{ cm}^3$."
+  },
+  {
+    "id": 109,
+    "question": "Find the length of an arc of a circle of radius $14\\text{ cm}$ which subtends an angle of $60^\\circ$ at the center. (Take $\\pi = \\frac{22}{7}$)",
+    "options": ["$14.67\\text{ cm}$", "$22.00\\text{ cm}$", "$7.33\\text{ cm}$", "$29.33\\text{ cm}$"],
+    "answer": "A",
+    "explanation": "Length of arc $= \\frac{\\theta}{360} \\times 2\\pi r = \\frac{60}{360} \\times 2 \\times \\frac{22}{7} \\times 14 = \\frac{1}{6} \\times 88 = 14.67\\text{ cm}$."
+  },
+  {
+    "id": 110,
+    "question": "Find the range of values of $x$ for which $2x - 3 > 7$.",
+    "options": ["$x > 5$", "$x < 5$", "$x > 2$", "$x < 2$"],
+    "answer": "A",
+    "explanation": "$2x > 7 + 3 \\implies 2x > 10 \\implies x > 5$."
+  },
+  {
+    "id": 111,
+    "question": "Evaluate $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$.",
+    "options": ["4", "2", "0", "Undefined"],
+    "answer": "A",
+    "explanation": "Factorize numerator: $\\frac{(x-2)(x+2)}{x-2} = x+2$. Taking the limit as $x \\to 2$: $2 + 2 = 4$."
+  },
+  {
+    "id": 112,
+    "question": "If $\\mathbf{a} = 3\\mathbf{i} + 4\\mathbf{j}$ and $\\mathbf{b} = \\mathbf{i} - 2\\mathbf{j}$, find the magnitude of $\\mathbf{a} + \\mathbf{b}$.",
+    "options": ["$2\\sqrt{5}$", "5", "$4\\sqrt{2}$", "6"],
+    "answer": "A",
+    "explanation": "$\\mathbf{a} + \\mathbf{b} = (3+1)\\mathbf{i} + (4-2)\\mathbf{j} = 4\\mathbf{i} + 2\\mathbf{j}$. Magnitude $= \\sqrt{4^2 + 2^2} = \\sqrt{16 + 4} = \\sqrt{20} = 2\\sqrt{5}$."
+  },
+  {
+    "id": 113,
+    "question": "Calculate the standard deviation of the numbers: 2, 4, 6, 8, 10.",
+    "options": ["$2\\sqrt{2}$", "2", "$\\sqrt{5}$", "8"],
+    "answer": "A",
+    "explanation": "Mean $\\mu = 6$. Deviations: $-4, -2, 0, 2, 4$. Squared deviations: $16, 4, 0, 4, 16$. Sum $= 40$. Variance $= \\frac{40}{5} = 8$. Standard deviation $= \\sqrt{8} = 2\\sqrt{2}$."
+  },
+  {
+    "id": 114,
+    "question": "If a card is drawn at random from a standard deck of 52 playing cards, what is the probability of drawing a King or a Heart?",
+    "options": ["$\\frac{4}{13}$", "$\\frac{17}{52}$", "$\\frac{9}{26}$", "$\\frac{1}{4}$"],
+    "answer": "A",
+    "explanation": "$P(\\text{King}) = \\frac{4}{52}$, $P(\\text{Heart}) = \\frac{13}{52}$, $P(\\text{King and Heart}) = \\frac{1}{52}$. $P(\\text{King or Heart}) = \\frac{4 + 13 - 1}{52} = \\frac{16}{52} = \\frac{4}{13}$."
+  },
+  {
+    "id": 115,
+    "question": "Solve for $x$ in the equation: $\\log_{10}(x+3) + \\log_{10} 2 = 1$.",
+    "options": ["2", "3", "5", "1"],
+    "answer": "A",
+    "explanation": "Using logarithm product rule: $\\log_{10}[2(x+3)] = 1 \\implies 2(x+3) = 10^1 \\implies 2x + 6 = 10 \\implies 2x = 4 \\implies x = 2$."
+  },
+  {
+    "id": 116,
+    "question": "Find the perimeter of a sector of a circle of radius $7\\text{ cm}$ with a central angle of $90^\\circ$. (Take $\\pi = \\frac{22}{7}$)",
+    "options": ["$25\\text{ cm}$", "$11\\text{ cm}$", "$18\\text{ cm}$", "$32\\text{ cm}$"],
+    "answer": "A",
+    "explanation": "Arc length $= \\frac{90}{360} \\times 2 \\times \\frac{22}{7} \\times 7 = 11\\text{ cm}$. Total perimeter $= \\text{Arc length} + 2r = 11 + 2(7) = 25\\text{ cm}$."
+  },
+  {
+    "id": 117,
+    "question": "Simplify: $\\frac{x^2 - 9}{x^2 - 5x + 6}$.",
+    "options": ["$\\frac{x+3}{x-2}$", "$\\frac{x-3}{x-2}$", "$\\frac{x+3}{x+2}$", "$\\frac{x-3}{x+2}$"],
+    "answer": "A",
+    "explanation": "Factorize numerator and denominator: $\\frac{(x-3)(x+3)}{(x-3)(x-2)} = \\frac{x+3}{x-2}$."
+  },
+  {
+    "id": 118,
+    "question": "Find the 5th term of the Geometric Progression: $3, 6, 12, 24, ...$",
+    "options": ["48", "96", "36", "72"],
+    "answer": "A",
+    "explanation": "$a = 3$, $r = 2$. $T_5 = ar^{5-1} = 3(2^4) = 3(16) = 48$."
+  },
+  {
+    "id": 119,
+    "question": "The binary operation $*$ is defined on real numbers by $a * b = a^2 + b - ab$. Evaluate $3 * 2$.",
+    "options": ["5", "7", "11", "3"],
+    "answer": "A",
+    "explanation": "$3 * 2 = 3^2 + 2 - (3)(2) = 9 + 2 - 6 = 5$."
+  },
+  {
+    "id": 120,
+    "question": "Find the area of a trapezium with parallel sides of lengths $8\\text{ cm}$ and $12\\text{ cm}$, and vertical height $5\\text{ cm}$.",
+    "options": ["$50\\text{ cm}^2$", "$100\\text{ cm}^2$", "$40\\text{ cm}^2$", "$60\\text{ cm}^2$"],
+    "answer": "A",
+    "explanation": "$\\text{Area} = \\frac{1}{2}(a + b)h = \\frac{1}{2}(8 + 12)(5) = \\frac{1}{2}(20)(5) = 50\\text{ cm}^2$."
+  },
+  {
+    "id": 121,
+    "question": "Find the value of $x$ for which $3^{2x+1} = 81$.",
+    "options": ["1.5", "2", "2.5", "1"],
+    "answer": "A",
+    "explanation": "Express 81 as a power of 3: $3^{2x+1} = 3^4 \\implies 2x + 1 = 4 \\implies 2x = 3 \\implies x = 1.5$."
+  },
+  {
+    "id": 122,
+    "question": "Evaluate: $\\int_{0}^{\\pi/2} \\cos x \\, dx$.",
+    "options": ["1", "0", "-1", "$\\pi$"],
+    "answer": "A",
+    "explanation": "$\\int \\cos x \\, dx = [\\sin x]_{0}^{\\pi/2} = \\sin(\\pi/2) - \\sin(0) = 1 - 0 = 1$."
+  },
+  {
+    "id": 123,
+    "question": "A fair die is rolled twice. What is the probability of getting a total score of 7?",
+    "options": ["$\\frac{1}{6}$", "$\\frac{5}{36}$", "$\\frac{1}{12}$", "$\\frac{7}{36}$"],
+    "answer": "A",
+    "explanation": "Favorable outcomes for sum of 7: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ — total 6 outcomes. Total possible outcomes $= 36$. $P(\\text{sum}=7) = \\frac{6}{36} = \\frac{1}{6}$."
+  },
+  {
+    "id": 124,
+    "question": "Find the gradient of the curve $y = 2x^3 - 5x + 3$ at $x = 2$.",
+    "options": ["19", "12", "14", "24"],
+    "answer": "A",
+    "explanation": "$\\frac{dy}{dx} = 6x^2 - 5$. At $x = 2$: $6(2^2) - 5 = 6(4) - 5 = 24 - 5 = 19$."
+  },
+  {
+    "id": 125,
+    "question": "Express $0.000345$ in standard form.",
+    "options": ["$3.45 \\times 10^{-4}$", "$3.45 \\times 10^{-3}$", "$34.5 \\times 10^{-5}$", "$3.45 \\times 10^{-5}$"],
+    "answer": "A",
+    "explanation": "Moving the decimal point 4 places to the right gives $3.45 \\times 10^{-4}$."
+  },
+  {
+    "id": 126,
+    "question": "If the inverse of matrix $A = \\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}$ is $A^{-1}$, find $A^{-1}$.",
+    "options": [
+      "$\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}$",
+      "$\\begin{pmatrix} -2 & 1 \\\\ 3 & -2 \\end{pmatrix}$",
+      "$\\begin{pmatrix} 2 & 3 \\\\ 1 & 2 \\end{pmatrix}$",
+      "$\\begin{pmatrix} -2 & -1 \\\\ -3 & -2 \\end{pmatrix}$"
+    ],
+    "answer": "A",
+    "explanation": "$\\det(A) = (2)(2) - (1)(3) = 4 - 3 = 1$. The adjugate matrix swap main diagonal and negate off-diagonal elements: $\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}$."
+  },
+  {
+    "id": 127,
+    "question": "Find the value of $k$ if $x - 2$ is a factor of $x^3 - 3x^2 + kx - 4$.",
+    "options": ["4", "2", "-4", "8"],
+    "answer": "A",
+    "explanation": "By Factor Theorem, $f(2) = 0$: $2^3 - 3(2^2) + k(2) - 4 = 0 \\implies 8 - 12 + 2k - 4 = 0 \\implies 2k - 8 = 0 \\implies k = 4$."
+  },
+  {
+    "id": 128,
+    "question": "Simplify: $\\frac{\\sqrt{50} - \\sqrt{18}}{\\sqrt{8}}$.",
+    "options": ["1", "2", "$\\sqrt{2}$", "$\\frac{1}{2}$"],
+    "answer": "A",
+    "explanation": "Simplify surds: $\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{18} = 3\\sqrt{2}$, $\\sqrt{8} = 2\\sqrt{2}$. So $\\frac{5\\sqrt{2} - 3\\sqrt{2}}{2\\sqrt{2}} = \\frac{2\\sqrt{2}}{2\\sqrt{2}} = 1$."
+  },
+  {
+    "id": 129,
+    "question": "Find the distance between the points $P(2, -3)$ and $Q(-2, 0)$.",
+    "options": ["5", "25", "$\\sqrt{7}$", "7"],
+    "answer": "A",
+    "explanation": "Distance $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(-2 - 2)^2 + (0 - (-3))^2} = \\sqrt{(-4)^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$."
+  },
+  {
+    "id": 130,
+    "question": "Find the midpoint of the line segment joining $(4, 8)$ and $(-2, 2)$.",
+    "options": ["$(1, 5)$", "$(3, 5)$", "$(2, 6)$", "$(1, 3)$"],
+    "answer": "A",
+    "explanation": "Midpoint $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right) = \\left(\\frac{4 + (-2)}{2}, \\frac{8 + 2}{2}\\right) = (1, 5)$."
+  },
+  {
+    "id": 131,
+    "question": "Calculate the simple interest on ₦40,000 for 3 years at $5\\%$ per annum.",
+    "options": ["₦6,000", "₦4,000", "₦8,000", "₦12,000"],
+    "answer": "A",
+    "explanation": "$I = \\frac{P \\times R \\times T}{100} = \\frac{40000 \\times 5 \\times 3}{100} = 6000$."
+  },
+  {
+    "id": 132,
+    "question": "If $2x + y = 7$ and $x - y = 2$, find the value of $xy$.",
+    "options": ["3", "6", "2", "4"],
+    "answer": "A",
+    "explanation": "Add equations: $3x = 9 \\implies x = 3$. Substitute into $x - y = 2 \\implies 3 - y = 2 \\implies y = 1$. Product $xy = 3 \\times 1 = 3$."
+  },
+  {
+    "id": 133,
+    "question": "Solve for $x$: $\\frac{x+1}{3} - \\frac{x-2}{2} = 1$.",
+    "options": ["2", "-2", "4", "-4"],
+    "answer": "A",
+    "explanation": "Multiply by 6: $2(x+1) - 3(x-2) = 6 \\implies 2x + 2 - 3x + 6 = 6 \\implies -x + 8 = 6 \\implies -x = -2 \\implies x = 2$."
+  },
+  {
+    "id": 134,
+    "question": "Find the sum to infinity of the geometric series: $8 + 4 + 2 + 1 + ...$",
+    "options": ["16", "32", "12", "15"],
+    "answer": "A",
+    "explanation": "First term $a = 8$, common ratio $r = \\frac{1}{2}$. $S_\\infty = \\frac{a}{1 - r} = \\frac{8}{1 - 0.5} = \\frac{8}{0.5} = 16$."
+  },
+  {
+    "id": 135,
+    "question": "If $\\sin \\theta = \\frac{3}{5}$, find the value of $\\tan \\theta$ for an acute angle $\\theta$.",
+    "options": ["$\\frac{3}{4}$", "$\\frac{4}{3}$", "$\\frac{4}{5}$", "$\\frac{3}{5}$"],
+    "answer": "A",
+    "explanation": "Opposite $= 3$, Hypotenuse $= 5 \\implies \\text{Adjacent} = \\sqrt{5^2 - 3^2} = 4$. So $\\tan \\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{3}{4}$."
+  },
+  {
+    "id": 136,
+    "question": "Find the derivative of $y = (2x + 3)^4$ with respect to $x$.",
+    "options": [
+      "$8(2x + 3)^3$",
+      "$4(2x + 3)^3$",
+      "$2(2x + 3)^3$",
+      "$12(2x + 3)^3$"
+    ],
+    "answer": "A",
+    "explanation": "Using Chain Rule: $\\frac{dy}{dx} = 4(2x+3)^3 \\times \\frac{d}{dx}(2x+3) = 4(2x+3)^3 \\times 2 = 8(2x+3)^3$."
+  },
+  {
+    "id": 137,
+    "question": "Find the mode of the numbers: 2, 5, 3, 7, 5, 8, 5, 2, 9.",
+    "options": ["5", "2", "5.1", "7"],
+    "answer": "A",
+    "explanation": "The mode is the number that occurs most frequently. 5 appears three times."
+  },
+  {
+    "id": 138,
+    "question": "A cylinder has a radius of $7\\text{ cm}$ and a height of $10\\text{ cm}$. Calculate its total surface area. (Take $\\pi = \\frac{22}{7}$)",
+    "options": ["$748\\text{ cm}^2$", "$440\\text{ cm}^2$", "$308\\text{ cm}^2$", "$616\\text{ cm}^2$"],
+    "answer": "A",
+    "explanation": "$\\text{Total Surface Area} = 2\\pi r(r + h) = 2 \\times \\frac{22}{7} \\times 7 \\times (7 + 10) = 44 \\times 17 = 748\\text{ cm}^2$."
+  },
+  {
+    "id": 139,
+    "question": "If $y$ is inversely proportional to $x^2$ and $y = 2$ when $x = 3$, find $y$ when $x = 6$.",
+    "options": ["$0.5$", "1", "0.25", "2"],
+    "answer": "A",
+    "explanation": "$y = \\frac{k}{x^2} \\implies 2 = \\frac{k}{3^2} \\implies k = 18$. When $x = 6$: $y = \\frac{18}{6^2} = \\frac{18}{36} = 0.5$."
+  },
+  {
+    "id": 140,
+    "question": "The angle of a sector of a circle of radius $10.5\\text{ cm}$ is $120^\\circ$. Find the area of the sector. (Take $\\pi = \\frac{22}{7}$)",
+    "options": ["$115.5\\text{ cm}^2$", "$231.0\\text{ cm}^2$", "$57.75\\text{ cm}^2$", "$120.0\\text{ cm}^2$"],
+    "answer": "A",
+    "explanation": "$\\text{Area} = \\frac{\\theta}{360} \\times \\pi r^2 = \\frac{120}{360} \\times \\frac{22}{7} \\times (10.5)^2 = \\frac{1}{3} \\times \\frac{22}{7} \\times 110.25 = 115.5\\text{ cm}^2$."
+  },
+  {
+    "id": 141,
+    "question": "If $P = \\{1, 2, 3, 4, 5\\}$ and $Q = \\{2, 4, 6, 8\\}$, find $P \\cap Q$.",
+    "options": ["$\\{2, 4\\}$", "$\\{1, 3, 5\\}$", "$\\{6, 8\\}$", "$\\{1, 2, 3, 4, 5, 6, 8\\}$"],
+    "answer": "A",
+    "explanation": "The intersection $P \\cap Q$ consists of elements common to both sets, which are 2 and 4."
+  },
+  {
+    "id": 142,
+    "question": "In how many distinct ways can the letters of the word 'SUCCESS' be arranged?",
+    "options": ["420", "5040", "210", "840"],
+    "answer": "A",
+    "explanation": "'SUCCESS' has 7 letters with 3 S's and 2 C's. Number of permutations $= \\frac{7!}{3!2!} = \\frac{5040}{6 \\times 2} = \\frac{5040}{12} = 420$."
+  },
+  {
+    "id": 143,
+    "question": "Find the variance of the numbers: 3, 5, 7, 9.",
+    "options": ["5", "4", "$\\sqrt{5}$", "2"],
+    "answer": "A",
+    "explanation": "Mean $\\mu = \\frac{3+5+7+9}{4} = 6$. Squared deviations: $(3-6)^2 = 9, (5-6)^2 = 1, (7-6)^2 = 1, (9-6)^2 = 9$. Variance $= \\frac{9+1+1+9}{4} = \\frac{20}{4} = 5$."
+  },
+  {
+    "id": 144,
+    "question": "Evaluate: $\\log_2 32 - \\log_2 8$.",
+    "options": ["2", "3", "4", "1"],
+    "answer": "A",
+    "explanation": "Using Quotient Rule: $\\log_2 \\left(\\frac{32}{8}\\right) = \\log_2 4 = 2$."
+  },
+  {
+    "id": 145,
+    "question": "The probability that John passes an exam is $\\frac{2}{3}$ and that Mary passes is $\\frac{3}{4}$. What is the probability that both pass?",
+    "options": ["$\\frac{1}{2}$", "$\\frac{5}{12}$", "$\\frac{1}{4}$", "$\\frac{11}{12}$"],
+    "answer": "A",
+    "explanation": "Since events are independent, $P(\\text{both pass}) = \\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12} = \\frac{1}{2}$."
+  },
+  {
+    "id": 146,
+    "question": "Find the equation of the line perpendicular to $y = 2x + 1$ passing through $(0, 4)$.",
+    "options": ["$y = -\\frac{1}{2}x + 4$", "$y = 2x + 4$", "$y = -2x + 4$", "$y = \\frac{1}{2}x + 4$"],
+    "answer": "A",
+    "explanation": "Gradient of given line is 2. Perpendicular gradient $m = -\\frac{1}{2}$. Y-intercept $c = 4$. Equation: $y = -\\frac{1}{2}x + 4$."
+  },
+  {
+    "id": 147,
+    "question": "Find the sum of the roots of the quadratic equation: $2x^2 - 8x + 5 = 0$.",
+    "options": ["4", "-4", "2.5", "-2.5"],
+    "answer": "A",
+    "explanation": "For $ax^2 + bx + c = 0$, sum of roots $= -\\frac{b}{a} = -\\frac{-8}{2} = 4$."
+  },
+  {
+    "id": 148,
+    "question": "Convert $11011_2$ to base ten.",
+    "options": ["27", "25", "29", "23"],
+    "answer": "A",
+    "explanation": "$11011_2 = 1(2^4) + 1(2^3) + 0(2^2) + 1(2^1) + 1(2^0) = 16 + 8 + 0 + 2 + 1 = 27$."
+  },
+  {
+    "id": 149,
+    "question": "Calculate the area of a triangle with sides $a = 6\\text{ cm}$, $b = 8\\text{ cm}$, and included angle $C = 30^\\circ$.",
+    "options": ["$12\\text{ cm}^2$", "$24\\text{ cm}^2$", "$12\\sqrt{3}\\text{ cm}^2$", "$6\\text{ cm}^2$"],
+    "answer": "A",
+    "explanation": "$\\text{Area} = \\frac{1}{2}ab \\sin C = \\frac{1}{2}(6)(8) \\sin 30^\\circ = 24 \\times 0.5 = 12\\text{ cm}^2$."
+  },
+  {
+    "id": 150,
+    "question": "Find the derivative of $y = \\sin(3x)$.",
+    "options": ["$3\\cos(3x)$", "$\\cos(3x)$", "$-3\\cos(3x)$", "$\\frac{1}{3}\\cos(3x)$"],
+    "answer": "A",
+    "explanation": "Using Chain Rule: $\\frac{dy}{dx} = \\cos(3x) \\cdot \\frac{d}{dx}(3x) = 3\\cos(3x)$."
+  },
+  {
+    "id": 151,
+    "question": "Factorize completely: $4x^2 - 9y^2$.",
+    "options": [
+      "$(2x - 3y)(2x + 3y)$",
+      "$(4x - 9y)(x + y)$",
+      "$(2x - 3y)^2$",
+      "$(2x + 3y)^2$"
+    ],
+    "answer": "A",
+    "explanation": "Using difference of two squares $a^2 - b^2 = (a-b)(a+b)$ where $a = 2x$ and $b = 3y$: $(2x - 3y)(2x + 3y)$."
+  },
+  {
+    "id": 152,
+    "question": "Solve the inequality: $\\frac{x}{2} + 3 < 5$.",
+    "options": ["$x < 4$", "$x > 4$", "$x < 16$", "$x < 1$"],
+    "answer": "A",
+    "explanation": "$\\frac{x}{2} < 5 - 3 \\implies \\frac{x}{2} < 2 \\implies x < 4$."
+  },
+  {
+    "id": 153,
+    "question": "Find the 10th term of the sequence: $5, 10, 15, 20, ...$",
+    "options": ["50", "45", "55", "60"],
+    "answer": "A",
+    "explanation": "$a = 5$, $d = 5$. $T_{10} = a + 9d = 5 + 9(5) = 5 + 45 = 50$."
+  },
+  {
+    "id": 154,
+    "question": "If $\\begin{pmatrix} x & 2 \\\\ 3 & 4 \\end{pmatrix}$ has a determinant of 10, find $x$.",
+    "options": ["4", "2", "5", "3"],
+    "answer": "A",
+    "explanation": "$\\det = 4x - 6 = 10 \\implies 4x = 16 \\implies x = 4$."
+  },
+  {
+    "id": 155,
+    "question": "Find the magnitude of the vector $\\mathbf{v} = 6\\mathbf{i} - 8\\mathbf{j}$.",
+    "options": ["10", "14", "2", "100"],
+    "answer": "A",
+    "explanation": "$|\\mathbf{v}| = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$."
+  },
+  {
+    "id": 156,
+    "question": "Evaluate: $\\int (4x^3 + 3x^2) \\, dx$.",
+    "options": ["$x^4 + x^3 + C$", "$12x^2 + 6x + C$", "$x^4 + 3x^3 + C$", "$4x^4 + x^3 + C$"],
+    "answer": "A",
+    "explanation": "$\\int (4x^3 + 3x^2) \\, dx = \\frac{4x^4}{4} + \\frac{3x^3}{3} + C = x^4 + x^3 + C$."
+  },
+  {
+    "id": 157,
+    "question": "Find the bearing of $A$ from $B$ if the bearing of $B$ from $A$ is $060^\\circ$.",
+    "options": ["$240^\\circ$", "$120^\\circ$", "$300^\\circ$", "$150^\\circ$"],
+    "answer": "A",
+    "explanation": "Back bearing $= 60^\\circ + 180^\\circ = 240^\\circ$."
+  },
+  {
+    "id": 158,
+    "question": "Calculate the height of a cone with radius $3\\text{ cm}$ and volume $12\\pi\\text{ cm}^3$.",
+    "options": ["$4\\text{ cm}$", "$12\\text{ cm}$", "$3\\text{ cm}$", "$6\\text{ cm}$"],
+    "answer": "A",
+    "explanation": "$V = \\frac{1}{3}\\pi r^2 h \\implies 12\\pi = \\frac{1}{3}\\pi (3^2) h \\implies 12\\pi = 3\\pi h \\implies h = 4\\text{ cm}$."
+  },
+  {
+    "id": 159,
+    "question": "If $f(x) = 2x^2 - 3x + 1$, find $f(-2)$.",
+    "options": ["15", "3", "-1", "7"],
+    "answer": "A",
+    "explanation": "$f(-2) = 2(-2)^2 - 3(-2) + 1 = 2(4) + 6 + 1 = 8 + 6 + 1 = 15$."
+  },
+  {
+    "id": 160,
+    "question": "What is the probability of picking an even number at random from the set $\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$?",
+    "options": ["$\\frac{1}{2}$", "$\\frac{2}{5}$", "$\\frac{3}{5}$", "$\\frac{1}{5}$"],
+    "answer": "A",
+    "explanation": "Even numbers in the set are $\\{2, 4, 6, 8, 10\\}$ (5 numbers). Probability $= \\frac{5}{10} = \\frac{1}{2}$."
+  },
+  {
+    "id": 161,
+    "question": "Evaluate $\\log_3 27 + \\log_3 1 - \\log_3 9$.",
+    "options": ["1", "2", "0", "3"],
+    "answer": "A",
+    "explanation": "$\\log_3 27 = 3$, $\\log_3 1 = 0$, $\\log_3 9 = 2$. Thus, $3 + 0 - 2 = 1$."
+  },
+  {
+    "id": 162,
+    "question": "If $y = 3x^2 - 4x + 7$, find the equation of the normal to the curve at the point $(1, 6)$.",
+    "options": ["$x + 2y - 13 = 0$", "$2x + y - 8 = 0$", "$x - 2y + 11 = 0$", "$2x - y + 4 = 0$"],
+    "answer": "A",
+    "explanation": "$\\frac{dy}{dx} = 6x - 4$. At $x = 1$, tangent slope $m_t = 6(1) - 4 = 2$. Normal slope $m_n = -\\frac{1}{2}$. Equation: $y - 6 = -\\frac{1}{2}(x - 1) \\implies 2y - 12 = -x + 1 \\implies x + 2y - 13 = 0$."
+  },
+  {
+    "id": 163,
+    "question": "Find the 8th term of the A.P. $-3, -1, 1, 3, ...$",
+    "options": ["11", "13", "15", "9"],
+    "answer": "A",
+    "explanation": "$a = -3$, $d = 2$. $T_8 = a + 7d = -3 + 7(2) = -3 + 14 = 11$."
+  },
+  {
+    "id": 164,
+    "question": "Find the radius of a sphere whose surface area is $154\\text{ cm}^2$. (Take $\\pi = \\frac{22}{7}$)",
+    "options": ["$3.5\\text{ cm}$", "$7.0\\text{ cm}$", "$2.1\\text{ cm}$", "$4.2\\text{ cm}$"],
+    "answer": "A",
+    "explanation": "$A = 4\\pi r^2 = 154 \\implies 4 \\times \\frac{22}{7} \\times r^2 = 154 \\implies \\frac{88}{7} r^2 = 154 \\implies r^2 = 12.25 \\implies r = 3.5\\text{ cm}$."
+  },
+  {
+    "id": 165,
+    "question": "Solve the simultaneous equations: $3x - 2y = 12$ and $x + 2y = 4$.",
+    "options": ["$x = 4, y = 0$", "$x = 2, y = 1$", "$x = 3, y = -1.5$", "$x = 0, y = -6$"],
+    "answer": "A",
+    "explanation": "Add both equations: $4x = 16 \\implies x = 4$. Substitute into second equation: $4 + 2y = 4 \\implies 2y = 0 \\implies y = 0$."
+  },
+  {
+    "id": 166,
+    "question": "A box contains 4 red, 3 green, and 5 yellow balls. If a ball is selected at random, find the probability that it is NOT red.",
+    "options": ["$\\frac{2}{3}$", "$\\frac{1}{3}$", "$\\frac{5}{12}$", "$\\frac{7}{12}$"],
+    "answer": "A",
+    "explanation": "Total balls $= 4 + 3 + 5 = 12$. Non-red balls $= 3 + 5 = 8$. $P(\\text{NOT red}) = \\frac{8}{12} = \\frac{2}{3}$."
+  },
+  {
+    "id": 167,
+    "question": "Simplify $\\frac{3}{x-2} - \\frac{2}{x+1}$.",
+    "options": ["$\\frac{x+7}{(x-2)(x+1)}$", "$\\frac{x-1}{(x-2)(x+1)}$", "$\\frac{x+1}{(x-2)(x+1)}$", "$\\frac{5x-1}{(x-2)(x+1)}$"],
+    "answer": "A",
+    "explanation": "Combining over common denominator: $\\frac{3(x+1) - 2(x-2)}{(x-2)(x+1)} = \\frac{3x + 3 - 2x + 4}{(x-2)(x+1)} = \\frac{x + 7}{(x-2)(x+1)}$."
+  },
+  {
+    "id": 168,
+    "question": "Evaluate: $\\int_{0}^{1} (6x^2 + 4x - 1) \\, dx$.",
+    "options": ["3", "4", "2", "5"],
+    "answer": "A",
+    "explanation": "$\\int (6x^2 + 4x - 1) \\, dx = [2x^3 + 2x^2 - x]_{0}^{1} = (2(1)^3 + 2(1)^2 - 1) - 0 = 2 + 2 - 1 = 3$."
+  },
+  {
+    "id": 169,
+    "question": "Find the matrix product $\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} \\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix}$.",
+    "options": [
+      "$\\begin{pmatrix} 4 & 6 \\\\ 10 & 12 \\end{pmatrix}$",
+      "$\\begin{pmatrix} 2 & 6 \\\\ 10 & 12 \\end{pmatrix}$",
+      "$\\begin{pmatrix} 4 & 0 \\\\ 3 & 12 \\end{pmatrix}$",
+      "$\\begin{pmatrix} 3 & 2 \\\\ 4 & 7 \\end{pmatrix}$"
+    ],
+    "answer": "A",
+    "explanation": "Row 1: $[(1\\cdot2)+(2\\cdot1), (1\\cdot0)+(2\\cdot3)] = [4, 6]$. Row 2: $[(3\\cdot2)+(4\\cdot1), (3\\cdot0)+(4\\cdot3)] = [10, 12]$."
+  },
+  {
+    "id": 170,
+    "question": "If $16^x = 64$, find $x$.",
+    "options": ["1.5", "2", "0.75", "2.5"],
+    "answer": "A",
+    "explanation": "$(2^4)^x = 2^6 \\implies 2^{4x} = 2^6 \\implies 4x = 6 \\implies x = 1.5$."
+  },
+  {
+    "id": 171,
+    "question": "Calculate the area of an equilateral triangle of side $6\\text{ cm}$.",
+    "options": ["$9\\sqrt{3}\\text{ cm}^2$", "$18\\sqrt{3}\\text{ cm}^2$", "$36\\sqrt{3}\\text{ cm}^2$", "$12\\text{ cm}^2$"],
+    "answer": "A",
+    "explanation": "$\\text{Area} = \\frac{\\sqrt{3}}{4} s^2 = \\frac{\\sqrt{3}}{4} (6^2) = \\frac{36\\sqrt{3}}{4} = 9\\sqrt{3}\\text{ cm}^2$."
+  },
+  {
+    "id": 172,
+    "question": "Find the geometric mean of 4 and 16.",
+    "options": ["8", "10", "6", "12"],
+    "answer": "A",
+    "explanation": "$\\text{Geometric Mean} = \\sqrt{4 \\times 16} = \\sqrt{64} = 8$."
+  },
+  {
+    "id": 173,
+    "question": "Evaluate $\\lim_{x \\to 3} \\frac{x^2 - 9}{x^2 - 3x}$.",
+    "options": ["2", "1", "3", "0"],
+    "answer": "A",
+    "explanation": "Factorize: $\\frac{(x-3)(x+3)}{x(x-3)} = \\frac{x+3}{x}$. As $x \\to 3$: $\\frac{3+3}{3} = \\frac{6}{3} = 2$."
+  },
+  {
+    "id": 174,
+    "question": "The probability of an event $A$ is $\\frac{3}{8}$. What is the probability that event $A$ does not occur?",
+    "options": ["$\\frac{5}{8}$", "$\\frac{3}{8}$", "$\\frac{1}{8}$", "$\\frac{7}{8}$"],
+    "answer": "A",
+    "explanation": "$P(A') = 1 - P(A) = 1 - \\frac{3}{8} = \\frac{5}{8}$."
+  },
+  {
+    "id": 175,
+    "question": "If $y = \\cos(2x)$, find $\\frac{dy}{dx}$.",
+    "options": ["$-2\\sin(2x)$", "$2\\sin(2x)$", "$-\\sin(2x)$", "$-2\\cos(2x)$"],
+    "answer": "A",
+    "explanation": "Using Chain Rule: $\\frac{dy}{dx} = -\\sin(2x) \\cdot 2 = -2\\sin(2x)$."
+  },
+  {
+    "id": 176,
+    "question": "Find the sum of the first $n$ terms of an A.P. whose first term is 3 and $n$-th term is 21.",
+    "options": ["$12n$", "$24n$", "$18n$", "$6n$"],
+    "answer": "A",
+    "explanation": "$S_n = \\frac{n}{2}(a + l) = \\frac{n}{2}(3 + 21) = \\frac{n}{2}(24) = 12n$."
+  },
+  {
+    "id": 177,
+    "question": "In how many ways can the word 'MATHS' be arranged?",
+    "options": ["120", "24", "60", "720"],
+    "answer": "A",
+    "explanation": "'MATHS' has 5 distinct letters. Number of arrangements $= 5! = 120$."
+  },
+  {
+    "id": 178,
+    "question": "Find the angle between the vectors $\\mathbf{u} = 3\\mathbf{i} + 4\\mathbf{j}$ and $\\mathbf{v} = 4\\mathbf{i} - 3\\mathbf{j}$.",
+    "options": ["$90^\\circ$", "$0^\\circ$", "$45^\\circ$", "$60^\\circ$"],
+    "answer": "A",
+    "explanation": "Dot product $\\mathbf{u} \\cdot \\mathbf{v} = (3)(4) + (4)(-3) = 12 - 12 = 0$. Since dot product is 0, the vectors are perpendicular ($90^\\circ$)."
+  },
+  {
+    "id": 179,
+    "question": "Find the range of the set of numbers: 12, 5, 27, 18, 3, 21.",
+    "options": ["24", "22", "25", "27"],
+    "answer": "A",
+    "explanation": "$\\text{Range} = \\text{Maximum} - \\text{Minimum} = 27 - 3 = 24$."
+  },
+  {
+    "id": 180,
+    "question": "Simplify: $\\frac{1}{1 - \\sin^2 \\theta}$.",
+    "options": ["$\\sec^2 \\theta$", "$\\cos^2 \\theta$", "$\\tan^2 \\theta$", "$\\csc^2 \\theta$"],
+    "answer": "A",
+    "explanation": "Since $1 - \\sin^2 \\theta = \\cos^2 \\theta$, $\\frac{1}{\\cos^2 \\theta} = \\sec^2 \\theta$."
+  },
+  {
+    "id": 181,
+    "question": "Find the coordinates of the center of the circle $x^2 + y^2 + 8x - 10y + 16 = 0$.",
+    "options": ["$(-4, 5)$", "$(4, -5)$", "$(8, -10)$", "$(-8, 10)$"],
+    "answer": "A",
+    "explanation": "Comparing with $x^2 + y^2 + 2gx + 2fy + c = 0$: $2g = 8 \\implies g = 4$, $2f = -10 \\implies f = -5$. Center $= (-g, -f) = (-4, 5)$."
+  },
+  {
+    "id": 182,
+    "question": "A trader marks his goods $20\\%$ above cost price and then allows a discount of $10\\%$. Find his actual percentage profit.",
+    "options": ["$8\\%$", "$10\\%$", "$12\\%$", "$15\\%$"],
+    "answer": "A",
+    "explanation": "Let cost price $= 100$. Marked price $= 120$. Selling price $= 120 - (10\\% \\text{ of } 120) = 120 - 12 = 108$. Profit $= 108 - 100 = 8\\%$."
+  },
+  {
+    "id": 183,
+    "question": "Solve for $x$: $2x^2 + 5x - 3 = 0$.",
+    "options": ["$x = \\frac{1}{2}$ or $x = -3$", "$x = -\\frac{1}{2}$ or $x = 3$", "$x = 1$ or $x = -3$", "$x = \\frac{1}{2}$ or $x = 3$"],
+    "answer": "A",
+    "explanation": "$(2x - 1)(x + 3) = 0 \\implies x = \\frac{1}{2}$ or $x = -3$."
+  },
+  {
+    "id": 184,
+    "question": "Find the maximum value of $y = 5 + 4x - x^2$.",
+    "options": ["9", "5", "4", "7"],
+    "answer": "A",
+    "explanation": "$\\frac{dy}{dx} = 4 - 2x = 0 \\implies x = 2$. At $x = 2$: $y = 5 + 4(2) - (2)^2 = 5 + 8 - 4 = 9$."
+  },
+  {
+    "id": 185,
+    "question": "Convert $75_{10}$ to octal (base 8).",
+    "options": ["$113_8$", "$131_8$", "$105_8$", "$123_8$"],
+    "answer": "A",
+    "explanation": "$75 \\div 8 = 9$ R 3, $9 \\div 8 = 1$ R 1, $1 \\div 8 = 0$ R 1. Reading remainders bottom-up gives $113_8$."
+  },
+  {
+    "id": 186,
+    "question": "Find the volume of a right circular cone with base radius $6\\text{ cm}$ and height $7\\text{ cm}$. (Take $\\pi = \\frac{22}{7}$)",
+    "options": ["$264\\text{ cm}^3$", "$132\\text{ cm}^3$", "$528\\text{ cm}^3$", "$792\\text{ cm}^3$"],
+    "answer": "A",
+    "explanation": "$V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3} \\times \\frac{22}{7} \\times 36 \\times 7 = \\frac{1}{3} \\times 22 \\times 36 = 264\\text{ cm}^3$."
+  },
+  {
+    "id": 187,
+    "question": "Rationalize the denominator: $\\frac{5}{\\sqrt{7} - \\sqrt{2}}$.",
+    "options": [
+      "$\\sqrt{7} + \\sqrt{2}$",
+      "$5(\\sqrt{7} + \\sqrt{2})$",
+      "$\\frac{\\sqrt{7} + \\sqrt{2}}{5}$",
+      "$\\sqrt{7} - \\sqrt{2}$"
+    ],
+    "answer": "A",
+    "explanation": "Multiply numerator and denominator by $(\\sqrt{7} + \\sqrt{2})$: $\\frac{5(\\sqrt{7} + \\sqrt{2})}{7 - 2} = \\frac{5(\\sqrt{7} + \\sqrt{2})}{5} = \\sqrt{7} + \\sqrt{2}$."
+  },
+  {
+    "id": 188,
+    "question": "If $f(x) = x^3 - 2x + 4$, find $f'(2)$.",
+    "options": ["10", "8", "12", "6"],
+    "answer": "A",
+    "explanation": "$f'(x) = 3x^2 - 2$. At $x = 2$: $f'(2) = 3(2^2) - 2 = 12 - 2 = 10$."
+  },
+  {
+    "id": 189,
+    "question": "Find the median of the set of numbers: 14, 7, 22, 19, 3, 11, 18.",
+    "options": ["14", "11", "18", "13"],
+    "answer": "A",
+    "explanation": "Arranging in ascending order: $3, 7, 11, 14, 18, 19, 22$. The middle value (4th position) is 14."
+  },
+  {
+    "id": 190,
+    "question": "Evaluate: $\\int e^{3x} \\, dx$.",
+    "options": [
+      "$\\frac{1}{3}e^{3x} + C$",
+      "$3e^{3x} + C$",
+      "$e^{3x} + C$",
+      "$\\frac{1}{3}e^{x} + C$"
+    ],
+    "answer": "A",
+    "explanation": "$\\int e^{kx} \\, dx = \\frac{1}{k}e^{kx} + C$. For $k = 3$, it yields $\\frac{1}{3}e^{3x} + C$."
+  },
+  {
+    "id": 191,
+    "question": "Find the value of $x$ such that the matrix $\\begin{pmatrix} x & 3 \\\\ 2 & 6 \\end{pmatrix}$ is singular.",
+    "options": ["1", "0", "2", "3"],
+    "answer": "A",
+    "explanation": "A matrix is singular if its determinant is zero: $6x - 6 = 0 \\implies 6x = 6 \\implies x = 1$."
+  },
+  {
+    "id": 192,
+    "question": "Find the 4th term in the expansion of $(x + 2y)^5$.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "By Binomial Theorem, the 4th term is $T_4 = \\binom{5}{3} x^{5-3} (2y)^3 = 10 \\cdot x^2 \\cdot 8y^3 = 80x^2 y^3$."
+  },
+  {
+    "id": 193,
+    "question": "Express $\\frac{5\\pi}{6}$ radians in degrees.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "$\\frac{5\\pi}{6} \\times \\frac{180^\\circ}{\\pi} = 5 \\times 30^\\circ = 150^\\circ$."
+  },
+  {
+    "id": 194,
+    "question": "Find the derivative of $y = \\ln(x^2 + 1)$.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "Using Chain Rule: $\\frac{d}{dx}[\\ln(u)] = \\frac{u'}{u} = \\frac{2x}{x^2 + 1}$."
+  },
+  {
+    "id": 195,
+    "question": "Calculate the compound interest on ₦50,000 for 2 years at $10\\%$ per annum, compounded annually.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "Total Amount $A = P(1 + r)^n = 50000(1 + 0.10)^2 = 50000(1.21) = 60,500$. Compound Interest $= 60,500 - 50,000 = 10,500$."
+  },
+  {
+    "id": 196,
+    "question": "If $\\mathbf{a} = 2\\mathbf{i} + 5\\mathbf{j}$ and $\\mathbf{b} = 3\\mathbf{i} - 2\\mathbf{j}$, find $2\\mathbf{a} - \\mathbf{b}$.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "$2\\mathbf{a} = 4\\mathbf{i} + 10\\mathbf{j}$. Then $2\\mathbf{a} - \\mathbf{b} = (4-3)\\mathbf{i} + (10 - (-2))\\mathbf{j} = \\mathbf{i} + 12\\mathbf{j}$."
+  },
+  {
+    "id": 197,
+    "question": "Solve for $x$: $\\log_2 x + \\log_2 4 = 5$.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "$\\log_2 (4x) = 5 \\implies 4x = 2^5 \\implies 4x = 32 \\implies x = 8$."
+  },
+  {
+    "id": 198,
+    "question": "Find the total surface area of a solid cube of side $4\\text{ cm}$.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "Total surface area $= 6 s^2 = 6(4^2) = 6(16) = 96\\text{ cm}^2$."
+  },
+  {
+    "id": 199,
+    "question": "If $y \\propto \\sqrt{x}$ and $y = 6$ when $x = 9$, find $y$ when $x = 25$.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "$y = k\\sqrt{x} \\implies 6 = k\\sqrt{9} \\implies 3k = 6 \\implies k = 2$. When $x = 25$: $y = 2\\sqrt{25} = 2(5) = 10$."
+  },
+  {
+    "id": 200,
+    "question": "Evaluate $\\int_{0}^{\\pi/4} \\sec^2 x \\, dx$.",
+    "options": ["A"],
+    "answer": "A",
+    "explanation": "$\\int \\sec^2 x \\, dx = [\\tan x]_{0}^{\\pi/4} = \\tan(\\pi/4) - \\tan(0) = 1 - 0 = 1$."
   },
   {
     id: 201,

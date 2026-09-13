@@ -5,8 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <!-- ADD THIS tag to force full desktop layout on phones: -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
 
     <title>Join Quiz</title>
 
@@ -23,13 +25,20 @@
 
         <div class="join-card">
 
+
+            <!-- PAGE ICON -->
+
             <div class="join-icon">
-                📝
+
+                <i data-lucide="clipboard-list"></i>
+
             </div>
+
 
             <h1 id="page-title">
                 Join Quiz
             </h1>
+
 
             <p
                 class="join-description"
@@ -39,9 +48,7 @@
             </p>
 
 
-            <!-- ======================================
-                 QUIZ CODE FORM
-            ======================================= -->
+            <!-- QUIZ CODE FORM -->
 
             <div
                 class="form-group"
@@ -63,28 +70,26 @@
             </div>
 
 
-            <!-- ======================================
-                 ERROR MESSAGE
-            ======================================= -->
+            <!-- ERROR MESSAGE -->
 
             <p id="error-message"></p>
 
 
-            <!-- ======================================
-                 JOIN BUTTON
-            ======================================= -->
+            <!-- JOIN BUTTON -->
 
             <button
                 id="join-button"
                 type="button"
             >
-                🚀 Join Quiz
+
+                <i data-lucide="rocket"></i>
+
+                Join Quiz
+
             </button>
 
 
-            <!-- ======================================
-                 WAITING ROOM
-            ======================================= -->
+            <!-- WAITING ROOM -->
 
             <div
                 id="waiting-room"
@@ -93,16 +98,21 @@
             >
 
                 <div class="waiting-icon">
-                    ⏳
+
+                    <i data-lucide="hourglass"></i>
+
                 </div>
+
 
                 <h2>
                     You're In!
                 </h2>
 
+
                 <p id="waiting-quiz-title">
                     Quiz
                 </p>
+
 
                 <p class="waiting-message">
                     You have successfully joined the quiz.
@@ -112,22 +122,29 @@
                     Please wait for the creator to start the quiz.
                 </p>
 
+
                 <div class="waiting-status">
-                    🟡 Waiting for creator...
+
+                    <i data-lucide="circle-dot"></i>
+
+                    Waiting for creator...
+
                 </div>
 
             </div>
 
 
-            <!-- ======================================
-                 BACK BUTTON
-            ======================================= -->
+            <!-- BACK BUTTON -->
 
             <button
                 id="back-button"
                 type="button"
             >
-                ← Back to Dashboard
+
+                <i data-lucide="arrow-left"></i>
+
+                Back to Dashboard
+
             </button>
 
         </div>
@@ -135,7 +152,18 @@
     </div>
 
 
-    <script type="module" src="script/join-quiz.js"></script>
+    <!-- Lucide Icons -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script
+        type="module"
+        src="script/join-quiz.js"
+    ></script>
 
 </body>
 

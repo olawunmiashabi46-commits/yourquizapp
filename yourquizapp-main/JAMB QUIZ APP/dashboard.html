@@ -2,10 +2,21 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
     <title>Student Dashboard</title>
-    <link rel="stylesheet" href="style/dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="style/dashboard.css"
+    >
+
 </head>
 
 <body>
@@ -13,68 +24,153 @@
     <div class="dashboard-container">
 
         <!-- HEADER -->
+
         <div class="dashboard-header">
+
             <div>
+
                 <h1>JAMB QUIZ</h1>
-                <p id="welcome-message">Welcome, Student!</p>
+
+                <p id="welcome-message">
+                    Welcome, Student!
+                </p>
+
             </div>
+
         </div>
 
+
         <!-- DASHBOARD CONTENT -->
+
         <div class="dashboard-content">
 
             <div class="dashboard-card">
 
-                <h2>🎓 Student Dashboard</h2>
-                <p>Welcome to your quiz dashboard. Choose an option below to continue.</p>
+                <h2>
+                    <i data-lucide="graduation-cap"></i>
+                    Student Dashboard
+                </h2>
 
-                <!-- MAIN BUTTONS GRID (2 PER ROW) -->
+                <p>
+                    Welcome to your quiz dashboard. Choose an option below to continue.
+                </p>
+
+
+                <!-- MAIN BUTTONS GRID -->
+
                 <div class="dashboard-actions">
 
-                    <!-- ROW 1 -->
+                    <!-- START QUIZ -->
+
                     <button id="start-quiz-button">
-                        📝 <span>Start Quiz</span>
+
+                        <i data-lucide="clipboard-list"></i>
+
+                        <span>
+                            Start Quiz
+                        </span>
+
                     </button>
+
+
+                    <!-- VIEW RESULTS -->
 
                     <button id="results-button">
-                        📊 <span>View Results</span>
+
+                        <i data-lucide="chart-column"></i>
+
+                        <span>
+                            View Results
+                        </span>
+
                     </button>
 
-                    <!-- ROW 2 -->
+
+                    <!-- LEADERBOARD -->
+
                     <button id="leaderboard-button">
-                        🏆 <span>Leaderboard</span>
+
+                        <i data-lucide="trophy"></i>
+
+                        <span>
+                            Leaderboard
+                        </span>
+
                     </button>
+
+
+                    <!-- JOIN QUIZ -->
 
                     <button id="join-quiz-button">
-                        🎮 <span>Join Quiz</span>
+
+                        <i data-lucide="gamepad-2"></i>
+
+                        <span>
+                            Join Quiz
+                        </span>
+
                     </button>
 
-                    <!-- ROW 3 (Create Quiz sits on the left half, exact same size) -->
+
+                    <!-- CREATE QUIZ -->
+
                     <button id="create-quiz-button">
-                        🎯 <span>Create Quiz</span>
+
+                        <i data-lucide="target"></i>
+
+                        <span>
+                            Create Quiz
+                        </span>
+
                     </button>
 
                 </div>
 
-                <!-- LOGOUT (FULL WIDTH AT BOTTOM) -->
+
+                <!-- LOGOUT -->
+
                 <div class="logout-section">
+
                     <button id="logout-button">
-                        🚪 Logout
+
+                        <i data-lucide="log-out"></i>
+
+                        Logout
+
                     </button>
+
                 </div>
 
             </div>
 
         </div>
 
+
         <!-- FOOTER -->
+
         <footer>
-            <p>JAMB Quiz App © 2026</p>
+
+            <p>
+                JAMB Quiz App © 2026
+            </p>
+
         </footer>
 
     </div>
 
-    <script src="script/dashboard.js"></script>
+
+    <!-- Lucide Icons -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script
+        src="script/dashboard.js"
+    ></script>
+
 </body>
 
 </html>
