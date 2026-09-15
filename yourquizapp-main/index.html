@@ -10,8 +10,10 @@
     <script>
       (function() {
         const loggedInStudent = localStorage.getItem("loggedInStudent");
-        // Only redirect to dashboard if logged in AND NOT coming directly from the dashboard
-        const isComingFromDashboard = document.referrer.includes("dashboard.html");
+        
+        // Checks for either /dashboard OR dashboard.html
+        const referrer = document.referrer.toLowerCase();
+        const isComingFromDashboard = referrer.includes("dashboard");
 
         if (loggedInStudent && !isComingFromDashboard) {
           window.location.replace("dashboard.html");
