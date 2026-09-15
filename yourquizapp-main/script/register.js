@@ -102,8 +102,7 @@ registerButton.addEventListener('click', async function () {
             password: password
         };
 
-        localStorage.setItem('loggedInStudent', JSON.stringify(loggedInStudentData));
-
+        // Save account record to studentAccounts list
         const accounts = JSON.parse(localStorage.getItem('studentAccounts')) || [];
         const existingIndex = accounts.findIndex(acc => (acc.username || '').toLowerCase() === username);
 
@@ -114,7 +113,10 @@ registerButton.addEventListener('click', async function () {
         }
 
         localStorage.setItem('studentAccounts', JSON.stringify(accounts));
-        window.location.href = 'dashboard.html';
+
+        // Notify student and redirect to login page
+        alert('Registration successful! Please login with your new account.');
+        window.location.href = 'login.html';
 
     } catch (error) {
         console.error('Registration error:', error);

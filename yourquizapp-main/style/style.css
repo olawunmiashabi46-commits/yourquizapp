@@ -164,3 +164,28 @@ button:active {
     font-size: 14px;
     font-weight: 600;
 }
+
+/* ======================================
+   BACK TO DASHBOARD LINK STYLING
+   ====================================== */
+.back-dashboard-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.back-dashboard-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.back-dashboard-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
