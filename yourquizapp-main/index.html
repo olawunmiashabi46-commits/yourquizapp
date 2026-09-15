@@ -10,7 +10,7 @@
     <script>
       (function() {
         const loggedInStudent = localStorage.getItem("loggedInStudent");
-        // If logged in and NOT coming directly from the dashboard setup button, send to dashboard
+        // Only redirect if logged in and NOT coming from the dashboard's "Start Quiz" button
         const isComingFromDashboard = document.referrer.includes("dashboard.html");
 
         if (loggedInStudent && !isComingFromDashboard) {
@@ -71,9 +71,9 @@
 
     <script src="script/script.js"></script>
 
-    <!-- Reveal Back to Dashboard link for logged-in students -->
+    <!-- REVEAL BACK TO DASHBOARD LINK -->
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const loggedInStudent = localStorage.getItem("loggedInStudent");
         if (loggedInStudent) {
           const backContainer = document.getElementById("back-to-dashboard-container");
