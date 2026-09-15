@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <!-- Force desktop-style scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SMART REDIRECT FOR LOGGED-IN USERS -->
+    <script>
+      (function() {
+        const loggedInStudent = localStorage.getItem("loggedInStudent");
+        // If logged in and NOT coming directly from the dashboard setup button, send to dashboard
+        const isComingFromDashboard = document.referrer.includes("dashboard.html");
+
+        if (loggedInStudent && !isComingFromDashboard) {
+          window.location.replace("dashboard.html");
+        }
+      })();
+    </script>
+
     <title>JAMB Quiz</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -47,7 +61,7 @@
             <!-- ERROR -->
             <p id="error-message"></p>
 
-            <!-- BACK TO DASHBOARD LINK (Placed below Start Quiz button) -->
+            <!-- BACK TO DASHBOARD LINK -->
             <div id="back-to-dashboard-container" class="back-dashboard-container hidden">
                 <a href="dashboard.html" class="back-dashboard-link">← Back to Dashboard</a>
             </div>
