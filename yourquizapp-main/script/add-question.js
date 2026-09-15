@@ -122,15 +122,15 @@ questionForm.addEventListener("submit", async (event) => {
     // ======================================
 
     const questionData = {
-        "quiz-id": quizId,
-        question: question,
-        "option-a": optionA,
-        "option-b": optionB,
-        "option-c": optionC,
-        "option-d": optionD,
-        "correct-answer": correctAnswer,
-        explanation: explanation || null
-    };
+    quiz_id: quizId,                      // match your quiz_id column
+    question_text: questionInput.value,   // changed from 'question' to 'question_text'
+    option_a: optionAInput.value,         // changed from 'option-a'
+    option_b: optionBInput.value,         // changed from 'option-b'
+    option_c: optionCInput.value,         // changed from 'option-c'
+    option_d: optionDInput.value,         // changed from 'option-d'
+    "correct-answer": correctAnswerSelect.value, // wrap in quotes due to hyphen
+    explanation: explanationInput.value
+};
 
 
     // ======================================
