@@ -542,18 +542,20 @@ async function finishQuiz() {
     if (quizId) {
         try {
             const { data, error } = await supabase
-                .from('quiz_results')
-                .insert([{
-                    quiz_id: quizId,
-                    student_id: studentId,
-                    student_name: studentName,
-                    score: totalScore,
-                    total_questions: totalQuestionsCount,
-                    percentage: percentageScore
-                }])
-                .select()
-                .single();
-
+    .from('quiz_results')
+    .insert([{
+        quiz_id: quizId,
+        student_id: studentId,
+        student_name: studentName,
+        total_questions: totalQuestionsCount,
+        correct_answers: totalScore,
+        score: totalScore,
+        completed_at: new Date().toISOString(),
+        submitted_at: new Date().toISOString()
+    }])
+    .select()
+    .single();
+    
             if (error) {
                 console.error('Supabase result error:', error);
             } else {
