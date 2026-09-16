@@ -565,5 +565,5 @@ async function finishQuiz() {
     }
 
     // GO TO RESULT PAGE
-    window.location.href = 'results.html';
+    window.location.href = 'result.html';
 }
