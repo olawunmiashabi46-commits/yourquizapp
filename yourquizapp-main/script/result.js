@@ -42,8 +42,7 @@ const overallScoreElement = document.getElementById('overall-score');
 const performanceTitleElement = document.getElementById('performance-title');
 const performanceMessageElement = document.getElementById('performance-message');
 const scoresContainer = document.getElementById('scores-container');
-const feedbackContainer = document.getElementById('feedback-container');
-
+const improveContainer = document.getElementById('improve-container') || document.getElementById('area-to-improve');
 if (studentNameElement) studentNameElement.textContent = `Student: ${studentName}`;
 if (performanceNameElement) performanceNameElement.textContent = studentName;
 if (totalQuestionsElement) totalQuestionsElement.textContent = totalQuestions;
@@ -66,6 +65,12 @@ if (performanceMessageElement) performanceMessageElement.textContent = performan
 
 if (feedbackContainer) {
     feedbackContainer.textContent = performance.message;
+}
+
+if (improveContainer) {
+    improveContainer.textContent = overallScore >= 70 
+        ? "Great mastery overall! Focus on maintaining speed and accuracy across all subjects." 
+        : "Re-read key textbook topics and practice more practice tests on your lowest scoring subjects.";
 }
 
 // ======================================
