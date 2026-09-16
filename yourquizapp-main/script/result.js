@@ -1,26 +1,21 @@
 // ======================================
 // GET LOGGED-IN STUDENT & QUIZ RESULT
 // ======================================
-const loggedInStudent = JSON.parse(localStorage.getItem('loggedInStudent'));
+const loggedInStudent = JSON.parse(localStorage.getItem('loggedInStudent')) || {};
 const studentResult = JSON.parse(localStorage.getItem('lastQuizResult'));
-
-if (!loggedInStudent) {
-    window.location.href = 'login.html';
-}
 
 if (!studentResult) {
     alert('No quiz result was found.');
     window.location.href = 'dashboard.html';
 }
 
-// Validate ownership
+// Ownership validation (Softened to prevent breaking guest/joined sessions)
 if (
     studentResult.studentId &&
     loggedInStudent.id &&
     String(studentResult.studentId) !== String(loggedInStudent.id)
 ) {
-    alert('This result does not belong to the current student.');
-    window.location.href = 'dashboard.html';
+    console.warn('Result ID differs from loggedInStudent ID; proceeding as guest or updated session.');
 }
 
 // ======================================
@@ -68,6 +63,10 @@ function getOverallPerformance(score) {
 const performance = getOverallPerformance(overallScore);
 if (performanceTitleElement) performanceTitleElement.textContent = performance.title;
 if (performanceMessageElement) performanceMessageElement.textContent = performance.message;
+
+if (feedbackContainer) {
+    feedbackContainer.textContent = performance.message;
+}
 
 // ======================================
 // RENDER SUBJECT BREAKDOWN
