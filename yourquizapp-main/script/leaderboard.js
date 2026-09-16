@@ -27,7 +27,8 @@ async function fetchLiveLeaderboard() {
             query = query.eq('quiz_id', quizId);
         }
         
-        const { data: results, error } = await query.order('percentage', { ascending: false });
+        // Fixed: Query by 'score' instead of non-existent 'percentage' column
+        const { data: results, error } = await query.order('score', { ascending: false });
 
         if (error) throw error;
 
@@ -58,7 +59,19 @@ async function fetchLiveLeaderboard() {
 function renderLeaderboard(results) {
     leaderboardContainer.innerHTML = '';
 
-    results.forEach((entry, index) => {
+    // Filter out duplicates so each student only shows their best/latest attempt
+    const uniqueStudentResults = [];
+    const seenStudents = new Set();
+
+    results.forEach(entry => {
+        const identifier = entry.student_id || entry.student_name;
+        if (!seenStudents.has(identifier)) {
+            seenStudents.add(identifier);
+            uniqueStudentResults.push(entry);
+        }
+    });
+
+    uniqueStudentResults.forEach((entry, index) => {
         const row = document.createElement('div');
         row.classList.add('leaderboard-row');
 
@@ -69,7 +82,16 @@ function renderLeaderboard(results) {
         else if (index === 2) { posBadge = '🥉 3rd'; row.classList.add('third-place'); }
 
         const name = entry.student_name || 'Anonymous Student';
-        const scorePct = `${entry.percentage ?? 0}%`;
+
+        // Calculate percentage safely whether 'percentage', 'score', or fallback fields are present
+        let percentageVal = entry.percentage;
+        if (percentageVal === undefined || percentageVal === null) {
+            const rawScore = Number(entry.score) || 0;
+            const totalQ = Number(entry.total_questions) || 40;
+            percentageVal = totalQ > 0 ? Math.round((rawScore / totalQ) * 100) : 0;
+        }
+
+        const scorePct = `${percentageVal}%`;
 
         row.innerHTML = `
             <span class="position">${posBadge}</span>
