@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Quiz Result</title>
+
+    <link rel="stylesheet" href="style/result.css">
+
+    <!-- KaTeX (renders $...$ LaTeX math notation used in Mathematics questions) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+    <div class="result-container">
+
+
+        <!-- ==================================
+             HEADER
+        =================================== -->
+
+        <div class="result-header">
+
+            <h1>
+                <i data-lucide="circle-check"></i>
+                Quiz Completed!
+            </h1>
+
+            <p id="student-name"></p>
+
+            <p class="result-message">
+                Here is your complete quiz performance.
+            </p>
+
+        </div>
+
+
+        <!-- ==================================
+             STUDENT'S PERFORMANCE
+        =================================== -->
+
+        <div class="performance-card">
+
+            <h2>
+                <i data-lucide="chart-column"></i>
+                Student's Performance
+            </h2>
+
+            <div class="performance-details">
+
+                <div class="performance-item">
+
+                    <span>
+                        <i data-lucide="user"></i>
+                        Student
+                    </span>
+
+                    <strong id="performance-name">-</strong>
+
+                </div>
+
+
+                <div class="performance-item">
+
+                    <span>
+                        <i data-lucide="clipboard-list"></i>
+                        Total Questions
+                    </span>
+
+                    <strong id="total-questions">0</strong>
+
+                </div>
+
+
+                <div class="performance-item correct">
+
+                    <span>
+                        <i data-lucide="check-circle"></i>
+                        Correct Answers
+                    </span>
+
+                    <strong id="correct-answers">0</strong>
+
+                </div>
+
+
+                <div class="performance-item wrong">
+
+                    <span>
+                        <i data-lucide="x-circle"></i>
+                        Wrong Answers
+                    </span>
+
+                    <strong id="wrong-answers">0</strong>
+
+                </div>
+
+
+                <div class="performance-item score-item">
+
+                    <span>
+                        <i data-lucide="chart-pie"></i>
+                        Score
+                    </span>
+
+                    <strong id="overall-score">0</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="performance-message">
+
+                <h3 id="performance-title">
+                    Performance
+                </h3>
+
+                <p id="performance-message"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================
+             ACTION BUTTONS
+        =================================== -->
+
+        <div class="result-buttons top-buttons">
+
+            <button id="review-button">
+                <i data-lucide="clipboard-check"></i>
+                Review Answers
+            </button>
+
+        </div>
+
+
+        <!-- ==================================
+             YOUR SCORES
+        =================================== -->
+
+        <div class="result-card">
+
+            <h2>
+                <i data-lucide="chart-column"></i>
+                Your Scores
+            </h2>
+
+            <div id="scores-container"></div>
+
+        </div>
+
+
+        <!-- ==================================
+             PERFORMANCE FEEDBACK
+        =================================== -->
+
+        <div class="result-card">
+
+            <h2>
+                <i data-lucide="message-circle"></i>
+                Performance Feedback
+            </h2>
+
+            <div id="feedback-container"></div>
+
+        </div>
+
+
+        <!-- ==================================
+             AREA TO IMPROVE
+        =================================== -->
+
+        <div class="improvement-card">
+
+            <h2>
+                <i data-lucide="pin"></i>
+                Area to Improve
+            </h2>
+
+            <p id="improvement-message"></p>
+
+        </div>
+
+
+        <!-- ==================================
+             REVIEW ANSWERS
+        =================================== -->
+
+        <div
+            class="result-card review-card"
+            id="review-section"
+            style="display: none;">
+
+            <h2>
+                <i data-lucide="clipboard-list"></i>
+                Review Answers
+            </h2>
+
+            <p class="review-intro">
+                Check the answers you selected and compare
+                them with the correct answers.
+            </p>
+
+            <div id="review-container"></div>
+
+        </div>
+
+
+        <!-- ==================================
+             BOTTOM BUTTONS
+        ================================== -->
+
+        <div class="result-buttons">
+
+            <button id="go-back-button">
+                <i data-lucide="arrow-left"></i>
+                Go Back
+            </button>
+
+
+            <button id="try-again-button">
+                <i data-lucide="refresh-cw"></i>
+                Try Quiz Again
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Activate Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+
+    <!-- ==================================
+         RESULT JAVASCRIPT
+    ================================== -->
+
+    <script src="script/result.js"></script>
+
+</body>
+
+</html>

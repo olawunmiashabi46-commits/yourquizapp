@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Join Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="style/join-quiz.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="join-container">
+
+        <div class="join-card">
+
+
+            <!-- PAGE ICON -->
+
+            <div class="join-icon">
+
+                <i data-lucide="clipboard-list"></i>
+
+            </div>
+
+
+            <h1 id="page-title">
+                Join Quiz
+            </h1>
+
+
+            <p
+                class="join-description"
+                id="join-description"
+            >
+                Enter the quiz code provided by the quiz organizer.
+            </p>
+
+
+            <!-- QUIZ CODE FORM -->
+
+            <div
+                class="form-group"
+                id="join-form"
+            >
+
+                <label for="quiz-code">
+                    Quiz Code
+                </label>
+
+                <input
+                    type="text"
+                    id="quiz-code"
+                    placeholder="Enter quiz code"
+                    maxlength="6"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <p id="error-message"></p>
+
+
+            <!-- JOIN BUTTON -->
+
+            <button
+                id="join-button"
+                type="button"
+            >
+
+                <i data-lucide="rocket"></i>
+
+                Join Quiz
+
+            </button>
+
+
+            <!-- WAITING ROOM -->
+
+            <div
+                id="waiting-room"
+                class="waiting-room"
+                style="display: none;"
+            >
+
+                <div class="waiting-icon">
+
+                    <i data-lucide="hourglass"></i>
+
+                </div>
+
+
+                <h2>
+                    You're In!
+                </h2>
+
+
+                <p id="waiting-quiz-title">
+                    Quiz
+                </p>
+
+
+                <p class="waiting-message">
+                    You have successfully joined the quiz.
+                </p>
+
+                <p class="waiting-message">
+                    Please wait for the creator to start the quiz.
+                </p>
+
+
+                <div class="waiting-status">
+
+                    <i data-lucide="circle-dot"></i>
+
+                    Waiting for creator...
+
+                </div>
+
+            </div>
+
+
+            <!-- BACK BUTTON -->
+
+            <button
+                id="back-button"
+                type="button"
+            >
+
+                <i data-lucide="arrow-left"></i>
+
+                Back to Dashboard
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Lucide Icons -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script
+        type="module"
+        src="script/join-quiz.js"
+    ></script>
+
+</body>
+
+</html>

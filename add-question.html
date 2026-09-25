@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Add Question | JAMB Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="style/add-question.css"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="question-dashboard">
+
+            <!-- HEADER -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>Add Question</h1>
+
+                    <p class="subtitle">
+                        Subject: <strong id="subjectLabel">-</strong>
+                    </p>
+
+                </div>
+
+                <div class="question-icon">
+                    <i data-lucide="file-plus-2"></i>
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION FORM -->
+
+            <form id="questionForm">
+
+                <!-- QUESTION -->
+
+                <div class="form-group">
+
+                    <label for="question">
+                        Question
+                    </label>
+
+                    <textarea
+                        id="question"
+                        placeholder="Enter the question"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- OPTION A -->
+
+                <div class="form-group">
+
+                    <label for="optionA">
+                        Option A
+                    </label>
+
+                    <input
+                        type="text"
+                        id="optionA"
+                        placeholder="Enter option A"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- OPTION B -->
+
+                <div class="form-group">
+
+                    <label for="optionB">
+                        Option B
+                    </label>
+
+                    <input
+                        type="text"
+                        id="optionB"
+                        placeholder="Enter option B"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- OPTION C -->
+
+                <div class="form-group">
+
+                    <label for="optionC">
+                        Option C
+                    </label>
+
+                    <input
+                        type="text"
+                        id="optionC"
+                        placeholder="Enter option C"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- OPTION D -->
+
+                <div class="form-group">
+
+                    <label for="optionD">
+                        Option D
+                    </label>
+
+                    <input
+                        type="text"
+                        id="optionD"
+                        placeholder="Enter option D"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CORRECT ANSWER -->
+
+                <div class="form-group">
+
+                    <label for="correctAnswer">
+                        Correct Answer
+                    </label>
+
+                    <select
+                        id="correctAnswer"
+                        required
+                    >
+
+                        <option value="">
+                            Select the correct answer
+                        </option>
+
+                        <option value="A">
+                            Option A
+                        </option>
+
+                        <option value="B">
+                            Option B
+                        </option>
+
+                        <option value="C">
+                            Option C
+                        </option>
+
+                        <option value="D">
+                            Option D
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- EXPLANATION -->
+
+                <div class="form-group">
+
+                    <label for="explanation">
+                        Explanation
+                        <span style="font-weight: normal; color: #9ca3af;">
+                            (Optional)
+                        </span>
+                    </label>
+
+                    <textarea
+                        id="explanation"
+                        placeholder="Enter an explanation if needed"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <p
+                    id="questionMessage"
+                    class="message"
+                ></p>
+
+
+                <!-- UPLOAD BUTTON -->
+
+                <button
+                    type="submit"
+                    id="uploadQuestion"
+                    class="upload-button"
+                >
+
+                    <i data-lucide="upload"></i>
+
+                    Upload Question
+
+                </button>
+
+            </form>
+
+
+            <!-- BACK BUTTON -->
+
+            <a
+                href="admin.html"
+                class="back-link"
+            >
+
+                <i data-lucide="arrow-left"></i>
+
+                Back to Dashboard
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script
+        type="module"
+        src="script/add-question.js"
+    ></script>
+
+</body>
+
+</html>

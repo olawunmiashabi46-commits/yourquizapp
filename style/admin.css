@@ -1,0 +1,301 @@
+/* ==================================
+   RESET
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================================
+   BODY
+================================== */
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    padding: 20px;
+}
+
+
+/* ==================================
+   MAIN CONTAINER
+================================== */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* ==================================
+   ADMIN DASHBOARD
+================================== */
+
+.admin-dashboard {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==================================
+   HEADER
+================================== */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+
+.dashboard-header h1 {
+    font-size: 28px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==================================
+   ADMIN ICON
+================================== */
+
+.admin-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #e8f0ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.admin-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* ==================================
+   FORM GROUP
+================================== */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+.form-group > label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 15px;
+}
+
+
+/* ==================================
+   SUBJECT GRID
+================================== */
+
+.subjects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/* ==================================
+   SUBJECT BUTTON
+================================== */
+
+.subject-button {
+    min-height: 75px;
+
+    border: 1px solid #dbe3f0;
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #1f2937;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.subject-button svg {
+    width: 22px;
+    height: 22px;
+    color: #2563eb;
+}
+
+
+.subject-button:hover {
+    background: #f0f6ff;
+    border-color: #2563eb;
+    color: #2563eb;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.10);
+}
+
+
+.subject-button:active {
+    transform: translateY(0);
+}
+
+
+/* ==================================
+   BACK LINK
+================================== */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 10px;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+.back-link svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+
+    .admin-dashboard {
+        padding: 25px 18px;
+        border-radius: 16px;
+    }
+
+
+    .dashboard-header {
+        margin-bottom: 28px;
+    }
+
+
+    .dashboard-header h1 {
+        font-size: 24px;
+    }
+
+
+    .admin-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .admin-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+
+    .subject-button {
+        min-height: 70px;
+        padding: 10px 6px;
+        font-size: 13px;
+        gap: 6px;
+    }
+
+
+    .subject-button svg {
+        width: 19px;
+        height: 19px;
+    }
+
+}
+
+
+/* ==================================
+   VERY SMALL PHONES
+================================== */
+
+@media (max-width: 380px) {
+
+    .admin-dashboard {
+        padding: 22px 14px;
+    }
+
+
+    .subject-button {
+        font-size: 12px;
+    }
+
+
+    .subject-button svg {
+        width: 17px;
+        height: 17px;
+    }
+
+}
