@@ -447,6 +447,16 @@ function renderQuestionPalette() {
 }
 
 // ======================================
+// FORMAT QUESTION TEXT
+// The question bank marks emphasized words with **word** (markdown-style
+// bold). Convert that to an underline, which is how JAMB-style questions
+// traditionally highlight the target word, instead of showing raw asterisks.
+// ======================================
+function formatQuestionText(text) {
+    return String(text || '').replace(/\*\*(.+?)\*\*/g, '<u>$1</u>');
+}
+
+// ======================================
 // LOAD QUESTION
 // ======================================
 function loadQuestion() {
@@ -480,7 +490,7 @@ function loadQuestion() {
     }
 
     if (questionHeading) {
-        questionHeading.innerHTML = `${currentQuestionIndex + 1}. ${currentQ.question}`;
+        questionHeading.innerHTML = `${currentQuestionIndex + 1}. ${formatQuestionText(currentQ.question)}`;
     }
 
     if (optionsContainer) {

@@ -549,6 +549,19 @@ if (loggedInStudent && studentResult) {
     }
 
     // ======================================
+    // FORMAT QUESTION TEXT
+    // Convert **word** markdown-style emphasis into an underline.
+    // ======================================
+
+    function formatQuestionText(text) {
+
+        return String(text || '').replace(
+            /\*\*(.+?)\*\*/g,
+            '<u>$1</u>'
+        );
+    }
+
+    // ======================================
     // CHECK ANSWERS
     // ======================================
 
@@ -673,9 +686,11 @@ if (loggedInStudent && studentResult) {
                             'review-question-text'
                         );
 
-                        questionText.textContent =
-                            getQuestionText(
-                                question
+                        questionText.innerHTML =
+                            formatQuestionText(
+                                getQuestionText(
+                                    question
+                                )
                             );
 
                         // STUDENT ANSWER
