@@ -537,6 +537,7 @@ function renderMathInQuiz() {
         ],
         throwOnError: false
     });
+}
 
 // ======================================
 // BUTTON EVENTS (FIXED WITH .closest)
