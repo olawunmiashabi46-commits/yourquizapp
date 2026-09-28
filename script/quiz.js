@@ -218,22 +218,49 @@ function normalizeSubjectName(subject) {
 // ======================================
 // NORMALIZE QUESTION
 // ======================================
+// ======================================
+// RESOLVE ANSWER TO OPTION TEXT
+// Some questions store the answer as a letter ("B") while others store
+// the full option text. Scoring compares the option text the student
+// tapped, so a letter answer must be converted to its option text or
+// it can never match (correct answers were being marked wrong).
+// ======================================
+function resolveAnswerText(options, answer) {
+    const raw = String(answer === undefined || answer === null ? '' : answer).trim();
+
+    // Exact option text always wins (even if an option is literally "A")
+    if (options.some(opt => String(opt).trim() === raw)) return raw;
+
+    // Single letter A-D -> option at that position
+    const letterMatch = raw.match(/^\(?([a-d])[\).:]?$/i);
+    if (letterMatch) {
+        const index = 'abcd'.indexOf(letterMatch[1].toLowerCase());
+        if (index >= 0 && index < options.length) return String(options[index]);
+    }
+
+    // Case-insensitive text match as a last resort
+    const ci = options.find(opt => String(opt).trim().toLowerCase() === raw.toLowerCase());
+    return ci !== undefined ? String(ci) : raw;
+}
+
 function normalizeQuestion(item) {
     if (!item) return null;
 
     if (item.question && Array.isArray(item.options)) {
+        const opts1 = item.options.map(option => String(option));
         return {
             question: String(item.question),
-            options: item.options.map(option => String(option)),
-            answer: item.answer
+            options: opts1,
+            answer: resolveAnswerText(opts1, item.answer)
         };
     }
 
     if (item.q && Array.isArray(item.options)) {
+        const opts2 = item.options.map(option => String(option));
         return {
             question: String(item.q),
-            options: item.options.map(option => String(option)),
-            answer: item.answer
+            options: opts2,
+            answer: resolveAnswerText(opts2, item.answer)
         };
     }
 
