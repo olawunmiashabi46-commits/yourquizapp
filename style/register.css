@@ -161,3 +161,20 @@ body {
     color: #059669;
     text-decoration: underline;
 }
+/* Phase 1 additions: select, textarea, links */
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+    color: #1e293b;
+}
+.form-group textarea { min-height: 80px; resize: vertical; }
+.form-group select:focus,
+.form-group textarea:focus { outline: none; border-color: #2563eb; }
+.switch-link { text-align: center; margin-top: 14px; font-size: 14px; color: #64748b; }
+.switch-link a { color: #2563eb; font-weight: bold; text-decoration: none; }
