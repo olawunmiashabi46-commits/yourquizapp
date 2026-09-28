@@ -1,4 +1,4 @@
-// STUDENT REGISTRATION (Supabase Auth)
+// EDUCATOR REGISTRATION (Supabase Auth)
 import { supabase } from './supabase.js';
 
 const $ = (id) => document.getElementById(id);
@@ -25,20 +25,17 @@ function fail(msg) {
 
 registerButton.addEventListener('click', async () => {
     const fullName = $('full-name').value.trim();
-    const username = $('username').value.trim().toLowerCase();
     const email = $('email').value.trim().toLowerCase();
     const phone = $('phone').value.trim();
-    const examType = $('exam-type').value;
+    const subjects = $('subjects').value.trim();
+    const bio = $('bio').value.trim();
     const password = $('password').value;
     const confirmPassword = $('confirm-password').value;
 
     errorMessage.textContent = '';
 
-    if (!fullName || !username || !email || !phone || !password || !confirmPassword) {
-        return fail('Please fill in all fields.');
-    }
-    if (!/^[a-z0-9_.]{3,20}$/.test(username)) {
-        return fail('Username must be 3-20 letters, numbers, dots or underscores.');
+    if (!fullName || !email || !phone || !subjects || !password || !confirmPassword) {
+        return fail('Please fill in all fields (bio is optional).');
     }
     if (!/^\S+@\S+\.\S+$/.test(email)) return fail('Please enter a valid email address.');
     if (!/^[0-9+\s-]{10,15}$/.test(phone)) return fail('Please enter a valid phone number.');
@@ -49,24 +46,19 @@ registerButton.addEventListener('click', async () => {
     registerButton.textContent = 'Creating account...';
 
     try {
-        const { data: free, error: freeErr } = await supabase.rpc('username_available', { p_username: username });
-        if (freeErr) throw freeErr;
-        if (!free) return fail('This username is already taken.');
-
         const { data: auth, error: signUpErr } = await supabase.auth.signUp({ email, password });
         if (signUpErr) throw signUpErr;
         if (!auth.session) {
             return fail('Email confirmation is still switched on in Supabase. Ask the site owner to turn it off.');
         }
 
-        const { error: insertErr } = await supabase.from('students').insert({
+        const { error: insertErr } = await supabase.from('educators').insert({
             auth_id: auth.user.id,
-            name: fullName,
-            username,
+            full_name: fullName,
             email,
             phone,
-            exam_type: examType,
-            category: ''
+            subjects,
+            bio
         });
         if (insertErr) throw insertErr;
 
@@ -74,7 +66,7 @@ registerButton.addEventListener('click', async () => {
         alert('Registration successful! Please login with your new account.');
         window.location.href = 'login.html';
     } catch (err) {
-        console.error('Registration error:', err);
+        console.error('Educator registration error:', err);
         const m = (err.message || '').toLowerCase();
         fail(m.includes('already registered') || m.includes('already been registered')
             ? 'This email is already registered. Please login instead.'

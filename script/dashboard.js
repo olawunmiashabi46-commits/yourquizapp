@@ -129,6 +129,9 @@ if (logoutButton) {
             return;
         }
 
+        // Sign out of the secure login too
+        import('./supabase.js').then(m => m.supabase.auth.signOut());
+
         // Remove current login session
         localStorage.removeItem('loggedInStudent');
 
@@ -136,7 +139,7 @@ if (logoutButton) {
         localStorage.removeItem('studentData');
         localStorage.removeItem('joinedQuiz');
 
-        // Return to login page
-        window.location.href = 'login.html';
+        // Return to login page (short wait so sign-out finishes)
+        setTimeout(function () { window.location.href = 'login.html'; }, 400);
     });
 }

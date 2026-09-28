@@ -1,149 +1,167 @@
-// ======================================
-// AUTO-LOGIN CHECK
-// ======================================
-const existingStudent = localStorage.getItem('loggedInStudent');
-if (existingStudent) {
-    window.location.href = 'dashboard.html';
-}
-
-// ======================================
-// IMPORT SUPABASE
-// ======================================
+// LOGIN (Supabase Auth) - students and educators, plus one-time upgrade for old accounts
 import { supabase } from './supabase.js';
 
-// ======================================
-// GET HTML ELEMENTS & INITIALIZE TOGGLES
-// ======================================
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
-const loginButton = document.getElementById('login-button');
-const createAccountButton = document.getElementById('create-account-button');
-const errorMessage = document.getElementById('error-message');
+const $ = (id) => document.getElementById(id);
+const identifierInput = $('username');
+const passwordInput = $('password');
+const loginButton = $('login-button');
+const errorMessage = $('error-message');
+const upgradePanel = $('upgrade-panel');
+const upgradeButton = $('upgrade-button');
 
-// Eye Icon Toggle Functionality
-function setupPasswordToggle(inputId, buttonId) {
-    const pInput = document.getElementById(inputId);
-    const toggleBtn = document.getElementById(buttonId);
+let pendingLegacy = null; // { username, password }
 
-    if (pInput && toggleBtn) {
-        toggleBtn.addEventListener('click', function () {
-            const isPassword = pInput.type === 'password';
-            pInput.type = isPassword ? 'text' : 'password';
-            toggleBtn.textContent = isPassword ? '🙈' : '👁️';
-        });
-    }
+// Old versions saved plain-text passwords on the device - remove them
+localStorage.removeItem('studentAccounts');
+
+function resetLoginButton() {
+    loginButton.disabled = false;
+    loginButton.textContent = 'Login';
 }
+function fail(msg) { errorMessage.textContent = msg; resetLoginButton(); }
 
-document.addEventListener('DOMContentLoaded', function() {
-    setupPasswordToggle('password', 'toggle-password');
-});
+// Already signed in? Go straight in. Old-style sessions (no real login) are cleared.
+(async function autoLogin() {
+    const { data } = await supabase.auth.getSession();
+    if (data.session) {
+        if (localStorage.getItem('loggedInStudent')) return (window.location.href = 'dashboard.html');
+        if (localStorage.getItem('loggedInEducator')) return (window.location.href = 'educator-dashboard.html');
+        try { await finishLogin(); } catch (e) { console.error(e); }
+    } else {
+        localStorage.removeItem('loggedInStudent');
+        localStorage.removeItem('loggedInEducator');
+    }
+})();
 
-// ======================================
-// LOGIN HANDLER
-// ======================================
-loginButton.addEventListener('click', async function () {
-    const username = usernameInput.value.trim();
-    const password = passwordInput.value.trim();
+function setupPasswordToggle(inputId, buttonId) {
+    const input = $(inputId), btn = $(buttonId);
+    if (!input || !btn) return;
+    btn.addEventListener('click', () => {
+        const hidden = input.type === 'password';
+        input.type = hidden ? 'text' : 'password';
+        btn.textContent = hidden ? '🙈' : '👁️';
+    });
+}
+setupPasswordToggle('password', 'toggle-password');
 
-    errorMessage.textContent = '';
+// After a successful sign-in: find the profile, save session info, redirect
+async function finishLogin() {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) throw new Error('No session');
 
-    if (username === '' || password === '') {
-        errorMessage.textContent = 'Please enter your username and password.';
+    const { data: student } = await supabase.from('students').select('*').eq('auth_id', user.id).maybeSingle();
+    if (student) {
+        localStorage.setItem('loggedInStudent', JSON.stringify({
+            id: student.id,
+            name: student.name || student.username,
+            username: student.username,
+            category: student.category || '',
+            email: student.email || '',
+            plan: student.plan || 'free',
+            planExpiresAt: student.plan_expires_at || null
+        }));
+        localStorage.removeItem('loggedInEducator');
+        window.location.href = 'dashboard.html';
         return;
     }
+
+    const { data: educator } = await supabase.from('educators').select('*').eq('auth_id', user.id).maybeSingle();
+    if (educator) {
+        localStorage.setItem('loggedInEducator', JSON.stringify({
+            id: educator.id,
+            name: educator.full_name,
+            email: educator.email,
+            plan: educator.plan || 'free',
+            planExpiresAt: educator.plan_expires_at || null
+        }));
+        localStorage.removeItem('loggedInStudent');
+        window.location.href = 'educator-dashboard.html';
+        return;
+    }
+
+    await supabase.auth.signOut();
+    throw new Error('No profile found for this account.');
+}
+
+loginButton.addEventListener('click', async () => {
+    const identifier = identifierInput.value.trim();
+    const password = passwordInput.value;
+    errorMessage.textContent = '';
+
+    if (!identifier || !password) return fail('Please enter your username/email and password.');
 
     loginButton.disabled = true;
     loginButton.textContent = '⏳ Logging in...';
 
     try {
-        // First check local accounts on this device
-        const localAccounts = JSON.parse(localStorage.getItem('studentAccounts')) || [];
-        let matchedAccount = localAccounts.find(function (student) {
-            const storedUsername = (student.username || '').trim().toLowerCase();
-            const storedPassword = (student.password || '').trim();
-            return storedUsername === username.toLowerCase() && storedPassword === password;
-        });
+        let email = identifier.toLowerCase();
 
-        // 1. Fetch student directly from Supabase DB
-        const { data: student, error: findError } = await supabase
-            .from('students')
-            .select('*')
-            .ilike('username', username)
-            .maybeSingle();
-
-        if (findError) throw findError;
-
-        if (!student) {
-            errorMessage.textContent = 'Account not found. Please create an account first.';
-            loginButton.disabled = false;
-            loginButton.textContent = 'Login';
-            return;
-        }
-
-        // 2. VERIFY PASSWORD
-        //    Legacy accounts created before password support was added to the
-        //    database will have an empty/null password on their Supabase row.
-        //    For those, fall back to this device's local cache once, then
-        //    backfill the password to Supabase so future logins (on any
-        //    device) are properly verified.
-        if (student.password) {
-            if (student.password !== password) {
-                errorMessage.textContent = 'Incorrect password. Please try again.';
-                loginButton.disabled = false;
-                loginButton.textContent = 'Login';
+        if (!identifier.includes('@')) {
+            // Old account that has not been upgraded yet?
+            const { data: isLegacy, error: legacyErr } = await supabase.rpc('legacy_check', {
+                p_username: identifier, p_password: password
+            });
+            if (legacyErr) throw legacyErr;
+            if (isLegacy) {
+                pendingLegacy = { username: identifier, password };
+                upgradePanel.style.display = 'block';
+                loginButton.style.display = 'none';
+                errorMessage.textContent = '';
                 return;
             }
-        } else if (matchedAccount && matchedAccount.password === password) {
-            // Legacy account: backfill password to Supabase for this student.
-            const { error: backfillError } = await supabase
-                .from('students')
-                .update({ password: password })
-                .eq('id', student.id);
 
-            if (backfillError) {
-                console.error('Password backfill error:', backfillError);
-            }
-        } else {
-            errorMessage.textContent = 'Incorrect password. Please try again.';
-            loginButton.disabled = false;
-            loginButton.textContent = 'Login';
-            return;
+            const { data: foundEmail, error: emailErr } = await supabase.rpc('login_email_for', { p_username: identifier });
+            if (emailErr) throw emailErr;
+            if (!foundEmail) return fail('Incorrect username or password.');
+            email = foundEmail;
         }
 
-        // 3. Build session data
-        const loggedInStudentData = {
-            id: student.id,
-            name: student.name || student.username,
-            username: student.username,
-            category: student.category || '',
-            password: password
-        };
+        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) return fail('Incorrect username/email or password.');
 
-        // 4. Save session on this device
-        localStorage.setItem('loggedInStudent', JSON.stringify(loggedInStudentData));
-
-        // 5. Update localAccounts cache on this device
-        const cacheIndex = localAccounts.findIndex(function (student) {
-            return (student.username || '').toLowerCase() === username.toLowerCase();
-        });
-
-        if (cacheIndex !== -1) {
-            localAccounts[cacheIndex] = loggedInStudentData;
-        } else {
-            localAccounts.push(loggedInStudentData);
-        }
-        localStorage.setItem('studentAccounts', JSON.stringify(localAccounts));
-
-        window.location.href = 'dashboard.html';
-
-    } catch (error) {
-        console.error('Login error:', error);
-        errorMessage.textContent = 'Unable to connect to server. Please check your network and try again.';
-        loginButton.disabled = false;
-        loginButton.textContent = 'Login';
+        await finishLogin();
+    } catch (err) {
+        console.error('Login error:', err);
+        fail('Unable to log in right now. Please check your network and try again.');
     }
 });
 
-createAccountButton.addEventListener('click', function () {
-    window.location.href = 'register.html';
+// One-time upgrade for accounts created before email logins existed
+upgradeButton.addEventListener('click', async () => {
+    const email = $('upgrade-email').value.trim().toLowerCase();
+    const phone = $('upgrade-phone').value.trim();
+    errorMessage.textContent = '';
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) return (errorMessage.textContent = 'Please enter a valid email address.');
+    if (!/^[0-9+\s-]{10,15}$/.test(phone)) return (errorMessage.textContent = 'Please enter a valid phone number.');
+    if (!pendingLegacy) return;
+
+    upgradeButton.disabled = true;
+    upgradeButton.textContent = 'Upgrading...';
+
+    try {
+        const { data: auth, error: signUpErr } = await supabase.auth.signUp({ email, password: pendingLegacy.password });
+        if (signUpErr) throw signUpErr;
+        if (!auth.session) throw new Error('Email confirmation is switched on in Supabase. Ask the site owner to turn it off.');
+
+        const { error: claimErr } = await supabase.rpc('claim_legacy_student', {
+            p_username: pendingLegacy.username,
+            p_password: pendingLegacy.password,
+            p_email: email,
+            p_phone: phone
+        });
+        if (claimErr) throw claimErr;
+
+        await finishLogin();
+    } catch (err) {
+        console.error('Upgrade error:', err);
+        const m = (err.message || '').toLowerCase();
+        errorMessage.textContent = m.includes('already registered')
+            ? 'That email is already used by another account. Try a different email.'
+            : (err.message || 'Upgrade failed. Please try again.');
+        upgradeButton.disabled = false;
+        upgradeButton.textContent = 'Upgrade my account';
+    }
 });
+
+$('create-account-button').addEventListener('click', () => { window.location.href = 'register.html'; });
