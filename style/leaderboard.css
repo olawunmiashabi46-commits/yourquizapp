@@ -143,3 +143,98 @@ body {
 #back-button:hover {
     background: #1e40af;
 }
+
+/* ======================================
+   SESSION CARDS (one per quiz session)
+====================================== */
+.session-header {
+    padding: 16px 20px 14px;
+    background: #f1f5f9;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.session-date {
+    font-size: 12px;
+    font-weight: bold;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+
+.session-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0f172a;
+    word-break: break-word;
+}
+
+.session-meta {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.leaderboard-row .student {
+    word-break: break-word;
+    padding-right: 8px;
+}
+
+.leaderboard-row.my-row {
+    background: #eff6ff;
+    box-shadow: inset 4px 0 0 #1e3a8a;
+}
+
+.gap-row {
+    text-align: center;
+    padding: 6px 0;
+    color: #94a3b8;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.show-all-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #1e3a8a;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.show-all-button:hover {
+    background: #eff6ff;
+}
+
+.leaderboard-message {
+    padding: 24px 20px;
+    text-align: center;
+    color: #64748b;
+    font-size: 15px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+.leaderboard-message.error {
+    color: #d93025;
+}
+
+@media (max-width: 400px) {
+    .leaderboard-row,
+    .table-header {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .session-title {
+        font-size: 16px;
+    }
+}
