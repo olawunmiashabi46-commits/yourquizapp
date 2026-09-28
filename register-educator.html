@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     >
 
-    <title>Create Account | JAMB Quiz</title>
+    <title>Educator Sign Up | JAMB Quiz</title>
 
     <link
         rel="stylesheet"
@@ -31,65 +31,34 @@
             </h1>
 
             <p class="subtitle">
-                Create your student account
+                Create your educator account
             </p>
 
 
             <!-- FULL NAME -->
-
             <div class="form-group">
-
-                <label for="full-name">
-                    Full Name
-                </label>
-
-                <input
-                    type="text"
-                    id="full-name"
-                    placeholder="Enter your full name"
-                >
-
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="Enter your full name">
             </div>
 
-
-            <!-- USERNAME -->
-
-            <div class="form-group">
-
-                <label for="username">
-                    Username
-                </label>
-
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Create a username"
-                >
-
-            </div>
-
-
-            
-            <!-- EMAIL -->
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" autocapitalize="none" placeholder="Enter your email">
             </div>
 
-            <!-- PHONE -->
             <div class="form-group">
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" placeholder="e.g. 08012345678">
             </div>
 
-            <!-- EXAM TYPE -->
             <div class="form-group">
-                <label for="exam-type">I am preparing for</label>
-                <select id="exam-type">
-                    <option value="JAMB">JAMB</option>
-                    <option value="Post-UTME">Post-UTME</option>
-                    <option value="Both">Both</option>
-                </select>
+                <label for="subjects">Subjects you teach</label>
+                <input type="text" id="subjects" placeholder="e.g. Mathematics, Physics">
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Short bio</label>
+                <textarea id="bio" placeholder="Tell students a little about you"></textarea>
             </div>
 
             <!-- PASSWORD -->
@@ -164,7 +133,7 @@
             <p id="error-message"></p>
 
 
-            <p class="switch-link">Are you a teacher? <a href="register-educator.html">Register as an Educator</a></p>
+            <p class="switch-link">Are you a student? <a href="register.html">Register as a Student</a></p>
 
             <!-- LOGIN -->
 
@@ -193,7 +162,7 @@
 
     <script
         type="module"
-        src="script/register.js"
+        src="script/register-educator.js"
     ></script>
 
 </body>

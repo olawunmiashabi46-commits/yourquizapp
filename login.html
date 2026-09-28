@@ -37,7 +37,7 @@
             <div class="form-group">
 
                 <label for="username">
-                    Username
+                    Username or Email
                 </label>
 
                 <input
@@ -46,7 +46,7 @@
                     autocapitalize="none"
                     autocomplete="off"
                     spellcheck="false"
-                    placeholder="Enter Username"
+                    placeholder="Enter username or email"
                 >
 
             </div>
@@ -88,6 +88,23 @@
                 Login
             </button>
 
+
+                        <!-- One-time upgrade for old accounts -->
+            <div id="upgrade-panel" style="display:none; margin-top:10px;">
+                <p style="font-size:14px; color:#334155; margin-bottom:12px;">
+                    Good news, your account was found! We've made logins more secure.
+                    Please add your email and phone number once to continue.
+                </p>
+                <div class="form-group">
+                    <label for="upgrade-email">Email</label>
+                    <input type="email" id="upgrade-email" autocapitalize="none" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="upgrade-phone">Phone Number</label>
+                    <input type="tel" id="upgrade-phone" placeholder="e.g. 08012345678">
+                </div>
+                <button id="upgrade-button" style="width:100%; padding:14px; border:none; border-radius:10px; background:#2563eb; color:#fff; font-size:16px; font-weight:bold; cursor:pointer;">Upgrade my account</button>
+            </div>
 
             <!-- Error -->
 
