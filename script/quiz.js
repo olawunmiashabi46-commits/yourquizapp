@@ -76,9 +76,64 @@ if (isChampionship) {
     });
 }
 
-let timeRemaining = isChampionship
-    ? (Number(joinedQuiz.championshipDurationMinutes) || 60) * 60
-    : 7200;
+// The championship end-time is saved to this device so that refreshing,
+// or briefly leaving the page, does NOT give a student extra time.
+// The countdown always continues from the real clock, not from scratch.
+const CHAMP_END_KEY = 'championshipEndTime:' + quizId + ':' + studentId;
+
+function getChampionshipTimeRemaining() {
+    const durationSeconds = (Number(joinedQuiz.championshipDurationMinutes) || 60) * 60;
+    let endEpoch = Number(localStorage.getItem(CHAMP_END_KEY));
+
+    if (!endEpoch) {
+        endEpoch = Date.now() + durationSeconds * 1000;
+        localStorage.setItem(CHAMP_END_KEY, String(endEpoch));
+    }
+
+    return Math.floor((endEpoch - Date.now()) / 1000);
+}
+
+function clearChampionshipTimer() {
+    localStorage.removeItem(CHAMP_END_KEY);
+}
+
+// Championship answers are also saved to this device as the student picks
+// them, so a refresh or a brief interruption doesn't wipe out their progress.
+const CHAMP_ANSWERS_KEY = 'championshipAnswers:' + quizId + ':' + studentId;
+
+function saveChampionshipAnswers() {
+    try {
+        localStorage.setItem(CHAMP_ANSWERS_KEY, JSON.stringify(userAnswers));
+    } catch (err) {
+        console.error('Could not save answers locally:', err);
+    }
+}
+
+function restoreChampionshipAnswers() {
+    try {
+        const saved = JSON.parse(localStorage.getItem(CHAMP_ANSWERS_KEY));
+        if (!saved) return;
+
+        Object.keys(userAnswers).forEach(function (subject) {
+            if (Array.isArray(saved[subject])) {
+                for (let i = 0; i < userAnswers[subject].length; i++) {
+                    if (saved[subject][i] !== undefined) {
+                        userAnswers[subject][i] = saved[subject][i];
+                    }
+                }
+            }
+        });
+    } catch (err) {
+        console.error('Could not restore saved answers:', err);
+    }
+}
+
+function clearChampionshipAnswers() {
+    localStorage.removeItem(CHAMP_ANSWERS_KEY);
+}
+
+
+let timeRemaining = isChampionship ? 0 : 7200; // championship value is set for real below, using a saved end-time
 
 let quizSubmitting = false;
 
@@ -384,6 +439,8 @@ async function initializeQuizSession() {
             if (questions.length > 0) anyQuestions = true;
         }
 
+        restoreChampionshipAnswers();
+
         if (questionHeading) {
             questionHeading.textContent = anyQuestions
                 ? 'Questions loaded successfully.'
@@ -427,6 +484,15 @@ window.addEventListener('DOMContentLoaded', async function () {
     if (studentNameEl) studentNameEl.textContent = `Student: ${studentName}`;
 
     await initializeQuizSession();
+
+    if (isChampionship) {
+        timeRemaining = getChampionshipTimeRemaining();
+        if (timeRemaining <= 0) {
+            // Time ran out while the student was away (or refreshed too late).
+            finishQuiz();
+            return;
+        }
+    }
 
     renderSubjectTabs();
     loadQuestion();
@@ -598,6 +664,7 @@ function loadQuestion() {
                     userAnswers[activeSubject] = [];
                 }
                 userAnswers[activeSubject][currentQuestionIndex] = opt;
+                if (isChampionship) saveChampionshipAnswers();
                 loadQuestion();
             };
 
@@ -679,6 +746,10 @@ async function finishQuiz() {
     quizSubmitting = true;
 
     if (timerInterval) clearInterval(timerInterval);
+    if (isChampionship) {
+        clearChampionshipTimer();
+        clearChampionshipAnswers();
+    }
 
     let scores = {};
     let totalScore = 0;
