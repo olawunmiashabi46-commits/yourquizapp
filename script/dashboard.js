@@ -143,3 +143,6 @@ if (logoutButton) {
         setTimeout(function () { window.location.href = 'login.html'; }, 400);
     });
 }
+document.getElementById('upgrade-button').addEventListener('click', function () {
+    window.location.href = 'upgrade.html';
+});
