@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Championship | JAMB Quiz</title>
+<link rel="stylesheet" href="style/championship.css">
+</head>
+<body>
+<div class="create-container">
+  <div class="create-card" id="champ-card">
+    <div class="create-icon">🏆</div>
+    <div id="champ-status-badge"></div>
+    <h1 id="champ-title">Loading...</h1>
+    <p class="description" id="champ-when"></p>
+
+    <div class="prize-box" id="champ-prize" style="display:none;"></div>
+    <div class="countdown" id="countdown"></div>
+
+    <div class="form-group" id="elective-group" style="display:none; text-align:left; margin-bottom:14px;">
+        <label for="elective-subject" style="display:block; font-size:14px; font-weight:bold; margin-bottom:6px;">
+            Choose your second subject (English is included for everyone)
+        </label>
+        <select id="elective-subject" style="width:100%; padding:12px; border:1px solid #cbd5e1; border-radius:10px; font-size:15px;">
+            <option value="">Select a subject</option>
+            <optgroup label="Science">
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Agricultural Science">Agricultural Science</option>
+            </optgroup>
+            <optgroup label="Commercial">
+                <option value="Economics">Economics</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Government">Government</option>
+            </optgroup>
+            <optgroup label="Arts">
+                <option value="Literature in English">Literature in English</option>
+                <option value="History">History</option>
+                <option value="CRS">CRS</option>
+            </optgroup>
+            <optgroup label="Social Science">
+                <option value="Geography">Geography</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <button id="action-button" disabled>Loading...</button>
+    <p id="error-message" style="color:#dc2626; font-size:14px; margin-top:10px;"></p>
+    <p class="locked-note" id="locked-note" style="display:none;">
+        Championship is Premium-only. <a href="upgrade.html">Upgrade to enter →</a>
+    </p>
+
+    <a href="dashboard.html" style="display:block; text-align:center; margin-top:18px; color:#64748b; font-size:14px;">← Back to Dashboard</a>
+  </div>
+</div>
+
+<script type="module" src="script/championship.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Add Championship Question | JAMB Quiz</title>
+<link rel="stylesheet" href="style/add-championship-question.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div class="container">
+  <div class="question-dashboard">
+    <div class="page-header">
+      <div>
+        <h1>Add Championship Question</h1>
+        <p class="subtitle">Championship: <strong id="champLabel">-</strong></p>
+      </div>
+      <div class="question-icon"><i data-lucide="trophy"></i></div>
+    </div>
+
+    <form id="questionForm">
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" required>
+          <option value="Use of English">Use of English (everyone answers this)</option>
+          <optgroup label="Science">
+            <option value="Mathematics">Mathematics</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+            <option value="Agricultural Science">Agricultural Science</option>
+          </optgroup>
+          <optgroup label="Commercial">
+            <option value="Economics">Economics</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Government">Government</option>
+          </optgroup>
+          <optgroup label="Arts">
+            <option value="Literature in English">Literature in English</option>
+            <option value="History">History</option>
+            <option value="CRS">CRS</option>
+          </optgroup>
+          <optgroup label="Social Science">
+            <option value="Geography">Geography</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="question">Question</label>
+        <textarea id="question" placeholder="Enter the question" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="optionA">Option A</label>
+        <input type="text" id="optionA" placeholder="Enter option A" required>
+      </div>
+      <div class="form-group">
+        <label for="optionB">Option B</label>
+        <input type="text" id="optionB" placeholder="Enter option B" required>
+      </div>
+      <div class="form-group">
+        <label for="optionC">Option C</label>
+        <input type="text" id="optionC" placeholder="Enter option C" required>
+      </div>
+      <div class="form-group">
+        <label for="optionD">Option D</label>
+        <input type="text" id="optionD" placeholder="Enter option D" required>
+      </div>
+      <div class="form-group">
+        <label for="correctAnswer">Correct Answer</label>
+        <select id="correctAnswer" required>
+          <option value="">Select the correct answer</option>
+          <option value="A">Option A</option>
+          <option value="B">Option B</option>
+          <option value="C">Option C</option>
+          <option value="D">Option D</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="explanation">Explanation <span style="font-weight:normal; color:#9ca3af;">(Optional)</span></label>
+        <textarea id="explanation" placeholder="Enter an explanation if needed" rows="4"></textarea>
+      </div>
+
+      <p id="questionMessage" class="message"></p>
+
+      <button type="submit" id="uploadQuestion" class="upload-button">
+        <i data-lucide="upload"></i> Upload Question
+      </button>
+    </form>
+
+    <div class="question-list" id="question-list"></div>
+
+    <a href="admin-championship.html" class="back-link">
+      <i data-lucide="arrow-left"></i> Back to Championships
+    </a>
+  </div>
+</div>
+
+<script>lucide.createIcons();</script>
+<script type="module" src="script/add-championship-question.js"></script>
+</body>
+</html>
