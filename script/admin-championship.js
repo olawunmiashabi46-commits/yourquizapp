@@ -1,0 +1,134 @@
+import { supabase } from './supabase.js';
+
+const adminAuthenticated = sessionStorage.getItem('adminAuthenticated');
+if (adminAuthenticated !== 'true') {
+    window.location.href = 'admin-login.html';
+}
+
+function generateQuizCode() {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let code = '';
+    for (let i = 0; i < 6; i++) code += chars[Math.floor(Math.random() * chars.length)];
+    return code;
+}
+
+const titleInput = document.getElementById('champ-title');
+const dateInput = document.getElementById('champ-date');
+const durationInput = document.getElementById('champ-duration');
+const prizeInput = document.getElementById('champ-prize');
+const createButton = document.getElementById('create-button');
+const errorMessage = document.getElementById('error-message');
+const champList = document.getElementById('champ-list');
+
+function statusLabel(row) {
+    if (row.status === 'started') return { text: 'Live now', cls: 'status-started' };
+    if (row.status === 'ended') return { text: 'Ended', cls: 'status-ended' };
+    return { text: 'Scheduled', cls: 'status-scheduled' };
+}
+
+async function loadChampionships() {
+    champList.innerHTML = '<p style="color:#64748b; font-size:14px;">Loading...</p>';
+    const { data, error } = await supabase
+        .from('quizzes')
+        .select('id, title, status, scheduled_at, duration_minutes')
+        .eq('is_championship', true)
+        .order('scheduled_at', { ascending: false });
+
+    if (error) {
+        champList.innerHTML = '<p style="color:#dc2626; font-size:14px;">Could not load championships.</p>';
+        return;
+    }
+    if (!data || data.length === 0) {
+        champList.innerHTML = '<p style="color:#64748b; font-size:14px;">No championships yet.</p>';
+        return;
+    }
+
+    champList.innerHTML = '';
+    data.forEach(function (row) {
+        const st = statusLabel(row);
+        const when = row.scheduled_at ? new Date(row.scheduled_at).toLocaleString() : 'No date set';
+        const div = document.createElement('div');
+        div.className = 'champ-row';
+        div.innerHTML = `
+            <div class="champ-info">
+                <b>${row.title}</b>
+                ${when} &middot; ${row.duration_minutes} min &nbsp; <span class="champ-status ${st.cls}">${st.text}</span>
+            </div>
+            <div>
+                <button class="secondary" data-add="${row.id}">Add Questions</button>
+                ${row.status === 'scheduled' ? `<button data-start="${row.id}">Start Now</button>` : ''}
+            </div>`;
+        champList.appendChild(div);
+    });
+
+    champList.querySelectorAll('[data-add]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            sessionStorage.setItem('adminChampionshipId', btn.dataset.add);
+            window.location.href = 'add-championship-question.html';
+        });
+    });
+    champList.querySelectorAll('[data-start]').forEach(btn => {
+        btn.addEventListener('click', () => startChampionship(btn.dataset.start, btn));
+    });
+}
+
+async function startChampionship(quizId, btn) {
+    if (!confirm('Start this championship now? Registered students will be able to join immediately.')) return;
+    btn.disabled = true;
+    btn.textContent = 'Starting...';
+    const { error } = await supabase
+        .from('quizzes')
+        .update({ started: true, status: 'started', started_at: new Date().toISOString() })
+        .eq('id', quizId);
+    if (error) {
+        alert('Could not start: ' + error.message);
+        btn.disabled = false;
+        btn.textContent = 'Start Now';
+        return;
+    }
+    loadChampionships();
+}
+
+createButton.addEventListener('click', async function () {
+    errorMessage.textContent = '';
+    const title = titleInput.value.trim();
+    const scheduledAt = dateInput.value;
+    const duration = parseInt(durationInput.value, 10);
+    const prizeInfo = prizeInput.value.trim();
+
+    if (!title) return (errorMessage.textContent = 'Please enter a title.');
+    if (!scheduledAt) return (errorMessage.textContent = 'Please pick a date and time.');
+    if (!duration || duration < 10) return (errorMessage.textContent = 'Please set a time limit of at least 10 minutes.');
+
+    createButton.disabled = true;
+    createButton.textContent = 'Creating...';
+
+    try {
+        const { error } = await supabase.from('quizzes').insert({
+            title,
+            quiz_code: generateQuizCode(),
+            category: 'General',
+            subjects: ['Use of English'],
+            is_championship: true,
+            scheduled_at: new Date(scheduledAt).toISOString(),
+            duration_minutes: duration,
+            prize_info: prizeInfo,
+            started: false,
+            status: 'scheduled'
+        });
+        if (error) throw error;
+
+        titleInput.value = '';
+        dateInput.value = '';
+        durationInput.value = '60';
+        prizeInput.value = '';
+        loadChampionships();
+    } catch (err) {
+        errorMessage.textContent = 'Could not create championship: ' + err.message;
+    } finally {
+        createButton.disabled = false;
+        createButton.textContent = '🏆 Create Championship';
+    }
+});
+
+loadChampionships();

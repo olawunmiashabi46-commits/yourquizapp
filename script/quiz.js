@@ -34,6 +34,8 @@ const quizId =
     joinedQuiz.id ||
     null;
 
+const isChampionship = joinedQuiz.isChampionship === true;
+
 // ======================================
 // SELECTED SUBJECTS
 // ======================================
@@ -64,7 +66,19 @@ let activeSessionQuestions = {};
 let userAnswers = {};
 
 let timerInterval = null;
-let timeRemaining = 7200;
+let tabSwitchCount = 0;
+
+if (isChampionship) {
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            tabSwitchCount += 1;
+        }
+    });
+}
+
+let timeRemaining = isChampionship
+    ? (Number(joinedQuiz.championshipDurationMinutes) || 60) * 60
+    : 7200;
 
 let quizSubmitting = false;
 
@@ -326,6 +340,32 @@ function buildSubjectQuestions(subject, requiredCount, adminQuestionsMap) {
 // ======================================
 // FETCH / BUILD ALL QUIZ QUESTIONS
 // ======================================
+// ======================================
+// LOAD CHAMPIONSHIP QUESTIONS (hand-picked
+// set for this specific championship only,
+// not the general question bank). English is
+// shared by everyone; the elective subject is
+// only the one this student chose at registration.
+// ======================================
+async function loadChampionshipQuestions(subject) {
+    const { data, error } = await supabase
+        .from('championship_questions')
+        .select('*')
+        .eq('quiz_id', quizId)
+        .eq('subject', subject)
+        .order('order_index', { ascending: true });
+
+    if (error) {
+        console.error('Could not load championship questions for ' + subject + ':', error);
+        return [];
+    }
+
+    return (data || [])
+        .map(mapAdminQuestion)
+        .filter(Boolean)
+        .map(normalizeQuestion);
+}
+
 async function initializeQuizSession() {
     const questionHeading = getEl('question');
     if (questionHeading) {
@@ -334,6 +374,23 @@ async function initializeQuizSession() {
 
     activeSessionQuestions = {};
     userAnswers = {};
+
+    if (isChampionship) {
+        let anyQuestions = false;
+        for (const sub of selectedSubjects) {
+            const questions = await loadChampionshipQuestions(sub);
+            activeSessionQuestions[sub] = questions;
+            userAnswers[sub] = new Array(questions.length).fill(null);
+            if (questions.length > 0) anyQuestions = true;
+        }
+
+        if (questionHeading) {
+            questionHeading.textContent = anyQuestions
+                ? 'Questions loaded successfully.'
+                : 'No questions have been added to this championship yet.';
+        }
+        return;
+    }
 
     const adminQuestionsMap = await loadAdminQuestions();
 
@@ -688,7 +745,8 @@ async function finishQuiz() {
         correct_answers: totalScore,
         score: totalScore,
         completed_at: new Date().toISOString(),
-        submitted_at: new Date().toISOString()
+        submitted_at: new Date().toISOString(),
+        tab_switches: isChampionship ? tabSwitchCount : 0
     }])
     .select()
     .single();

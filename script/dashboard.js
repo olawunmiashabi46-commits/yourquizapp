@@ -146,3 +146,45 @@ if (logoutButton) {
 document.getElementById('upgrade-button').addEventListener('click', function () {
     window.location.href = 'upgrade.html';
 });
+
+// ======================================
+// CHAMPIONSHIP BANNER
+// ======================================
+(function loadChampionshipBanner() {
+    import('./supabase.js').then(async ({ supabase }) => {
+        const banner = document.getElementById('champ-banner');
+        if (!banner) return;
+
+        const { data, error } = await supabase
+            .from('quizzes')
+            .select('id, title, status, scheduled_at')
+            .eq('is_championship', true)
+            .in('status', ['scheduled', 'started'])
+            .order('scheduled_at', { ascending: true })
+            .limit(1);
+
+        if (error || !data || data.length === 0) return;
+
+        const champ = data[0];
+        const label = document.getElementById('champ-banner-label');
+        const titleEl = document.getElementById('champ-banner-title');
+        const subEl = document.getElementById('champ-banner-sub');
+
+        titleEl.textContent = champ.title;
+
+        if (champ.status === 'started') {
+            label.textContent = '🔴 Championship is LIVE';
+            subEl.textContent = 'Tap to join now →';
+        } else {
+            label.textContent = '🏆 Upcoming Championship';
+            subEl.textContent = champ.scheduled_at
+                ? 'Starts ' + new Date(champ.scheduled_at).toLocaleString() + ' — tap for details'
+                : 'Tap for details';
+        }
+
+        banner.style.display = 'block';
+        banner.addEventListener('click', function () {
+            window.location.href = 'championship.html?id=' + champ.id;
+        });
+    });
+})();
