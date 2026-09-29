@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Upgrade to Premium | JAMB Quiz</title>
+<link rel="stylesheet" href="style/upgrade.css">
+</head>
+<body>
+<div class="upgrade-container">
+  <div class="upgrade-box">
+    <h1>🌟 Go Premium</h1>
+    <p class="subtitle">Unlock everything JAMB Quiz has to offer</p>
+
+    <div id="plan-view">
+      <div class="plan-card">
+        <div class="plan-price">₦5,000 <span>/ 2 months</span></div>
+        <ul class="plan-features">
+          <li>Video lessons from educators</li>
+          <li>Championship participation</li>
+          <li>Group chat with other students</li>
+          <li>Ask educators questions directly</li>
+          <li>Rate and review teachers &amp; subjects</li>
+        </ul>
+      </div>
+      <button id="pay-button">Pay with Paystack</button>
+      <p id="status-message"></p>
+    </div>
+
+    <div id="already-premium-view" class="already-premium" style="display:none;">
+      <p>🎉 You're already on Premium.</p>
+      <p id="expiry-note" style="color:#64748b; font-size:13px; margin-top:6px;"></p>
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+  </div>
+</div>
+
+<script src="https://js.paystack.co/v2/inline.js"></script>
+<script type="module" src="script/upgrade.js"></script>
+</body>
+</html>
