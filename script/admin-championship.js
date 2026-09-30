@@ -13,6 +13,9 @@ function generateQuizCode() {
 }
 
 const titleInput = document.getElementById('champ-title');
+const eligibleSelect = document.getElementById('champ-eligible');
+const regOpensInput = document.getElementById('champ-reg-opens');
+const regClosesInput = document.getElementById('champ-reg-closes');
 const dateInput = document.getElementById('champ-date');
 const durationInput = document.getElementById('champ-duration');
 const prizeInput = document.getElementById('champ-prize');
@@ -30,7 +33,7 @@ async function loadChampionships() {
     champList.innerHTML = '<p style="color:#64748b; font-size:14px;">Loading...</p>';
     const { data, error } = await supabase
         .from('quizzes')
-        .select('id, title, status, scheduled_at, duration_minutes')
+        .select('id, title, status, scheduled_at, duration_minutes, eligible_plan')
         .eq('is_championship', true)
         .order('scheduled_at', { ascending: false });
 
@@ -49,10 +52,11 @@ async function loadChampionships() {
         const when = row.scheduled_at ? new Date(row.scheduled_at).toLocaleString() : 'No date set';
         const div = document.createElement('div');
         div.className = 'champ-row';
+        const eligLabel = row.eligible_plan === 'free' ? '🎟️ Free — ₦2,000 entry' : '⭐ Premium only';
         div.innerHTML = `
             <div class="champ-info">
                 <b>${row.title}</b>
-                ${when} &middot; ${row.duration_minutes} min &nbsp; <span class="champ-status ${st.cls}">${st.text}</span>
+                ${when} &middot; ${row.duration_minutes} min &middot; ${eligLabel} &nbsp; <span class="champ-status ${st.cls}">${st.text}</span>
             </div>
             <div>
                 <button class="secondary" data-add="${row.id}">Add Questions</button>
@@ -92,6 +96,9 @@ async function startChampionship(quizId, btn) {
 createButton.addEventListener('click', async function () {
     errorMessage.textContent = '';
     const title = titleInput.value.trim();
+    const eligiblePlan = eligibleSelect.value;
+    const regOpens = regOpensInput.value;
+    const regCloses = regClosesInput.value;
     const scheduledAt = dateInput.value;
     const duration = parseInt(durationInput.value, 10);
     const prizeInfo = prizeInput.value.trim();
@@ -99,6 +106,9 @@ createButton.addEventListener('click', async function () {
     if (!title) return (errorMessage.textContent = 'Please enter a title.');
     if (!scheduledAt) return (errorMessage.textContent = 'Please pick a date and time.');
     if (!duration || duration < 10) return (errorMessage.textContent = 'Please set a time limit of at least 10 minutes.');
+    if (regOpens && regCloses && new Date(regOpens) >= new Date(regCloses)) {
+        return (errorMessage.textContent = 'Registration must open before it closes.');
+    }
 
     createButton.disabled = true;
     createButton.textContent = 'Creating...';
@@ -110,6 +120,9 @@ createButton.addEventListener('click', async function () {
             category: 'General',
             subjects: ['Use of English'],
             is_championship: true,
+            eligible_plan: eligiblePlan,
+            registration_opens_at: regOpens ? new Date(regOpens).toISOString() : null,
+            registration_closes_at: regCloses ? new Date(regCloses).toISOString() : null,
             scheduled_at: new Date(scheduledAt).toISOString(),
             duration_minutes: duration,
             prize_info: prizeInfo,
@@ -119,6 +132,9 @@ createButton.addEventListener('click', async function () {
         if (error) throw error;
 
         titleInput.value = '';
+        eligibleSelect.value = 'premium';
+        regOpensInput.value = '';
+        regClosesInput.value = '';
         dateInput.value = '';
         durationInput.value = '60';
         prizeInput.value = '';

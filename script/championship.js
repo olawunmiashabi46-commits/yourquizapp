@@ -1,5 +1,8 @@
 import { supabase } from './supabase.js';
 
+const PAYSTACK_PUBLIC_KEY = 'pk_test_e520b25bb406a3135afb4ebbb7ebe3c0cb157005';
+const FREE_ENTRY_AMOUNT_KOBO = 200000; // must match api/verify-payment.js
+
 const loggedInStudent = JSON.parse(localStorage.getItem('loggedInStudent'));
 if (!loggedInStudent) window.location.href = 'login.html';
 
@@ -76,7 +79,10 @@ async function loadChampionship() {
         badgeEl.innerHTML = '<span class="champ-badge">Ended</span>';
         countdownEl.textContent = '';
     } else {
-        badgeEl.innerHTML = '<span class="champ-badge">Scheduled</span>';
+        const eligLabel = quiz.eligible_plan === 'free'
+            ? '<span class="champ-badge">🎟️ Free Championship — ₦2,000 to enter</span>'
+            : '<span class="champ-badge">⭐ Premium Championship</span>';
+        badgeEl.innerHTML = eligLabel;
         if (quiz.scheduled_at) startCountdown(quiz.scheduled_at);
     }
 
@@ -84,6 +90,17 @@ async function loadChampionship() {
 }
 
 let myElective = null;
+
+function registrationWindowStatus() {
+    const now = new Date();
+    if (quiz.registration_opens_at && now < new Date(quiz.registration_opens_at)) {
+        return 'Registration opens ' + new Date(quiz.registration_opens_at).toLocaleString();
+    }
+    if (quiz.registration_closes_at && now > new Date(quiz.registration_closes_at)) {
+        return 'Registration has closed.';
+    }
+    return null; // open
+}
 
 async function renderAction() {
     if (quiz.status === 'ended') {
@@ -116,13 +133,29 @@ async function renderAction() {
 
     // status === 'scheduled'
     if (isRegistered) {
-        actionButton.textContent = '✅ Registered — English + ' + myElective;
+        const label = quiz.eligible_plan === 'free' ? '✅ Entry paid — ' : '✅ Registered — ';
+        actionButton.textContent = label + 'English + ' + myElective;
+        actionButton.disabled = true;
+        return;
+    }
+
+    const windowMessage = registrationWindowStatus();
+    if (windowMessage) {
+        actionButton.textContent = windowMessage;
         actionButton.disabled = true;
         return;
     }
 
     electiveGroup.style.display = 'block';
 
+    if (quiz.eligible_plan === 'free') {
+        actionButton.textContent = 'Pay ₦2,000 to Enter';
+        actionButton.disabled = false;
+        actionButton.onclick = payForFreeChampionship;
+        return;
+    }
+
+    // Premium championship
     if (!isActivePremium(loggedInStudent)) {
         actionButton.textContent = 'Register Now';
         actionButton.disabled = true;
@@ -133,6 +166,72 @@ async function renderAction() {
     actionButton.textContent = 'Register Now';
     actionButton.disabled = false;
     actionButton.onclick = registerForChampionship;
+}
+
+function payForFreeChampionship() {
+    const chosenSubject = electiveSelect.value;
+    if (!chosenSubject) {
+        errorMessage.textContent = 'Please choose your second subject first.';
+        return;
+    }
+    if (!loggedInStudent.email) {
+        errorMessage.textContent = 'Your account has no email on file. Please contact support.';
+        return;
+    }
+    if (typeof PaystackPop === 'undefined') {
+        errorMessage.textContent = 'Payment could not load. Check your connection and try again.';
+        return;
+    }
+
+    actionButton.disabled = true;
+    errorMessage.textContent = '';
+
+    const popup = new PaystackPop();
+    popup.newTransaction({
+        key: PAYSTACK_PUBLIC_KEY,
+        email: loggedInStudent.email,
+        amount: FREE_ENTRY_AMOUNT_KOBO,
+        currency: 'NGN',
+        metadata: { studentId: loggedInStudent.id, quizId: quiz.id, chosenSubject },
+        onSuccess: (transaction) => verifyFreeEntryOnServer(transaction.reference, chosenSubject),
+        onCancel: () => {
+            actionButton.disabled = false;
+            errorMessage.textContent = 'Payment was cancelled.';
+        }
+    });
+}
+
+async function verifyFreeEntryOnServer(reference, chosenSubject) {
+    errorMessage.textContent = 'Confirming your payment...';
+    try {
+        const res = await fetch('/api/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                reference,
+                planCode: 'free_championship_entry',
+                accountId: loggedInStudent.id,
+                quizId: quiz.id,
+                electiveSubject: chosenSubject
+            })
+        });
+        const data = await res.json();
+
+        if (!data.success) {
+            errorMessage.textContent = data.message || 'We could not confirm this payment.';
+            actionButton.disabled = false;
+            return;
+        }
+
+        myElective = chosenSubject;
+        electiveGroup.style.display = 'none';
+        errorMessage.textContent = '';
+        actionButton.textContent = '✅ Entry paid — English + ' + chosenSubject;
+    } catch (err) {
+        console.error('verify-payment fetch error:', err);
+        errorMessage.textContent = 'Network error confirming payment. If money left your account, contact support with reference: ' + reference;
+        actionButton.disabled = false;
+    }
 }
 
 async function registerForChampionship() {

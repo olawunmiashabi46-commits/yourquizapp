@@ -150,41 +150,49 @@ document.getElementById('upgrade-button').addEventListener('click', function () 
 // ======================================
 // CHAMPIONSHIP BANNER
 // ======================================
-(function loadChampionshipBanner() {
+(function loadChampionshipBanners() {
     import('./supabase.js').then(async ({ supabase }) => {
-        const banner = document.getElementById('champ-banner');
-        if (!banner) return;
+        const now = new Date().toISOString();
 
-        const { data, error } = await supabase
-            .from('quizzes')
-            .select('id, title, status, scheduled_at')
-            .eq('is_championship', true)
-            .in('status', ['scheduled', 'started'])
-            .order('scheduled_at', { ascending: true })
-            .limit(1);
+        async function showBanner(eligiblePlan, prefix) {
+            const banner = document.getElementById('champ-banner-' + prefix);
+            if (!banner) return;
 
-        if (error || !data || data.length === 0) return;
+            const { data, error } = await supabase
+                .from('quizzes')
+                .select('id, title, status, scheduled_at, registration_opens_at, registration_closes_at')
+                .eq('is_championship', true)
+                .eq('eligible_plan', eligiblePlan)
+                .in('status', ['scheduled', 'started'])
+                .order('scheduled_at', { ascending: true })
+                .limit(1);
 
-        const champ = data[0];
-        const label = document.getElementById('champ-banner-label');
-        const titleEl = document.getElementById('champ-banner-title');
-        const subEl = document.getElementById('champ-banner-sub');
+            if (error || !data || data.length === 0) return;
 
-        titleEl.textContent = champ.title;
+            const champ = data[0];
 
-        if (champ.status === 'started') {
-            label.textContent = '🔴 Championship is LIVE';
-            subEl.textContent = 'Tap to join now →';
-        } else {
-            label.textContent = '🏆 Upcoming Championship';
-            subEl.textContent = champ.scheduled_at
-                ? 'Starts ' + new Date(champ.scheduled_at).toLocaleString() + ' — tap for details'
-                : 'Tap for details';
+            // Don't show a "scheduled" banner before registration has opened.
+            if (champ.status === 'scheduled' && champ.registration_opens_at && now < champ.registration_opens_at) {
+                return;
+            }
+
+            const titleEl = document.getElementById('champ-banner-' + prefix + '-title');
+            const subEl = document.getElementById('champ-banner-' + prefix + '-sub');
+
+            titleEl.textContent = champ.title;
+            subEl.textContent = champ.status === 'started'
+                ? 'Live now — tap to join →'
+                : (champ.scheduled_at
+                    ? 'Starts ' + new Date(champ.scheduled_at).toLocaleString() + ' — tap for details'
+                    : 'Tap for details');
+
+            banner.style.display = 'block';
+            banner.addEventListener('click', function () {
+                window.location.href = 'championship.html?id=' + champ.id;
+            });
         }
 
-        banner.style.display = 'block';
-        banner.addEventListener('click', function () {
-            window.location.href = 'championship.html?id=' + champ.id;
-        });
+        showBanner('premium', 'premium');
+        showBanner('free', 'free');
     });
 })();
