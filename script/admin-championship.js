@@ -61,6 +61,7 @@ async function loadChampionships() {
             <div>
                 <button class="secondary" data-add="${row.id}">Add Questions</button>
                 ${row.status === 'scheduled' ? `<button data-start="${row.id}">Start Now</button>` : ''}
+                <button class="secondary" style="color:#dc2626;" data-delete="${row.id}" data-title="${row.title.replace(/"/g, '&quot;')}">Delete</button>
             </div>`;
         champList.appendChild(div);
     });
@@ -74,6 +75,29 @@ async function loadChampionships() {
     champList.querySelectorAll('[data-start]').forEach(btn => {
         btn.addEventListener('click', () => startChampionship(btn.dataset.start, btn));
     });
+    champList.querySelectorAll('[data-delete]').forEach(btn => {
+        btn.addEventListener('click', () => deleteChampionship(btn.dataset.delete, btn.dataset.title));
+    });
+}
+
+async function deleteChampionship(quizId, title) {
+    if (!confirm('Delete "' + title + '"? This also removes its questions, registrations, and results. This cannot be undone.')) return;
+
+    try {
+        // Clean up related rows first, regardless of how the original
+        // tables were set up, so the delete below never fails.
+        await supabase.from('quiz_results').delete().eq('quiz_id', quizId);
+        await supabase.from('quiz_participants').delete().eq('quiz_id', quizId);
+        await supabase.from('championship_registrations').delete().eq('quiz_id', quizId);
+        await supabase.from('championship_questions').delete().eq('quiz_id', quizId);
+
+        const { error } = await supabase.from('quizzes').delete().eq('id', quizId);
+        if (error) throw error;
+
+        loadChampionships();
+    } catch (err) {
+        alert('Could not delete: ' + err.message);
+    }
 }
 
 async function startChampionship(quizId, btn) {

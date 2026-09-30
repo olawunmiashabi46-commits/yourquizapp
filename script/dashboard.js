@@ -192,7 +192,18 @@ document.getElementById('upgrade-button').addEventListener('click', function () 
             });
         }
 
-        showBanner('premium', 'premium');
-        showBanner('free', 'free');
+        function isActivePremium(student) {
+            if (student.plan !== 'premium') return false;
+            if (!student.planExpiresAt) return true;
+            return new Date(student.planExpiresAt) > new Date();
+        }
+
+        // A student only ever sees the championship meant for their plan,
+        // not both, so there's no confusion about which one they can join.
+        if (isActivePremium(loggedInStudent)) {
+            showBanner('premium', 'premium');
+        } else {
+            showBanner('free', 'free');
+        }
     });
 })();
