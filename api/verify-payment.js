@@ -3,7 +3,9 @@ import { createClient } from '@supabase/supabase-js';
 // Prices are decided here on the server, never trusted from the browser.
 const PLANS = {
   student_premium: { table: 'students', amountKobo: 500000, days: 60 },
-  educator_premium: { table: 'educators', amountKobo: 1000000, days: 180 }
+  educator_premium: { table: 'educators', amountKobo: 1000000, days: 180 },
+  // Not an account upgrade — a one-time paid entry into ONE Free championship.
+  free_championship_entry: { amountKobo: 200000, oneTimeEntry: true }
 };
 
 export default async function handler(req, res) {
@@ -11,7 +13,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
 
-  const { reference, planCode, accountId } = req.body || {};
+  const { reference, planCode, accountId, quizId, electiveSubject } = req.body || {};
   if (!reference || !planCode || !accountId) {
     return res.status(400).json({ success: false, message: 'Missing details.' });
   }
@@ -19,6 +21,10 @@ export default async function handler(req, res) {
   const plan = PLANS[planCode];
   if (!plan) {
     return res.status(400).json({ success: false, message: 'Unknown plan.' });
+  }
+
+  if (plan.oneTimeEntry && (!quizId || !electiveSubject)) {
+    return res.status(400).json({ success: false, message: 'Missing championship or subject details.' });
   }
 
   const secretKey = process.env.PAYSTACK_SECRET_KEY;
@@ -68,8 +74,31 @@ export default async function handler(req, res) {
       verified_at: new Date().toISOString()
     });
 
-    // 4. Activate premium. The service role key bypasses the trigger that
-    //    blocks students/educators from changing their own plan.
+    // 4a. A paid Free-championship entry: register for that ONE event only.
+    //     This does NOT touch the student's plan (they stay Free).
+    if (plan.oneTimeEntry) {
+      const { error: quizErr, data: quizRow } = await supabase
+        .from('quizzes')
+        .select('id, is_championship, eligible_plan')
+        .eq('id', quizId)
+        .maybeSingle();
+
+      if (quizErr || !quizRow || !quizRow.is_championship || quizRow.eligible_plan !== 'free') {
+        return res.status(400).json({ success: false, message: 'This is not an open Free championship.' });
+      }
+
+      const { error: regErr } = await supabase.rpc('register_paid_championship_entry', {
+        p_quiz_id: quizId,
+        p_student_id: accountId,
+        p_elective_subject: electiveSubject
+      });
+      if (regErr) throw regErr;
+
+      return res.status(200).json({ success: true });
+    }
+
+    // 4b. Activate a Premium subscription. The service role key bypasses the
+    //     trigger that blocks students/educators from changing their own plan.
     const expiresAt = new Date(Date.now() + plan.days * 24 * 60 * 60 * 1000).toISOString();
     const { error: updateErr } = await supabase
       .from(plan.table)
