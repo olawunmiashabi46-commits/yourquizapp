@@ -39,7 +39,10 @@ registerButton.addEventListener('click', async () => {
     }
     if (!/^\S+@\S+\.\S+$/.test(email)) return fail('Please enter a valid email address.');
     if (!/^[0-9+\s-]{10,15}$/.test(phone)) return fail('Please enter a valid phone number.');
-    if (password.length < 6) return fail('Password must be at least 6 characters.');
+    if (password.length < 8) return fail('Password must be at least 8 characters.');
+    if (!/[a-z]/.test(password)) return fail('Password must include at least one lowercase letter.');
+    if (!/[A-Z]/.test(password)) return fail('Password must include at least one uppercase letter.');
+    if (!/[0-9]/.test(password)) return fail('Password must include at least one number.');
     if (password !== confirmPassword) return fail('Passwords do not match.');
 
     registerButton.disabled = true;

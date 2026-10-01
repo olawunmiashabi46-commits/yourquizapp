@@ -17,6 +17,22 @@ const eligibleSelect = document.getElementById('champ-eligible');
 const regOpensInput = document.getElementById('champ-reg-opens');
 const regClosesInput = document.getElementById('champ-reg-closes');
 const dateInput = document.getElementById('champ-date');
+
+// Don't let the admin pick a date/time that's already in the past.
+function toLocalDatetimeInputValue(d) {
+    const pad = (n) => String(n).padStart(2, '0');
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
+        'T' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+}
+function applyMinDatetimeNow() {
+    const nowValue = toLocalDatetimeInputValue(new Date());
+    [regOpensInput, regClosesInput, dateInput].forEach((input) => {
+        if (input) input.min = nowValue;
+    });
+}
+applyMinDatetimeNow();
+setInterval(applyMinDatetimeNow, 30000); // keep the floor current if the page stays open a while
+
 const durationInput = document.getElementById('champ-duration');
 const prizeInput = document.getElementById('champ-prize');
 const createButton = document.getElementById('create-button');
@@ -130,6 +146,12 @@ createButton.addEventListener('click', async function () {
     if (!title) return (errorMessage.textContent = 'Please enter a title.');
     if (!scheduledAt) return (errorMessage.textContent = 'Please pick a date and time.');
     if (!duration || duration < 10) return (errorMessage.textContent = 'Please set a time limit of at least 10 minutes.');
+    if (new Date(scheduledAt) < new Date()) {
+        return (errorMessage.textContent = 'The start date/time cannot be in the past.');
+    }
+    if (regOpens && new Date(regOpens) < new Date()) {
+        return (errorMessage.textContent = 'Registration cannot open in the past.');
+    }
     if (regOpens && regCloses && new Date(regOpens) >= new Date(regCloses)) {
         return (errorMessage.textContent = 'Registration must open before it closes.');
     }
