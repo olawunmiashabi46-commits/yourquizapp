@@ -68,23 +68,25 @@ async function loadChampionship() {
     whenEl.textContent = quiz.scheduled_at ? new Date(quiz.scheduled_at).toLocaleString() : '';
 
     if (quiz.prize_info) {
-        prizeEl.textContent = '🎁 ' + quiz.prize_info;
+        prizeEl.innerHTML = '<i data-lucide="gift" style="width:16px; height:16px; vertical-align:-3px; margin-right:4px;"></i>' + quiz.prize_info;
         prizeEl.style.display = 'block';
     }
 
     if (quiz.status === 'started') {
-        badgeEl.innerHTML = '<span class="champ-badge live">🔴 Live now</span>';
+        badgeEl.innerHTML = '<span class="pill-badge live"><i data-lucide="radio"></i> Live now</span>';
         countdownEl.textContent = '';
     } else if (quiz.status === 'ended') {
-        badgeEl.innerHTML = '<span class="champ-badge">Ended</span>';
+        badgeEl.innerHTML = '<span class="pill-badge ended"><i data-lucide="flag"></i> Ended</span>';
         countdownEl.textContent = '';
     } else {
         const eligLabel = quiz.eligible_plan === 'free'
-            ? '<span class="champ-badge">🎟️ Free Championship — ₦2,000 to enter</span>'
-            : '<span class="champ-badge">⭐ Premium Championship</span>';
+            ? '<span class="pill-badge free"><i data-lucide="ticket"></i> ₦2,000 to enter</span>'
+            : '<span class="pill-badge premium"><i data-lucide="star"></i> Premium Championship</span>';
         badgeEl.innerHTML = eligLabel;
         if (quiz.scheduled_at) startCountdown(quiz.scheduled_at);
     }
+
+    if (window.lucide) lucide.createIcons();
 
     await renderAction();
 }
@@ -103,6 +105,8 @@ function registrationWindowStatus() {
 }
 
 async function renderAction() {
+    if (window.lucide) lucide.createIcons();
+    if (window.lucide) lucide.createIcons();
     if (quiz.status === 'ended') {
         actionButton.textContent = 'Championship has ended';
         actionButton.disabled = true;
@@ -133,7 +137,7 @@ async function renderAction() {
 
     // status === 'scheduled'
     if (isRegistered) {
-        const label = quiz.eligible_plan === 'free' ? '✅ Entry paid — ' : '✅ Registered — ';
+        const label = quiz.eligible_plan === 'free' ? 'Entry paid — ' : 'Registered — ';
         actionButton.textContent = label + 'English + ' + myElective;
         actionButton.disabled = true;
         return;
@@ -226,7 +230,7 @@ async function verifyFreeEntryOnServer(reference, chosenSubject) {
         myElective = chosenSubject;
         electiveGroup.style.display = 'none';
         errorMessage.textContent = '';
-        actionButton.textContent = '✅ Entry paid — English + ' + chosenSubject;
+        actionButton.textContent = 'Entry paid — English + ' + chosenSubject;
     } catch (err) {
         console.error('verify-payment fetch error:', err);
         errorMessage.textContent = 'Network error confirming payment. If money left your account, contact support with reference: ' + reference;
@@ -260,7 +264,7 @@ async function registerForChampionship() {
 
     myElective = chosenSubject;
     electiveGroup.style.display = 'none';
-    actionButton.textContent = '✅ Registered — English + ' + chosenSubject;
+    actionButton.textContent = 'Registered — English + ' + chosenSubject;
 }
 
 function joinChampionship() {

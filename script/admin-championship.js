@@ -64,23 +64,27 @@ async function loadChampionships() {
 
     champList.innerHTML = '';
     data.forEach(function (row) {
-        const st = statusLabel(row);
         const when = row.scheduled_at ? new Date(row.scheduled_at).toLocaleString() : 'No date set';
         const div = document.createElement('div');
         div.className = 'champ-row';
-        const eligLabel = row.eligible_plan === 'free' ? '🎟️ Free — ₦2,000 entry' : '⭐ Premium only';
+        const eligLabel = row.eligible_plan === 'free'
+            ? '<span class="pill-badge free"><i data-lucide="ticket"></i> ₦2,000 entry</span>'
+            : '<span class="pill-badge premium"><i data-lucide="star"></i> Premium only</span>';
         div.innerHTML = `
             <div class="champ-info">
-                <b>${row.title}</b>
-                ${when} &middot; ${row.duration_minutes} min &middot; ${eligLabel} &nbsp; <span class="champ-status ${st.cls}">${st.text}</span>
+                <b>${row.title}</b><br>
+                ${when} &middot; ${row.duration_minutes} min
+                <div style="margin-top:6px; display:flex; gap:6px; flex-wrap:wrap;">${eligLabel} ${statusPill(row)}</div>
             </div>
-            <div>
-                <button class="secondary" data-add="${row.id}">Add Questions</button>
-                ${row.status === 'scheduled' ? `<button data-start="${row.id}">Start Now</button>` : ''}
-                <button class="secondary" style="color:#dc2626;" data-delete="${row.id}" data-title="${row.title.replace(/"/g, '&quot;')}">Delete</button>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;">
+                <button class="app-button" data-add="${row.id}"><i data-lucide="plus-circle"></i> Add Questions</button>
+                ${row.status === 'scheduled' ? `<button class="app-button primary" data-start="${row.id}"><i data-lucide="play"></i> Start Now</button>` : ''}
+                <button class="app-button" style="color:#dc2626; border-color:#fecaca;" data-delete="${row.id}" data-title="${row.title.replace(/"/g, '&quot;')}"><i data-lucide="trash-2"></i> Delete</button>
             </div>`;
         champList.appendChild(div);
     });
+
+    if (window.lucide) lucide.createIcons();
 
     champList.querySelectorAll('[data-add]').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -94,6 +98,7 @@ async function loadChampionships() {
     champList.querySelectorAll('[data-delete]').forEach(btn => {
         btn.addEventListener('click', () => deleteChampionship(btn.dataset.delete, btn.dataset.title));
     });
+    if (window.lucide) lucide.createIcons();
 }
 
 async function deleteChampionship(quizId, title) {
@@ -189,7 +194,8 @@ createButton.addEventListener('click', async function () {
         errorMessage.textContent = 'Could not create championship: ' + err.message;
     } finally {
         createButton.disabled = false;
-        createButton.textContent = '🏆 Create Championship';
+        createButton.innerHTML = '<i data-lucide="trophy"></i> Create Championship';
+        if (window.lucide) lucide.createIcons();
     }
 });
 

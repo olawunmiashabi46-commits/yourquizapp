@@ -187,6 +187,7 @@ document.getElementById('upgrade-button').addEventListener('click', function () 
                     : 'Tap for details');
 
             banner.style.display = 'block';
+            if (window.lucide) lucide.createIcons();
             banner.addEventListener('click', function () {
                 window.location.href = 'championship.html?id=' + champ.id;
             });
