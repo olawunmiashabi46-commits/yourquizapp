@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Championship | JAMB Quiz</title>
 <link rel="stylesheet" href="style/championship.css">
+<link rel="stylesheet" href="style/championship-shared.css">
 <script src="https://js.paystack.co/v2/inline.js"></script>
 </head>
 <body>
 <div class="create-container">
   <div class="create-card" id="champ-card">
-    <div class="create-icon">🏆</div>
+    <div class="create-icon"><i data-lucide="trophy"></i></div>
     <div id="champ-status-badge"></div>
     <h1 id="champ-title">Loading...</h1>
     <p class="description" id="champ-when"></p>
@@ -48,16 +49,18 @@
         </select>
     </div>
 
-    <button id="action-button" disabled>Loading...</button>
+    <button id="action-button" class="app-button primary" disabled>Loading...</button>
     <p id="error-message" style="color:#dc2626; font-size:14px; margin-top:10px;"></p>
     <p class="locked-note" id="locked-note" style="display:none;">
-        Championship is Premium-only. <a href="upgrade.html">Upgrade to enter →</a>
+        Championship is Premium-only. <a href="upgrade.html">Upgrade to enter <i data-lucide="arrow-right" style="width:14px; height:14px; vertical-align:-2px;"></i></a>
     </p>
 
-    <a href="dashboard.html" style="display:block; text-align:center; margin-top:18px; color:#64748b; font-size:14px;">← Back to Dashboard</a>
+    <a href="dashboard.html" class="app-button" style="margin-top:18px;"><i data-lucide="arrow-left"></i> Back to Dashboard</a>
   </div>
 </div>
 
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
 <script type="module" src="script/championship.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Manage Championships | Admin</title>
 <link rel="stylesheet" href="style/admin-championship.css">
+<link rel="stylesheet" href="style/championship-shared.css">
 </head>
 <body>
 <div class="create-container">
@@ -54,7 +55,7 @@
         <textarea id="champ-prize" placeholder="Example: Winner gets ₦20,000. Top 5 get certificates."></textarea>
     </div>
 
-    <button id="create-button">🏆 Create Championship</button>
+    <button id="create-button" class="app-button primary"><i data-lucide="trophy"></i> Create Championship</button>
     <p id="error-message" style="color:#dc2626; font-size:14px; margin-top:10px;"></p>
 
     <div class="champ-list" id="champ-list"></div>
