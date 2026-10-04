@@ -176,6 +176,12 @@ document.getElementById('upgrade-button').addEventListener('click', function () 
                 return;
             }
 
+            // The start time has passed and nobody ever clicked "Start Now" —
+            // treat it as missed rather than keep showing it as upcoming.
+            if (champ.status === 'scheduled' && champ.scheduled_at && now > champ.scheduled_at) {
+                return;
+            }
+
             const titleEl = document.getElementById('champ-banner-' + prefix + '-title');
             const subEl = document.getElementById('champ-banner-' + prefix + '-sub');
 

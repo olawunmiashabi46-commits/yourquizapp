@@ -18,20 +18,17 @@ const regOpensInput = document.getElementById('champ-reg-opens');
 const regClosesInput = document.getElementById('champ-reg-closes');
 const dateInput = document.getElementById('champ-date');
 
-// Don't let the admin pick a date/time that's already in the past.
-function toLocalDatetimeInputValue(d) {
+// Don't let the admin scroll into a past DAY. The exact "can't be in the
+// past" check (down to the minute) still happens when Create is clicked,
+// so this is just a gentle floor, it won't un-pick a value while you type.
+function startOfTodayInputValue() {
+    const d = new Date();
     const pad = (n) => String(n).padStart(2, '0');
-    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
-        'T' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + 'T00:00';
 }
-function applyMinDatetimeNow() {
-    const nowValue = toLocalDatetimeInputValue(new Date());
-    [regOpensInput, regClosesInput, dateInput].forEach((input) => {
-        if (input) input.min = nowValue;
-    });
-}
-applyMinDatetimeNow();
-setInterval(applyMinDatetimeNow, 30000); // keep the floor current if the page stays open a while
+[regOpensInput, regClosesInput, dateInput].forEach((input) => {
+    if (input) input.min = startOfTodayInputValue();
+});
 
 const durationInput = document.getElementById('champ-duration');
 const prizeInput = document.getElementById('champ-prize');
@@ -39,10 +36,15 @@ const createButton = document.getElementById('create-button');
 const errorMessage = document.getElementById('error-message');
 const champList = document.getElementById('champ-list');
 
-function statusLabel(row) {
-    if (row.status === 'started') return { text: 'Live now', cls: 'status-started' };
-    if (row.status === 'ended') return { text: 'Ended', cls: 'status-ended' };
-    return { text: 'Scheduled', cls: 'status-scheduled' };
+function statusPill(row) {
+    if (row.status === 'started') return '<span class="pill-badge live"><i data-lucide="radio"></i> Live now</span>';
+    if (row.status === 'ended') return '<span class="pill-badge ended"><i data-lucide="flag"></i> Ended</span>';
+
+    // Scheduled, but its start time has already passed and it was never started.
+    if (row.scheduled_at && new Date(row.scheduled_at) < new Date()) {
+        return '<span class="pill-badge free"><i data-lucide="alert-triangle"></i> Missed — start time passed</span>';
+    }
+    return '<span class="pill-badge premium"><i data-lucide="clock"></i> Scheduled</span>';
 }
 
 async function loadChampionships() {
