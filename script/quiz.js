@@ -36,6 +36,15 @@ const quizId =
 
 const isChampionship = joinedQuiz.isChampionship === true;
 
+// FREE vs PREMIUM question-bank limit (regular practice/multiplayer only —
+// championships always use their own hand-picked question set, untouched).
+function isActivePremiumStudent(student) {
+    if (!student || student.plan !== 'premium') return false;
+    if (!student.planExpiresAt) return true;
+    return new Date(student.planExpiresAt) > new Date();
+}
+const isPremiumStudent = isActivePremiumStudent(loggedInStudent);
+
 // ======================================
 // SELECTED SUBJECTS
 // ======================================
@@ -454,7 +463,11 @@ async function initializeQuizSession() {
     for (const sub of selectedSubjects) {
         const cleanSubject = String(sub).toLowerCase().trim();
         const isEnglish = cleanSubject === 'use of english' || cleanSubject === 'english';
-        const requiredCount = isEnglish ? 60 : 40;
+        const fullCount = isEnglish ? 60 : 40;
+        // Free students practice with a smaller slice of the question bank;
+        // Premium students always get the full set.
+        const freeCount = isEnglish ? 20 : 15;
+        const requiredCount = isPremiumStudent ? fullCount : freeCount;
 
         const questions = buildSubjectQuestions(sub, requiredCount, adminQuestionsMap);
         activeSessionQuestions[sub] = questions;
@@ -463,6 +476,32 @@ async function initializeQuizSession() {
 
     if (questionHeading) {
         questionHeading.textContent = 'Questions loaded successfully.';
+    }
+
+    // Let a Free student know they're on the limited question set, with a
+    // quick way to upgrade — not shown to Premium students or championships.
+    if (!isPremiumStudent) {
+        const notice = getEl('free-bank-notice');
+        const noticeText = getEl('free-bank-notice-text');
+        if (notice && noticeText) {
+            const englishCount = (activeSessionQuestions['Use of English'] || []).length;
+            const otherCounts = Object.keys(activeSessionQuestions)
+                .filter((s) => s !== 'Use of English')
+                .map((s) => activeSessionQuestions[s].length);
+            const sampleOther = otherCounts.length ? otherCounts[0] : null;
+
+            let text = "You're practicing with the Free question set";
+            if (englishCount || sampleOther) {
+                const parts = [];
+                if (englishCount) parts.push(englishCount + ' English');
+                if (sampleOther) parts.push(sampleOther + ' per other subject');
+                text += ' (' + parts.join(', ') + ')';
+            }
+            text += '.';
+            noticeText.textContent = text;
+            notice.style.display = 'block';
+            if (window.lucide) lucide.createIcons();
+        }
     }
 }
 
