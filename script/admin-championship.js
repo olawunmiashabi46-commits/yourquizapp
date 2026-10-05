@@ -153,14 +153,22 @@ createButton.addEventListener('click', async function () {
     if (!title) return (errorMessage.textContent = 'Please enter a title.');
     if (!scheduledAt) return (errorMessage.textContent = 'Please pick a date and time.');
     if (!duration || duration < 10) return (errorMessage.textContent = 'Please set a time limit of at least 10 minutes.');
-    if (new Date(scheduledAt) < new Date()) {
-        return (errorMessage.textContent = 'The start date/time cannot be in the past.');
+    // A small buffer (5 min), so the normal time it takes to fill this form
+    // doesn't accidentally push your chosen time into the past by the time
+    // you click Create.
+    const earliestAllowed = new Date(Date.now() + 5 * 60 * 1000);
+    const fmt = (d) => d.toLocaleString([], { hour: '2-digit', minute: '2-digit', month: 'short', day: 'numeric' });
+
+    if (new Date(scheduledAt) < earliestAllowed) {
+        return (errorMessage.textContent =
+            'Start time (' + fmt(new Date(scheduledAt)) + ') must be at least 5 minutes from now (' + fmt(new Date()) + ').');
     }
-    if (regOpens && new Date(regOpens) < new Date()) {
-        return (errorMessage.textContent = 'Registration cannot open in the past.');
+    if (regOpens && new Date(regOpens) < earliestAllowed) {
+        return (errorMessage.textContent =
+            'Registration Opens (' + fmt(new Date(regOpens)) + ') must be at least 5 minutes from now (' + fmt(new Date()) + ').');
     }
     if (regOpens && regCloses && new Date(regOpens) >= new Date(regCloses)) {
-        return (errorMessage.textContent = 'Registration must open before it closes.');
+        return (errorMessage.textContent = 'Registration Opens must be earlier than Registration Closes.');
     }
 
     createButton.disabled = true;
