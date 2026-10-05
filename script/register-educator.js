@@ -5,6 +5,39 @@ const $ = (id) => document.getElementById(id);
 const errorMessage = $('error-message');
 const registerButton = $('register-button');
 
+const FIELD_IDS = ['full-name', 'email', 'phone', 'subjects', 'password', 'confirm-password'];
+
+function clearFieldErrors() {
+    FIELD_IDS.forEach((id) => {
+        const errEl = $(id + '-error');
+        const inputEl = $(id);
+        if (errEl) { errEl.textContent = ''; errEl.classList.remove('visible'); }
+        if (inputEl) inputEl.classList.remove('has-error');
+    });
+    errorMessage.textContent = '';
+}
+
+function fieldFail(fieldId, msg) {
+    clearFieldErrors();
+    const errEl = $(fieldId + '-error');
+    const inputEl = $(fieldId);
+    if (errEl) { errEl.textContent = msg; errEl.classList.add('visible'); }
+    if (inputEl) {
+        inputEl.classList.add('has-error');
+        inputEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        inputEl.focus();
+    }
+    registerButton.disabled = false;
+    registerButton.textContent = 'Create Account';
+}
+
+function generalFail(msg) {
+    clearFieldErrors();
+    errorMessage.textContent = msg;
+    registerButton.disabled = false;
+    registerButton.textContent = 'Create Account';
+}
+
 function setupPasswordToggle(inputId, buttonId) {
     const input = $(inputId), btn = $(buttonId);
     if (!input || !btn) return;
@@ -17,12 +50,6 @@ function setupPasswordToggle(inputId, buttonId) {
 setupPasswordToggle('password', 'toggle-password');
 setupPasswordToggle('confirm-password', 'toggle-confirm-password');
 
-function fail(msg) {
-    errorMessage.textContent = msg;
-    registerButton.disabled = false;
-    registerButton.textContent = 'Create Account';
-}
-
 registerButton.addEventListener('click', async () => {
     const fullName = $('full-name').value.trim();
     const email = $('email').value.trim().toLowerCase();
@@ -32,18 +59,21 @@ registerButton.addEventListener('click', async () => {
     const password = $('password').value;
     const confirmPassword = $('confirm-password').value;
 
-    errorMessage.textContent = '';
+    clearFieldErrors();
 
-    if (!fullName || !email || !phone || !subjects || !password || !confirmPassword) {
-        return fail('Please fill in all fields (bio is optional).');
-    }
-    if (!/^\S+@\S+\.\S+$/.test(email)) return fail('Please enter a valid email address.');
-    if (!/^[0-9+\s-]{10,15}$/.test(phone)) return fail('Please enter a valid phone number.');
-    if (password.length < 8) return fail('Password must be at least 8 characters.');
-    if (!/[a-z]/.test(password)) return fail('Password must include at least one lowercase letter.');
-    if (!/[A-Z]/.test(password)) return fail('Password must include at least one uppercase letter.');
-    if (!/[0-9]/.test(password)) return fail('Password must include at least one number.');
-    if (password !== confirmPassword) return fail('Passwords do not match.');
+    if (!fullName) return fieldFail('full-name', 'Please enter your full name.');
+    if (!email) return fieldFail('email', 'Please enter your email.');
+    if (!/^\S+@\S+\.\S+$/.test(email)) return fieldFail('email', 'Please enter a valid email address.');
+    if (!phone) return fieldFail('phone', 'Please enter your phone number.');
+    if (!/^[0-9+\s-]{10,15}$/.test(phone)) return fieldFail('phone', 'Please enter a valid phone number.');
+    if (!subjects) return fieldFail('subjects', 'Please enter at least one subject you teach.');
+    if (!password) return fieldFail('password', 'Please create a password.');
+    if (password.length < 8) return fieldFail('password', 'Password must be at least 8 characters.');
+    if (!/[a-z]/.test(password)) return fieldFail('password', 'Password must include at least one lowercase letter.');
+    if (!/[A-Z]/.test(password)) return fieldFail('password', 'Password must include at least one uppercase letter.');
+    if (!/[0-9]/.test(password)) return fieldFail('password', 'Password must include at least one number.');
+    if (!confirmPassword) return fieldFail('confirm-password', 'Please confirm your password.');
+    if (password !== confirmPassword) return fieldFail('confirm-password', 'Passwords do not match.');
 
     registerButton.disabled = true;
     registerButton.textContent = 'Creating account...';
@@ -52,7 +82,7 @@ registerButton.addEventListener('click', async () => {
         const { data: auth, error: signUpErr } = await supabase.auth.signUp({ email, password });
         if (signUpErr) throw signUpErr;
         if (!auth.session) {
-            return fail('Email confirmation is still switched on in Supabase. Ask the site owner to turn it off.');
+            return generalFail('Email confirmation is still switched on in Supabase. Ask the site owner to turn it off.');
         }
 
         const { error: insertErr } = await supabase.from('educators').insert({
@@ -71,9 +101,11 @@ registerButton.addEventListener('click', async () => {
     } catch (err) {
         console.error('Educator registration error:', err);
         const m = (err.message || '').toLowerCase();
-        fail(m.includes('already registered') || m.includes('already been registered')
-            ? 'This email is already registered. Please login instead.'
-            : (err.message || 'Something went wrong. Please try again.'));
+        if (m.includes('already registered') || m.includes('already been registered')) {
+            fieldFail('email', 'This email is already registered. Please login instead.');
+        } else {
+            generalFail(err.message || 'Something went wrong. Please try again.');
+        }
     }
 });
 

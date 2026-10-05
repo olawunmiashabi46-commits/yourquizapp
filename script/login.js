@@ -9,6 +9,31 @@ const errorMessage = $('error-message');
 const upgradePanel = $('upgrade-panel');
 const upgradeButton = $('upgrade-button');
 
+const LOGIN_FIELD_IDS = ['username', 'password'];
+const UPGRADE_FIELD_IDS = ['upgrade-email', 'upgrade-phone'];
+
+function clearAllFieldErrors(ids) {
+    ids.forEach((id) => {
+        const errEl = $(id + '-error');
+        const inputEl = $(id);
+        if (errEl) { errEl.textContent = ''; errEl.classList.remove('visible'); }
+        if (inputEl) inputEl.classList.remove('has-error');
+    });
+}
+
+// Only for things like "please fill this in" — never for "wrong credentials",
+// which stays a general message on purpose (not hinting which part is wrong).
+function fieldFail(fieldId, msg) {
+    clearAllFieldErrors(LOGIN_FIELD_IDS);
+    clearAllFieldErrors(UPGRADE_FIELD_IDS);
+    errorMessage.textContent = '';
+    const errEl = $(fieldId + '-error');
+    const inputEl = $(fieldId);
+    if (errEl) { errEl.textContent = msg; errEl.classList.add('visible'); }
+    if (inputEl) { inputEl.classList.add('has-error'); inputEl.focus(); }
+    resetLoginButton();
+}
+
 let pendingLegacy = null; // { username, password }
 
 // Old versions saved plain-text passwords on the device - remove them
@@ -18,7 +43,12 @@ function resetLoginButton() {
     loginButton.disabled = false;
     loginButton.textContent = 'Login';
 }
-function fail(msg) { errorMessage.textContent = msg; resetLoginButton(); }
+function fail(msg) {
+    clearAllFieldErrors(LOGIN_FIELD_IDS);
+    clearAllFieldErrors(UPGRADE_FIELD_IDS);
+    errorMessage.textContent = msg;
+    resetLoginButton();
+}
 
 // Already signed in? Go straight in. Old-style sessions (no real login) are cleared.
 (async function autoLogin() {
@@ -88,7 +118,8 @@ loginButton.addEventListener('click', async () => {
     const password = passwordInput.value;
     errorMessage.textContent = '';
 
-    if (!identifier || !password) return fail('Please enter your username/email and password.');
+    if (!identifier) return fieldFail('username', 'Please enter your username or email.');
+    if (!password) return fieldFail('password', 'Please enter your password.');
 
     loginButton.disabled = true;
     loginButton.textContent = '⏳ Logging in...';
@@ -132,8 +163,11 @@ upgradeButton.addEventListener('click', async () => {
     const phone = $('upgrade-phone').value.trim();
     errorMessage.textContent = '';
 
-    if (!/^\S+@\S+\.\S+$/.test(email)) return (errorMessage.textContent = 'Please enter a valid email address.');
-    if (!/^[0-9+\s-]{10,15}$/.test(phone)) return (errorMessage.textContent = 'Please enter a valid phone number.');
+    clearAllFieldErrors(UPGRADE_FIELD_IDS);
+    if (!email) return fieldFail('upgrade-email', 'Please enter your email.');
+    if (!/^\S+@\S+\.\S+$/.test(email)) return fieldFail('upgrade-email', 'Please enter a valid email address.');
+    if (!phone) return fieldFail('upgrade-phone', 'Please enter your phone number.');
+    if (!/^[0-9+\s-]{10,15}$/.test(phone)) return fieldFail('upgrade-phone', 'Please enter a valid phone number.');
     if (!pendingLegacy) return;
 
     upgradeButton.disabled = true;
@@ -156,9 +190,13 @@ upgradeButton.addEventListener('click', async () => {
     } catch (err) {
         console.error('Upgrade error:', err);
         const m = (err.message || '').toLowerCase();
-        errorMessage.textContent = m.includes('already registered')
-            ? 'That email is already used by another account. Try a different email.'
-            : (err.message || 'Upgrade failed. Please try again.');
+        if (m.includes('already registered')) {
+            const errEl = $('upgrade-email-error');
+            if (errEl) { errEl.textContent = 'That email is already used by another account.'; errEl.classList.add('visible'); }
+            $('upgrade-email').classList.add('has-error');
+        } else {
+            errorMessage.textContent = err.message || 'Upgrade failed. Please try again.';
+        }
         upgradeButton.disabled = false;
         upgradeButton.textContent = 'Upgrade my account';
     }
