@@ -178,3 +178,17 @@ body {
 .form-group textarea:focus { outline: none; border-color: #2563eb; }
 .switch-link { text-align: center; margin-top: 14px; font-size: 14px; color: #64748b; }
 .switch-link a { color: #2563eb; font-weight: bold; text-decoration: none; }
+
+/* Per-field error messages */
+.field-error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 4px;
+    min-height: 0;
+    display: none;
+}
+.field-error.visible { display: block; }
+.form-group input.has-error,
+.form-group select.has-error {
+    border-color: #dc2626 !important;
+}

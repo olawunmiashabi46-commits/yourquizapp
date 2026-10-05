@@ -161,3 +161,15 @@ body {
     color: #059669;
     text-decoration: underline;
 }
+/* Per-field error messages */
+.field-error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 4px;
+    min-height: 0;
+    display: none;
+}
+.field-error.visible { display: block; }
+.form-group input.has-error {
+    border-color: #dc2626 !important;
+}
