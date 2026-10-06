@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Group Chat | JAMB Quiz</title>
+<link rel="stylesheet" href="style/chat.css">
+</head>
+<body>
+
+<div class="chat-header">
+  <a href="dashboard.html"><i data-lucide="arrow-left"></i></a>
+  <i data-lucide="users"></i>
+  <h1>Premium Group Chat</h1>
+</div>
+
+<div id="locked-screen" class="locked-screen" style="display:none;">
+  <i data-lucide="lock" style="width:32px; height:32px; color:#94a3b8;"></i>
+  <p style="color:#475569; font-size:15px;">Group chat is a Premium feature.</p>
+  <a href="upgrade.html">Upgrade to join →</a>
+</div>
+
+<div id="chat-messages" class="chat-messages"></div>
+
+<div id="chat-input-bar" class="chat-input-bar" style="display:none;">
+  <textarea id="message-input" placeholder="Type a message..." rows="1" maxlength="1000"></textarea>
+  <button id="send-button"><i data-lucide="send"></i></button>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+<script type="module" src="script/chat.js"></script>
+</body>
+</html>
