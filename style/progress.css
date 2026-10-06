@@ -1,0 +1,215 @@
+/* ======================================
+   UNIFORM DASHBOARD GRID STYLING
+====================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.dashboard-header {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    font-size: 26px;
+    color: #0f172a; /* Deep Navy Header */
+    margin-bottom: 6px;
+}
+
+.dashboard-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* Card Section */
+.dashboard-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.dashboard-card h2 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.dashboard-card > p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* 2-COLUMN GRID FOR MAIN ACTION BUTTONS */
+.dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* ALL MAIN BUTTONS ARE IDENTICAL IN SIZE AND LOOK */
+.dashboard-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1.5px solid #cbd5e1;
+    background: #ffffff;
+    color: #1e3a8a; /* Deep Navy Action Text */
+}
+
+.dashboard-actions button:hover {
+    background: #eff6ff;
+    border-color: #1e3a8a;
+    transform: translateY(-1px);
+}
+
+/* Logout Section (Red-Accented Full Width at Bottom) */
+.logout-section {
+    margin-top: 15px;
+}
+
+#logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #fee2e2;
+    color: #dc2626; /* Crimson Red */
+    border: 1px solid #fca5a5;
+    transition: all 0.2s ease;
+}
+
+#logout-button:hover {
+    background: #fecaca;
+    border-color: #f87171;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 25px;
+}
+/* Progress page additions */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.stat-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+.stat-box .stat-number { font-size: 26px; font-weight: bold; color: #1e3a8a; }
+.stat-box .stat-label { font-size: 12px; color: #64748b; margin-top: 4px; }
+
+.subject-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+.subject-row:last-child { border-bottom: none; }
+.subject-bar-track { flex: 1; height: 8px; background: #e2e8f0; border-radius: 4px; margin: 0 12px; overflow: hidden; }
+.subject-bar-fill { height: 100%; border-radius: 4px; background: #2563eb; }
+.subject-pct { font-weight: bold; color: #1e293b; width: 40px; text-align: right; }
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+}
+.badge-card {
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+    border: 1.5px solid #e2e8f0;
+    background: #f8fafc;
+}
+.badge-card.unlocked {
+    border-color: #fbbf24;
+    background: #fffbeb;
+}
+.badge-card i { width: 26px; height: 26px; margin-bottom: 6px; }
+.badge-card.unlocked i { color: #d97706; }
+.badge-card:not(.unlocked) i { color: #cbd5e1; }
+.badge-card .badge-name { font-size: 12px; font-weight: bold; color: #334155; }
+.badge-card:not(.unlocked) .badge-name { color: #94a3b8; }
+
+.premium-lock {
+    text-align: center;
+    padding: 24px 16px;
+    background: #f8fafc;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+.premium-lock a { color: #2563eb; font-weight: bold; text-decoration: none; }
+
+.focus-callout {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #1e3a8a;
+    margin-top: 12px;
+}
+
+.empty-state {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    padding: 24px 0;
+}
