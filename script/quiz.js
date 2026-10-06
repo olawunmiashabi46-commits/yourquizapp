@@ -794,6 +794,7 @@ async function finishQuiz() {
     let scores = {};
     let totalScore = 0;
     let totalQuestionsCount = 0;
+    let totalAttemptedCount = 0;
 
     // CALCULATE SUBJECT SCORES
     selectedSubjects.forEach(sub => {
@@ -801,20 +802,25 @@ async function finishQuiz() {
         const studentSubAnswers = userAnswers[sub] || [];
 
         let correctCount = 0;
+        let attemptedCount = 0;
 
         questions.forEach((q, idx) => {
-            if (String(studentSubAnswers[idx] || '').trim() === String(q.answer || '').trim()) {
+            const given = String(studentSubAnswers[idx] || '').trim();
+            if (given !== '') attemptedCount++;
+            if (given === String(q.answer || '').trim()) {
                 correctCount++;
             }
         });
 
         scores[sub] = {
             score: correctCount,
-            total: questions.length
+            total: questions.length,
+            attempted: attemptedCount
         };
 
         totalScore += correctCount;
         totalQuestionsCount += questions.length;
+        totalAttemptedCount += attemptedCount;
     });
 
     // CALCULATE PERCENTAGE
@@ -860,6 +866,7 @@ async function finishQuiz() {
                 subjects: selectedSubjects,
                 per_subject: scores,
                 total_questions: totalQuestionsCount,
+                questions_attempted: totalAttemptedCount,
                 correct_answers: totalScore,
                 percentage: percentageScore,
                 avg_seconds_per_question: avgSecondsPerQuestion,

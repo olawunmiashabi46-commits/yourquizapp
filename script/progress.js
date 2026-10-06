@@ -32,22 +32,28 @@ async function loadProgress() {
     const list = attempts || [];
 
     // ---------- BASIC STATS (everyone) ----------
-    let totalQuestions = 0, totalCorrect = 0;
-    const perSubject = {}; // subject -> { correct, total }
+    let totalQuestions = 0, totalCorrect = 0, totalAttempted = 0;
+    const perSubject = {}; // subject -> { correct, total, attempted }
 
     list.forEach((a) => {
         totalQuestions += a.total_questions || 0;
         totalCorrect += a.correct_answers || 0;
+        totalAttempted += (a.questions_attempted != null ? a.questions_attempted : a.total_questions) || 0;
         const subjScores = a.per_subject || {};
         Object.keys(subjScores).forEach((subj) => {
-            if (!perSubject[subj]) perSubject[subj] = { correct: 0, total: 0 };
+            if (!perSubject[subj]) perSubject[subj] = { correct: 0, total: 0, attempted: 0 };
             perSubject[subj].correct += Number(subjScores[subj].score) || 0;
             perSubject[subj].total += Number(subjScores[subj].total) || 0;
+            perSubject[subj].attempted += Number(subjScores[subj].attempted != null ? subjScores[subj].attempted : subjScores[subj].total) || 0;
         });
     });
 
-    const overallAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
-    $('stat-accuracy').textContent = totalQuestions > 0 ? overallAccuracy + '%' : '—';
+    // Accuracy is based on what was actually answered, not left blank —
+    // a fairer number than dividing by every question that was shown.
+    const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
+    $('stat-accuracy').textContent = totalAttempted > 0 ? overallAccuracy + '%' : '—';
+    $('stat-correct').textContent = totalCorrect;
+    $('stat-attempted').textContent = totalAttempted;
     $('stat-total').textContent = totalQuestions;
 
     const subjectList = $('subject-list');
@@ -58,8 +64,8 @@ async function loadProgress() {
         subjectNames
             .sort((a, b) => (perSubject[b].total) - (perSubject[a].total))
             .forEach((subj) => {
-                const { correct, total } = perSubject[subj];
-                const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+                const { correct, total, attempted } = perSubject[subj];
+                const pct = attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
                 const row = document.createElement('div');
                 row.className = 'subject-row';
                 row.innerHTML = `
@@ -79,16 +85,16 @@ async function loadProgress() {
         $('advanced-content').style.display = 'block';
 
         // Weakest subject (needs a reasonable sample so one bad quiz doesn't skew it)
-        const meaningfulSubjects = subjectNames.filter((s) => perSubject[s].total >= 10);
+        const meaningfulSubjects = subjectNames.filter((s) => perSubject[s].attempted >= 10);
         if (meaningfulSubjects.length > 0) {
             weakestSubject = meaningfulSubjects.reduce((worst, s) => {
-                const pct = perSubject[s].correct / perSubject[s].total;
-                const worstPct = perSubject[worst].correct / perSubject[worst].total;
+                const pct = perSubject[s].correct / perSubject[s].attempted;
+                const worstPct = perSubject[worst].correct / perSubject[worst].attempted;
                 return pct < worstPct ? s : worst;
             }, meaningfulSubjects[0]);
         }
         if (weakestSubject) {
-            const pct = Math.round((perSubject[weakestSubject].correct / perSubject[weakestSubject].total) * 100);
+            const pct = Math.round((perSubject[weakestSubject].correct / perSubject[weakestSubject].attempted) * 100);
             $('focus-callout').style.display = 'block';
             $('focus-callout').innerHTML =
                 `<i data-lucide="target" style="width:14px; height:14px; vertical-align:-2px; margin-right:4px;"></i>` +
@@ -143,11 +149,11 @@ async function loadProgress() {
         },
         {
             icon: 'book-marked', name: '500 Questions',
-            unlocked: totalQuestions >= 500
+            unlocked: totalAttempted >= 500
         },
         {
             icon: 'target', name: '90% Accuracy',
-            unlocked: totalQuestions >= 50 && overallAccuracy >= 90
+            unlocked: totalAttempted >= 50 && overallAccuracy >= 90
         },
         {
             icon: 'zap', name: 'Fastest Solver',
