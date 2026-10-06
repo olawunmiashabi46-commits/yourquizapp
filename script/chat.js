@@ -20,6 +20,7 @@ const sendButton = $('send-button');
 let lastSeenId = 0;
 let pollTimer = null;
 let atBottom = true;
+let isPolling = false; // prevents two overlapping checks from both rendering the same message
 
 function escapeAndLinkify(text) {
     // Plain text rendering via textContent handles escaping; this just
@@ -83,16 +84,22 @@ async function loadInitialMessages() {
 }
 
 async function pollNewMessages() {
-    const { data, error } = await supabase
-        .from('group_messages')
-        .select('*')
-        .gt('id', lastSeenId)
-        .order('created_at', { ascending: true });
+    if (isPolling) return;
+    isPolling = true;
+    try {
+        const { data, error } = await supabase
+            .from('group_messages')
+            .select('*')
+            .gt('id', lastSeenId)
+            .order('created_at', { ascending: true });
 
-    if (error || !data || data.length === 0) return;
+        if (error || !data || data.length === 0) return;
 
-    renderMessages(data);
-    lastSeenId = data[data.length - 1].id;
+        renderMessages(data);
+        lastSeenId = data[data.length - 1].id;
+    } finally {
+        isPolling = false;
+    }
 }
 
 messagesEl.addEventListener('scroll', () => {
