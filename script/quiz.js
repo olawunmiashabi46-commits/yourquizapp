@@ -837,11 +837,31 @@ async function finishQuiz() {
 
     localStorage.setItem('lastQuizResult', JSON.stringify(localResult));
 
-    // SAVE RESULT TO SUPABASE (MULTIPLAYER QUIZZES ONLY)
-    // Solo practice sessions use a local 'solo_...' id and are never a real
-    // row in the 'quizzes' table, so they are intentionally kept local-only
-    // and never appear on the leaderboard.
+    // SAVE RESULT TO SUPABASE
+    // Multiplayer/championship quizzes save to quiz_results, which feeds
+    // the public leaderboard (unchanged from before).
+    // Solo practice sessions use a local 'solo_...' id and are NOT a real
+    // row in the 'quizzes' table — these are saved privately to
+    // solo_attempts instead, which the leaderboard never reads from, so
+    // solo practice still never appears there, only this student's own
+    // future Progress page will use it.
     const isSoloQuiz = !quizId || String(quizId).startsWith('solo_');
+
+    if (isSoloQuiz && studentId) {
+        try {
+            await supabase.from('solo_attempts').insert([{
+                student_id: studentId,
+                subjects: selectedSubjects,
+                per_subject: scores,
+                total_questions: totalQuestionsCount,
+                correct_answers: totalScore,
+                percentage: percentageScore,
+                completed_at: new Date().toISOString()
+            }]);
+        } catch (error) {
+            console.error('Could not save solo practice history:', error);
+        }
+    }
 
     if (quizId && !isSoloQuiz) {
         try {
