@@ -1,0 +1,55 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8fafc; color: #1e293b;
+    height: 100vh; display: flex; flex-direction: column;
+}
+.chat-header {
+    background: #fff; border-bottom: 1px solid #e2e8f0;
+    padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+}
+.chat-header a { color: #64748b; display: flex; }
+.chat-header h1 { font-size: 17px; }
+.chat-header i { width: 20px; height: 20px; }
+
+.chat-messages {
+    flex: 1; overflow-y: auto; padding: 16px;
+    display: flex; flex-direction: column; gap: 10px;
+    max-width: 700px; width: 100%; margin: 0 auto;
+}
+.msg-row { display: flex; flex-direction: column; max-width: 80%; }
+.msg-row.mine { align-self: flex-end; align-items: flex-end; }
+.msg-bubble {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 14px;
+    padding: 10px 14px; font-size: 14px; line-height: 1.4; word-wrap: break-word;
+}
+.msg-row.mine .msg-bubble { background: #2563eb; color: #fff; border-color: #2563eb; }
+.msg-name { font-size: 12px; font-weight: bold; color: #475569; margin-bottom: 3px; }
+.msg-row.mine .msg-name { display: none; }
+.msg-time { font-size: 11px; color: #94a3b8; margin-top: 3px; }
+
+.chat-input-bar {
+    background: #fff; border-top: 1px solid #e2e8f0; padding: 12px 16px;
+    display: flex; gap: 10px; max-width: 700px; width: 100%; margin: 0 auto;
+}
+.chat-input-bar textarea {
+    flex: 1; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 10px 12px;
+    font-size: 14px; font-family: inherit; resize: none; max-height: 100px;
+}
+.chat-input-bar textarea:focus { outline: none; border-color: #2563eb; }
+.chat-input-bar button {
+    width: 46px; height: 46px; border: none; border-radius: 10px;
+    background: #2563eb; color: #fff; cursor: pointer; display: flex;
+    align-items: center; justify-content: center; flex-shrink: 0;
+}
+.chat-input-bar button:disabled { opacity: .5; cursor: not-allowed; }
+
+.empty-chat { text-align: center; color: #94a3b8; font-size: 14px; padding: 40px 0; }
+.locked-screen {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; padding: 24px; gap: 12px;
+}
+.locked-screen a {
+    background: #2563eb; color: #fff; padding: 12px 24px; border-radius: 10px;
+    text-decoration: none; font-weight: bold; font-size: 14px;
+}
