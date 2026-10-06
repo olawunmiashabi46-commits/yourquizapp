@@ -214,3 +214,7 @@ document.getElementById('upgrade-button').addEventListener('click', function () 
         }
     });
 })();
+
+document.getElementById('progress-button').addEventListener('click', function () {
+    window.location.href = 'progress.html';
+});

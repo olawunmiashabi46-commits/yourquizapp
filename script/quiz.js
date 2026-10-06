@@ -76,6 +76,7 @@ let userAnswers = {};
 
 let timerInterval = null;
 let tabSwitchCount = 0;
+const quizStartTime = Date.now(); // used to approximate avg seconds/question for solo attempts
 
 if (isChampionship) {
     document.addEventListener('visibilitychange', function () {
@@ -849,6 +850,11 @@ async function finishQuiz() {
 
     if (isSoloQuiz && studentId) {
         try {
+            const elapsedSeconds = Math.max(1, Math.round((Date.now() - quizStartTime) / 1000));
+            const avgSecondsPerQuestion = totalQuestionsCount > 0
+                ? Math.round((elapsedSeconds / totalQuestionsCount) * 10) / 10
+                : null;
+
             await supabase.from('solo_attempts').insert([{
                 student_id: studentId,
                 subjects: selectedSubjects,
@@ -856,6 +862,7 @@ async function finishQuiz() {
                 total_questions: totalQuestionsCount,
                 correct_answers: totalScore,
                 percentage: percentageScore,
+                avg_seconds_per_question: avgSecondsPerQuestion,
                 completed_at: new Date().toISOString()
             }]);
         } catch (error) {
