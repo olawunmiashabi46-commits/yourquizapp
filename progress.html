@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>My Progress | JAMB Quiz</title>
+<link rel="stylesheet" href="style/progress.css">
+</head>
+<body>
+<div class="dashboard-container">
+  <div class="dashboard-card">
+    <h2><i data-lucide="trending-up"></i> My Progress</h2>
+    <p>A look at how your practice is going.</p>
+
+    <div id="loading-state" class="empty-state">Loading your progress...</div>
+
+    <div id="progress-content" style="display:none;">
+
+        <!-- BASIC: visible to everyone -->
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-number" id="stat-accuracy">-</div>
+                <div class="stat-label">Overall Accuracy</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="stat-total">-</div>
+                <div class="stat-label">Questions Answered</div>
+            </div>
+        </div>
+
+        <h2 style="font-size:16px; margin-top:20px;"><i data-lucide="book-open"></i> By Subject</h2>
+        <div id="subject-list"></div>
+        <div id="empty-subjects" class="empty-state" style="display:none;">
+            No practice attempts yet — take a quiz to see your subject breakdown here.
+        </div>
+
+        <!-- ADVANCED: Premium only -->
+        <h2 style="font-size:16px; margin-top:24px;"><i data-lucide="sparkles"></i> Advanced Insights</h2>
+        <div id="advanced-locked" class="premium-lock" style="display:none;">
+            Detailed trends, streaks, and your focus area are a Premium feature.
+            <br><a href="upgrade.html">Upgrade to unlock →</a>
+        </div>
+        <div id="advanced-content" style="display:none;">
+            <div class="focus-callout" id="focus-callout" style="display:none;"></div>
+            <div class="stat-grid" style="margin-top:14px;">
+                <div class="stat-box">
+                    <div class="stat-number" id="stat-streak">-</div>
+                    <div class="stat-label">Day Streak</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="stat-trend">-</div>
+                    <div class="stat-label">Recent Trend</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges: visible to everyone, but some only unlock with Premium-tracked data -->
+        <h2 style="font-size:16px; margin-top:24px;"><i data-lucide="award"></i> Badges</h2>
+        <div class="badge-grid" id="badge-grid"></div>
+
+    </div>
+
+    <a href="dashboard.html" class="app-button" style="display:flex; align-items:center; justify-content:center; gap:8px; margin-top:20px; height:48px; border-radius:10px; border:1.5px solid #cbd5e1; color:#1e3a8a; text-decoration:none; font-weight:bold;">
+        <i data-lucide="arrow-left"></i> Back to Dashboard
+    </a>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script type="module" src="script/progress.js"></script>
+</body>
+</html>
