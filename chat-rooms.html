@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Group Chat | JAMB Quiz</title>
+<link rel="stylesheet" href="style/chat.css">
+</head>
+<body>
+
+<div class="chat-header">
+  <a href="dashboard.html"><i data-lucide="arrow-left"></i></a>
+  <i data-lucide="users"></i>
+  <h1>Group Chat</h1>
+</div>
+
+<div id="locked-screen" class="locked-screen" style="display:none;">
+  <i data-lucide="lock" style="width:32px; height:32px; color:#94a3b8;"></i>
+  <p style="color:#475569; font-size:15px;">Group chat is a Premium feature.</p>
+  <a href="upgrade.html">Upgrade to join →</a>
+</div>
+
+<div id="room-list" class="room-list-container" style="display:none;">
+  <a href="chat.html?room=general" class="room-card room-general">
+    <div class="room-icon"><i data-lucide="globe"></i></div>
+    <div>
+        <div class="room-name">General</div>
+        <div class="room-desc">Open to everyone</div>
+    </div>
+  </a>
+  <a href="chat.html?room=science" class="room-card room-science">
+    <div class="room-icon"><i data-lucide="flask-conical"></i></div>
+    <div>
+        <div class="room-name">Science</div>
+        <div class="room-desc">Physics, Chemistry, Biology & more</div>
+    </div>
+  </a>
+  <a href="chat.html?room=commercial" class="room-card room-commercial">
+    <div class="room-icon"><i data-lucide="briefcase"></i></div>
+    <div>
+        <div class="room-name">Commercial</div>
+        <div class="room-desc">Economics, Accounting, Commerce & more</div>
+    </div>
+  </a>
+  <a href="chat.html?room=arts" class="room-card room-arts">
+    <div class="room-icon"><i data-lucide="palette"></i></div>
+    <div>
+        <div class="room-name">Arts</div>
+        <div class="room-desc">Literature, History, Government & more</div>
+    </div>
+  </a>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+<script type="module">
+import { supabase } from './script/supabase.js';
+const loggedInStudent = JSON.parse(localStorage.getItem('loggedInStudent'));
+if (!loggedInStudent) window.location.href = 'login.html';
+
+function isActivePremium(student) {
+    if (!student || student.plan !== 'premium') return false;
+    if (!student.planExpiresAt) return true;
+    return new Date(student.planExpiresAt) > new Date();
+}
+
+if (isActivePremium(loggedInStudent)) {
+    document.getElementById('room-list').style.display = 'block';
+} else {
+    document.getElementById('locked-screen').style.display = 'flex';
+}
+</script>
+</body>
+</html>

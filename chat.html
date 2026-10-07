@@ -9,9 +9,9 @@
 <body>
 
 <div class="chat-header">
-  <a href="dashboard.html"><i data-lucide="arrow-left"></i></a>
+  <a href="chat-rooms.html"><i data-lucide="arrow-left"></i></a>
   <i data-lucide="users"></i>
-  <h1>Premium Group Chat</h1>
+  <h1 id="room-title">Group Chat</h1>
 </div>
 
 <div id="locked-screen" class="locked-screen" style="display:none;">
@@ -22,8 +22,14 @@
 
 <div id="chat-messages" class="chat-messages"></div>
 
+<div id="recording-indicator" class="recording-indicator" style="display:none;">
+  <i data-lucide="mic" style="width:16px; height:16px;"></i>
+  <span id="recording-time">Recording... 0:00</span>
+</div>
+
 <div id="chat-input-bar" class="chat-input-bar" style="display:none;">
   <textarea id="message-input" placeholder="Type a message..." rows="1" maxlength="1000"></textarea>
+  <button id="mic-button" class="mic-button" title="Hold to record a voice note"><i data-lucide="mic"></i></button>
   <button id="send-button"><i data-lucide="send"></i></button>
 </div>
 
