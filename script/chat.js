@@ -11,27 +11,33 @@ function isActivePremium(student) {
     return new Date(student.planExpiresAt) > new Date();
 }
 
+const ROOM_NAMES = { general: 'General', science: 'Science', commercial: 'Commercial', arts: 'Arts' };
+const params = new URLSearchParams(window.location.search);
+const room = ROOM_NAMES[params.get('room')] ? params.get('room') : 'general';
+$('room-title').textContent = ROOM_NAMES[room] + ' Chat';
+
 const messagesEl = $('chat-messages');
 const inputBar = $('chat-input-bar');
 const lockedScreen = $('locked-screen');
 const messageInput = $('message-input');
 const sendButton = $('send-button');
+const micButton = $('mic-button');
+const recordingIndicator = $('recording-indicator');
+const recordingTime = $('recording-time');
+
+const MAX_RECORDING_SECONDS = 120;
 
 let lastSeenId = 0;
 let pollTimer = null;
 let atBottom = true;
-let isPolling = false; // prevents two overlapping checks from both rendering the same message
-
-function escapeAndLinkify(text) {
-    // Plain text rendering via textContent handles escaping; this just
-    // builds the DOM node, no raw HTML from message content is ever used.
-    const span = document.createElement('span');
-    span.textContent = text;
-    return span;
-}
+let isPolling = false;
 
 function formatTime(iso) {
     return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+function formatDuration(totalSeconds) {
+    const s = Math.round(totalSeconds);
+    return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
 }
 
 function renderMessages(messages) {
@@ -52,7 +58,24 @@ function renderMessages(messages) {
 
         const bubble = document.createElement('div');
         bubble.className = 'msg-bubble';
-        bubble.appendChild(escapeAndLinkify(m.message));
+
+        if (m.message_type === 'voice' && m.voice_url) {
+            bubble.classList.add('voice-bubble');
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            audio.src = m.voice_url;
+            bubble.appendChild(audio);
+            if (m.voice_duration_seconds) {
+                const dur = document.createElement('span');
+                dur.style.fontSize = '12px';
+                dur.textContent = formatDuration(m.voice_duration_seconds);
+                bubble.appendChild(dur);
+            }
+        } else {
+            const textSpan = document.createElement('span');
+            textSpan.textContent = m.message;
+            bubble.appendChild(textSpan);
+        }
 
         const timeEl = document.createElement('div');
         timeEl.className = 'msg-time';
@@ -71,6 +94,7 @@ async function loadInitialMessages() {
     const { data, error } = await supabase
         .from('group_messages')
         .select('*')
+        .eq('room', room)
         .order('created_at', { ascending: true })
         .limit(100);
 
@@ -90,6 +114,7 @@ async function pollNewMessages() {
         const { data, error } = await supabase
             .from('group_messages')
             .select('*')
+            .eq('room', room)
             .gt('id', lastSeenId)
             .order('created_at', { ascending: true });
 
@@ -106,7 +131,8 @@ messagesEl.addEventListener('scroll', () => {
     atBottom = messagesEl.scrollHeight - messagesEl.scrollTop - messagesEl.clientHeight < 60;
 });
 
-async function sendMessage() {
+// ---------- TEXT MESSAGES ----------
+async function sendTextMessage() {
     const text = messageInput.value.trim();
     if (!text) return;
 
@@ -116,7 +142,9 @@ async function sendMessage() {
     const { error } = await supabase.from('group_messages').insert({
         student_id: loggedInStudent.id,
         student_name: loggedInStudent.name,
-        message: text
+        message: text,
+        message_type: 'text',
+        room
     });
 
     if (error) {
@@ -133,11 +161,11 @@ async function sendMessage() {
     messageInput.focus();
 }
 
-sendButton.addEventListener('click', sendMessage);
+sendButton.addEventListener('click', sendTextMessage);
 messageInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
-        sendMessage();
+        sendTextMessage();
     }
 });
 messageInput.addEventListener('input', () => {
@@ -145,6 +173,94 @@ messageInput.addEventListener('input', () => {
     messageInput.style.height = Math.min(messageInput.scrollHeight, 100) + 'px';
 });
 
+// ---------- VOICE NOTES ----------
+let mediaRecorder = null;
+let recordedChunks = [];
+let recordingStartTime = null;
+let recordingTimerInterval = null;
+
+async function startRecording() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        alert('Voice notes are not supported on this browser.');
+        return;
+    }
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        recordedChunks = [];
+        mediaRecorder = new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
+        mediaRecorder.onstop = () => {
+            stream.getTracks().forEach((t) => t.stop());
+            handleRecordingStop();
+        };
+
+        mediaRecorder.start();
+        recordingStartTime = Date.now();
+        micButton.classList.add('recording');
+        recordingIndicator.style.display = 'flex';
+
+        recordingTimerInterval = setInterval(() => {
+            const elapsed = Math.floor((Date.now() - recordingStartTime) / 1000);
+            recordingTime.textContent = 'Recording... ' + formatDuration(elapsed);
+            if (elapsed >= MAX_RECORDING_SECONDS) stopRecording();
+        }, 250);
+    } catch (err) {
+        console.error('Microphone access error:', err);
+        alert('Could not access your microphone. Please allow microphone permission and try again.');
+    }
+}
+
+function stopRecording() {
+    if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+    clearInterval(recordingTimerInterval);
+    micButton.classList.remove('recording');
+    recordingIndicator.style.display = 'none';
+}
+
+async function handleRecordingStop() {
+    const durationSeconds = Math.min(MAX_RECORDING_SECONDS, Math.round((Date.now() - recordingStartTime) / 1000));
+    if (durationSeconds < 1 || recordedChunks.length === 0) return;
+
+    const blob = new Blob(recordedChunks, { type: 'audio/webm' });
+    const fileName = 'voice_' + loggedInStudent.id + '_' + Date.now() + '.webm';
+
+    micButton.disabled = true;
+    try {
+        const { error: uploadErr } = await supabase.storage
+            .from('voice-notes')
+            .upload(fileName, blob, { contentType: 'audio/webm' });
+        if (uploadErr) throw uploadErr;
+
+        const { data: urlData } = supabase.storage.from('voice-notes').getPublicUrl(fileName);
+
+        const { error: insertErr } = await supabase.from('group_messages').insert({
+            student_id: loggedInStudent.id,
+            student_name: loggedInStudent.name,
+            message_type: 'voice',
+            voice_url: urlData.publicUrl,
+            voice_duration_seconds: durationSeconds,
+            room
+        });
+        if (insertErr) throw insertErr;
+
+        atBottom = true;
+        pollNewMessages();
+    } catch (err) {
+        console.error('Could not send voice note:', err);
+        alert('Could not send your voice note. Please try again.');
+    } finally {
+        micButton.disabled = false;
+    }
+}
+
+micButton.addEventListener('mousedown', startRecording);
+micButton.addEventListener('touchstart', (e) => { e.preventDefault(); startRecording(); });
+micButton.addEventListener('mouseup', stopRecording);
+micButton.addEventListener('mouseleave', () => { if (mediaRecorder && mediaRecorder.state === 'recording') stopRecording(); });
+micButton.addEventListener('touchend', (e) => { e.preventDefault(); stopRecording(); });
+
+// ---------- POLLING LIFECYCLE ----------
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) { clearInterval(pollTimer); }
     else { pollNewMessages(); pollTimer = setInterval(pollNewMessages, 4000); }

@@ -232,7 +232,7 @@ document.getElementById('progress-button').addEventListener('click', function ()
     if (isActivePremium(loggedInStudent)) {
         btn.style.display = 'flex';
         btn.addEventListener('click', function () {
-            window.location.href = 'chat.html';
+            window.location.href = 'chat-rooms.html';
         });
     }
 })();
