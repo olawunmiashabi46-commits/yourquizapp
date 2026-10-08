@@ -81,6 +81,7 @@ async function loadChampionships() {
             <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;">
                 <button class="app-button" data-add="${row.id}"><i data-lucide="plus-circle"></i> Add Questions</button>
                 ${row.status === 'scheduled' ? `<button class="app-button primary" data-start="${row.id}"><i data-lucide="play"></i> Start Now</button>` : ''}
+                ${row.status === 'started' ? `<button class="app-button primary" data-end="${row.id}"><i data-lucide="square"></i> End Now</button>` : ''}
                 <button class="app-button" style="color:#dc2626; border-color:#fecaca;" data-delete="${row.id}" data-title="${row.title.replace(/"/g, '&quot;')}"><i data-lucide="trash-2"></i> Delete</button>
             </div>`;
         champList.appendChild(div);
@@ -97,10 +98,25 @@ async function loadChampionships() {
     champList.querySelectorAll('[data-start]').forEach(btn => {
         btn.addEventListener('click', () => startChampionship(btn.dataset.start, btn));
     });
+    champList.querySelectorAll('[data-end]').forEach(btn => {
+        btn.addEventListener('click', () => endChampionship(btn.dataset.end, btn));
+    });
     champList.querySelectorAll('[data-delete]').forEach(btn => {
         btn.addEventListener('click', () => deleteChampionship(btn.dataset.delete, btn.dataset.title));
     });
     if (window.lucide) lucide.createIcons();
+}
+
+async function endChampionship(quizId, btn) {
+    if (!confirm('End this championship now? Every student still answering will be submitted immediately.')) return;
+    btn.disabled = true;
+    const { error } = await supabase.from('quizzes').update({ status: 'ended' }).eq('id', quizId);
+    if (error) {
+        alert('Could not end: ' + error.message);
+        btn.disabled = false;
+        return;
+    }
+    loadChampionships();
 }
 
 async function deleteChampionship(quizId, title) {

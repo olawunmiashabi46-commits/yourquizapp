@@ -27,6 +27,7 @@ const backButton = document.getElementById('back-button');
 const participantCount = document.getElementById('participant-count');
 const creatorStatus = document.getElementById('creator-status');
 const startQuizButton = document.getElementById('start-quiz-button');
+const timeLimitSelect = document.getElementById('quiz-time-limit');
 
 // ======================================
 // SUBJECTS BY CATEGORY
@@ -179,6 +180,7 @@ createButton.addEventListener('click', async function () {
                 creator_id: loggedInStudent.id,
                 category: category,
                 subjects: selectedSubjects,
+                time_limit_minutes: timeLimitSelect ? parseInt(timeLimitSelect.value, 10) : 120,
                 started: false,
                 status: 'waiting',
                 started_at: null
@@ -216,6 +218,7 @@ createButton.addEventListener('click', async function () {
 
         quizTitleInput.disabled = true;
         categorySelect.disabled = true;
+        if (timeLimitSelect) timeLimitSelect.disabled = true;
         selectedCheckboxes.forEach(cb => cb.disabled = true);
 
         createButton.textContent = '✅ Quiz Created';
@@ -325,7 +328,7 @@ backButton.addEventListener('click', function () {
 
         const { data, error } = await supabase
             .from('quizzes')
-            .select('id, title, quiz_code, status, started')
+            .select('id, title, quiz_code, status, started, time_limit_minutes')
             .eq('creator_id', loggedInStudent.id)
             .eq('status', 'waiting')
             .eq('started', false)
@@ -342,6 +345,10 @@ backButton.addEventListener('click', function () {
         quizTitleInput.value = quiz.title;
         quizTitleInput.disabled = true;
         categorySelect.disabled = true;
+        if (timeLimitSelect) {
+            if (quiz.time_limit_minutes) timeLimitSelect.value = String(quiz.time_limit_minutes);
+            timeLimitSelect.disabled = true;
+        }
 
         quizCodeElement.textContent = quiz.quiz_code;
         quizResult.classList.remove('hidden');

@@ -131,7 +131,16 @@ async function loadProgress() {
     }
 
     // ---------- BADGES (shown to everyone; some need enough data to unlock) ----------
-    const avgSecondsList = list.map((a) => a.avg_seconds_per_question).filter((v) => v != null);
+    // Only attempts where most questions were really answered and the score was
+    // reasonable count, so rushing through blanks can't earn this badge.
+    const avgSecondsList = list
+        .filter((a) => {
+            const total = a.total_questions || 0;
+            const answered = a.questions_attempted != null ? a.questions_attempted : total;
+            return a.avg_seconds_per_question != null && total > 0 &&
+                (answered / total) >= 0.8 && (a.percentage || 0) >= 50;
+        })
+        .map((a) => a.avg_seconds_per_question);
     const avgSeconds = avgSecondsList.length >= 5
         ? avgSecondsList.reduce((a, b) => a + b, 0) / avgSecondsList.length
         : null;

@@ -103,7 +103,8 @@ if (joinButton) {
                     started,
                     creator_id,
                     category,
-                    subjects
+                    subjects,
+                    status
                 `)
                 .eq('quiz_code', quizCode)
                 .maybeSingle();
@@ -119,6 +120,10 @@ if (joinButton) {
                 throw new Error(
                     'Quiz not found. Please check the code and try again.'
                 );
+            }
+
+            if (quiz.status === 'ended') {
+                throw new Error('This quiz has already ended.');
             }
 
             // ==================================
@@ -383,12 +388,12 @@ if (backButton) {
 
         const { data: quiz, error } = await supabase
             .from('quizzes')
-            .select('id, title, quiz_code, started')
+            .select('id, title, quiz_code, started, status')
             .eq('id', saved.quizId)
             .maybeSingle();
 
         if (error) return;
-        if (!quiz) { localStorage.removeItem('joinedQuiz'); return; }
+        if (!quiz || quiz.status === 'ended') { localStorage.removeItem('joinedQuiz'); return; }
 
         if (quiz.started === true) {
             window.location.href = 'quiz.html';

@@ -134,7 +134,123 @@ function clearChampionshipAnswers() {
 }
 
 
-let timeRemaining = isChampionship ? 0 : 7200; // championship value is set for real below, using a saved end-time
+// ======================================
+// SHARED QUIZZES (multiplayer + championship)
+// Everyone shares ONE deadline (start time + time limit), measured on the
+// server's clock so a wrong clock on someone's phone/laptop can't give
+// them extra time or cut it short. The host (or admin) can also end the
+// quiz early, and every student's page notices and auto-submits.
+// ======================================
+const isSharedQuiz = !!quizId && !String(quizId).startsWith('solo_');
+let sharedQuiz = null;          // { status, creatorId, deadlineMs }
+let serverOffsetMs = 0;         // server time minus this device's time
+let endWatcher = null;
+
+async function measureServerOffset() {
+    try {
+        const t0 = Date.now();
+        const { data, error } = await supabase.rpc('server_now');
+        const t1 = Date.now();
+        if (!error && data) {
+            serverOffsetMs = new Date(data).getTime() - (t0 + t1) / 2;
+        }
+    } catch (err) {
+        console.error('Could not read server time:', err);
+    }
+}
+
+async function loadSharedQuizInfo() {
+    try {
+        const { data, error } = await supabase
+            .from('quizzes')
+            .select('status, started_at, duration_minutes, time_limit_minutes, creator_id, is_championship')
+            .eq('id', quizId)
+            .maybeSingle();
+
+        if (error || !data) return null;
+
+        const limitMinutes = data.is_championship
+            ? (Number(data.duration_minutes) || 60)
+            : (Number(data.time_limit_minutes) || 120);
+        const startMs = data.started_at ? new Date(data.started_at).getTime() : null;
+
+        return {
+            status: data.status,
+            creatorId: data.creator_id,
+            deadlineMs: startMs ? startMs + limitMinutes * 60 * 1000 : null
+        };
+    } catch (err) {
+        console.error('Could not load quiz info:', err);
+        return null;
+    }
+}
+
+function getSharedTimeRemaining() {
+    return Math.floor((sharedQuiz.deadlineMs - (Date.now() + serverOffsetMs)) / 1000);
+}
+
+async function checkIfQuizEnded() {
+    if (quizSubmitting) return;
+    try {
+        const { data } = await supabase.from('quizzes').select('status').eq('id', quizId).maybeSingle();
+        if (data && data.status === 'ended') {
+            clearInterval(timerInterval);
+            finishQuiz();
+        }
+    } catch (err) {
+        console.error('End check failed:', err);
+    }
+}
+
+function startEndWatcher() {
+    clearInterval(endWatcher);
+    endWatcher = setInterval(checkIfQuizEnded, 5000);
+    document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) {
+            if (sharedQuiz && sharedQuiz.deadlineMs) {
+                timeRemaining = getSharedTimeRemaining();
+                updateTimerDisplay();
+                if (timeRemaining <= 0) { clearInterval(timerInterval); finishQuiz(); return; }
+            }
+            checkIfQuizEnded();
+        }
+    });
+}
+
+// A saved copy of this student's question set and answers, so a refresh or
+// a trip to another tab doesn't reshuffle their questions or lose answers.
+const SESSION_KEY = 'quizSession:' + quizId + ':' + studentId;
+
+function saveSharedSession() {
+    try {
+        localStorage.setItem(SESSION_KEY, JSON.stringify({
+            questions: activeSessionQuestions,
+            answers: userAnswers
+        }));
+    } catch (err) {
+        console.error('Could not save quiz session:', err);
+    }
+}
+
+function loadSharedSession() {
+    try {
+        const saved = JSON.parse(localStorage.getItem(SESSION_KEY));
+        if (saved && saved.questions && saved.answers) return saved;
+    } catch (err) { /* ignore */ }
+    return null;
+}
+
+function countAnsweredQuestions() {
+    let n = 0;
+    Object.keys(userAnswers).forEach(function (sub) {
+        (userAnswers[sub] || []).forEach(function (a) {
+            if (a !== null && a !== undefined && String(a).trim() !== '') n++;
+        });
+    });
+    return n;
+}
+
+let timeRemaining = isChampionship ? 0 : 7200; // for shared quizzes this is set from the shared deadline below
 
 let quizSubmitting = false;
 
@@ -450,6 +566,16 @@ async function initializeQuizSession() {
         return;
     }
 
+    if (isSharedQuiz) {
+        const saved = loadSharedSession();
+        if (saved) {
+            activeSessionQuestions = saved.questions;
+            userAnswers = saved.answers;
+            if (questionHeading) questionHeading.textContent = 'Questions loaded successfully.';
+            return;
+        }
+    }
+
     const adminQuestionsMap = await loadAdminQuestions();
 
     for (const sub of selectedSubjects) {
@@ -462,6 +588,8 @@ async function initializeQuizSession() {
         activeSessionQuestions[sub] = questions;
         userAnswers[sub] = new Array(questions.length).fill(null);
     }
+
+    if (isSharedQuiz) saveSharedSession();
 
     if (questionHeading) {
         questionHeading.textContent = 'Questions loaded successfully.';
@@ -488,13 +616,55 @@ window.addEventListener('DOMContentLoaded', async function () {
 
     await initializeQuizSession();
 
-    if (isChampionship) {
-        timeRemaining = getChampionshipTimeRemaining();
-        if (timeRemaining <= 0) {
-            // Time ran out while the student was away (or refreshed too late).
+    if (isSharedQuiz) {
+        await measureServerOffset();
+        sharedQuiz = await loadSharedQuizInfo();
+
+        if (sharedQuiz && sharedQuiz.deadlineMs) {
+            timeRemaining = getSharedTimeRemaining();
+        } else if (isChampionship) {
+            // Couldn't reach the server: fall back to this device's own clock.
+            timeRemaining = getChampionshipTimeRemaining();
+        }
+
+        const alreadyOver = (sharedQuiz && sharedQuiz.status === 'ended') ||
+            ((sharedQuiz && sharedQuiz.deadlineMs) || isChampionship) && timeRemaining <= 0;
+
+        if (alreadyOver) {
+            if (countAnsweredQuestions() === 0) {
+                // Arrived after the end with nothing answered: don't record a zero.
+                localStorage.removeItem('joinedQuiz');
+                localStorage.removeItem(SESSION_KEY);
+                alert('This quiz has already ended.');
+                window.location.href = 'dashboard.html';
+                return;
+            }
             finishQuiz();
             return;
         }
+
+        // Host-only button to end the quiz for everyone at once.
+        const endBtn = getEl('end-for-all-button');
+        if (endBtn && !isChampionship && sharedQuiz &&
+            String(sharedQuiz.creatorId) === String(studentId)) {
+            endBtn.style.display = 'block';
+            endBtn.addEventListener('click', async function () {
+                if (!confirm('End this quiz for everyone now? Every student will be submitted immediately.')) return;
+                endBtn.disabled = true;
+                endBtn.textContent = 'Ending...';
+                const { error } = await supabase.from('quizzes').update({ status: 'ended' }).eq('id', quizId);
+                if (error) {
+                    alert('Could not end the quiz: ' + error.message);
+                    endBtn.disabled = false;
+                    endBtn.textContent = 'End quiz for everyone';
+                    return;
+                }
+                clearInterval(timerInterval);
+                finishQuiz();
+            });
+        }
+
+        startEndWatcher();
     }
 
     renderSubjectTabs();
@@ -510,7 +680,11 @@ function startTimer() {
     updateTimerDisplay();
 
     timerInterval = setInterval(() => {
-        timeRemaining--;
+        if (sharedQuiz && sharedQuiz.deadlineMs) {
+            timeRemaining = getSharedTimeRemaining();
+        } else {
+            timeRemaining--;
+        }
         updateTimerDisplay();
 
         if (timeRemaining <= 0) {
@@ -668,6 +842,7 @@ function loadQuestion() {
                 }
                 userAnswers[activeSubject][currentQuestionIndex] = opt;
                 if (isChampionship) saveChampionshipAnswers();
+                else if (isSharedQuiz) saveSharedSession();
                 loadQuestion();
             };
 
@@ -871,6 +1046,8 @@ async function finishQuiz() {
     // The quiz is finished, so forget it: otherwise the Join Quiz page would
     // keep trying to resume a quiz that is already over.
     localStorage.removeItem('joinedQuiz');
+    localStorage.removeItem(SESSION_KEY);
+    clearInterval(endWatcher);
 
     // GO TO RESULT PAGE
     window.location.href = 'result.html';
