@@ -27,6 +27,14 @@ const recordingTime = $('recording-time');
 
 const MAX_RECORDING_SECONDS = 120;
 
+// Change this if your own student id is ever different — it decides
+// who is allowed to pin/unpin messages. Also enforced on the server,
+// so this is just for showing/hiding the pin button in the UI.
+const ADMIN_STUDENT_ID = 9;
+const isAdmin = String(loggedInStudent.id) === String(ADMIN_STUDENT_ID);
+
+const pinnedBar = $('pinned-bar');
+
 let lastSeenId = 0;
 let pollTimer = null;
 let atBottom = true;
@@ -56,6 +64,8 @@ function renderMessages(messages) {
         nameEl.className = 'msg-name';
         nameEl.textContent = m.student_name;
 
+        if (m.pinned) row.classList.add('pinned');
+
         const bubble = document.createElement('div');
         bubble.className = 'msg-bubble';
 
@@ -84,6 +94,15 @@ function renderMessages(messages) {
         row.appendChild(nameEl);
         row.appendChild(bubble);
         row.appendChild(timeEl);
+
+        if (isAdmin) {
+            const pinBtn = document.createElement('button');
+            pinBtn.className = 'pin-toggle';
+            pinBtn.textContent = m.pinned ? 'Unpin' : 'Pin';
+            pinBtn.addEventListener('click', () => togglePin(m.id, !m.pinned));
+            row.appendChild(pinBtn);
+        }
+
         messagesEl.appendChild(row);
     });
 
@@ -91,10 +110,15 @@ function renderMessages(messages) {
 }
 
 async function loadInitialMessages() {
+    // Messages older than 7 days quietly drop out of view here — they
+    // stay safely in the database, nothing is deleted.
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+
     const { data, error } = await supabase
         .from('group_messages')
         .select('*')
         .eq('room', room)
+        .gte('created_at', sevenDaysAgo)
         .order('created_at', { ascending: true })
         .limit(100);
 
@@ -105,6 +129,65 @@ async function loadInitialMessages() {
 
     renderMessages(data || []);
     if (data && data.length > 0) lastSeenId = data[data.length - 1].id;
+
+    loadPinnedMessages();
+}
+
+// ---------- PINNED MESSAGES ----------
+async function loadPinnedMessages() {
+    const { data, error } = await supabase
+        .from('group_messages')
+        .select('id, student_name, message, message_type')
+        .eq('room', room)
+        .eq('pinned', true)
+        .order('created_at', { ascending: false });
+
+    if (error || !data || data.length === 0) {
+        pinnedBar.style.display = 'none';
+        pinnedBar.innerHTML = '';
+        return;
+    }
+
+    pinnedBar.innerHTML = '<div class="pinned-bar-title"><i data-lucide="pin"></i> Pinned</div>';
+    data.forEach((m) => {
+        const item = document.createElement('div');
+        item.className = 'pinned-item';
+        const text = m.message_type === 'voice' ? '🎙️ Voice note' : m.message;
+        const span = document.createElement('span');
+        span.innerHTML = '';
+        const nameB = document.createElement('b');
+        nameB.textContent = m.student_name + ': ';
+        span.appendChild(nameB);
+        span.appendChild(document.createTextNode(text));
+        item.appendChild(span);
+
+        if (isAdmin) {
+            const unpinBtn = document.createElement('button');
+            unpinBtn.textContent = 'Unpin';
+            unpinBtn.addEventListener('click', () => togglePin(m.id, false));
+            item.appendChild(unpinBtn);
+        }
+        pinnedBar.appendChild(item);
+    });
+    pinnedBar.style.display = 'block';
+    if (window.lucide) lucide.createIcons();
+}
+
+async function togglePin(messageId, newPinned) {
+    const { error } = await supabase
+        .from('group_messages')
+        .update({ pinned: newPinned })
+        .eq('id', messageId);
+
+    if (error) {
+        console.error('Could not update pin:', error);
+        alert('Could not update pin status.');
+        return;
+    }
+    // Re-draw the room so the Pin/Unpin label and highlight update.
+    messagesEl.innerHTML = '';
+    lastSeenId = 0;
+    loadInitialMessages();
 }
 
 async function pollNewMessages() {

@@ -350,9 +350,60 @@ if (backButton) {
                 clearInterval(waitingTimer);
             }
 
+            // Leaving on purpose: forget the saved quiz so the next visit
+            // starts fresh with the code box.
+            localStorage.removeItem('joinedQuiz');
+
             window.location.href =
                 'dashboard.html';
         }
     );
 
 }
+
+// ======================================
+// RESUME A QUIZ YOU ALREADY JOINED
+// If you joined a quiz and then left this page (to check something in
+// another tab, refresh, etc.), coming back puts you straight back in the
+// waiting room, or into the quiz if it has started meanwhile.
+// ======================================
+(async function resumeJoinedQuiz() {
+    try {
+        const saved = JSON.parse(localStorage.getItem('joinedQuiz') || 'null');
+        if (!saved || !saved.quizId) return;
+        if (String(saved.studentId) !== String(loggedInStudent.id)) return;
+        if (saved.isChampionship) return; // championships have their own page
+
+        const ageMs = Date.now() - new Date(saved.joinedAt || 0).getTime();
+        const MAX_AGE_MS = 3 * 60 * 60 * 1000; // 3 hours
+        if (!(ageMs >= 0 && ageMs < MAX_AGE_MS)) {
+            localStorage.removeItem('joinedQuiz'); // too old, treat as stale
+            return;
+        }
+
+        const { data: quiz, error } = await supabase
+            .from('quizzes')
+            .select('id, title, quiz_code, started')
+            .eq('id', saved.quizId)
+            .maybeSingle();
+
+        if (error) return;
+        if (!quiz) { localStorage.removeItem('joinedQuiz'); return; }
+
+        if (quiz.started === true) {
+            window.location.href = 'quiz.html';
+            return;
+        }
+
+        if (joinForm) joinForm.style.display = 'none';
+        if (joinButton) joinButton.style.display = 'none';
+        if (waitingRoom) waitingRoom.style.display = 'block';
+        if (pageTitle) pageTitle.textContent = 'Waiting Room';
+        if (joinDescription) joinDescription.textContent = `Quiz Code: ${quiz.quiz_code}`;
+        if (waitingQuizTitle) waitingQuizTitle.textContent = quiz.title;
+
+        startWaitingForQuiz(quiz.id);
+    } catch (err) {
+        console.error('Could not resume joined quiz:', err);
+    }
+})();

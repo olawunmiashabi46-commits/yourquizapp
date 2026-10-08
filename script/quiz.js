@@ -868,6 +868,10 @@ async function finishQuiz() {
         }
     }
 
+    // The quiz is finished, so forget it: otherwise the Join Quiz page would
+    // keep trying to resume a quiz that is already over.
+    localStorage.removeItem('joinedQuiz');
+
     // GO TO RESULT PAGE
     window.location.href = 'result.html';
 }

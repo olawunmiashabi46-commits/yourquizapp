@@ -313,3 +313,47 @@ backButton.addEventListener('click', function () {
     clearInterval(participantTimer);
     window.location.href = 'dashboard.html';
 });
+// ======================================
+// RESUME AN ACTIVE WAITING ROOM
+// If you already created a quiz and it hasn't started yet, coming back
+// to this page (after switching tabs, refreshing, etc.) takes you
+// straight back to that quiz's waiting room instead of a blank form.
+// ======================================
+(async function resumeActiveQuiz() {
+    try {
+        const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+
+        const { data, error } = await supabase
+            .from('quizzes')
+            .select('id, title, quiz_code, status, started')
+            .eq('creator_id', loggedInStudent.id)
+            .eq('status', 'waiting')
+            .eq('started', false)
+            .eq('is_championship', false)
+            .gte('created_at', since)
+            .order('created_at', { ascending: false })
+            .limit(1);
+
+        if (error || !data || data.length === 0) return;
+
+        const quiz = data[0];
+        currentQuizId = quiz.id;
+
+        quizTitleInput.value = quiz.title;
+        quizTitleInput.disabled = true;
+        categorySelect.disabled = true;
+
+        quizCodeElement.textContent = quiz.quiz_code;
+        quizResult.classList.remove('hidden');
+        participantCount.textContent = '0 students have joined.';
+        creatorStatus.textContent = '🟡 Waiting for students to join...';
+
+        createButton.disabled = true;
+        createButton.textContent = '✅ Quiz Created';
+        startQuizButton.disabled = true;
+
+        startParticipantChecking();
+    } catch (err) {
+        console.error('Could not resume active quiz:', err);
+    }
+})();
