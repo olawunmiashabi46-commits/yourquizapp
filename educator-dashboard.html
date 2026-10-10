@@ -2,37 +2,61 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Educator Dashboard | JAMB Quiz</title>
-<style>
-body{font-family:'Segoe UI',system-ui,sans-serif;background:#f8fafc;color:#1e293b;display:flex;justify-content:center;padding:24px}
-.box{max-width:480px;width:100%;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:30px;text-align:center}
-h1{font-size:22px;margin-bottom:8px}p{color:#64748b;font-size:14px;margin-bottom:8px}
-.badge{display:inline-block;background:#e0f2fe;color:#0369a1;border-radius:20px;padding:4px 12px;font-size:13px;margin:8px 0 16px}
-button{padding:12px 22px;border:none;border-radius:10px;background:#0f172a;color:#fff;font-size:15px;cursor:pointer}
-</style>
+<link rel="stylesheet" href="style/reviews.css">
+<link rel="stylesheet" href="style/lessons.css">
 </head>
 <body>
-<div class="box">
-  <h1 id="welcome">Welcome</h1>
-  <span class="badge" id="plan">Free plan</span>
-  <p>Your educator account is ready. Video uploads, student questions and live classes are coming soon.</p>
-  <button id="logout">Logout</button>
+
+<div class="page-header">
+  <i data-lucide="graduation-cap"></i>
+  <h1 id="welcome">Educator Dashboard</h1>
 </div>
-<script type="module">
-import { supabase } from './script/supabase.js';
-const { data } = await supabase.auth.getSession();
-const e = JSON.parse(localStorage.getItem('loggedInEducator') || 'null');
-if (!data.session || !e) { window.location.href = 'login.html'; }
-else {
-  document.getElementById('welcome').textContent = 'Welcome, ' + e.name + '!';
-  document.getElementById('plan').textContent = (e.plan === 'premium' ? 'Premium' : 'Free') + ' plan';
-}
-document.getElementById('logout').onclick = async () => {
-  await supabase.auth.signOut();
-  localStorage.removeItem('loggedInEducator');
-  window.location.href = 'login.html';
-};
-</script>
+
+<div class="page-body">
+
+  <div class="top-row" style="margin-bottom:14px;">
+    <span class="pill free" id="plan-pill">Free plan</span>
+    <button class="btn small" id="logout-button" type="button"><i data-lucide="log-out"></i> Logout</button>
+  </div>
+
+  <div class="section-title" style="margin-top:6px;">Add a lesson</div>
+  <div class="card">
+    <div class="field">
+      <label for="lesson-subject">Subject</label>
+      <select id="lesson-subject"></select>
+    </div>
+    <div class="field">
+      <label for="lesson-topic">Topic</label>
+      <input type="text" id="lesson-topic" list="topic-suggestions" maxlength="80" placeholder="e.g. Quadratic Equations">
+      <datalist id="topic-suggestions"></datalist>
+      <div class="help">Lessons with the same topic are grouped together for students.</div>
+    </div>
+    <div class="field">
+      <label for="lesson-title">Lesson title</label>
+      <input type="text" id="lesson-title" maxlength="100" placeholder="e.g. Solving by factorisation">
+    </div>
+    <div class="field">
+      <label for="lesson-link">YouTube link</label>
+      <input type="url" id="lesson-link" placeholder="https://www.youtube.com/watch?v=...">
+      <div class="help">Upload the video to YouTube first (Unlisted works well), then paste its link here.</div>
+    </div>
+    <div class="field">
+      <label for="lesson-description">Short description (optional)</label>
+      <textarea id="lesson-description" maxlength="300" placeholder="What will students learn?"></textarea>
+    </div>
+    <button class="btn primary" id="add-button" type="button" style="width:100%;"><i data-lucide="upload"></i> Submit for approval</button>
+    <div class="msg" id="add-message"></div>
+  </div>
+
+  <div class="section-title">My lessons</div>
+  <div id="lesson-list"><p class="hint">Loading...</p></div>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+<script type="module" src="script/educator-dashboard.js"></script>
 </body>
 </html>
