@@ -254,3 +254,21 @@ document.getElementById('progress-button').addEventListener('click', function ()
         });
     }
 })();
+
+// Lessons button — only shown to active Premium students, hidden
+// entirely for Free students (not even a locked preview).
+(function setupLessonsButton() {
+    function isActivePremium(student) {
+        if (!student || student.plan !== 'premium') return false;
+        if (!student.planExpiresAt) return true;
+        return new Date(student.planExpiresAt) > new Date();
+    }
+    const btn = document.getElementById('lessons-button');
+    if (!btn) return;
+    if (isActivePremium(loggedInStudent)) {
+        btn.style.display = 'flex';
+        btn.addEventListener('click', function () {
+            window.location.href = 'lessons.html';
+        });
+    }
+})();
