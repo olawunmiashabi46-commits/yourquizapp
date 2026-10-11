@@ -45,7 +45,7 @@ function showLocked() {
 // ---------------- 1. subjects ----------------
 async function showSubjects() {
     pageTitle.textContent = 'Lessons';
-    backLink.href = 'dashboard.html';
+    backLink.href = 'learn.html';
     const { data, error } = await supabase.rpc('list_lesson_subjects');
     view.innerHTML = '';
     if (error) { view.appendChild(el('p', 'hint', friendly(error))); return; }

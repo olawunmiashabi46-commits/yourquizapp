@@ -75,7 +75,7 @@ function friendly(error) {
 // ---------------------------------------------------------------
 async function showList() {
     pageTitle.textContent = 'Educators';
-    backLink.href = 'dashboard.html';
+    backLink.href = 'learn.html';
 
     const { data, error } = await supabase.rpc('list_educators_for_premium');
     view.innerHTML = '';

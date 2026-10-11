@@ -153,21 +153,70 @@ async function loadLessons() {
         row.appendChild(info);
         card.appendChild(row);
 
-        const del = el('button', 'btn small danger', 'Delete');
-        del.type = 'button';
-        del.style.marginTop = '10px';
-        del.addEventListener('click', async () => {
-            if (!confirm('Delete this lesson? This cannot be undone.')) return;
-            del.disabled = true;
-            const { error: err } = await supabase.rpc('educator_delete_lesson', { p_lesson_id: l.lesson_id });
-            if (err) { alert('Could not delete the lesson.'); del.disabled = false; return; }
-            loadLessons();
-        });
-        card.appendChild(del);
 
         list.appendChild(card);
     });
     icons();
 }
 
+// ---------- what students say (read-only) ----------
+const STAR_POINTS = '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2';
+function starsRow(rating) {
+    const ns = 'http://www.w3.org/2000/svg';
+    const wrap = el('span', 'stars');
+    for (let i = 1; i <= 5; i++) {
+        const filled = i <= Math.round(rating);
+        const svg = document.createElementNS(ns, 'svg');
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('fill', filled ? '#f59e0b' : 'none');
+        svg.setAttribute('stroke', filled ? '#f59e0b' : '#cbd5e1');
+        svg.setAttribute('stroke-width', '2');
+        svg.setAttribute('stroke-linejoin', 'round');
+        const poly = document.createElementNS(ns, 'polygon');
+        poly.setAttribute('points', STAR_POINTS);
+        svg.appendChild(poly);
+        wrap.appendChild(svg);
+    }
+    return wrap;
+}
+
+async function loadReviews() {
+    const summary = $('review-summary');
+    const list = $('review-list');
+    const { data, error } = await supabase.rpc('educator_my_reviews');
+    summary.innerHTML = '';
+    list.innerHTML = '';
+
+    if (error) {
+        list.appendChild(el('p', 'hint', 'Could not load your reviews right now.'));
+        return;
+    }
+    if (!data || data.length === 0) {
+        list.appendChild(el('p', 'hint', 'No reviews yet. They will appear here when students rate you.'));
+        return;
+    }
+
+    const avg = data.reduce((sum, r) => sum + r.rating, 0) / data.length;
+    const head = el('div', 'card');
+    const line = el('div', 'rating-line');
+    line.style.marginTop = '0';
+    line.appendChild(starsRow(avg));
+    line.appendChild(el('span', '', avg.toFixed(1) + ' average from ' + data.length +
+        (data.length === 1 ? ' review' : ' reviews')));
+    head.appendChild(line);
+    summary.appendChild(head);
+
+    data.forEach((r) => {
+        const card = el('div', 'card');
+        const top = el('div', 'review-head');
+        top.appendChild(el('div', 'card-name', r.author_name));
+        top.appendChild(starsRow(r.rating));
+        card.appendChild(top);
+        card.appendChild(el('div', 'review-meta', new Date(r.created_at).toLocaleDateString()));
+        if (r.comment) card.appendChild(el('div', 'review-comment', r.comment));
+        list.appendChild(card);
+    });
+}
+
 loadLessons();
+loadReviews();
