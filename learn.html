@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+    <title>Lessons | JAMB Quiz</title>
+    <link rel="stylesheet" href="style/dashboard.css">
+    <style>
+        .home-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            height: 48px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1.5px solid #cbd5e1;
+            background: #ffffff;
+            color: #1e3a8a;
+            transition: all 0.2s ease;
+        }
+        .home-link:hover {
+            background: #eff6ff;
+            border-color: #1e3a8a;
+            transform: translateY(-1px);
+        }
+        .home-link i { width: 18px; height: 18px; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <!-- HEADER -->
+        <div class="dashboard-header">
+            <div>
+                <h1>JAMB QUIZ</h1>
+                <p id="welcome-message">Welcome!</p>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="dashboard-content">
+            <div class="dashboard-card">
+
+                <h2>
+                    <i data-lucide="video"></i>
+                    Lessons
+                </h2>
+
+                <p>
+                    Watch video lessons from our educators, or read and leave reviews about them.
+                </p>
+
+                <div class="dashboard-actions">
+
+                    <button id="watch-button">
+                        <i data-lucide="video"></i>
+                        <span>Watch Lessons</span>
+                    </button>
+
+                    <button id="reviews-button">
+                        <i data-lucide="user-check"></i>
+                        <span>Educator Reviews</span>
+                    </button>
+
+                </div>
+
+                <div class="logout-section">
+                    <a href="dashboard.html" class="home-link">
+                        <i data-lucide="arrow-left"></i>
+                        Back to Dashboard
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>JAMB Quiz App © 2026</p>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        const student = JSON.parse(localStorage.getItem('loggedInStudent') || 'null');
+
+        function isActivePremium(s) {
+            if (!s || s.plan !== 'premium') return false;
+            if (!s.planExpiresAt) return true;
+            return new Date(s.planExpiresAt) > new Date();
+        }
+
+        // Lessons and reviews are Premium only (also enforced by the database).
+        if (!student) {
+            window.location.href = 'login.html';
+        } else if (!isActivePremium(student)) {
+            window.location.href = 'upgrade.html';
+        } else {
+            document.getElementById('welcome-message').textContent = 'Welcome, ' + student.name + '!';
+            document.getElementById('watch-button').addEventListener('click', () => { window.location.href = 'lessons.html'; });
+            document.getElementById('reviews-button').addEventListener('click', () => { window.location.href = 'educators.html'; });
+        }
+    </script>
+</body>
+</html>

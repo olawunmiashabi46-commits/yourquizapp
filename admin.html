@@ -1,325 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     >
-
     <title>Admin Dashboard | JAMB Quiz</title>
-
-    <link
-        rel="stylesheet"
-        href="style/admin.css"
-    >
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+    <link rel="stylesheet" href="style/dashboard.css">
+    <style>
+        .home-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            height: 48px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1.5px solid #cbd5e1;
+            background: #ffffff;
+            color: #1e3a8a;
+            transition: all 0.2s ease;
+        }
+        .home-link:hover {
+            background: #eff6ff;
+            border-color: #1e3a8a;
+            transform: translateY(-1px);
+        }
+        .home-link i { width: 18px; height: 18px; }
+    </style>
 </head>
-
 <body>
+    <div class="dashboard-container">
 
-    <div class="container">
-
-        <div class="admin-dashboard">
-
-            <!-- ==============================
-                 HEADER
-            =============================== -->
-
-            <div class="dashboard-header">
-
-                <div>
-
-                    <h1>Admin Dashboard</h1>
-
-                    <p class="subtitle">
-                        Select a subject to add questions.
-                    </p>
-
-                </div>
-
-                <div class="admin-icon">
-                    <i data-lucide="shield-check"></i>
-                </div>
-
+        <!-- HEADER -->
+        <div class="dashboard-header">
+            <div>
+                <h1>JAMB QUIZ</h1>
+                <p>Welcome, Admin!</p>
             </div>
-
-
-            <!-- ==============================
-                 SUBJECTS
-            =============================== -->
-
-            <div class="form-group">
-
-                <label>
-                    Select Subject
-                </label>
-
-
-                <div class="subjects-grid">
-
-
-                    <!-- ENGLISH -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="English"
-                    >
-
-                        <i data-lucide="book-open"></i>
-
-                        <span>
-                            English
-                        </span>
-
-                    </button>
-
-
-                    <!-- MATHEMATICS -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Mathematics"
-                    >
-
-                        <i data-lucide="calculator"></i>
-
-                        <span>
-                            Mathematics
-                        </span>
-
-                    </button>
-
-
-                    <!-- PHYSICS -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Physics"
-                    >
-
-                        <i data-lucide="atom"></i>
-
-                        <span>
-                            Physics
-                        </span>
-
-                    </button>
-
-
-                    <!-- CHEMISTRY -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Chemistry"
-                    >
-
-                        <i data-lucide="flask-conical"></i>
-
-                        <span>
-                            Chemistry
-                        </span>
-
-                    </button>
-
-
-                    <!-- BIOLOGY -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Biology"
-                    >
-
-                        <i data-lucide="leaf"></i>
-
-                        <span>
-                            Biology
-                        </span>
-
-                    </button>
-
-
-                    <!-- ECONOMICS -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Economics"
-                    >
-
-                        <i data-lucide="trending-up"></i>
-
-                        <span>
-                            Economics
-                        </span>
-
-                    </button>
-
-
-                    <!-- GOVERNMENT -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Government"
-                    >
-
-                        <i data-lucide="landmark"></i>
-
-                        <span>
-                            Government
-                        </span>
-
-                    </button>
-
-
-                    <!-- LITERATURE -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Literature in English"
-                    >
-
-                        <i data-lucide="library"></i>
-
-                        <span>
-                            Literature in English
-                        </span>
-
-                    </button>
-
-
-                    <!-- HISTORY -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="History"
-                    >
-
-                        <i data-lucide="scroll-text"></i>
-
-                        <span>
-                            History
-                        </span>
-
-                    </button>
-
-
-                    <!-- AGRICULTURAL SCIENCE -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Agricultural Science"
-                    >
-
-                        <i data-lucide="wheat"></i>
-
-                        <span>
-                            Agricultural Science
-                        </span>
-
-                    </button>
-
-
-                    <!-- CRK -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="CRK"
-                    >
-
-                        <i data-lucide="book-marked"></i>
-
-                        <span>
-                            CRK
-                        </span>
-
-                    </button>
-
-
-                    <!-- FINANCIAL ACCOUNTING -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Financial Accounting"
-                    >
-
-                        <i data-lucide="file-spreadsheet"></i>
-
-                        <span>
-                            Financial Accounting
-                        </span>
-
-                    </button>
-
-
-                    <!-- COMMERCE -->
-
-                    <button
-                        class="subject-button"
-                        data-subject="Commerce"
-                    >
-
-                        <i data-lucide="shopping-bag"></i>
-
-                        <span>
-                            Commerce
-                        </span>
-
-                    </button>
-
-
-                </div>
-
-            </div>
-
-
-            <a href="admin-championship.html" class="back-link" style="margin-bottom:8px;">
-                <i data-lucide="trophy"></i> Manage Championships
-            </a>
-
-            <a href="admin-reports.html" class="back-link" style="margin-bottom:8px;">
-                <i data-lucide="flag"></i> Review Reports
-            </a>
-
-            <a href="admin-lessons.html" class="back-link" style="margin-bottom:8px;">
-                <i data-lucide="video"></i> Lesson Approvals
-            </a>
-
-            <!-- ==============================
-                 BACK TO HOME
-            =============================== -->
-
-            <a
-                href="dashboard.html"
-                class="back-link"
-            >
-
-                <i data-lucide="arrow-left"></i>
-
-                Back to Home
-
-            </a>
-
         </div>
+
+        <!-- DASHBOARD CONTENT -->
+        <div class="dashboard-content">
+            <div class="dashboard-card">
+
+                <h2>
+                    <i data-lucide="shield-check"></i>
+                    Admin Dashboard
+                </h2>
+
+                <p>
+                    Manage questions, championships, reviews and lessons from here.
+                </p>
+
+                <div class="dashboard-actions">
+
+                    <button id="questions-button">
+                        <i data-lucide="file-plus"></i>
+                        <span>Add Questions</span>
+                    </button>
+
+                    <button id="championship-button">
+                        <i data-lucide="trophy"></i>
+                        <span>Manage Championships</span>
+                    </button>
+
+                    <button id="reports-button">
+                        <i data-lucide="flag"></i>
+                        <span>Review Reports</span>
+                    </button>
+
+                    <button id="lessons-button">
+                        <i data-lucide="video"></i>
+                        <span>Lesson Approvals</span>
+                    </button>
+
+                </div>
+
+                <div class="logout-section">
+                    <a href="dashboard.html" class="home-link">
+                        <i data-lucide="arrow-left"></i>
+                        Back Home
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>JAMB Quiz App © 2026</p>
+        </footer>
 
     </div>
 
-
-    <!-- LUCIDE ICONS -->
-
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
+        // Only the signed-in admin may see this page.
+        if (sessionStorage.getItem('adminAuthenticated') !== 'true') {
+            window.location.href = 'admin-login.html';
+        }
+
+        const go = (id, url) =>
+            document.getElementById(id).addEventListener('click', () => { window.location.href = url; });
+
+        go('questions-button', 'admin-questions.html');
+        go('championship-button', 'admin-championship.html');
+        go('reports-button', 'admin-reports.html');
+        go('lessons-button', 'admin-lessons.html');
     </script>
-
-
-    <!-- ADMIN JAVASCRIPT -->
-
-    <script src="script/admin.js"></script>
-
 </body>
-
 </html>
