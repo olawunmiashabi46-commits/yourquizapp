@@ -1,10 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Prices are decided here on the server, never trusted from the browser.
+// (The database repeats this check, so it is enforced twice.)
 const PLANS = {
-  student_premium: { table: 'students', amountKobo: 500000, days: 60 },
-  educator_premium: { table: 'educators', amountKobo: 1000000, days: 180 },
-  // Not an account upgrade — a one-time paid entry into ONE Free championship.
+  student_premium: { amountKobo: 500000 },
+  educator_premium: { amountKobo: 1000000 },
+  // Not an account upgrade, a one-time paid entry into ONE Free championship.
   free_championship_entry: { amountKobo: 200000, oneTimeEntry: true }
 };
 
@@ -52,62 +53,31 @@ export default async function handler(req, res) {
       return res.status(400).json({ success: false, message: 'Payment amount does not match this plan.' });
     }
 
-    // 2. Stop the same payment being used twice.
-    const { data: existing } = await supabase
-      .from('payments')
-      .select('id, status')
-      .eq('reference', reference)
-      .maybeSingle();
-
-    if (existing && existing.status === 'verified') {
-      return res.status(200).json({ success: true, message: 'Already activated.' });
+    // The account named when the payment started must match the account asking.
+    const meta = tx.metadata || {};
+    if (meta.studentId && String(meta.studentId) !== String(accountId)) {
+      return res.status(400).json({ success: false, message: 'This payment belongs to a different account.' });
     }
 
-    // 3. Record the payment.
-    await supabase.from('payments').upsert({
-      reference,
-      account_type: planCode.startsWith('student') ? 'student' : 'educator',
-      account_id: String(accountId),
-      plan_code: planCode,
-      amount_kobo: plan.amountKobo,
-      status: 'verified',
-      verified_at: new Date().toISOString()
+    // 2. Record and apply it in one step (safe to run more than once).
+    const { data, error } = await supabase.rpc('apply_payment', {
+      p_reference: reference,
+      p_plan_code: planCode,
+      p_account_id: String(accountId),
+      p_amount_kobo: tx.amount,
+      p_quiz_id: plan.oneTimeEntry ? Number(quizId) : null,
+      p_elective: plan.oneTimeEntry ? String(electiveSubject) : null
     });
+    if (error) throw error;
 
-    // 4a. A paid Free-championship entry: register for that ONE event only.
-    //     This does NOT touch the student's plan (they stay Free).
-    if (plan.oneTimeEntry) {
-      const { error: quizErr, data: quizRow } = await supabase
-        .from('quizzes')
-        .select('id, is_championship, eligible_plan')
-        .eq('id', quizId)
-        .maybeSingle();
-
-      if (quizErr || !quizRow || !quizRow.is_championship || quizRow.eligible_plan !== 'free') {
-        return res.status(400).json({ success: false, message: 'This is not an open Free championship.' });
-      }
-
-      const { error: regErr } = await supabase.rpc('register_paid_championship_entry', {
-        p_quiz_id: quizId,
-        p_student_id: accountId,
-        p_elective_subject: electiveSubject
+    if (data && data.result === 'needs_review') {
+      return res.status(400).json({
+        success: false,
+        message: 'We received your payment but could not apply it automatically. Please contact support and quote this reference: ' + reference
       });
-      if (regErr) throw regErr;
-
-      return res.status(200).json({ success: true });
     }
 
-    // 4b. Activate a Premium subscription. The service role key bypasses the
-    //     trigger that blocks students/educators from changing their own plan.
-    const expiresAt = new Date(Date.now() + plan.days * 24 * 60 * 60 * 1000).toISOString();
-    const { error: updateErr } = await supabase
-      .from(plan.table)
-      .update({ plan: 'premium', plan_expires_at: expiresAt })
-      .eq('id', accountId);
-
-    if (updateErr) throw updateErr;
-
-    return res.status(200).json({ success: true, planExpiresAt: expiresAt });
+    return res.status(200).json({ success: true, planExpiresAt: (data && data.expires_at) || null });
   } catch (err) {
     console.error('verify-payment error:', err);
     return res.status(500).json({ success: false, message: 'Something went wrong verifying payment.' });
