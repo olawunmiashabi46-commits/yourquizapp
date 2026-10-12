@@ -255,3 +255,37 @@ document.getElementById('progress-button').addEventListener('click', function ()
         });
     }
 })();
+
+// ======================================
+// KEEP THE PLAN IN STEP WITH THE SERVER
+// If a payment was applied while this device wasn't looking (for example the
+// student paid, lost connection, and the Paystack webhook upgraded them), the
+// saved copy of their plan is out of date. Check once, and if it changed,
+// refresh the page so the right buttons appear.
+// ======================================
+(async function syncPlanFromServer() {
+    try {
+        if (sessionStorage.getItem('planSyncDone')) return; // at most one refresh per visit
+        const { supabase } = await import('./supabase.js');
+
+        const { data, error } = await supabase
+            .from('students')
+            .select('plan, plan_expires_at')
+            .eq('id', loggedInStudent.id)
+            .maybeSingle();
+        if (error || !data) return;
+
+        const serverExpiry = data.plan_expires_at ? new Date(data.plan_expires_at).getTime() : null;
+        const savedExpiry = loggedInStudent.planExpiresAt ? new Date(loggedInStudent.planExpiresAt).getTime() : null;
+
+        if (data.plan !== (loggedInStudent.plan || 'free') || serverExpiry !== savedExpiry) {
+            loggedInStudent.plan = data.plan;
+            loggedInStudent.planExpiresAt = data.plan_expires_at || null;
+            localStorage.setItem('loggedInStudent', JSON.stringify(loggedInStudent));
+            sessionStorage.setItem('planSyncDone', '1');
+            window.location.reload();
+        }
+    } catch (err) {
+        console.error('Could not sync plan:', err);
+    }
+})();

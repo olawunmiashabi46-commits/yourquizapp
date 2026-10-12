@@ -98,6 +98,8 @@ async function showLessonList() {
 
         const thumb = el('img', 'lesson-thumb');
         thumb.src = 'https://img.youtube.com/vi/' + encodeURIComponent(l.lesson_youtube_id) + '/mqdefault.jpg';
+        thumb.loading = 'lazy';
+        thumb.decoding = 'async';
         thumb.alt = '';
         row.appendChild(thumb);
 
@@ -136,7 +138,7 @@ async function showPlayer() {
 
     const wrap = el('div', 'video-wrap');
     const frame = document.createElement('iframe');
-    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(l.lesson_youtube_id) + '?rel=0&modestbranding=1';
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(l.lesson_youtube_id) + '?rel=0';
     frame.title = l.lesson_title;
     frame.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen');
     frame.setAttribute('allowfullscreen', '');

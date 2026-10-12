@@ -54,7 +54,9 @@ registerButton.addEventListener('click', async () => {
     const fullName = $('full-name').value.trim();
     const email = $('email').value.trim().toLowerCase();
     const phone = $('phone').value.trim();
-    const subjects = $('subjects').value.trim();
+    // Every ticked subject, joined into one list, e.g. "Mathematics, Physics"
+    const subjects = Array.from(document.querySelectorAll('input[name="subject"]:checked'))
+        .map((box) => box.value).join(', ');
     const bio = $('bio').value.trim();
     const password = $('password').value;
     const confirmPassword = $('confirm-password').value;
@@ -66,7 +68,7 @@ registerButton.addEventListener('click', async () => {
     if (!/^\S+@\S+\.\S+$/.test(email)) return fieldFail('email', 'Please enter a valid email address.');
     if (!phone) return fieldFail('phone', 'Please enter your phone number.');
     if (!/^[0-9+\s-]{10,15}$/.test(phone)) return fieldFail('phone', 'Please enter a valid phone number.');
-    if (!subjects) return fieldFail('subjects', 'Please enter at least one subject you teach.');
+    if (!subjects) return fieldFail('subjects', 'Please tick at least one subject you teach.');
     if (!password) return fieldFail('password', 'Please create a password.');
     if (password.length < 8) return fieldFail('password', 'Password must be at least 8 characters.');
     if (!/[a-z]/.test(password)) return fieldFail('password', 'Password must include at least one lowercase letter.');

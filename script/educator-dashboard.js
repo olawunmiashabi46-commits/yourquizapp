@@ -124,6 +124,8 @@ async function loadLessons() {
 
         const thumb = el('img', 'lesson-thumb');
         thumb.src = 'https://img.youtube.com/vi/' + encodeURIComponent(l.lesson_youtube_id) + '/mqdefault.jpg';
+        thumb.loading = 'lazy';
+        thumb.decoding = 'async';
         thumb.alt = '';
         row.appendChild(thumb);
 
