@@ -17,6 +17,28 @@
         href="style/register.css"
     >
 
+    <style>
+        .subject-checks {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 6px;
+        }
+        .subject-check {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            background: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .subject-check input { width: 18px; height: 18px; margin: 0; flex-shrink: 0; }
+        .subject-check:has(input:checked) { border-color: #2563eb; background: #eff6ff; }
+        .subject-checks.has-error { outline: 2px solid #dc2626; outline-offset: 3px; border-radius: 10px; }
+    </style>
 </head>
 
 <body>
@@ -55,8 +77,23 @@
             </div>
 
             <div class="form-group">
-                <label for="subjects">Subjects you teach</label>
-                <input type="text" id="subjects" placeholder="e.g. Mathematics, Physics">
+                <label>Subjects you teach <span style="font-weight:normal; color:#64748b;">(tick all that apply)</span></label>
+                <div class="subject-checks" id="subjects">
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Use of English"><span>Use of English</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Mathematics"><span>Mathematics</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Physics"><span>Physics</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Chemistry"><span>Chemistry</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Biology"><span>Biology</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Agricultural Science"><span>Agricultural Science</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Economics"><span>Economics</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Accounting"><span>Accounting</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Commerce"><span>Commerce</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Government"><span>Government</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Literature in English"><span>Literature in English</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="History"><span>History</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="CRS"><span>CRS</span></label>
+                    <label class="subject-check"><input type="checkbox" name="subject" value="Geography"><span>Geography</span></label>
+                </div>
                 <p class="field-error" id="subjects-error"></p>
             </div>
 
