@@ -18,12 +18,17 @@ function lessonCard(l, state) {
     const card = el('div', 'card');
     const row = el('div', 'lesson-row');
 
-    const thumb = el('img', 'lesson-thumb');
-    thumb.src = 'https://img.youtube.com/vi/' + encodeURIComponent(l.lesson_youtube_id) + '/mqdefault.jpg';
-    thumb.loading = 'lazy';
-    thumb.decoding = 'async';
-    thumb.alt = '';
-    row.appendChild(thumb);
+    const thumbId = l.lesson_youtube_id || l.lesson_source_video_id;
+    if (thumbId) {
+        const thumb = el('img', 'lesson-thumb');
+        thumb.src = 'https://img.youtube.com/vi/' + encodeURIComponent(thumbId) + '/mqdefault.jpg';
+        thumb.loading = 'lazy';
+        thumb.decoding = 'async';
+        thumb.alt = '';
+        row.appendChild(thumb);
+    } else {
+        row.appendChild(el('div', 'lesson-thumb'));   // grey box until a video is attached
+    }
 
     const info = el('div', 'lesson-info');
     info.appendChild(el('div', 'card-name', l.lesson_title));
@@ -34,21 +39,56 @@ function lessonCard(l, state) {
 
     if (l.lesson_description) card.appendChild(el('div', 'card-bio', l.lesson_description));
 
-    const watch = el('a', 'btn small', 'Watch on YouTube');
-    watch.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(l.lesson_youtube_id);
-    watch.target = '_blank';
-    watch.rel = 'noopener noreferrer';
+    // Upload the video to the JAMB QUIZ APP channel, then paste YOUR channel's link here.
+    // Students only ever watch your channel's copy, never the educator's original.
+    let linkInput = null;
+    if (state !== 'approved') {
+        linkInput = el('input', 'report-reason');
+        linkInput.type = 'url';
+        linkInput.placeholder = l.lesson_youtube_id
+            ? 'A channel link is already attached. Paste a new one only to replace it.'
+            : 'After uploading to JAMB QUIZ APP, paste your channel link here';
+        linkInput.style.marginTop = '10px';
+        card.appendChild(linkInput);
+    }
 
     // Buttons sit in equal-width columns, all the same height and lined up.
     const actions = el('div');
     actions.style.cssText = 'display:grid; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); gap:8px; margin-top:12px;';
-    actions.appendChild(watch);
+
+    if (l.lesson_source_video_id && !l.lesson_youtube_id) {
+        const own = el('a', 'btn small', "Open educator's video");
+        own.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(l.lesson_source_video_id);
+        own.target = '_blank';
+        own.rel = 'noopener noreferrer';
+        actions.appendChild(own);
+    }
+    if (l.lesson_youtube_id) {
+        const watch = el('a', 'btn small', 'Watch on YouTube');
+        watch.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(l.lesson_youtube_id);
+        watch.target = '_blank';
+        watch.rel = 'noopener noreferrer';
+        actions.appendChild(watch);
+    }
 
     function approveButton() {
         const b = el('button', 'btn small primary', 'Approve');
         b.type = 'button';
         b.addEventListener('click', async () => {
+            const pasted = linkInput ? linkInput.value.trim() : '';
+            if (!pasted && !l.lesson_youtube_id) {
+                alert('Upload the video to the channel first, then paste its YouTube link in the box before approving.');
+                if (linkInput) linkInput.focus();
+                return;
+            }
             b.disabled = true;
+
+            if (pasted) {
+                const { error: linkError } = await supabase.rpc('admin_set_lesson_video',
+                    { p_lesson_id: l.lesson_id, p_youtube_url: pasted });
+                if (linkError) { alert('Could not attach the video: ' + linkError.message); b.disabled = false; return; }
+            }
+
             const { error } = await supabase.rpc('admin_review_lesson',
                 { p_lesson_id: l.lesson_id, p_approve: true, p_reason: null });
             if (error) { alert('Could not approve: ' + error.message); b.disabled = false; return; }
@@ -116,7 +156,7 @@ async function load() {
     const approved = (data || []).filter((l) => l.lesson_status === 'approved');
     const rejected = (data || []).filter((l) => l.lesson_status === 'rejected');
 
-    view.appendChild(el('div', 'section-title', 'Waiting for approval (' + pending.length + ')'));
+    view.appendChild(el('div', 'section-title', 'Inbox: waiting for you (' + pending.length + ')'));
     if (pending.length === 0) view.appendChild(el('p', 'hint', 'Nothing waiting. All caught up.'));
     pending.forEach((l) => view.appendChild(lessonCard(l, 'pending')));
 

@@ -92,7 +92,7 @@ $('add-button').addEventListener('click', async () => {
 // ---------- my lessons ----------
 const STATUS = {
     pending: { cls: 'pending', icon: 'clock', text: 'Waiting for approval' },
-    approved: { cls: 'approved', icon: 'circle-check', text: 'Live' },
+    approved: { cls: 'approved', icon: 'circle-check', text: 'Approved, now live' },
     rejected: { cls: 'rejected', icon: 'circle-x', text: 'Not approved' }
 };
 
