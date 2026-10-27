@@ -23,11 +23,6 @@ if (!sessionData.session || !educator) {
 }
 
 $('welcome').textContent = 'Welcome, ' + educator.name;
-const isPremium = educator.plan === 'premium' &&
-    (!educator.planExpiresAt || new Date(educator.planExpiresAt) > new Date());
-const planPill = $('plan-pill');
-planPill.textContent = isPremium ? 'Premium plan' : 'Free plan';
-planPill.className = 'pill ' + (isPremium ? 'premium' : 'free');
 
 $('logout-button').addEventListener('click', async () => {
     await supabase.auth.signOut();
@@ -220,5 +215,68 @@ async function loadReviews() {
     });
 }
 
+// ---------- student questions ----------
+async function loadQuestions() {
+    const list = $('question-list');
+    const { data, error } = await supabase.rpc('educator_lesson_questions');
+    list.innerHTML = '';
+
+    if (error) {
+        list.appendChild(el('p', 'hint', 'Could not load questions right now.'));
+        return;
+    }
+    if (!data || data.length === 0) {
+        list.appendChild(el('p', 'hint', 'No questions yet. They will appear here when students ask about your lessons.'));
+        return;
+    }
+
+    data.forEach((q) => {
+        const card = el('div', 'card');
+
+        const top = el('div', 'review-head');
+        top.appendChild(el('div', 'card-name', q.author_name));
+        const waiting = !q.answer_text;
+        const pill = el('span', 'pill ' + (waiting ? 'pending' : 'approved'), waiting ? 'Waiting for your answer' : 'Answered');
+        top.appendChild(pill);
+        card.appendChild(top);
+
+        card.appendChild(el('div', 'card-sub', 'On: ' + q.lesson_title + ' · ' + new Date(q.asked_at).toLocaleDateString()));
+        card.appendChild(el('div', 'review-comment', q.question_text));
+
+        const box = el('textarea', 'review-text');
+        box.maxLength = 1000;
+        box.placeholder = 'Type your answer';
+        box.value = q.answer_text || '';
+        box.style.marginTop = '10px';
+        card.appendChild(box);
+
+        const send = el('button', 'btn small primary', waiting ? 'Send answer' : 'Update answer');
+        send.type = 'button';
+        send.style.marginTop = '10px';
+        const msg = el('div', 'msg');
+        send.addEventListener('click', async () => {
+            if (box.value.trim().length < 1) {
+                msg.className = 'msg error';
+                msg.textContent = 'Please type your answer first.';
+                return;
+            }
+            send.disabled = true;
+            const { error: err } = await supabase.rpc('educator_answer_question',
+                { p_question_id: q.question_id, p_answer: box.value });
+            if (err) {
+                msg.className = 'msg error';
+                msg.textContent = 'Could not send your answer. Please try again.';
+                send.disabled = false;
+                return;
+            }
+            loadQuestions();
+        });
+        card.appendChild(send);
+        card.appendChild(msg);
+        list.appendChild(card);
+    });
+}
+
 loadLessons();
+loadQuestions();
 loadReviews();

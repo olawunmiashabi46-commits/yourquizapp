@@ -166,6 +166,93 @@ async function showPlayer() {
     teacher.appendChild(arrow);
     view.appendChild(teacher);
     icons();
+
+    renderQuestions(l.lesson_id);
+}
+
+// ---------------- 5. questions and answers under a lesson ----------------
+// Loaded AFTER the video is on screen, so it never delays the lesson itself.
+function renderQuestions(lessonId) {
+    const section = el('div');
+    section.appendChild(el('div', 'section-title', 'Questions and answers'));
+
+    const form = el('div', 'card');
+    const box = el('textarea', 'review-text');
+    box.maxLength = 500;
+    box.placeholder = 'Ask the educator a question about this lesson';
+    form.appendChild(box);
+
+    const ask = el('button', 'btn primary', 'Ask question');
+    ask.type = 'button';
+    ask.style.marginTop = '12px';
+    const msg = el('div', 'msg');
+    form.appendChild(ask);
+    form.appendChild(msg);
+    section.appendChild(form);
+
+    const list = el('div');
+    list.appendChild(el('p', 'hint', 'Loading questions...'));
+    section.appendChild(list);
+    view.appendChild(section);
+
+    function askMessage(error) {
+        const m = (error && error.message) || '';
+        const known = ['questions a day', 'between 3 and 500', 'Premium', 'not found'];
+        return known.some((k) => m.includes(k)) ? m : 'Something went wrong. Please try again.';
+    }
+
+    async function loadList() {
+        const { data, error } = await supabase.rpc('get_lesson_questions', { p_lesson_id: lessonId });
+        list.innerHTML = '';
+        if (error) { list.appendChild(el('p', 'hint', 'Could not load questions right now.')); return; }
+        if (!data || data.length === 0) {
+            list.appendChild(el('p', 'hint', 'No questions yet. Be the first to ask!'));
+            return;
+        }
+        data.forEach((q) => {
+            const card = el('div', 'card');
+            const top = el('div', 'review-head');
+            top.appendChild(el('div', 'card-name',
+                String(q.author_id) === String(loggedInStudent.id) ? q.author_name + ' (you)' : q.author_name));
+            top.appendChild(el('div', 'review-meta', new Date(q.asked_at).toLocaleDateString()));
+            card.appendChild(top);
+            card.appendChild(el('div', 'review-comment', q.question_text));
+
+            if (q.answer_text) {
+                const answer = el('div', 'quote');
+                answer.appendChild(el('b', '', 'Answer' + (q.answered_by_name ? ' from ' + q.answered_by_name : '') + ': '));
+                answer.appendChild(document.createTextNode(q.answer_text));
+                card.appendChild(answer);
+            } else {
+                card.appendChild(el('div', 'review-meta', 'Waiting for the educator to answer.'));
+            }
+            list.appendChild(card);
+        });
+    }
+
+    ask.addEventListener('click', async () => {
+        const text = box.value.trim();
+        if (text.length < 3) {
+            msg.className = 'msg error';
+            msg.textContent = 'Please type your question first.';
+            return;
+        }
+        ask.disabled = true;
+        msg.textContent = '';
+        const { error } = await supabase.rpc('ask_lesson_question', { p_lesson_id: lessonId, p_question: text });
+        ask.disabled = false;
+        if (error) {
+            msg.className = 'msg error';
+            msg.textContent = askMessage(error);
+            return;
+        }
+        box.value = '';
+        msg.className = 'msg ok';
+        msg.textContent = 'Your question was sent. The educator will answer it here.';
+        loadList();
+    });
+
+    loadList();
 }
 
 // ---------------------------------------------------------------
