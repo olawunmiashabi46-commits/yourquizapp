@@ -317,16 +317,30 @@ async function loadAdminQuestions() {
     const map = {};
 
     try {
-        const { data, error } = await supabase
-            .from('questions')
-            .select('*');
+        // Supabase returns at most 1000 rows per request, so fetch in pages of
+        // 1000 until everything has arrived. Otherwise a bank bigger than 1000
+        // questions would silently lose the rest.
+        const PAGE = 1000;
+        const data = [];
+        let useOrder = true;
+        for (let from = 0; from < 20000; from += PAGE) {
+            let query = supabase.from('questions').select('*');
+            if (useOrder) query = query.order('id', { ascending: true });
+            let { data: page, error } = await query.range(from, from + PAGE - 1);
 
-        if (error) {
-            console.error('Could not load admin-added questions:', error);
-            return map;
+            if (error && useOrder) {       // table has no id column: retry unordered
+                useOrder = false;
+                ({ data: page, error } = await supabase.from('questions').select('*').range(from, from + PAGE - 1));
+            }
+            if (error) {
+                console.error('Could not load admin-added questions:', error);
+                return map;
+            }
+            data.push(...(page || []));
+            if (!page || page.length < PAGE) break;
         }
 
-        (data || []).forEach(row => {
+        data.forEach(row => {
             const mapped = mapAdminQuestion(row);
             if (!mapped) return;
 
