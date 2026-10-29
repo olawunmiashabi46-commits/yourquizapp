@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bulk Import Questions | Admin</title>
+<link rel="stylesheet" href="style/reviews.css">
+<link rel="stylesheet" href="style/lessons.css">
+</head>
+<body>
+
+<div class="page-header">
+  <a href="admin.html"><i data-lucide="arrow-left"></i></a>
+  <i data-lucide="file-spreadsheet"></i>
+  <h1>Bulk Import Questions</h1>
+</div>
+
+<div class="page-body">
+
+  <div class="card">
+    <div class="card-name">How it works</div>
+    <div class="card-bio">
+      1. Put your questions in a spreadsheet (Excel or Google Sheets), one question per row, with these columns in this order:
+      <b>Question, A, B, C, D, Answer, Explanation</b>. The answer is just the letter A, B, C or D. The explanation is optional.<br><br>
+      2. Select the cells, copy them, and paste them in the box below.<br><br>
+      3. Press <b>Check questions</b>. Nothing is saved yet. You'll see what is ready and what has a problem.<br><br>
+      4. Press <b>Import</b>.
+    </div>
+    <div class="card-bio" style="margin-top:10px;">
+      <b>Tips:</b> write Maths formulas between dollar signs, like $x^2 + 3x$. To underline a word in an English question, put two stars around it, like **relinquish**. You can import up to 500 questions at a time.
+    </div>
+    <a id="template-link" class="btn small" download="questions-template.csv" style="margin-top:12px;">
+      <i data-lucide="download"></i> Download a template
+    </a>
+  </div>
+
+  <div class="section-title">1. Choose the subject</div>
+  <div class="card">
+    <div class="field" style="margin-bottom:0;">
+      <label for="subject">All the questions you paste will go into this subject</label>
+      <select id="subject"></select>
+    </div>
+  </div>
+
+  <div class="section-title">2. Paste your questions</div>
+  <div class="card">
+    <textarea class="review-text" id="paste-box" style="min-height:170px;" placeholder="Paste the copied spreadsheet cells here"></textarea>
+    <button class="btn primary" id="check-button" type="button" style="margin-top:12px; width:100%;">
+      <i data-lucide="search-check"></i> Check questions
+    </button>
+    <div class="msg" id="check-message"></div>
+  </div>
+
+  <div id="preview" style="display:none;">
+    <div class="section-title">3. Check the result</div>
+    <div class="card">
+      <div id="counts" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+      <div id="problem-box" style="margin-top:14px;"></div>
+      <div id="sample-box" style="margin-top:14px;"></div>
+      <button class="btn primary" id="import-button" type="button" style="margin-top:14px; width:100%;">
+        <i data-lucide="upload"></i> Import
+      </button>
+      <div class="msg" id="import-message"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+<script type="module" src="script/admin-bulk.js"></script>
+</body>
+</html>
