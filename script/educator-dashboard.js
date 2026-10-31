@@ -43,7 +43,7 @@ function updateOverview() {
     $('ov-questions').textContent = waiting;
     $('ov-rating').textContent = avg;
     $('ov-reviews').textContent = R.length;
-    $('badge-videos').textContent = pending || '';
+    $('badge-videos').textContent = L.filter((l) => l.lesson_status === 'changes_required').length || '';
     $('badge-questions').textContent = waiting || '';
 }
 
@@ -126,7 +126,8 @@ $('add-button').addEventListener('click', async () => {
 const STATUS = {
     pending: { cls: 'pending', icon: 'clock', text: 'Waiting for approval' },
     approved: { cls: 'approved', icon: 'circle-check', text: 'Approved, now live' },
-    rejected: { cls: 'rejected', icon: 'circle-x', text: 'Not approved' }
+    rejected: { cls: 'rejected', icon: 'circle-x', text: 'Not approved' },
+    changes_required: { cls: 'free', icon: 'pencil', text: 'Changes required' }
 };
 
 async function loadLessons() {
@@ -178,6 +179,14 @@ async function loadLessons() {
 
         if (l.lesson_status === 'rejected' && l.lesson_reject_reason) {
             info.appendChild(el('div', 'reject-note', 'Reason: ' + l.lesson_reject_reason));
+        }
+        if (l.lesson_status === 'changes_required') {
+            info.appendChild(el('div', 'reject-note', 'What to change: ' + (l.lesson_reject_reason || 'Please check the details and send it again.')));
+            const editBtn = el('button', 'btn small primary', 'Edit and send again');
+            editBtn.type = 'button';
+            editBtn.style.marginTop = '10px';
+            editBtn.addEventListener('click', () => openEditForm(l, card, editBtn));
+            info.appendChild(editBtn);
         }
         if (l.lesson_status === 'approved') {
             const stats = el('div', 'lesson-stats');
@@ -396,3 +405,62 @@ async function loadMyQuestions() {
     });
 }
 loadMyQuestions();
+
+// ---------- fix a lesson that was sent back ----------
+function openEditForm(l, card, editBtn) {
+    editBtn.style.display = 'none';
+    const form = el('div');
+    form.style.marginTop = '12px';
+
+    function field(labelText, control) {
+        const f = el('div', 'field');
+        f.appendChild(el('label', '', labelText));
+        f.appendChild(control);
+        form.appendChild(f);
+        return control;
+    }
+    const subject = field('Subject', el('select'));
+    SUBJECTS.forEach((name) => { const o = el('option', '', name); o.value = name; subject.appendChild(o); });
+    subject.value = l.lesson_subject;
+    const topic = field('Topic', el('input')); topic.type = 'text'; topic.maxLength = 80; topic.value = l.lesson_topic;
+    const title = field('Lesson title', el('input')); title.type = 'text'; title.maxLength = 100; title.value = l.lesson_title;
+    const link = field('YouTube link', el('input')); link.type = 'url';
+    link.value = l.lesson_source_video_id ? 'https://www.youtube.com/watch?v=' + l.lesson_source_video_id : '';
+    const desc = field('Short description (optional)', el('textarea')); desc.maxLength = 300; desc.value = l.lesson_description || '';
+
+    const msg = el('div', 'msg');
+    const send = el('button', 'btn small primary', 'Send again');
+    send.type = 'button';
+    const cancel = el('button', 'btn small', 'Cancel');
+    cancel.type = 'button';
+    cancel.style.marginLeft = '8px';
+    cancel.addEventListener('click', () => { form.remove(); editBtn.style.display = ''; });
+
+    send.addEventListener('click', async () => {
+        msg.className = 'msg error';
+        if (topic.value.trim().length < 2) { msg.textContent = 'Please enter a topic.'; return; }
+        if (title.value.trim().length < 3) { msg.textContent = 'Please enter a lesson title.'; return; }
+        if (!/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/|\/live\/)([A-Za-z0-9_-]{11})/.test(link.value)) {
+            msg.textContent = 'Please paste a valid YouTube link.'; return;
+        }
+        send.disabled = true;
+        msg.textContent = '';
+        const { error } = await supabase.rpc('educator_update_lesson', {
+            p_lesson_id: l.lesson_id, p_subject: subject.value, p_topic: topic.value, p_title: title.value,
+            p_youtube_url: link.value, p_description: desc.value
+        });
+        if (error) {
+            msg.textContent = friendly(error);
+            send.disabled = false;
+            return;
+        }
+        loadLessons();
+    });
+
+    const buttons = el('div');
+    buttons.appendChild(send);
+    buttons.appendChild(cancel);
+    form.appendChild(buttons);
+    form.appendChild(msg);
+    card.appendChild(form);
+}

@@ -38,11 +38,12 @@ function lessonCard(l, state) {
     card.appendChild(row);
 
     if (l.lesson_description) card.appendChild(el('div', 'card-bio', l.lesson_description));
+    if (state === 'changes' && l.lesson_reject_reason) card.appendChild(el('div', 'reject-note', 'Changes requested: ' + l.lesson_reject_reason));
 
     // Upload the video to the JAMB QUIZ APP channel, then paste YOUR channel's link here.
     // Students only ever watch your channel's copy, never the educator's original.
     let linkInput = null;
-    if (state !== 'approved') {
+    if (state === 'pending' || state === 'rejected') {
         linkInput = el('input', 'report-reason');
         linkInput.type = 'url';
         linkInput.placeholder = l.lesson_youtube_id
@@ -112,6 +113,20 @@ function lessonCard(l, state) {
         return b;
     }
 
+    function changesButton() {
+        const b = el('button', 'btn small', 'Request changes');
+        b.type = 'button';
+        b.addEventListener('click', async () => {
+            const note = prompt('What should the educator change? (they will see this)');
+            if (note === null) return;
+            b.disabled = true;
+            const { error } = await supabase.rpc('admin_request_lesson_changes', { p_lesson_id: l.lesson_id, p_note: note });
+            if (error) { alert(error.message); b.disabled = false; return; }
+            load();
+        });
+        return b;
+    }
+
     function removeButton() {
         const b = el('button', 'btn small danger', 'Remove');
         b.type = 'button';
@@ -127,7 +142,11 @@ function lessonCard(l, state) {
 
     if (state === 'pending') {
         actions.appendChild(approveButton());
+        actions.appendChild(changesButton());
         actions.appendChild(rejectButton('Reject'));
+    } else if (state === 'changes') {
+        actions.appendChild(rejectButton('Reject'));
+        actions.appendChild(removeButton());
     } else if (state === 'approved') {
         actions.appendChild(rejectButton('Disapprove'));
         actions.appendChild(removeButton());
@@ -155,10 +174,16 @@ async function load() {
     const pending = (data || []).filter((l) => l.lesson_status === 'pending');
     const approved = (data || []).filter((l) => l.lesson_status === 'approved');
     const rejected = (data || []).filter((l) => l.lesson_status === 'rejected');
+    const changes = (data || []).filter((l) => l.lesson_status === 'changes_required');
 
     view.appendChild(el('div', 'section-title', 'Inbox: waiting for you (' + pending.length + ')'));
     if (pending.length === 0) view.appendChild(el('p', 'hint', 'Nothing waiting. All caught up.'));
     pending.forEach((l) => view.appendChild(lessonCard(l, 'pending')));
+
+    if (changes.length > 0) {
+        view.appendChild(el('div', 'section-title', 'Waiting for the educator to fix (' + changes.length + ')'));
+        changes.forEach((l) => view.appendChild(lessonCard(l, 'changes')));
+    }
 
     view.appendChild(el('div', 'section-title', 'Live lessons (' + approved.length + ')'));
     if (approved.length === 0) view.appendChild(el('p', 'hint', 'No live lessons yet.'));
