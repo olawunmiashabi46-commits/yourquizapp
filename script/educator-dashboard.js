@@ -24,6 +24,43 @@ if (!sessionData.session || !educator) {
 
 $('welcome').textContent = 'Welcome, ' + educator.name;
 
+// ---------- sections, overview and navigation ----------
+const state = { lessons: [], reviews: [], questions: [] };
+const SECTIONS = ['overview', 'submit', 'videos', 'ratings', 'questions', 'qsubmit', 'qmine', 'guidelines'];
+
+function updateOverview() {
+    const L = state.lessons;
+    const live = L.filter((l) => l.lesson_status === 'approved');
+    const pending = L.filter((l) => l.lesson_status === 'pending').length;
+    const views = live.reduce((sum, l) => sum + Number(l.lesson_views || 0), 0);
+    const waiting = state.questions.filter((q) => !q.answer_text).length;
+    const R = state.reviews;
+    const avg = R.length ? (R.reduce((sum, r) => sum + r.rating, 0) / R.length).toFixed(1) : '-';
+
+    $('ov-live').textContent = live.length;
+    $('ov-pending').textContent = pending;
+    $('ov-views').textContent = views;
+    $('ov-questions').textContent = waiting;
+    $('ov-rating').textContent = avg;
+    $('ov-reviews').textContent = R.length;
+    $('badge-videos').textContent = pending || '';
+    $('badge-questions').textContent = waiting || '';
+}
+
+function showSection(name) {
+    if (!SECTIONS.includes(name)) name = 'overview';
+    SECTIONS.forEach((s) => {
+        $('sec-' + s).hidden = s !== name;
+        const item = document.querySelector('[data-nav="' + s + '"]');
+        if (item) item.classList.toggle('active', s === name);
+    });
+    if (location.hash !== '#' + name) history.replaceState(null, '', '#' + name);
+    window.scrollTo(0, 0);
+}
+document.querySelectorAll('[data-nav]').forEach((b) => b.addEventListener('click', () => showSection(b.dataset.nav)));
+document.querySelectorAll('[data-go]').forEach((b) => b.addEventListener('click', () => showSection(b.dataset.go)));
+showSection(location.hash.slice(1));
+
 $('logout-button').addEventListener('click', async () => {
     await supabase.auth.signOut();
     localStorage.removeItem('loggedInEducator');
@@ -77,7 +114,8 @@ $('add-button').addEventListener('click', async () => {
     }
 
     addMessage.className = 'msg ok';
-    addMessage.textContent = 'Submitted! Your lesson will appear for students once it is approved.';
+    addMessage.textContent = 'Submitted! It is now waiting for the admin. Taking you to My Videos...';
+    setTimeout(() => showSection('videos'), 1200);
     $('lesson-title').value = '';
     $('lesson-link').value = '';
     $('lesson-description').value = '';
@@ -100,6 +138,7 @@ async function loadLessons() {
         list.appendChild(el('p', 'hint', 'Could not load your lessons right now.'));
         return;
     }
+    state.lessons = data || []; updateOverview();
     if (!data || data.length === 0) {
         list.appendChild(el('p', 'hint', 'You have not added any lessons yet.'));
         return;
@@ -188,6 +227,7 @@ async function loadReviews() {
         list.appendChild(el('p', 'hint', 'Could not load your reviews right now.'));
         return;
     }
+    state.reviews = data || []; updateOverview();
     if (!data || data.length === 0) {
         list.appendChild(el('p', 'hint', 'No reviews yet. They will appear here when students rate you.'));
         return;
@@ -225,6 +265,7 @@ async function loadQuestions() {
         list.appendChild(el('p', 'hint', 'Could not load questions right now.'));
         return;
     }
+    state.questions = data || []; updateOverview();
     if (!data || data.length === 0) {
         list.appendChild(el('p', 'hint', 'No questions yet. They will appear here when students ask about your lessons.'));
         return;
@@ -280,3 +321,78 @@ async function loadQuestions() {
 loadLessons();
 loadQuestions();
 loadReviews();
+
+// ---------- quiz question submissions ----------
+SUBJECTS.forEach((name) => {
+    const o = el('option', '', name);
+    o.value = name;
+    $('q-subject').appendChild(o);
+});
+
+const qMessage = $('q-message');
+$('q-button').addEventListener('click', async () => {
+    const v = (id) => $(id).value.trim();
+    const opts = [v('q-a'), v('q-b'), v('q-c'), v('q-d')];
+    qMessage.className = 'msg error';
+
+    if (v('q-topic').length < 2) { qMessage.textContent = 'Please enter the topic.'; return; }
+    if (v('q-text').length < 10) { qMessage.textContent = 'Please type the full question.'; return; }
+    if (opts.some((o) => o === '')) { qMessage.textContent = 'Please fill in all four options.'; return; }
+    if (new Set(opts.map((o) => o.toLowerCase())).size < 4) { qMessage.textContent = 'Two of the options are the same.'; return; }
+    if (!v('q-answer')) { qMessage.textContent = 'Please choose the correct answer.'; return; }
+
+    const btn = $('q-button');
+    btn.disabled = true;
+    qMessage.textContent = '';
+
+    const { error } = await supabase.rpc('educator_submit_question', {
+        p_subject: $('q-subject').value, p_topic: v('q-topic'), p_difficulty: $('q-difficulty').value,
+        p_question: v('q-text'), p_a: opts[0], p_b: opts[1], p_c: opts[2], p_d: opts[3],
+        p_answer: v('q-answer'), p_explanation: v('q-explanation')
+    });
+    btn.disabled = false;
+
+    if (error) {
+        qMessage.className = 'msg error';
+        qMessage.textContent = /subject|topic|difficulty|question|option|answer|waiting|educators/i.test(error.message || '')
+            ? error.message : 'Something went wrong. Please try again.';
+        return;
+    }
+    qMessage.className = 'msg ok';
+    qMessage.textContent = 'Submitted! The admin will review it. You can follow it in My Question Submissions.';
+    ['q-text', 'q-a', 'q-b', 'q-c', 'q-d', 'q-explanation'].forEach((id) => { $(id).value = ''; });
+    $('q-answer').value = '';
+    loadMyQuestions();
+});
+
+const Q_STATUS = {
+    pending: { cls: 'pending', text: 'Waiting for review' },
+    approved: { cls: 'approved', text: 'Approved, added to the question bank' },
+    rejected: { cls: 'rejected', text: 'Not approved' }
+};
+
+async function loadMyQuestions() {
+    const list = $('qmine-list');
+    const { data, error } = await supabase.rpc('educator_my_questions');
+    list.innerHTML = '';
+    if (error) { list.appendChild(el('p', 'hint', 'Could not load your questions right now.')); return; }
+    if (!data || data.length === 0) {
+        list.appendChild(el('p', 'hint', 'You have not submitted any questions yet.'));
+        return;
+    }
+    data.forEach((q) => {
+        const card = el('div', 'card');
+        const st = Q_STATUS[q.q_status] || Q_STATUS.pending;
+        const top = el('div', 'review-head');
+        top.appendChild(el('div', 'card-sub', q.q_subject + ' · ' + q.q_topic + ' · ' + q.q_difficulty));
+        top.appendChild(el('span', 'pill ' + st.cls, st.text));
+        card.appendChild(top);
+        card.appendChild(el('div', 'review-comment', q.q_text));
+        if (q.q_status === 'rejected' && q.q_reject_reason) {
+            card.appendChild(el('div', 'reject-note', 'Reason: ' + q.q_reject_reason));
+        }
+        card.appendChild(el('div', 'review-meta', new Date(q.q_created_at).toLocaleDateString()));
+        list.appendChild(card);
+    });
+}
+loadMyQuestions();

@@ -27,7 +27,7 @@ $('template-link').href = URL.createObjectURL(new Blob([
 ], { type: 'text/csv' }));
 
 // Reads pasted spreadsheet cells (tab-separated). Handles quoted cells and line breaks inside cells.
-export function parseTable(text) {
+export function parseTable(text, delim = '\t') {
     const rows = [];
     let row = [], cell = '', inQuotes = false;
     const endRow = () => { row.push(cell); cell = ''; if (row.some((c) => c.trim() !== '')) rows.push(row); row = []; };
@@ -37,7 +37,7 @@ export function parseTable(text) {
             if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else inQuotes = false; }
             else cell += ch;
         } else if (ch === '"' && cell === '') inQuotes = true;
-        else if (ch === '\t') { row.push(cell); cell = ''; }
+        else if (ch === delim) { row.push(cell); cell = ''; }
         else if (ch === '\n' || ch === '\r') { if (ch === '\r' && text[i + 1] === '\n') i++; endRow(); }
         else cell += ch;
     }
@@ -46,16 +46,21 @@ export function parseTable(text) {
 }
 
 export function validateRow(cells) {
-    if (cells.length < 6) return { error: 'Needs 6 columns: question, A, B, C, D and the answer letter' };
+    if (cells.length < 6) return { error: 'Only ' + cells.length + ' column(s) found. Each row needs 6: Question, A, B, C, D, Answer' };
     const [q, a, b, c, d, ans, expl] = cells.map((x) => (x || '').trim());
     if (q.length < 10) return { error: 'The question is too short' };
     if (q.length > 1000) return { error: 'The question is too long (over 1000 characters)' };
     const opts = [a, b, c, d];
-    if (opts.some((o) => o === '')) return { error: 'Options A, B, C and D must all be filled in' };
+    const emptyAt = opts.findIndex((o) => o === '');
+    if (emptyAt !== -1) return { error: 'Option ' + 'ABCD'[emptyAt] + ' is empty' };
     if (opts.some((o) => o.length > 300)) return { error: 'An option is too long (over 300 characters)' };
     if (new Set(opts.map((o) => o.toLowerCase())).size < 4) return { error: 'Two options are the same' };
-    const letter = ans.toUpperCase().replace(/[.)\s]/g, '');
-    if (!/^[A-D]$/.test(letter)) return { error: 'The answer must be A, B, C or D' };
+    let letter = ans.toUpperCase().replace(/^(OPTION|ANSWER)[:\s]*/, '').replace(/[.)\s]/g, '');
+    if (!/^[A-D]$/.test(letter)) {
+        const at = opts.findIndex((o) => o.toLowerCase() === ans.toLowerCase());   // answer written as the option's words
+        if (at === -1) return { error: 'The answer is "' + ans.slice(0, 30) + '" but it must be the letter A, B, C or D' };
+        letter = 'ABCD'[at];
+    }
     if ((expl || '').length > 1000) return { error: 'The explanation is too long (over 1000 characters)' };
     return { q, a, b, c, d, letter, explanation: expl || '' };
 }
@@ -83,7 +88,10 @@ $('check-button').addEventListener('click', async () => {
     msg.textContent = '';
     $('preview').style.display = 'none';
 
-    let rows = parseTable($('paste-box').value);
+    const raw = $('paste-box').value;
+    const firstLine = raw.split(/\r?\n/).find((l) => l.trim() !== '') || '';
+    const delim = firstLine.includes('\t') ? '\t' : (firstLine.includes(',') ? ',' : '\t');
+    let rows = parseTable(raw, delim);
     let offset = 0;
     if (rows.length && ((rows[0][5] || '').trim().toLowerCase() === 'answer' ||
                         (rows[0][0] || '').trim().toLowerCase() === 'question')) {
